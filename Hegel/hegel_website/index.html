@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georg Wilhelm Friedrich Hegel - Filósofo del Idealismo Alemán</title>
+    <meta name="description" content="Página académica completa sobre Georg Wilhelm Friedrich Hegel: biografía, pensamiento filosófico, obras principales y su influencia en la filosofía moderna.">
+    <meta name="keywords" content="Hegel, filosofía, idealismo alemán, dialéctica, fenomenología, filosofía del derecho">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'academic-blue': '#1e3a8a',
+                        'classic-navy': '#1e293b',
+                        'warm-gray': '#374151',
+                        'accent-gold': '#d97706'
+                    },
+                    fontFamily: {
+                        'serif': ['Georgia', 'Times New Roman', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom styles for academic content */
+        .quote-box {
+            border-left: 4px solid #d97706;
+            background: linear-gradient(135deg, #fefbf3 0%, #f8f4e8 100%);
+        }
+        
+        .section-divider {
+            background: linear-gradient(90deg, transparent 0%, #d97706 50%, transparent 100%);
+            height: 2px;
+        }
+        
+        /* Navigation shadow */
+        .nav-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        /* Hover effects */
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            transition: transform 0.3s ease;
+        }
+        
+        /* Academic card styling */
+        .academic-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .academic-card:hover {
+            border-color: #d97706;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Portrait styling */
+        .portrait-frame {
+            background: linear-gradient(145deg, #f1f5f9, #e2e8f0);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white nav-shadow z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="font-playfair text-xl font-bold text-academic-blue">
+                    G.W.F. Hegel
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-academic-blue transition-colors">Inicio</a>
+                    <a href="#biografia" class="text-gray-700 hover:text-academic-blue transition-colors">Biografía</a>
+                    <a href="#pensamiento" class="text-gray-700 hover:text-academic-blue transition-colors">Pensamiento</a>
+                    <a href="#obras" class="text-gray-700 hover:text-academic-blue transition-colors">Obras</a>
+                    <a href="#influencias" class="text-gray-700 hover:text-academic-blue transition-colors">Influencias</a>
+                    <a href="#contexto" class="text-gray-700 hover:text-academic-blue transition-colors">Contexto</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#inicio" class="block px-3 py-2 text-gray-700 hover:text-academic-blue">Inicio</a>
+                <a href="#biografia" class="block px-3 py-2 text-gray-700 hover:text-academic-blue">Biografía</a>
+                <a href="#pensamiento" class="block px-3 py-2 text-gray-700 hover:text-academic-blue">Pensamiento</a>
+                <a href="#obras" class="block px-3 py-2 text-gray-700 hover:text-academic-blue">Obras</a>
+                <a href="#influencias" class="block px-3 py-2 text-gray-700 hover:text-academic-blue">Influencias</a>
+                <a href="#contexto" class="block px-3 py-2 text-gray-700 hover:text-academic-blue">Contexto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="pt-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Georg Wilhelm Friedrich
+                        <span class="text-accent-gold">Hegel</span>
+                    </h1>
+                    <p class="text-xl sm:text-2xl mb-8 text-blue-100 leading-relaxed">
+                        El Maestro de la Dialéctica y Arquitecto del Idealismo Alemán
+                    </p>
+                    <div class="space-y-4 text-lg text-blue-200">
+                        <p><strong class="text-accent-gold">1770-1831</strong> • Stuttgart - Berlín</p>
+                        <p>Filósofo que revolucionó el pensamiento occidental con su sistema dialéctico y su comprensión del desarrollo histórico de la conciencia.</p>
+                    </div>
+                    <div class="mt-8 space-y-4 sm:space-y-0 sm:space-x-4 sm:flex">
+                        <a href="#biografia" class="inline-block bg-accent-gold text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors hover-lift">
+                            Explorar Biografía
+                        </a>
+                        <a href="#obras" class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-colors hover-lift">
+                            Ver Obras Principales
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <div class="portrait-frame p-6 rounded-2xl max-w-md">
+                        <img 
+                            src="images/hegel_portrait.jpg" 
+                            alt="Retrato de Georg Wilhelm Friedrich Hegel"
+                            class="w-full h-auto rounded-xl shadow-2xl"
+                        >
+                        <p class="text-center text-sm text-blue-200 mt-4 italic">
+                            "La filosofía es su tiempo aprehendido en pensamientos"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biografia Section -->
+    <section id="biografia" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl font-bold text-classic-navy mb-4">
+                    Biografía Intelectual
+                </h2>
+                <div class="section-divider w-24 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    La vida de Hegel abarcó uno de los períodos más transformadores de la historia europea, desde la Revolución Francesa hasta las guerras napoleónicas.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8 mb-16">
+                <!-- Juventud y Formación -->
+                <div class="academic-card rounded-xl p-8">
+                    <div class="text-accent-gold text-4xl mb-4">🎓</div>
+                    <h3 class="font-playfair text-2xl font-semibold mb-4 text-classic-navy">
+                        Juventud y Formación (1770-1793)
+                    </h3>
+                    <ul class="text-gray-700 space-y-3">
+                        <li><strong>27 de agosto de 1770:</strong> Nace en Stuttgart, Ducado de Württemberg</li>
+                        <li><strong>Padre:</strong> Georg Ludwig Hegel, oficial fiscal del ducado</li>
+                        <li><strong>Madre:</strong> Maria Magdalena Louisa Fromm, quien le enseñó latín</li>
+                        <li><strong>1788-1793:</strong> Estudios en el Seminario Teológico de Tübingen</li>
+                        <li><strong>Compañeros:</strong> Friedrich Hölderlin y Friedrich Schelling</li>
+                    </ul>
+                </div>
+
+                <!-- Desarrollo Intelectual -->
+                <div class="academic-card rounded-xl p-8">
+                    <div class="text-accent-gold text-4xl mb-4">📚</div>
+                    <h3 class="font-playfair text-2xl font-semibold mb-4 text-classic-navy">
+                        Desarrollo Intelectual (1793-1807)
+                    </h3>
+                    <ul class="text-gray-700 space-y-3">
+                        <li><strong>1793-1797:</strong> Tutor privado en Berna, Suiza</li>
+                        <li><strong>1797-1801:</strong> Tutor en Frankfurt del Meno</li>
+                        <li><strong>1801-1807:</strong> Docente en la Universidad de Jena</li>
+                        <li><strong>1806:</strong> Batalla de Jena - ve pasar a Napoleón</li>
+                        <li><strong>1807:</strong> Publica la "Fenomenología del Espíritu"</li>
+                    </ul>
+                </div>
+
+                <!-- Madurez Intelectual -->
+                <div class="academic-card rounded-xl p-8">
+                    <div class="text-accent-gold text-4xl mb-4">👑</div>
+                    <h3 class="font-playfair text-2xl font-semibold mb-4 text-classic-navy">
+                        Madurez Intelectual (1808-1831)
+                    </h3>
+                    <ul class="text-gray-700 space-y-3">
+                        <li><strong>1808-1816:</strong> Director de gimnasio en Núremberg</li>
+                        <li><strong>1811:</strong> Se casa con Marie Helena von Tucher</li>
+                        <li><strong>1812-1816:</strong> Publica "Ciencia de la Lógica"</li>
+                        <li><strong>1818-1831:</strong> Cátedra en la Universidad de Berlín</li>
+                        <li><strong>14 de noviembre de 1831:</strong> Muere en Berlín de cólera</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cita Biográfica Destacada -->
+            <div class="quote-box rounded-xl p-8 max-w-4xl mx-auto">
+                <blockquote class="text-lg italic text-gray-800 mb-4">
+                    "Cada individuo es hijo de su tiempo; por eso la filosofía también es su tiempo aprehendido en pensamientos. Es igualmente insensato creer que una filosofía puede ir más allá de su tiempo presente como que un individuo puede saltar por encima de su tiempo."
+                </blockquote>
+                <cite class="text-accent-gold font-semibold">— G.W.F. Hegel, Principios de la Filosofía del Derecho</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pensamiento Filosófico -->
+    <section id="pensamiento" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl font-bold text-classic-navy mb-4">
+                    Pensamiento Filosófico Central
+                </h2>
+                <div class="section-divider w-24 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    El sistema hegeliano representa la culminación del idealismo alemán, integrando lógica, naturaleza y espíritu en una síntesis dialéctica comprehensiva.
+                </p>
+            </div>
+
+            <!-- Conceptos Fundamentales -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Dialéctica -->
+                <div class="academic-card rounded-xl p-8">
+                    <h3 class="font-playfair text-2xl font-semibold mb-4 text-classic-navy flex items-center">
+                        <span class="text-accent-gold mr-3">⚖️</span>
+                        La Dialéctica
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        El método dialéctico hegeliano procede mediante la contradicción: tesis, antítesis y síntesis (Aufhebung).
+                    </p>
+                    <div class="quote-box rounded-lg p-4 mb-4">
+                        <blockquote class="text-sm italic text-gray-800">
+                            "La contradicción es la raíz de todo movimiento y vitalidad; solamente en cuanto algo tiene en sí mismo una contradicción se mueve, tiene impulso y actividad."
+                        </blockquote>
+                        <cite class="text-xs text-accent-gold">— Ciencia de la Lógica</cite>
+                    </div>
+                </div>
+
+                <!-- Fenomenología -->
+                <div class="academic-card rounded-xl p-8">
+                    <h3 class="font-playfair text-2xl font-semibold mb-4 text-classic-navy flex items-center">
+                        <span class="text-accent-gold mr-3">🧠</span>
+                        Fenomenología
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        El desarrollo de la conciencia desde la certeza sensible hasta el saber absoluto.
+                    </p>
+                    <div class="quote-box rounded-lg p-4 mb-4">
+                        <blockquote class="text-sm italic text-gray-800">
+                            "Lo verdadero es el todo. Pero el todo es solamente la esencia que se completa mediante su desarrollo."
+                        </blockquote>
+                        <cite class="text-xs text-accent-gold">— Fenomenología del Espíritu</cite>
+                    </div>
+                </div>
+
+                <!-- Ser, Nada, Devenir -->
+                <div class="academic-card rounded-xl p-8">
+                    <h3 class="font-playfair text-2xl font-semibold mb-4 text-classic-navy flex items-center">
+                        <span class="text-accent-gold mr-3">🔄</span>
+                        Ser-Nada-Devenir
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        La tríada fundamental de la lógica hegeliana que demuestra el movimiento inherente del pensamiento.
+                    </p>
+                    <div class="quote-box rounded-lg p-4 mb-4">
+                        <blockquote class="text-sm italic text-gray-800">
+                            "El puro ser y la pura nada son por tanto la misma cosa. Lo que constituye la verdad no es el ser ni la nada, sino aquello que no traspasa sino que ha traspasado, a saber, el devenir."
+                        </blockquote>
+                        <cite class="text-xs text-accent-gold">— Ciencia de la Lógica</cite>
+                    </div>
+                </div>
+
+                <!-- Reconocimiento -->
+                <div class="academic-card rounded-xl p-8">
+                    <h3 class="font-playfair text-2xl font-semibold mb-4 text-classic-navy flex items-center">
+                        <span class="text-accent-gold mr-3">👥</span>
+                        Reconocimiento
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        La autoconciencia se constituye en el encuentro con otra autoconciencia mediante el reconocimiento mutuo.
+                    </p>
+                    <div class="quote-box rounded-lg p-4 mb-4">
+                        <blockquote class="text-sm italic text-gray-800">
+                            "La autoconciencia es en sí y para sí cuando y porque es en sí y para sí para otra autoconciencia; es decir, solo es en cuanto se la reconoce."
+                        </blockquote>
+                        <cite class="text-xs text-accent-gold">— Fenomenología del Espíritu</cite>
+                    </div>
+                </div>
+
+                <!-- Espíritu Absoluto -->
+                <div class="academic-card rounded-xl p-8">
+                    <h3 class="font-playfair text-2xl font-semibold mb-4 text-classic-navy flex items-center">
+                        <span class="text-accent-gold mr-3">✨</span>
+                        Espíritu Absoluto
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        La culminación del sistema en el arte, la religión y la filosofía como formas del espíritu absoluto.
+                    </p>
+                    <div class="quote-box rounded-lg p-4 mb-4">
+                        <blockquote class="text-sm italic text-gray-800">
+                            "La idea absoluta es la única realidad verdadera, la única vida verdadera, la única verdad verdadera."
+                        </blockquote>
+                        <cite class="text-xs text-accent-gold">— Enciclopedia de las Ciencias Filosóficas</cite>
+                    </div>
+                </div>
+
+                <!-- Filosofía del Derecho -->
+                <div class="academic-card rounded-xl p-8">
+                    <h3 class="font-playfair text-2xl font-semibold mb-4 text-classic-navy flex items-center">
+                        <span class="text-accent-gold mr-3">⚖️</span>
+                        Filosofía del Derecho
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        El desarrollo de la libertad desde el derecho abstracto hasta la eticidad estatal.
+                    </p>
+                    <div class="quote-box rounded-lg p-4 mb-4">
+                        <blockquote class="text-sm italic text-gray-800">
+                            "El Estado es la realidad de la idea ética, el espíritu ético como voluntad sustancial manifiesta, clara ante sí misma, que se piensa y se sabe."
+                        </blockquote>
+                        <cite class="text-xs text-accent-gold">— Principios de la Filosofía del Derecho</cite>
+                    </div>
+                </div>
+            </div>
+
+            <!-- La Dialéctica del Amo y el Esclavo -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="font-playfair text-3xl font-bold text-classic-navy mb-6 text-center">
+                    La Dialéctica del Amo y el Esclavo
+                </h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold text-xl text-accent-gold mb-4">El Conflicto Inicial</h4>
+                        <p class="text-gray-700 mb-4">
+                            Dos autoconciencias se encuentran en una lucha a muerte por el reconocimiento. Una arriesga su vida (el futuro amo) mientras la otra la preserva (el futuro esclavo).
+                        </p>
+                        <div class="quote-box rounded-lg p-4">
+                            <blockquote class="text-sm italic text-gray-800">
+                                "El señor es la conciencia que existe para sí, pero ya no meramente el concepto de tal conciencia, sino una conciencia que existe para sí y que está mediada consigo a través de otra conciencia."
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-xl text-accent-gold mb-4">La Inversión Dialéctica</h4>
+                        <p class="text-gray-700 mb-4">
+                            Paradójicamente, el esclavo, a través del trabajo y el temor, desarrolla una autoconciencia más auténtica que el amo, quien se vuelve dependiente del reconocimiento del esclavo.
+                        </p>
+                        <div class="quote-box rounded-lg p-4">
+                            <blockquote class="text-sm italic text-gray-800">
+                                "La autoconciencia alcanza su satisfacción únicamente en otra autoconciencia."
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Principales Obras -->
+    <section id="obras" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl font-bold text-classic-navy mb-4">
+                    Principales Obras
+                </h2>
+                <div class="section-divider w-24 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Las obras fundamentales de Hegel que constituyen su sistema filosófico completo, disponibles en español tanto en formato gratuito como comercial.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Fenomenología del Espíritu -->
+                <div class="academic-card rounded-xl p-8">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-playfair text-2xl font-bold text-classic-navy">
+                            Fenomenología del Espíritu
+                        </h3>
+                        <span class="text-accent-gold font-semibold text-lg">1807</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        La obra maestra que describe el desarrollo de la conciencia desde la certeza sensible hasta el saber absoluto. Incluye la famosa dialéctica del amo y el esclavo.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <h4 class="font-semibold text-accent-gold">🆓 Enlaces Gratuitos:</h4>
+                        <a href="https://archive.org/details/hegel-fenomenologia-del-espiritu-editorial-pre-texos" 
+                           target="_blank" 
+                           class="block text-academic-blue hover:text-accent-gold transition-colors underline">
+                            📖 Archive.org - Editorial Pre-Textos (Trad. Manuel Jiménez Redondo)
+                        </a>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="font-semibold text-accent-gold">💰 Enlaces Comerciales:</h4>
+                        <a href="https://www.amazon.es/Fenomenologia-Del-Espiritu-LECTURAS-FILOSOFÍA/dp/8496775712" 
+                           target="_blank" 
+                           class="block text-academic-blue hover:text-accent-gold transition-colors underline">
+                            🛒 Amazon España - Edición Abada
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ciencia de la Lógica -->
+                <div class="academic-card rounded-xl p-8">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-playfair text-2xl font-bold text-classic-navy">
+                            Ciencia de la Lógica
+                        </h3>
+                        <span class="text-accent-gold font-semibold text-lg">1812-1816</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        El tratado más técnico de Hegel sobre la lógica dialéctica. Desarrolla las categorías fundamentales del pensamiento puro desde el ser hasta la idea absoluta.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <h4 class="font-semibold text-accent-gold">🆓 Enlaces Gratuitos:</h4>
+                        <a href="https://archive.org/details/hegel-ciencia-de-la-logica-vol.-i-ii" 
+                           target="_blank" 
+                           class="block text-academic-blue hover:text-accent-gold transition-colors underline">
+                            📖 Archive.org - Volúmenes I y II Completos (Trad. Félix Duque)
+                        </a>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="font-semibold text-accent-gold">💰 Enlaces Comerciales:</h4>
+                        <a href="https://www.amazon.com/-/es/Ciencia-lógica-I-objetiva-doctrina/dp/8415289014" 
+                           target="_blank" 
+                           class="block text-academic-blue hover:text-accent-gold transition-colors underline">
+                            🛒 Amazon - Volumen I (Abada Editores)
+                        </a>
+                        <a href="https://www.amazon.com/-/es/Ciencia-lógica-II-subjetiva-doctrina/dp/8416160333" 
+                           target="_blank" 
+                           class="block text-academic-blue hover:text-accent-gold transition-colors underline">
+                            🛒 Amazon - Volumen II (Abada Editores)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Enciclopedia de las Ciencias Filosóficas -->
+                <div class="academic-card rounded-xl p-8">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-playfair text-2xl font-bold text-classic-navy">
+                            Enciclopedia de las Ciencias Filosóficas
+                        </h3>
+                        <span class="text-accent-gold font-semibold text-lg">1817-1830</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        La exposición sistemática completa del sistema hegeliano en tres partes: Lógica, Filosofía de la Naturaleza y Filosofía del Espíritu.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <h4 class="font-semibold text-accent-gold">🆓 Enlaces Gratuitos:</h4>
+                        <a href="https://archive.org/details/hegel-enciclopedia-de-las-ciencias-filosoficas" 
+                           target="_blank" 
+                           class="block text-academic-blue hover:text-accent-gold transition-colors underline">
+                            📖 Archive.org - Alianza Editorial
+                        </a>
+                        <a href="https://archive.org/details/g.-w.-f.-hegel-enciclopedia-de-las-ciencias-filosoficas-1830-abada-2017" 
+                           target="_blank" 
+                           class="block text-academic-blue hover:text-accent-gold transition-colors underline">
+                            📖 Archive.org - Edición Abada 2017
+                        </a>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="font-semibold text-accent-gold">💰 Enlaces Comerciales:</h4>
+                        <a href="https://www.amazon.com/-/es/Enciclopedia-las-Ciencias-Filosóficas-Hegel/dp/8416160570" 
+                           target="_blank" 
+                           class="block text-academic-blue hover:text-accent-gold transition-colors underline">
+                            🛒 Amazon - Edición Abada [1830]
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Principios de la Filosofía del Derecho -->
+                <div class="academic-card rounded-xl p-8">
+                    <div class="flex items-start justify-between mb-4">
+                        <h3 class="font-playfair text-2xl font-bold text-classic-navy">
+                            Principios de la Filosofía del Derecho
+                        </h3>
+                        <span class="text-accent-gold font-semibold text-lg">1821</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">
+                        La obra política de Hegel que desarrolla su filosofía del "espíritu objetivo": derecho abstracto, moralidad y eticidad culminando en el Estado.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <h4 class="font-semibold text-accent-gold">🆓 Enlaces Gratuitos:</h4>
+                        <a href="https://archive.org/details/hegel-principios-de-la-filosofia-del-derecho" 
+                           target="_blank" 
+                           class="block text-academic-blue hover:text-accent-gold transition-colors underline">
+                            📖 Archive.org - PDF directo
+                        </a>
+                    </div>
+                    <div class="space-y-3">
+                        <h4 class="font-semibold text-accent-gold">💰 Enlaces Comerciales:</h4>
+                        <a href="https://www.amazon.es/Principios-filosofia-derecho-Wilhelm-Friedrich/dp/8435014320" 
+                           target="_blank" 
+                           class="block text-academic-blue hover:text-accent-gold transition-colors underline">
+                            🛒 Amazon España - Edición Sudamericana
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Obras Adicionales -->
+            <div class="mt-12">
+                <h3 class="font-playfair text-3xl font-bold text-classic-navy mb-8 text-center">
+                    Obras Adicionales Disponibles
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="academic-card rounded-lg p-6">
+                        <h4 class="font-semibold text-xl text-classic-navy mb-3">
+                            Lecciones sobre la Historia de la Filosofía
+                        </h4>
+                        <p class="text-gray-700 mb-4">Obra póstuma basada en las últimas lecciones de Hegel (c. 1830)</p>
+                        <a href="https://archive.org/details/hegel-lecciones-sobre-la-historia-de-la-filosofia-i" 
+                           target="_blank" 
+                           class="text-academic-blue hover:text-accent-gold transition-colors underline">
+                            📖 Volumen I - Archive.org
+                        </a>
+                    </div>
+                    <div class="academic-card rounded-lg p-6">
+                        <h4 class="font-semibold text-xl text-classic-navy mb-3">
+                            Lecciones sobre la Filosofía de la Historia
+                        </h4>
+                        <p class="text-gray-700 mb-4">El desarrollo histórico como progreso en la conciencia de la libertad</p>
+                        <a href="https://www.amazon.com/-/es/Lecciones-filosofía-historia-universal-Alianza/dp/8420645958" 
+                           target="_blank" 
+                           class="text-academic-blue hover:text-accent-gold transition-colors underline">
+                            🛒 Amazon - Alianza Ensayo (Prólogo de Ortega y Gasset)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nota sobre Traductores -->
+            <div class="mt-12 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8">
+                <h3 class="font-playfair text-2xl font-bold text-classic-navy mb-4">
+                    📚 Traductores Académicos Destacados
+                </h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <h4 class="font-semibold text-accent-gold">Félix Duque</h4>
+                        <p class="text-sm text-gray-700">Universidad Autónoma de Madrid<br>Especialista en Ciencia de la Lógica</p>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-semibold text-accent-gold">Manuel Jiménez Redondo</h4>
+                        <p class="text-sm text-gray-700">Universidad de Valencia<br>Fenomenología del Espíritu</p>
+                    </div>
+                    <div class="text-center">
+                        <h4 class="font-semibold text-accent-gold">Ramón Valls Plana</h4>
+                        <p class="text-sm text-gray-700">Especialista reconocido<br>Enciclopedia de Ciencias Filosóficas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Influencias -->
+    <section id="influencias" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl font-bold text-classic-navy mb-4">
+                    Influencias Filosóficas
+                </h2>
+                <div class="section-divider w-24 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Hegel sintetizó las tradiciones filosóficas precedentes en su sistema dialéctico, desde los antiguos griegos hasta el idealismo alemán.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Influencias Recibidas -->
+                <div>
+                    <h3 class="font-playfair text-3xl font-bold text-classic-navy mb-8 text-center">
+                        🏛️ Influencias Recibidas
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Kant -->
+                        <div class="academic-card rounded-xl p-6">
+                            <h4 class="font-semibold text-xl text-accent-gold mb-3 flex items-center">
+                                <span class="mr-3">🧠</span>
+                                Immanuel Kant (1724-1804)
+                            </h4>
+                            <p class="text-gray-700 mb-3">
+                                Base fundamental del idealismo hegeliano. Hegel adopta el idealismo transcendental kantiano pero critica el "dualismo" entre fenómeno y noúmeno.
+                            </p>
+                            <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>Autonomía de la razón</li>
+                                <li>Crítica filosófica sistemática</li>
+                                <li>Superación del empirismo y racionalismo</li>
+                            </ul>
+                        </div>
+
+                        <!-- Fichte -->
+                        <div class="academic-card rounded-xl p-6">
+                            <h4 class="font-semibold text-xl text-accent-gold mb-3 flex items-center">
+                                <span class="mr-3">⚡</span>
+                                Johann Gottlieb Fichte (1762-1814)
+                            </h4>
+                            <p class="text-gray-700 mb-3">
+                                El desarrollo del "Yo absoluto" fichteano influye en la concepción hegeliana del Espíritu Absoluto.
+                            </p>
+                            <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>Principio de autoposición del Yo</li>
+                                <li>Dialéctica Yo-No Yo</li>
+                                <li>Idealismo subjetivo</li>
+                            </ul>
+                        </div>
+
+                        <!-- Schelling -->
+                        <div class="academic-card rounded-xl p-6">
+                            <h4 class="font-semibold text-xl text-accent-gold mb-3 flex items-center">
+                                <span class="mr-3">🌿</span>
+                                Friedrich Schelling (1775-1854)
+                            </h4>
+                            <p class="text-gray-700 mb-3">
+                                Compañero en Tübingen, su "filosofía de la identidad" influye en la concepción hegeliana de la unidad de naturaleza y espíritu.
+                            </p>
+                            <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>Filosofía de la naturaleza</li>
+                                <li>Identidad sujeto-objeto</li>
+                                <li>Absoluto como indiferencia</li>
+                            </ul>
+                        </div>
+
+                        <!-- Spinoza -->
+                        <div class="academic-card rounded-xl p-6">
+                            <h4 class="font-semibold text-xl text-accent-gold mb-3 flex items-center">
+                                <span class="mr-3">💎</span>
+                                Baruch Spinoza (1632-1677)
+                            </h4>
+                            <p class="text-gray-700 mb-3">
+                                Su concepción de la sustancia única y la necesidad racional influyen en el sistema hegeliano.
+                            </p>
+                            <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>Monismo sustancial</li>
+                                <li>Necesidad lógica</li>
+                                <li>Rechazo de la contingencia</li>
+                            </ul>
+                        </div>
+
+                        <!-- Aristóteles -->
+                        <div class="academic-card rounded-xl p-6">
+                            <h4 class="font-semibold text-xl text-accent-gold mb-3 flex items-center">
+                                <span class="mr-3">🏺</span>
+                                Aristóteles (384-322 a.C.)
+                            </h4>
+                            <p class="text-gray-700 mb-3">
+                                Fundamental para la lógica dialéctica y la comprensión del movimiento como actualización de la potencia.
+                            </p>
+                            <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>Lógica y silogística</li>
+                                <li>Potencia y acto</li>
+                                <li>Teleología inmanente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Influencias Ejercidas -->
+                <div>
+                    <h3 class="font-playfair text-3xl font-bold text-classic-navy mb-8 text-center">
+                        🌟 Influencias Ejercidas
+                    </h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Marx -->
+                        <div class="academic-card rounded-xl p-6">
+                            <h4 class="font-semibold text-xl text-accent-gold mb-3 flex items-center">
+                                <span class="mr-3">⚒️</span>
+                                Karl Marx (1818-1883)
+                            </h4>
+                            <p class="text-gray-700 mb-3">
+                                Adopta el método dialéctico hegeliano pero lo "invierte" del idealismo al materialismo histórico.
+                            </p>
+                            <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>Dialéctica materialista</li>
+                                <li>Alienación y reconocimiento</li>
+                                <li>Filosofía de la historia</li>
+                            </ul>
+                            <div class="quote-box rounded-lg p-3 mt-3">
+                                <blockquote class="text-xs italic text-gray-800">
+                                    "Mi método dialéctico no sólo es fundamentalmente distinto del método de Hegel, sino que es, en todo y por todo, la antítesis de él."
+                                </blockquote>
+                                <cite class="text-xs text-accent-gold">— Karl Marx</cite>
+                            </div>
+                        </div>
+
+                        <!-- Kierkegaard -->
+                        <div class="academic-card rounded-xl p-6">
+                            <h4 class="font-semibold text-xl text-accent-gold mb-3 flex items-center">
+                                <span class="mr-3">💭</span>
+                                Søren Kierkegaard (1813-1855)
+                            </h4>
+                            <p class="text-gray-700 mb-3">
+                                Reacciona contra el sistema hegeliano enfatizando la existencia individual, la angustia y la elección.
+                            </p>
+                            <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>Crítica al sistema totalizante</li>
+                                <li>Individualidad vs. universalidad</li>
+                                <li>Existencia como paradoja</li>
+                            </ul>
+                        </div>
+
+                        <!-- Feuerbach -->
+                        <div class="academic-card rounded-xl p-6">
+                            <h4 class="font-semibold text-xl text-accent-gold mb-3 flex items-center">
+                                <span class="mr-3">🔄</span>
+                                Ludwig Feuerbach (1804-1872)
+                            </h4>
+                            <p class="text-gray-700 mb-3">
+                                Discípulo inicial que luego critica el idealismo hegeliano proponiendo un "materialismo antropológico".
+                            </p>
+                            <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li>Crítica de la religión</li>
+                                <li>Antropología materialista</li>
+                                <li>Inversión del idealismo</li>
+                            </ul>
+                        </div>
+
+                        <!-- Filosofía Continental -->
+                        <div class="academic-card rounded-xl p-6">
+                            <h4 class="font-semibold text-xl text-accent-gold mb-3 flex items-center">
+                                <span class="mr-3">🌍</span>
+                                Filosofía Continental Moderna
+                            </h4>
+                            <p class="text-gray-700 mb-3">
+                                Su influencia se extiende a múltiples corrientes del pensamiento contemporáneo.
+                            </p>
+                            <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li><strong>Fenomenología:</strong> Husserl, Heidegger</li>
+                                <li><strong>Teoría Crítica:</strong> Escuela de Frankfurt</li>
+                                <li><strong>Post-estructuralismo:</strong> Derrida, Deleuze</li>
+                                <li><strong>Filosofía Política:</strong> Teorías del reconocimiento</li>
+                            </ul>
+                        </div>
+
+                        <!-- Hegelianismo Contemporáneo -->
+                        <div class="academic-card rounded-xl p-6">
+                            <h4 class="font-semibold text-xl text-accent-gold mb-3 flex items-center">
+                                <span class="mr-3">📖</span>
+                                Hegelianismo Contemporáneo
+                            </h4>
+                            <p class="text-gray-700 mb-3">
+                                Renovado interés en Hegel en la filosofía del siglo XXI.
+                            </p>
+                            <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                                <li><strong>Axel Honneth:</strong> Teoría del reconocimiento</li>
+                                <li><strong>Slavoj Žižek:</strong> Psicoanálisis lacaniano-hegeliano</li>
+                                <li><strong>Robert Pippin:</strong> Interpretación deflacionaria</li>
+                                <li><strong>John McDowell:</strong> Realismo conceptual</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cita sobre la influencia -->
+            <div class="mt-16">
+                <div class="quote-box rounded-xl p-8 max-w-4xl mx-auto">
+                    <blockquote class="text-lg italic text-gray-800 mb-4 text-center">
+                        "La historia universal es el progreso en la conciencia de la libertad."
+                    </blockquote>
+                    <cite class="text-accent-gold font-semibold text-center block">— G.W.F. Hegel, Lecciones sobre la Filosofía de la Historia</cite>
+                    <p class="text-center text-gray-600 mt-4 text-sm">
+                        Esta visión hegeliana de la historia como desarrollo dialéctico de la libertad ha influenciado profundamente el pensamiento político y social occidental.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contexto Histórico -->
+    <section id="contexto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl font-bold text-classic-navy mb-4">
+                    Contexto Histórico y Filosófico
+                </h2>
+                <div class="section-divider w-24 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Hegel vivió en una época de transformaciones revolucionarias que moldearon profundamente su filosofía de la historia y su comprensión del desarrollo del espíritu.
+                </p>
+            </div>
+
+            <!-- Timeline Visual -->
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-accent-gold"></div>
+                
+                <div class="space-y-12">
+                    <!-- Revolución Francesa -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8 text-right">
+                            <div class="academic-card rounded-xl p-6">
+                                <h3 class="font-playfair text-2xl font-bold text-classic-navy mb-2">
+                                    Revolución Francesa
+                                </h3>
+                                <p class="text-accent-gold font-semibold mb-3">1789 (Hegel tiene 19 años)</p>
+                                <p class="text-gray-700 mb-4">
+                                    Hegel y sus compañeros de Tübingen (Schelling y Hölderlin) plantan un "árbol de la libertad" en apoyo a la Revolución. Este evento marca profundamente su comprensión de la historia como progreso de la libertad.
+                                </p>
+                                <div class="quote-box rounded-lg p-3">
+                                    <blockquote class="text-sm italic text-gray-800">
+                                        "Fue una magnífica aurora. Todos los seres pensantes celebraron esta época."
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-accent-gold rounded-full border-4 border-white"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- Idealismo Alemán -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-academic-blue rounded-full border-4 border-white"></div>
+                        <div class="flex-1 pl-8">
+                            <div class="academic-card rounded-xl p-6">
+                                <h3 class="font-playfair text-2xl font-bold text-classic-navy mb-2">
+                                    El Idealismo Alemán
+                                </h3>
+                                <p class="text-accent-gold font-semibold mb-3">1790s-1810s</p>
+                                <p class="text-gray-700 mb-4">
+                                    Hegel forma parte del movimiento filosófico que incluye a Kant, Fichte y Schelling. El idealismo alemán busca superar las limitaciones del empirismo y racionalismo previos mediante una filosofía sistemática de la razón.
+                                </p>
+                                <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                                    <li>Crítica de la razón pura (Kant, 1781)</li>
+                                    <li>Doctrina de la ciencia (Fichte, 1794)</li>
+                                    <li>Sistema del idealismo transcendental (Schelling, 1800)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Guerras Napoleónicas -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8 text-right">
+                            <div class="academic-card rounded-xl p-6">
+                                <h3 class="font-playfair text-2xl font-bold text-classic-navy mb-2">
+                                    Guerras Napoleónicas
+                                </h3>
+                                <p class="text-accent-gold font-semibold mb-3">1803-1815</p>
+                                <p class="text-gray-700 mb-4">
+                                    Hegel ve en Napoleón la personificación del "espíritu del mundo a caballo". La Batalla de Jena (1806) ocurre mientras Hegel termina la Fenomenología del Espíritu.
+                                </p>
+                                <div class="quote-box rounded-lg p-3">
+                                    <blockquote class="text-sm italic text-gray-800">
+                                        "Vi al Emperador —esta alma del mundo— salir de la ciudad para ir de reconocimiento."
+                                    </blockquote>
+                                    <cite class="text-xs text-accent-gold">— Hegel sobre Napoleón, 1806</cite>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-red-500 rounded-full border-4 border-white"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- Restauración -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-purple-500 rounded-full border-4 border-white"></div>
+                        <div class="flex-1 pl-8">
+                            <div class="academic-card rounded-xl p-6">
+                                <h3 class="font-playfair text-2xl font-bold text-classic-navy mb-2">
+                                    La Restauración
+                                </h3>
+                                <p class="text-accent-gold font-semibold mb-3">1815-1830</p>
+                                <p class="text-gray-700 mb-4">
+                                    Período de reacción conservadora tras las guerras napoleónicas. Hegel desarrolla su filosofía política madura, defendiendo el Estado constitucional como realización de la libertad racional.
+                                </p>
+                                <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                                    <li>Congreso de Viena (1815)</li>
+                                    <li>Santa Alianza</li>
+                                    <li>Movimientos liberales y nacionalistas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- El Romanticismo -->
+            <div class="mt-16 grid lg:grid-cols-2 gap-8">
+                <div class="academic-card rounded-xl p-8">
+                    <h3 class="font-playfair text-2xl font-bold text-classic-navy mb-4 flex items-center">
+                        <span class="text-accent-gold mr-3">🌹</span>
+                        El Romanticismo Alemán
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        Hegel mantiene una relación ambivalente con el Romanticismo. Aunque aprecia su énfasis en la subjetividad y el arte, critica su tendencia hacia el irracionalismo.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><strong>Novalis:</strong> La filosofía como "nostalgia del infinito"</li>
+                        <li><strong>Schleiermacher:</strong> Sentimiento religioso</li>
+                        <li><strong>Los hermanos Schlegel:</strong> Crítica literaria y estética</li>
+                        <li><strong>Goethe:</strong> Síntesis de clasicismo y romanticismo</li>
+                    </ul>
+                </div>
+
+                <div class="academic-card rounded-xl p-8">
+                    <h3 class="font-playfair text-2xl font-bold text-classic-navy mb-4 flex items-center">
+                        <span class="text-accent-gold mr-3">🏛️</span>
+                        Contexto Universitario
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        La reforma universitaria alemana transforma el panorama intelectual. Hegel participa en la creación de la universidad moderna.
+                    </p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li><strong>Universidad de Berlín (1810):</strong> Fundada por Wilhelm von Humboldt</li>
+                        <li><strong>Libertad académica:</strong> Lehrfreiheit y Lernfreiheit</li>
+                        <li><strong>Unidad investigación-docencia:</strong> Nuevo modelo universitario</li>
+                        <li><strong>Filosofía como ciencia:</strong> Sistematización del saber</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cita final sobre el tiempo -->
+            <div class="mt-16">
+                <div class="quote-box rounded-xl p-8 max-w-4xl mx-auto text-center">
+                    <blockquote class="text-xl italic text-gray-800 mb-4">
+                        "Lo único que nos enseña la experiencia y la historia es que los pueblos y los gobiernos jamás han aprendido nada de la historia."
+                    </blockquote>
+                    <cite class="text-accent-gold font-semibold">— G.W.F. Hegel</cite>
+                    <p class="text-gray-600 mt-4">
+                        Esta paradoja hegeliana sobre la historia refleja su época: un período de cambios revolucionarios donde las lecciones del pasado parecían constantemente superadas por nuevas realidades.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-classic-navy text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="font-playfair text-2xl font-bold mb-4 text-accent-gold">
+                        G.W.F. Hegel
+                    </h3>
+                    <p class="text-gray-300 mb-4">
+                        Página académica dedicada al estudio del pensamiento hegeliano y su influencia en la filosofía occidental.
+                    </p>
+                    <p class="text-sm text-gray-400">
+                        "La búsqueda de la verdad requiere que se eleve uno por encima de las certezas inmediatas."
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4 text-accent-gold">Enlaces Útiles</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="https://archive.org/search.php?query=hegel" target="_blank" class="hover:text-accent-gold transition-colors">📚 Archive.org - Obras de Hegel</a></li>
+                        <li><a href="https://plato.stanford.edu/entries/hegel/" target="_blank" class="hover:text-accent-gold transition-colors">🎓 Stanford Encyclopedia of Philosophy</a></li>
+                        <li><a href="https://www.iep.utm.edu/hegel/" target="_blank" class="hover:text-accent-gold transition-colors">📖 Internet Encyclopedia of Philosophy</a></li>
+                        <li><a href="https://www.marxists.org/reference/archive/hegel/" target="_blank" class="hover:text-accent-gold transition-colors">📑 Marxists Internet Archive</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold text-lg mb-4 text-accent-gold">Información Académica</h4>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li><strong>Período:</strong> 1770-1831</li>
+                        <li><strong>Corriente:</strong> Idealismo Alemán</li>
+                        <li><strong>Obras principales:</strong> 4 textos fundamentales</li>
+                        <li><strong>Influencia:</strong> Filosofía continental moderna</li>
+                        <li><strong>Método:</strong> Dialéctica especulativa</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    Esta página utiliza contenido académico de dominio público y fuentes educativas verificadas. 
+                    <br>
+                    Última actualización: Junio 2025 • Creado con fines educativos
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript para navegación móvil y efectos -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-sm');
+            } else {
+                nav.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all academic cards for animation
+        document.querySelectorAll('.academic-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+
+<style>
+#minimax-floating-ball {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 12px;
+  background: #222222;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  color: #F8F8F8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#minimax-floating-ball:hover {
+  transform: translateY(-2px);
+  background: #383838;
+}
+
+.minimax-ball-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.minimax-logo-wave {
+  width: 26px;
+  height: 22px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='22' viewBox='0 0 26 22' fill='none'%3E%3Cg clip-path='url(%23clip0_3442_102412)'%3E%3Cpath d='M12.8405 14.6775C12.8405 14.9897 13.0932 15.2424 13.4055 15.2424C13.7178 15.2424 13.9705 14.9897 13.9705 14.6775V2.98254C13.9705 1.88957 13.0809 1 11.9879 1C10.895 1 10.0054 1.88957 10.0054 2.98254V11.566V17.1068C10.0054 17.5773 9.62327 17.9594 9.1528 17.9594C8.68233 17.9594 8.30021 17.5773 8.30021 17.1068V8.04469C8.30021 6.95172 7.41063 6.06215 6.31767 6.06215C5.22471 6.06215 4.33513 6.95172 4.33513 8.04469V11.8855C4.33513 12.3559 3.953 12.7381 3.48254 12.7381C3.01207 12.7381 2.62994 12.3559 2.62994 11.8855V10.4936C2.62994 10.1813 2.37725 9.92861 2.06497 9.92861C1.7527 9.92861 1.5 10.1813 1.5 10.4936V11.8855C1.5 12.9784 2.38957 13.868 3.48254 13.868C4.5755 13.868 5.46508 12.9784 5.46508 11.8855V8.04469C5.46508 7.57422 5.8472 7.19209 6.31767 7.19209C6.78814 7.19209 7.17026 7.57422 7.17026 8.04469V17.1068C7.17026 18.1998 8.05984 19.0894 9.1528 19.0894C10.2458 19.0894 11.1353 18.1998 11.1353 17.1068V2.98254C11.1353 2.51207 11.5175 2.12994 11.9879 2.12994C12.4584 2.12994 12.8405 2.51207 12.8405 2.98254V14.6775Z' fill='%23F8F8F8'/%3E%3Cpath d='M23.3278 6.06215C22.2348 6.06215 21.3452 6.95172 21.3452 8.04469V15.6143C21.3452 16.0847 20.9631 16.4669 20.4926 16.4669C20.0222 16.4669 19.6401 16.0847 19.6401 15.6143V2.98254C19.6401 1.88957 18.7505 1 17.6575 1C16.5645 1 15.675 1.88957 15.675 2.98254V19.0175C15.675 19.4879 15.2928 19.8701 14.8224 19.8701C14.3519 19.8701 13.9698 19.4879 13.9698 19.0175V17.0329C13.9698 16.7206 13.7171 16.4679 13.4048 16.4679C13.0925 16.4679 12.8398 16.7206 12.8398 17.0329V19.0175C12.8398 20.1104 13.7294 21 14.8224 21C15.9153 21 16.8049 20.1104 16.8049 19.0175V2.98254C16.8049 2.51207 17.187 2.12994 17.6575 2.12994C18.128 2.12994 18.5101 2.51207 18.5101 2.98254V15.6143C18.5101 16.7072 19.3997 17.5968 20.4926 17.5968C21.5856 17.5968 22.4752 16.7072 22.4752 15.6143V8.04469C22.4752 7.57422 22.8573 7.19209 23.3278 7.19209C23.7982 7.19209 24.1804 7.57422 24.1804 8.04469V14.6775C24.1804 14.9897 24.4331 15.2424 24.7453 15.2424C25.0576 15.2424 25.3103 14.9897 25.3103 14.6775V8.04469C25.3103 6.95172 24.4207 6.06215 23.3278 6.06215Z' fill='%23F8F8F8'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_3442_102412'%3E%3Crect width='25' height='22' fill='white' transform='translate(0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.minimax-ball-text {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.minimax-close-icon {
+  margin-left: 8px;
+  font-size: 16px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.minimax-close-icon:hover {
+  opacity: 1;
+}
+</style>
+<div id="minimax-floating-ball">
+  <div class="minimax-ball-content">
+    <div class="minimax-logo-wave"></div>
+    <span class="minimax-ball-text">Created by MiniMax Agent</span>
+  </div>
+  <div class="minimax-close-icon">×</div>
+</div>
+<script>
+// Initialize floating ball functionality
+function initFloatingBall() {
+  const ball = document.getElementById('minimax-floating-ball');
+  if (!ball) return;
+
+  // Initial animation
+  ball.style.opacity = '0';
+  ball.style.transform = 'translateY(20px)';
+
+  setTimeout(() => {
+    ball.style.opacity = '1';
+    ball.style.transform = 'translateY(0)';
+  }, 500);
+
+  // Handle logo click
+  const ballContent = ball.querySelector('.minimax-ball-content');
+  ballContent.addEventListener('click', function (e) {
+    e.stopPropagation();
+    window.open('https://agent.minimax.io/agent', '_blank');
+    ball.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      ball.style.transform = 'scale(1)';
+    }, 100);
+  });
+
+  // Handle close button click
+  const closeIcon = ball.querySelector('.minimax-close-icon');
+  closeIcon.addEventListener('click', function (e) {
+    e.stopPropagation();
+    ball.style.opacity = '0';
+    ball.style.transform = 'translateY(20px)';
+
+    setTimeout(() => {
+      ball.style.display = 'none';
+    }, 300);
+  });
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initFloatingBall); 
+</script>
+
+</body>
+</html>

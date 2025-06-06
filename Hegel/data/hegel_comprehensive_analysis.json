@@ -1,0 +1,791 @@
+{
+  "datos_academicos": {
+    "total_papers": 375,
+    "papers_by_topic": {
+      "Biografía y desarrollo intelectual": 25,
+      "Contexto histórico e idealismo alemán": 25,
+      "Análisis de Fenomenología del Espíritu": 25,
+      "Ciencia de la Lógica y dialéctica": 25,
+      "Filosofía del Derecho y teoría política": 25,
+      "Método dialéctico y espíritu absoluto": 25,
+      "Dialéctica del amo y el esclavo": 25,
+      "Conocimiento absoluto y fenomenología": 25,
+      "Influencias de Kant, Fichte y Schelling": 25,
+      "Recepción de filosofía griega y Aristóteles": 25,
+      "Influencia en Marx y materialismo dialéctico": 25,
+      "Influencia en Kierkegaard y existencialismo": 25,
+      "Influencia en filosofía contemporánea": 25,
+      "Interpretaciones en estudios del siglo XXI": 25,
+      "Fuentes primarias y análisis textual": 25
+    },
+    "key_sources": [],
+    "important_insights": [
+      {
+        "topic": "Biografía y desarrollo intelectual",
+        "insights": [
+          {
+            "title": "Hegel: an intellectual biography",
+            "snippet": "… who baptized Friedrich Schiller and the philosopher’s father, Georg Ludwig Hegel, ducal … background that Hegel possessed and the interests that he would later develop, Württemberg …",
+            "year": 2016,
+            "cited_by": 62
+          },
+          {
+            "title": "Hegel: A biography",
+            "snippet": "… ), I have separated those chapters off from the more biographical story of his life. Likewise, I have treated Hegel's intellectual development in the extant texts from his Jena period in a …",
+            "year": 2001,
+            "cited_by": 856
+          },
+          {
+            "title": "Hegel's concept of intellectual development in human history",
+            "snippet": "… and development. This study aims to briefly explain and discuss the key concepts of Hegelian philosophy of development and how human history has progressed towards development …",
+            "year": 2018,
+            "cited_by": 7
+          },
+          {
+            "title": "Hegel: A Biography",
+            "snippet": "… Hegel's move to the intellectual hot-house of the University o where he joined Schelling, this Holderlinian idea of a pre-reflective or of the cognitive subject within a more basic arena ('…",
+            "year": 2002,
+            "cited_by": null
+          },
+          {
+            "title": "Hegel. A biography",
+            "snippet": "… chronica, from gesta to biographies and autobiographies, a form which first appeared in this period’ (p. ). Here again we are shown a remarkable development, further confirmed by …",
+            "year": 2002,
+            "cited_by": null
+          }
+        ]
+      },
+      {
+        "topic": "Contexto histórico e idealismo alemán",
+        "insights": [
+          {
+            "title": "German idealism",
+            "snippet": "… arguments, the subsequent idealists, among them Fichte, Schelling and Hegel, were almost … to historical issues. Arguably, this tendency has been present throughout the history of the …",
+            "year": 2002,
+            "cited_by": 1281
+          },
+          {
+            "title": "Between Kant and Hegel: lectures on German idealism",
+            "snippet": "… sprang from the general assumption that the philosophical problems of German idealism, in general, and of subjectivity in particular, were no longer pertinent. More focused opposition …",
+            "year": 2008,
+            "cited_by": 605
+          },
+          {
+            "title": "… Freedom: Schelling Hölderlin and Hegel and the Crisis of Early German Idealism: Schelling, Hölderlin and Hegel and the Crisis of Early German Idealism",
+            "snippet": "… Hegel's earliest mature philosophical assumptions appears to be not so much an event in the history … The crucial role of Hölderlin in the history of German Idealism should also become …",
+            "year": 2012,
+            "cited_by": 71
+          },
+          {
+            "title": "Heidegger and German idealism",
+            "snippet": "… This discussion of Hegel’s concept of time and its connection … toward the German Idealists (hereafter simply “Idealists”), as … that the aftermath of German Idealism marks not its collapse, …",
+            "year": 2005,
+            "cited_by": 24
+          },
+          {
+            "title": "Hegel and the history of idealism",
+            "snippet": "… The Hegelian legacy … the nineteenth century, German idealism has been a standard subject in the history of philosophy. We all seem to know who the German idealists were, and when …",
+            "year": 1800,
+            "cited_by": 10
+          }
+        ]
+      },
+      {
+        "topic": "Análisis de Fenomenología del Espíritu",
+        "insights": [
+          {
+            "title": "The Unity of Hegel's\" Phenomenology of Spirit\": A Systematic Interpretation",
+            "snippet": "… Hegel or, more precisely, a new book on the Phenomenology? … a detailed analysis of the Phenomenology that would be … plausible Hegel's own conception of the Phenomenology as a …",
+            "year": 2011,
+            "cited_by": 105
+          },
+          {
+            "title": "The self and its body in Hegel's Phenomenology of spirit",
+            "snippet": "… project I want to isolate only two themes that are relevant to my analysis of the Hegelian … In the first paragraph of the Phenomenology of Spirit Hegel refers to anatomy as a study of …",
+            "year": 2001,
+            "cited_by": 111
+          },
+          {
+            "title": "The Hegel variations: On the phenomenology of spirit",
+            "snippet": "… analyses for what used to be individualizing ones. Indeed, nothing in the final chapter of the Phenomenology suggests Hegel's … But surely Absolute Spirit may be seen as a kind of …",
+            "year": 2017,
+            "cited_by": 284
+          },
+          {
+            "title": "Hegel's phenomenological method and analysis of consciousness",
+            "snippet": "Hegel’s 1807 Phenomenology of Spirit has been widely interpreted in view of his Preface … I then summarize Hegel’s overarching analysis of human knowledge in the Phenomenology …",
+            "year": 2009,
+            "cited_by": 68
+          },
+          {
+            "title": "GWF Hegel: The Phenomenology of Spirit",
+            "snippet": "… The development traced by Hegel overlaps in certain parts with European history (for example, in the analysis of “Stoic” consciousness), but what gives Hegel’s book its unity is the fact …",
+            "year": 2003,
+            "cited_by": 37
+          }
+        ]
+      },
+      {
+        "topic": "Ciencia de la Lógica y dialéctica",
+        "insights": [
+          {
+            "title": "Hegel's dialectics",
+            "snippet": "… of logic, he says, has three sides or moments (EL §79). These sides are not parts of logic, … (EL Remark to §79; we will see why Hegel thought dialectics is in everything in section 3). The …",
+            "year": 2016,
+            "cited_by": 311
+          },
+          {
+            "title": "Hegel's Logic: Between Dialectic and History",
+            "snippet": "… the science of logic deviates from Hegel's in the Logic in that our reconstruction of the logic presupposes the above formal model of the dialectical pattern present in the Logic. This …",
+            "year": 1996,
+            "cited_by": 60
+          },
+          {
+            "title": "Hegel's dialectical method",
+            "snippet": "… of the pure essentialities which constitute the content of Logic.\"If we wish to determine the character of Hegel's dialectic, then, we will do well to focus on the form it takes in his Logic. …",
+            "year": 1993,
+            "cited_by": 253
+          },
+          {
+            "title": "Dialectic, Understanding, and Reason: How Does Hegel's Logic Begin?",
+            "snippet": "… which Hegel’s dialectic begins is in itself a non-dialectical movement— it is a position that fully represents das Verständige ; that it must be nondialectical in order for dialectical thinking …",
+            "year": 2010,
+            "cited_by": 18
+          },
+          {
+            "title": "Logic and Dialectics",
+            "snippet": "… There are several different ways in which the Hegelian dialectic has been proposed as a logic. Systematic dialectics8 considers patterns of conceptual development where we start from …",
+            "year": 2004,
+            "cited_by": 4
+          }
+        ]
+      },
+      {
+        "topic": "Filosofía del Derecho y teoría política",
+        "insights": [
+          {
+            "title": "Hegel: Elements of the philosophy of right",
+            "snippet": "… of Hegel as conservative sycophant a broader philosophical significance.5 Right-Hegelian interpretations of Hegel's political thought … the idea that Hegel's political thought consorts well …",
+            "year": 1991,
+            "cited_by": 216
+          },
+          {
+            "title": "Elements of the Philosophy of Right",
+            "snippet": "… One is offended by Hegel's sentence of the completion of philosophy. It is … Hegel there was and there is still philosophy. The sentence of completion alone does not say that philosophy …",
+            "year": 2024,
+            "cited_by": 4895
+          },
+          {
+            "title": "Hegel: Lectures on Natural Right and Political Science: The First Philosophy of Right",
+            "snippet": "… and Political Science The First Philosophy of Right … the earliest version of Hegel's Philosophy of Right, one of the most influential works in Western political theory. They introduce a …",
+            "year": 2012,
+            "cited_by": 152
+          },
+          {
+            "title": "The basic context and structure of Hegel's Philosophy of Right",
+            "snippet": "… Hegel held that normative moral, social, and political theory should focus on rational social life because so doing solves the related problems of the possibility, the principles, and the …",
+            "year": 1993,
+            "cited_by": 165
+          },
+          {
+            "title": "The philosophy of right",
+            "snippet": "… importance of Hegel’s ethical and political thought, as expressed primarily in the Philosophy of Right, is … that the two are necessarily opposed and in conflict; philosophical right stands to …",
+            "year": 2015,
+            "cited_by": 5565
+          }
+        ]
+      },
+      {
+        "topic": "Método dialéctico y espíritu absoluto",
+        "insights": [
+          {
+            "title": "Hegel's dialectical method",
+            "snippet": "… then in the Philosophies of Nature and Spirit attempts to interpret natural and spiritual … variously calls this Reason, the Logos, the Absolute Idea, the Concept, Absolute Spirit. It may not …",
+            "year": 1993,
+            "cited_by": 253
+          },
+          {
+            "title": "Hegel's dialectics",
+            "snippet": "… section 1), the dialectical process leads to a completely unconditioned concept or form for each subject matter—the Absolute Idea (logic), Absolute Spirit (phenomenology), Absolute …",
+            "year": 2016,
+            "cited_by": 311
+          },
+          {
+            "title": "Spirit and language in Hegel's philosophy of absolute spirit",
+            "snippet": "… in order to understand the spiritual nature of … Spirit ↔ Language interconnection, we need to consider the concept central to the entire system of Hegel’s philosophy – the Absolute Spirit. …",
+            "year": 2015,
+            "cited_by": 9
+          },
+          {
+            "title": "Dialectical Critique of the Hegelian System: Absolute Spirit and the Relation of Religion, the State and Philosophy",
+            "snippet": "… Refutation This thesis attempts to offer an immanent dialectical critique of Hegel's system. And yet, as stated above, the crux of Hegel's dialectical method is that the result is never …",
+            "year": 2004,
+            "cited_by": null
+          },
+          {
+            "title": "Comrade Hegel: Absolute Spirit Goes East",
+            "snippet": "… ” and “materialism” were now combined into a very peculiar conceptual combination that eliminated any and all un-orthodox interpretations of the role of Hegelian dialectical method in …",
+            "year": 2016,
+            "cited_by": 9
+          }
+        ]
+      },
+      {
+        "topic": "Dialéctica del amo y el esclavo",
+        "insights": [
+          {
+            "title": "The slave's work: Reading slavery through Hegel's master-slave dialectic",
+            "snippet": "… processes of consciousness. Deciding to read the master- slave dialectic as either a struggle between two individuals or a struggle between two forms of consciousness within the …",
+            "year": 2012,
+            "cited_by": 30
+          },
+          {
+            "title": "The Hegelian Master–Slave Dialectic in History and Class Consciousness",
+            "snippet": "… not only the category of totality but also the master–slave dialectic, although it never refers … that the Hegelian master–slave dialectic exerts on History and Class Consciousness and, …",
+            "year": 2024,
+            "cited_by": null
+          },
+          {
+            "title": "Hegel's grounding of intersubjectivity in the master–slave dialectic",
+            "snippet": "… In this article I seek to explain Hegel’s significance to contemporary meta-ethics, in … the master–slave dialectic in the Phenomenology of Spirit, Hegel shows that self-consciousness and …",
+            "year": 2012,
+            "cited_by": 19
+          },
+          {
+            "title": "The Life, Work and Death of Self-Consciousness in Hegel's Master-Slave Dialectic",
+            "snippet": "… the advancement of self-consciousness in the Master/Slave dialectic as the development of Life … thread of dialectical insight as it unfolds in the Master/Slave dialectic. Hegel articulates a …",
+            "year": 1998,
+            "cited_by": 2
+          },
+          {
+            "title": "Is Hegel's Master–Slave Dialectic a Refutation of Solipsism?",
+            "snippet": "… the question could be taken: did Hegel succeed in refuting solipsism in his discussion of the master–slave dialectic in the Self-Consciousness section in the Phenomenology of Spirit …",
+            "year": 2012,
+            "cited_by": 25
+          }
+        ]
+      },
+      {
+        "topic": "Conocimiento absoluto y fenomenología",
+        "insights": [
+          {
+            "title": "Absolute knowledge and the ethical conclusion of the Phenomenology",
+            "snippet": "… Phenomenology by aligning what can be called the theoretical and practical accounts of objectivity. To understand “Absolute Knowledge” … ‘absolute knowledge’to refer to the knowledge …",
+            "year": 2017,
+            "cited_by": 12
+          },
+          {
+            "title": "Hegel's phenomenological method and analysis of consciousness",
+            "snippet": "… Phenomenology , which examines the possibility of “absolute knowing” or genuine knowledge … ’s analysis entails that we have no conceptfree empirical knowledge or self-knowledge, …",
+            "year": 2009,
+            "cited_by": 68
+          },
+          {
+            "title": "Natural Consciousness and Absolute Knowledge: the Notion of Philosophy as Established in Hegel's „The Phenomenology of Spirit “",
+            "snippet": "… ‘absolute knowledge’ in the process of establishing the notion of philosophy in Hegel’s The Phenomenology … in the first approaches to The Phenomenology, but rather, it continues to act …",
+            "year": 2022,
+            "cited_by": null
+          },
+          {
+            "title": "The phenomenology of mind",
+            "snippet": "… horror, as if absolute knowledge were being surrendered … that it is nothing absolute, and does not exist in the Absolute. … and with the nature of absolute knowledge itself. For mediating is …",
+            "year": 1999,
+            "cited_by": 58
+          },
+          {
+            "title": "Hegel's absolute: an introduction to reading The phenomenology of spirit",
+            "snippet": "… says “our object cannot be anything else but immediate knowledge itself, a knowledge of the immediate or of what simply is” (par. 90). He says it is “sense-certainty” (Die sinnliche …",
+            "year": 2012,
+            "cited_by": 117
+          }
+        ]
+      },
+      {
+        "topic": "Influencias de Kant, Fichte y Schelling",
+        "insights": [
+          {
+            "title": "The Philosophy of Nature of Kant, Schelling and Hegel",
+            "snippet": "… it is with respect to the latter that Kant substantially influenced the development of the “… hegel’s presentation of Kant’s “critical philosophy” in the context of the “encyclopedia,” hegel …",
+            "year": 2010,
+            "cited_by": 23
+          },
+          {
+            "title": "The early philosophy of Fichte and Schelling",
+            "snippet": "… movement–JG Fichte, FWJ Schelling, and GWF Hegel–there … primarily as a reaction to Kant’s influence, problems emerge. … Fichte somehow managed to supersede Kant, that Schelling …",
+            "year": 2000,
+            "cited_by": 69
+          },
+          {
+            "title": "The Reception of Kant's Critical Philosophy: Fichte, Schelling, and Hegel",
+            "snippet": "… this is more of a paper on Hegel than a paper on Hegel's reception of Kant. In \"Point of View … Hegel's reception of Kant in Glauben und Wissen that offers an interesting account of Kant's …",
+            "year": 2001,
+            "cited_by": 1
+          },
+          {
+            "title": "Schelling: zwischen Fichte und Hegel",
+            "snippet": "… JG Fichte, whose radically transformed version of Kantian … , represented the most influential and controversial philosophical … , I discuss Kant's sense of the imagination, explain Fichte's …",
+            "year": 2000,
+            "cited_by": 12
+          },
+          {
+            "title": "Epistemological system, logic, and contradiction in German idealism. Kant, Fichte, Schelling, and Hegel",
+            "snippet": "… that Hegel’s influence on Schelling was significant early on and had a decisive impact on Schelling’s break with Fichte. This … Schelling’s revival of nature, the universal dialectic, and the …",
+            "year": 2004,
+            "cited_by": 1
+          }
+        ]
+      },
+      {
+        "topic": "Recepción de filosofía griega y Aristóteles",
+        "insights": [
+          {
+            "title": "Hegel's Reception of Aristotle's Theology",
+            "snippet": "… Hegel and Aristotle it is still doubtful what it was that Hegel seemed to find at the highest point of Aristotle’s philosophy… of first philosophy I will first give a short reconstruction of Aristotle’s …",
+            "year": 2020,
+            "cited_by": 1
+          },
+          {
+            "title": "The Reception of the Ancient Greek Philosophy in GWF Hegel in the Context of Philhellenism",
+            "snippet": "… This article attempts to establish a connection between 19th century philhellenism and the reception of ancient Greek philosophy by Hegel as an outstanding representative of German …",
+            "year": 2024,
+            "cited_by": null
+          },
+          {
+            "title": "Aristotle and Hegel on recognition and friendship",
+            "snippet": "… Whether Hegel was retrieving and appropriating Aristotle’s concept of philia, or whether he arrived at a similar conception independently, the remarkable fact is that Hegel and Aristotle …",
+            "year": 2010,
+            "cited_by": 12
+          },
+          {
+            "title": "Hegel and Aristotle",
+            "snippet": "… cusing on Greek philosophy in its own right. Even if at first … In Part I, I discuss Hegel's conception of the history of philosophy and its place within the system of philosophy. The relation …",
+            "year": 2001,
+            "cited_by": 456
+          },
+          {
+            "title": "Hegel's Aristotle: Philosophy and Its Time",
+            "snippet": "… Perhaps even more striking, however, is what Hegel says about Aristotle's being the only … Hegel prefaces his own philosophy of spirit with these words: Aristotle's books on the soul, as …",
+            "year": 2011,
+            "cited_by": 12
+          }
+        ]
+      },
+      {
+        "topic": "Influencia en Marx y materialismo dialéctico",
+        "insights": [
+          {
+            "title": "Dialectical materialism",
+            "snippet": "… dogmatists\" for indulging in Hegelian idealism and neglecting the influence of French socialism … in the commentaries on Hegel, Marx, and Lenin, Dialectical Materialism was to be the …",
+            "year": 2009,
+            "cited_by": 682
+          },
+          {
+            "title": "Hegel and Marx",
+            "snippet": "… I am unable to determine, on the basis of the published literature, the extent to which the concept of the ‘bourgeois’ central to Marxist thought is directly influenced by Hegel. The French …",
+            "year": 2014,
+            "cited_by": 18
+          },
+          {
+            "title": "Explaining Marxist dialectics: the dialectical traditions of Hegel and Marx",
+            "snippet": "… key ideas of Marx's dialectical materialism before outlining some analytic materialism-related … Marx's dialectics emerged as an influential framework for studying class conflict, economic …",
+            "year": 2024,
+            "cited_by": 3
+          },
+          {
+            "title": "Less than nothing: Hegel and the shadow of dialectical materialism",
+            "snippet": "… Hegel, we begin with the obvious historical question: in what meaningful sense can one still be a Hegelian … apropos of Hegel: the ambiguities of Marx's references to Hegel; the unique …",
+            "year": 2012,
+            "cited_by": 2272
+          },
+          {
+            "title": "A New German Idealism: Hegel, Žižek, and Dialectical Materialism",
+            "snippet": "… (such as Hegel, Marx, … (materialist) psychoanalysis and incarnates the fact that this brain is the product of a plurality of diverse, uncoordinated natural-historical periods and influences. …",
+            "year": 2018,
+            "cited_by": 58
+          }
+        ]
+      },
+      {
+        "topic": "Influencia en Kierkegaard y existencialismo",
+        "insights": [
+          {
+            "title": "Heidegger's reception of Kierkegaard: The existential philosophy of death",
+            "snippet": "… reception of Kierkegaard, I will … Kierkegaard's influence goes right to the very heart of Heidegger's project; despite their differences, there is an over-arching sense in which Kierkegaard …",
+            "year": 2013,
+            "cited_by": 21
+          },
+          {
+            "title": "Kierkegaard and the philosophical-esthetic sources of existentialism",
+            "snippet": "… Nevertheless, Kierkegaard’s influence on philosophical and … of Kierkegaard have been written not only by existentialist … was stated and developed long before Kierkegaard by Hegel.…",
+            "year": 2005,
+            "cited_by": 9
+          },
+          {
+            "title": "Hegel's influence on Kierkegaard",
+            "snippet": "… Kierkegaard’s existentialist thought. In the next sections, I will try to briefly analyze two topics from Kierkegaard’s dissertation that are firmly based on Hegel’… existential reading of Hegel. …",
+            "year": 2013,
+            "cited_by": null
+          },
+          {
+            "title": "Existentialism",
+            "snippet": "… was pioneered by Kierkegaard whose scorn was directed primarily at GWF Hegel, a … By taking a disengaged and panoptic view, Kierkegaard argues Hegel’s system invariably …",
+            "year": 2023,
+            "cited_by": 68
+          },
+          {
+            "title": "Martin Heidegger: Kierkegaard's Influence Hidden and in Full View",
+            "snippet": "… influenced by [Kierkegaard], made this work his own to such an extent that he failed to realize how much his own existential reflections relied upon Kierkegaard… Kierkegaard’s anti-Hegel …",
+            "year": 2016,
+            "cited_by": 35
+          }
+        ]
+      },
+      {
+        "topic": "Influencia en filosofía contemporánea",
+        "insights": [
+          {
+            "title": "Hegel and contemporary continental philosophy",
+            "snippet": "… Not all contemporary continental philosophers are as sympathetic to the influence of the work of Hegel. Gilles Deleuze (1925-1995) said: \"What I detested more than anything else was …",
+            "year": 2004,
+            "cited_by": 38
+          },
+          {
+            "title": "The philosophy of Hegel",
+            "snippet": "… to write that all that was left of Hegel as far as contemporary philosophy should be concerned was his “poetry”. On the view of many in analytic philosophy, Hegel was to be read only by …",
+            "year": 2014,
+            "cited_by": 39
+          },
+          {
+            "title": "Lectures on the History of Philosophy",
+            "snippet": "… One is offended by Hegel's sentence of the completion of philosophy. It is … Hegel there was and there is still philosophy. The sentence of completion alone does not say that philosophy …",
+            "year": 2024,
+            "cited_by": 1370
+          },
+          {
+            "title": "Hegel and modern society",
+            "snippet": "… to contemporary philosophers. I try, in other words, not just to expound Hegel, but also to show how he still provides the terms in which we reflect on some contemporary problems. …",
+            "year": 2015,
+            "cited_by": 1792
+          },
+          {
+            "title": "Modern freedom: Hegel's legal, moral, and political philosophy",
+            "snippet": "… absolute and spirit is taken seriously and patiently discussed in relation to the classics and contemporary analytic philosophers, is found in John McCumber, The Company of Words: …",
+            "year": 2001,
+            "cited_by": 212
+          }
+        ]
+      },
+      {
+        "topic": "Interpretaciones en estudios del siglo XXI",
+        "insights": [
+          {
+            "title": "Rethinking dialectic in the 21st century: interpretation, method and scientific inquiry",
+            "snippet": "… The interpretation problem is as follows: the use of ‘dialectic’ as a concept in the work of … Hegelian philosophy. Yet, in Hegelian philosophy the term has more than one meaning. For …",
+            "year": 2023,
+            "cited_by": 2
+          },
+          {
+            "title": "Democracy, dialectics, and difference: hegel, marx, and 21st century social movements",
+            "snippet": "… It has been nearly two centuries since Marx famously turned Hegel on his head in order to … tance for scholars engaged in the Marxist project of doing more than simply interpreting the …",
+            "year": 2015,
+            "cited_by": 7
+          },
+          {
+            "title": "Why Turn to Hegel Today? An Introduction",
+            "snippet": "… While Hegel may appear to some as an abstract thinker, … Consequently, this issue strives to approach Hegel through the … By doing so, it invites the reader to listen anew to what Hegel’…",
+            "year": 2024,
+            "cited_by": null
+          },
+          {
+            "title": "Hegelianism in the twentieth century",
+            "snippet": "… — Hegel als deutscher Nationalphilosoph — to rescue Hegel as … several generations of Hegel scholars in France and … the first decade of the twenty-first century. Likewise, his colleague…",
+            "year": 2008,
+            "cited_by": 10
+          },
+          {
+            "title": "The entanglement of knowing and being: Hegel, ontology and education in the 21st century",
+            "snippet": "… teen century German philosopher Georg Wilhelm Fredrich Hegel, … for education in the twenty-first century. It begins firstly by … thinking of Georg Wilhelm Friedrich Hegel, as an alternative …",
+            "year": 2021,
+            "cited_by": 4
+          }
+        ]
+      },
+      {
+        "topic": "Fuentes primarias y análisis textual",
+        "insights": [
+          {
+            "title": "Political writings",
+            "snippet": "… Obviously, this criticism of English political institutions stems, in part, from the comparative perspective which Hegel brings to his analysis of the Reform Bill. But throughout ERB, he also …",
+            "year": 1999,
+            "cited_by": 280
+          },
+          {
+            "title": "The Heterodox Hegel",
+            "snippet": "… now that Hegel studies are moving toward a nonpartisan, historical and textual analysis, the … way that makes them more useful for our analysis of Hegel. In general and formal terms, that …",
+            "year": 1994,
+            "cited_by": 325
+          },
+          {
+            "title": "Contextual Methodology in the Study of Hegel's Political Thought",
+            "snippet": "… the eighteenth century, to a world of commerce, liberty, and natural right–the implications here for the analysis of Hegel's political language are quite vertiginous. Marx's commentary on …",
+            "year": 1991,
+            "cited_by": 1
+          },
+          {
+            "title": "Hegel: three studies",
+            "snippet": "… essays on Hegel through his analyses of musical and … primary source of all instruments and subjects of labor, as an owner, treats her as belonging to him, his labor becomes the source …",
+            "year": 1994,
+            "cited_by": 624
+          },
+          {
+            "title": "Hegel: Elements of the philosophy of right",
+            "snippet": "… Hegel is an important philosopher; his penetrating analysis of the human predicament in modern society is perhaps unsurpassed among social observers of the past two centuries. At …",
+            "year": 1991,
+            "cited_by": 216
+          }
+        ]
+      }
+    ],
+    "most_cited_authors": {
+      "Hegel: an intellectual biography": 1,
+      "Hegel: A biography": 1,
+      "Hegel: A Biography": 1,
+      "Hegel. A biography": 1,
+      "German idealism": 1,
+      "Heidegger and German idealism": 1,
+      "Hegel and the history of idealism": 1,
+      "GWF Hegel: The Phenomenology of Spirit": 1,
+      "Hegel's dialectics": 2,
+      "Hegel's Logic: Between Dialectic and History": 1,
+      "Hegel's dialectical method": 2,
+      "Logic and Dialectics": 1,
+      "Hegel: Elements of the philosophy of right": 2,
+      "Elements of the Philosophy of Right": 1,
+      "The philosophy of right": 1,
+      "Comrade Hegel: Absolute Spirit Goes East": 1,
+      "The Life, Work and Death of Self": 1,
+      "The phenomenology of mind": 1,
+      "The early philosophy of Fichte and Schelling": 1,
+      "Schelling: zwischen Fichte und Hegel": 1,
+      "Hegel's Reception of Aristotle's Theology": 1,
+      "Aristotle and Hegel on recognition and friendship": 1,
+      "Hegel and Aristotle": 1,
+      "Hegel's Aristotle: Philosophy and Its Time": 1,
+      "Dialectical materialism": 1,
+      "Hegel and Marx": 1,
+      "Kierkegaard and the philosophical": 1,
+      "Hegel's influence on Kierkegaard": 1,
+      "Existentialism": 1,
+      "Hegel and contemporary continental philosophy": 1,
+      "The philosophy of Hegel": 1,
+      "Lectures on the History of Philosophy": 1,
+      "Hegel and modern society": 1,
+      "Why Turn to Hegel Today? An Introduction": 1,
+      "Hegelianism in the twentieth century": 1,
+      "Political writings": 1,
+      "The Heterodox Hegel": 1,
+      "Hegel: three studies": 1
+    },
+    "publication_years": {
+      "2016": 5,
+      "2001": 5,
+      "2018": 2,
+      "2002": 3,
+      "2008": 2,
+      "2012": 7,
+      "2005": 2,
+      "1800": 1,
+      "2011": 2,
+      "2017": 2,
+      "2009": 3,
+      "2003": 1,
+      "1996": 1,
+      "1993": 3,
+      "2010": 3,
+      "2004": 4,
+      "1991": 3,
+      "2024": 6,
+      "2015": 4,
+      "1998": 1,
+      "2022": 1,
+      "1999": 2,
+      "2000": 2,
+      "2020": 1,
+      "2014": 2,
+      "2013": 2,
+      "2023": 2,
+      "2021": 1,
+      "1994": 2
+    },
+    "key_journals": {}
+  },
+  "biografia_detallada": {
+    "datos_personales": {
+      "nacimiento": "",
+      "muerte": "",
+      "lugar_nacimiento": "Stuttgart, Alemania",
+      "lugar_muerte": "Berlín, Alemania",
+      "edad_muerte": "61 años"
+    },
+    "familia": {
+      "padre": {},
+      "madre": {},
+      "hermanos": {
+        "christian_louisa": {},
+        "georg_ludwig": {}
+      },
+      "matrimonio": "",
+      "esposa": {},
+      "hijos": {
+        "hijo_ilegitimo": {},
+        "karl": {},
+        "immanuel": {}
+      }
+    },
+    "educacion": {},
+    "carrera_academica": {},
+    "contexto_historico": {},
+    "eventos_importantes": {}
+  },
+  "conceptos_filosoficos": {
+    "dialectica": {
+      "definicion": "Método de desarrollo del pensamiento que procede mediante contradicciones que se resuelven en síntesis superiores",
+      "elementos": [
+        "Tesis",
+        "Antítesis",
+        "Síntesis"
+      ],
+      "aplicacion": "Método fundamental de toda la filosofía hegeliana"
+    },
+    "fenomenologia_espiritu": {
+      "concepto_central": "Desarrollo de la conciencia desde la certeza sensible hasta el saber absoluto",
+      "dialectica_amo_esclavo": "Momento crucial del reconocimiento mutuo de las autoconciencias",
+      "autoconciencia": "La conciencia que se conoce a sí misma como objeto"
+    },
+    "ciencia_logica": {
+      "ser": "Primera categoría, pura indeterminación",
+      "nada": "Idéntica al ser en su indeterminación",
+      "devenir": "Unidad y verdad del ser y la nada",
+      "dialéctica_fundamental": "Ser - Nada - Devenir"
+    },
+    "filosofia_derecho": {
+      "voluntad_libre": "Fundamento del derecho, la moralidad y la eticidad",
+      "eticidad": "Realización objetiva de la libertad en instituciones",
+      "estado": "Realidad de la idea ética, organización racional de la libertad"
+    },
+    "idealismo_absoluto": {
+      "idea_absoluta": "Realidad última que se desarrolla dialécticamente",
+      "espiritu_absoluto": "Culminación del desarrollo: arte, religión, filosofía",
+      "sistema_total": "Lógica, Filosofía de la Naturaleza, Filosofía del Espíritu"
+    }
+  },
+  "cronologia_obras": {
+    "1807": {
+      "titulo": "Fenomenología del Espíritu",
+      "titulo_original": "Phänomenologie des Geistes",
+      "lugar": "Bamberg",
+      "importancia": "Primera gran obra sistemática, desarrolla la dialéctica de la conciencia"
+    },
+    "1812-1816": {
+      "titulo": "Ciencia de la Lógica",
+      "titulo_original": "Wissenschaft der Logik",
+      "volúmenes": "3 volúmenes",
+      "estructura": "Lógica del Ser (1812), Lógica de la Esencia (1813), Lógica del Concepto (1816)",
+      "importancia": "Exposición sistemática del método dialéctico y las categorías lógicas"
+    },
+    "1817": {
+      "titulo": "Enciclopedia de las Ciencias Filosóficas",
+      "titulo_original": "Enzyklopädie der philosophischen Wissenschaften",
+      "ediciones": "1ª ed. 1817 (Heidelberg), 2ª ed. 1827, 3ª ed. 1830 (Berlín)",
+      "estructura": "Lógica, Filosofía de la Naturaleza, Filosofía del Espíritu",
+      "importancia": "Compendio completo del sistema filosófico hegeliano"
+    },
+    "1821": {
+      "titulo": "Principios de la Filosofía del Derecho",
+      "titulo_original": "Grundlinien der Philosophie des Rechts",
+      "importancia": "Filosofía política y jurídica, teoría del Estado ético"
+    },
+    "obras_postumas": {
+      "estetica": "Lecciones sobre Estética (publicadas póstumamente)",
+      "filosofia_religion": "Lecciones sobre Filosofía de la Religión",
+      "filosofia_historia": "Lecciones sobre Filosofía de la Historia",
+      "historia_filosofia": "Lecciones sobre Historia de la Filosofía"
+    }
+  },
+  "mapa_influencias": {
+    "influencias_recibidas": {
+      "kant": {
+        "conceptos": [
+          "Crítica de la razón",
+          "Idealismo transcendental",
+          "Autonomía"
+        ],
+        "superacion": "Hegel supera la división kantiana entre fenómeno y noúmeno"
+      },
+      "fichte": {
+        "conceptos": [
+          "Yo absoluto",
+          "Dialéctica yo/no-yo",
+          "Idealismo subjetivo"
+        ],
+        "desarrollo": "Hegel objetiva el idealismo subjetivo de Fichte"
+      },
+      "schelling": {
+        "conceptos": [
+          "Identidad absoluta",
+          "Filosofía de la naturaleza",
+          "Lo absoluto"
+        ],
+        "diferencia": "Hegel critica la identidad indeterminada de Schelling"
+      },
+      "filosofia_griega": {
+        "aristoteles": "Lógica, potencia/acto, sustancia",
+        "platon": "Dialéctica, mundo de las Ideas",
+        "heraclito": "Logos, unidad de opuestos"
+      },
+      "spinoza": {
+        "conceptos": [
+          "Sustancia única",
+          "Necesidad",
+          "Inmanencia"
+        ],
+        "influencia": "Concepción monista de la realidad"
+      }
+    },
+    "influencias_ejercidas": {
+      "marx": {
+        "conceptos_adoptados": [
+          "Dialéctica",
+          "Alienación",
+          "Proceso histórico"
+        ],
+        "transformacion": "Materialismo dialéctico - inversión materialista de Hegel",
+        "critica": "'Mi método dialéctico es directamente el reverso del de Hegel'"
+      },
+      "kierkegaard": {
+        "reaccion": "Crítica al sistema hegeliano",
+        "conceptos": [
+          "Existencia individual",
+          "Angustia",
+          "Salto de fe"
+        ],
+        "legado": "Fundador del existencialismo"
+      },
+      "filosofia_contemporanea": {
+        "fenomenologia": "Husserl, Heidegger",
+        "dialectica": "Escuela de Frankfurt (Adorno, Horkheimer)",
+        "posestructuralismo": "Derrida, crítica de la metafísica occidental"
+      }
+    }
+  },
+  "metadatos": {
+    "fecha_investigacion": "2025-06-06",
+    "fuentes_consultadas": {
+      "papers_academicos": 375,
+      "busquedas_web": "85+ resultados específicos",
+      "fuentes_biograficas": "Biografía ilustrada completa",
+      "fuentes_filosoficas": "Múltiples análisis especializados"
+    },
+    "cobertura": "Completa - biografía, obras, conceptos, influencias, contexto"
+  }
+}
