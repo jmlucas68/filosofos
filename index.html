@@ -2,45 +2,147 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Filósofos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grandes Filósofos</title>
   <style>
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: #f3f4f6;
+      color: #1f2937;
       padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      max-width: 1200px;
+      margin: 0 auto;
     }
     .card {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin: 15px;
-      padding: 20px;
-      width: 200px;
-      text-align: center;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
       transition: transform 0.2s;
     }
-    .card:hover {
-      transform: scale(1.05);
+    .card:hover { transform: translateY(-5px); }
+    .card img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 180px;
     }
-    .card a {
+    .card-content {
+      padding: 15px;
+      flex: 1;
+    }
+    .card-content a {
       text-decoration: none;
-      color: #2c3e50;
-      font-weight: bold;
+      color: #111827;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .bio {
+      font-size: 14px;
+      margin: 10px 0;
+      line-height: 1.4;
+    }
+    .meta {
+      font-size: 13px;
+      color: #475569;
     }
   </style>
 </head>
 <body>
+  <h1>Grandes Filósofos</h1>
+  <div class="grid">
 
-  <div class="card"><a href="https://jmlucas68.github.io/tomas/" target="_blank">Santo Tomás de Aquino</a></div>
-  <div class="card"><a href="https://jmlucas68.github.io/agustin/" target="_blank">San Agustín</a></div>
-  <div class="card"><a href="https://jmlucas68.github.io/platon/" target="_blank">Platón</a></div>
-  <div class="card"><a href="https://jmlucas68.github.io/hegel/" target="_blank">Hegel</a></div>
-  <div class="card"><a href="https://jmlucas68.github.io/wittgenstein/" target="_blank">Wittgenstein</a></div>
-  <div class="card"><a href="https://jmlucas68.github.io/wittgenstein/" target="_blank">Kant</a></div>
-  <div class="card"><a href="https://jmlucas68.github.io/fichte/" target="_blank">Fichte</a></div>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/St-thomas-aquinas.jpg/512px-St-thomas-aquinas.jpg" alt="Santo Tomás de Aquino">
+      <div class="card-content">
+        <a href="https://jmlucas68.github.io/tomas/" target="_blank">Santo Tomás de Aquino</a>
+        <div class="bio">
+          Filósofo y teólogo dominico italiano (c. 1224–1274), primer escolástico y fundador del tomismo. Su obra central es la <em>Summa Theologiae</em> :contentReference[oaicite:1]{index=1}.
+        </div>
+        <div class="meta">Escuela: Escolasticismo / Tomismo</div>
+      </div>
+    </div>
 
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Augustine_Hippo.jpg/512px-Augustine_Hippo.jpg" alt="San Agustín">
+      <div class="card-content">
+        <a href="https://jmlucas68.github.io/agustin/" target="_blank">San Agustín</a>
+        <div class="bio">
+          Obispo y filósofo berberisca (354–430), uno de los Padres latinos de la Iglesia. Autor de <em>Confesiones</em>. Debate sobre la gracia y el pecado original :contentReference[oaicite:2]{index=2}.
+        </div>
+        <div class="meta">Escuela: Patrística / Cristianismo</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Plato_Silanion_Musei_Capitolini_MC1377.jpg/512px-Plato_Silanion_Musei_Capitolini_MC1377.jpg" alt="Platón">
+      <div class="card-content">
+        <a href="https://jmlucas68.github.io/platon/" target="_blank">Platón</a>
+        <div class="bio">
+          Clásico griego (c. 428–348 a.C.), discípulo de Sócrates, fundador de la Academia de Atenas. Diálogos como <em>La República</em> y teoría de las Ideas :contentReference[oaicite:3]{index=3}.
+        </div>
+        <div class="meta">Escuela: Platonismo</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Hegel_portrait_by_Schlesinger_1831.jpg/512px-Hegel_portrait_by_Schlesinger_1831.jpg" alt="Hegel">
+      <div class="card-content">
+        <a href="https://jmlucas68.github.io/hegel/" target="_blank">Hegel</a>
+        <div class="bio">
+          Filósofo alemán idealista (1770–1831), autor de <em>Fenomenología del espíritu</em>. Sistematizó la dialéctica como motor histórico :contentReference[oaicite:4]{index=4}.
+        </div>
+        <div class="meta">Escuela: Idealismo alemán</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ludwig_Wittgenstein_1930.jpg/512px-Ludwig_Wittgenstein_1930.jpg" alt="Wittgenstein">
+      <div class="card-content">
+        <a href="https://jmlucas68.github.io/wittgenstein/" target="_blank">Wittgenstein</a>
+        <div class="bio">
+          Filósofo austríaco-británico (1889–1951), considerado el mayor filósofo del lenguaje del siglo XX. Obras clave: <em>Tractatus</em> e <em>Investigaciones filosóficas</em> :contentReference[oaicite:5]{index=5}.
+        </div>
+        <div class="meta">Escuela: Filosofía analítica</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Kant_gemaelde_1781.jpg/512px-Kant_gemaelde_1781.jpg" alt="Kant">
+      <div class="card-content">
+        <a href="https://jmlucas68.github.io/wittgenstein/" target="_blank">Kant</a>
+        <div class="bio">
+          Filósofo alemán (1724–1804), central en la iluminación. Revolucionó epistemología y ética con la crítica de la razón pura y el imperativo categórico :contentReference[oaicite:6]{index=6}.
+        </div>
+        <div class="meta">Escuela: Idealismo trascendental</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Fichte_by_J_G_K%C3%BChnel.jpg/512px-Fichte_by_J_G_K%C3%BChnel.jpg" alt="Fichte">
+      <div class="card-content">
+        <a href="https://jmlucas68.github.io/fichte/" target="_blank">Fichte</a>
+        <div class="bio">
+          Filósofo alemán (1762–1814), fundador del idealismo trascendental tras Kant. Enfoque en el yo como acción y conciencia :contentReference[oaicite:7]{index=7}.
+        </div>
+        <div class="meta">Escuela: Idealismo alemán</div>
+      </div>
+    </div>
+
+  </div>
 </body>
 </html>
+
