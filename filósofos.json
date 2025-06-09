@@ -1,8 +1,8 @@
 [
   {
-    "nombre": "Santo Tomás de Aquino",
-    "url_pagina": "https://jmlucas68.github.io/tomas/",
-    "url_foto": "images/Santo Tomas de Aquino.jpg"
+    "nombre": "Platón",
+    "url_pagina": "https://jmlucas68.github.io/platon/",
+    "url_foto": "https://placehold.co/800x600/png?text=Platon"
   },
   {
     "nombre": "San Agustín",
@@ -10,28 +10,28 @@
     "url_foto": "https://placehold.co/800x600/png?text=San+Agustin"
   },
   {
-    "nombre": "Platón",
-    "url_pagina": "https://jmlucas68.github.io/platon/",
-    "url_foto": "https://placehold.co/800x600/png?text=Platon"
+    "nombre": "Santo Tomás de Aquino",
+    "url_pagina": "https://jmlucas68.github.io/tomas/",
+    "url_foto": "images/Santo Tomas de Aquino.jpg"
+  },
+    {
+    "nombre": "Kant",
+    "url_pagina": "https://jmlucas68.github.io/wittgenstein/",
+    "url_foto": "https://placehold.co/800x600/png?text=Kant"
+  },
+    {
+    "nombre": "Fichte",
+    "url_pagina": "https://jmlucas68.github.io/fichte/",
+    "url_foto": "https://placehold.co/800x600/png?text=Fichte"
   },
   {
     "nombre": "Hegel",
     "url_pagina": "https://jmlucas68.github.io/hegel/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/hegel/refs/heads/main/images/hegel_portrait.jpg"
   },
-  {
+    {
     "nombre": "Wittgenstein",
     "url_pagina": "https://jmlucas68.github.io/wittgenstein/",
     "url_foto": "https://placehold.co/800x600/png?text=Wittgenstein"
-  },
-  {
-    "nombre": "Kant",
-    "url_pagina": "https://jmlucas68.github.io/wittgenstein/",
-    "url_foto": "https://placehold.co/800x600/png?text=Kant"
-  },
-  {
-    "nombre": "Fichte",
-    "url_pagina": "https://jmlucas68.github.io/fichte/",
-    "url_foto": "https://placehold.co/800x600/png?text=Fichte"
   }
 ]
