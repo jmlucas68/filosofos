@@ -1,37 +1,37 @@
 [
   {
     "nombre": "Santo Tomás de Aquino",
-    "url_pagina": "https://jmlucas68.github.io/tomas/", 
-    "url_foto": "https://images.unsplash.com/photo-1572409384-6d2bbf9dd2b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    "url_pagina": "https://jmlucas68.github.io/tomas/",
+    "url_foto": "https://placehold.co/800x600/png?text=Santo+Tomas+de+Aquino"
   },
   {
     "nombre": "San Agustín",
     "url_pagina": "https://jmlucas68.github.io/agustin/",
-    "url_foto": "https://images.unsplash.com/photo-1592204870-856f6fc10a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    "url_foto": "https://placehold.co/800x600/png?text=San+Agustin"
   },
   {
     "nombre": "Platón",
     "url_pagina": "https://jmlucas68.github.io/platon/",
-    "url_foto": "https://images.unsplash.com/photo-1542779284-9205fcf3f36d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    "url_foto": "https://placehold.co/800x600/png?text=Platon"
   },
   {
     "nombre": "Hegel",
     "url_pagina": "https://jmlucas68.github.io/hegel/",
-    "url_foto": "https://images.unsplash.com/photo-1604079628048-943952c8f6a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    "url_foto": "https://placehold.co/800x600/png?text=Hegel"
   },
   {
     "nombre": "Wittgenstein",
     "url_pagina": "https://jmlucas68.github.io/wittgenstein/",
-    "url_foto": "https://images.unsplash.com/photo-1576612140337-f2aac2ce0ef8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    "url_foto": "https://placehold.co/800x600/png?text=Wittgenstein"
   },
   {
     "nombre": "Kant",
     "url_pagina": "https://jmlucas68.github.io/wittgenstein/",
-    "url_foto": "https://images.unsplash.com/photo-1583505166299-3a3cd32eb830?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    "url_foto": "https://placehold.co/800x600/png?text=Kant"
   },
   {
     "nombre": "Fichte",
     "url_pagina": "https://jmlucas68.github.io/fichte/",
-    "url_foto": "https://images.unsplash.com/photo-1573633159391-aa43be56fea7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    "url_foto": "https://placehold.co/800x600/png?text=Fichte"
   }
 ]
