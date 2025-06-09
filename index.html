@@ -2,146 +2,109 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grandes Filósofos</title>
+  <title>Galería de Filósofos</title>
   <style>
-    * { box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: #f3f4f6;
-      color: #1f2937;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
       padding: 20px;
     }
     h1 {
       text-align: center;
-      margin-bottom: 30px;
     }
-    .grid {
+    .galeria {
       display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      max-width: 1200px;
-      margin: 0 auto;
+      margin-top: 30px;
     }
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    .filosofo {
+      background-color: white;
+      border-radius: 8px;
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
       transition: transform 0.2s;
     }
-    .card:hover { transform: translateY(-5px); }
-    .card img {
-      display: block;
-      object-fit: cover;
+    .filosofo:hover {
+      transform: scale(1.03);
+    }
+    .filosofo img {
       width: 100%;
-      height: 180px;
+      height: auto;
+      display: block;
     }
-    .card-content {
-      padding: 15px;
-      flex: 1;
+    .nombre {
+      font-weight: bold;
+      padding: 10px;
     }
-    .card-content a {
+    .nombre a {
       text-decoration: none;
-      color: #111827;
-      font-size: 20px;
-      font-weight: 600;
-    }
-    .bio {
-      font-size: 14px;
-      margin: 10px 0;
-      line-height: 1.4;
-    }
-    .meta {
-      font-size: 13px;
-      color: #475569;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <h1>Grandes Filósofos</h1>
-  <div class="grid">
 
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2023/07/03/00/00/ai-generated-plato-statue-8102406_640.jpg" alt="Platón">
-      <div class="card-content">
-        <a href="https://jmlucas68.github.io/platon/" target="_blank">Platón</a>
-        <div class="bio">
-          Filósofo clásico griego (c. 428–348 a.C.), discípulo de Sócrates, fundador de la Academia y la teoría de las Ideas.
-        </div>
-        <div class="meta">Escuela: Platonismo</div>
-      </div>
-    </div>
+<h1>Galería de Filósofos</h1>
 
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2023/07/03/00/00/ai-generated-plato-statue-8102406_640.jpg" alt="San Agustín">
-      <div class="card-content">
-        <a href="https://jmlucas68.github.io/agustin/" target="_blank">San Agustín</a>
-        <div class="bio">
-          Padre de la Iglesia latina (354–430), autor de <em>Confesiones</em> y <em>Ciudad de Dios</em>, y gran influyente de la teología cristiana.
-        </div>
-        <div class="meta">Escuela: Patrística</div>
-      </div>
-    </div>
+<div class="galeria" id="galeria">
+  <!-- Los filósofos se cargarán aquí -->
+</div>
 
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2023/07/03/00/00/ai-generated-plato-statue-8102406_640.jpg" alt="Santo Tomás de Aquino">
-      <div class="card-content">
-        <a href="https://jmlucas68.github.io/tomas/" target="_blank">Santo Tomás de Aquino</a>
-        <div class="bio">
-          Filósofo escolástico (c. 1225–1274), autor de la <em>Summa Theologiae</em>, unió fe y razón con gran éxito.
-        </div>
-        <div class="meta">Escuela: Escolástica / Tomismo</div>
-      </div>
-    </div>
+<script>
+  const filosofos = [
+    {
+      nombre: "Santo Tomás de Aquino",
+      url_pagina: "https://jmlucas68.github.io/tomas/", 
+      url_foto: "https://images.unsplash.com/photo-1572409384-6d2bbf9dd2b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      nombre: "San Agustín",
+      url_pagina: "https://jmlucas68.github.io/agustin/",
+      url_foto: "https://images.unsplash.com/photo-1592204870-856f6fc10a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      nombre: "Platón",
+      url_pagina: "https://jmlucas68.github.io/platon/",
+      url_foto: "https://images.unsplash.com/photo-1542779284-9205fcf3f36d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      nombre: "Hegel",
+      url_pagina: "https://jmlucas68.github.io/hegel/",
+      url_foto: "https://images.unsplash.com/photo-1604079628048-943952c8f6a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      nombre: "Wittgenstein",
+      url_pagina: "https://jmlucas68.github.io/wittgenstein/",
+      url_foto: "https://images.unsplash.com/photo-1576612140337-f2aac2ce0ef8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      nombre: "Kant",
+      url_pagina: "https://jmlucas68.github.io/wittgenstein/",
+      url_foto: "https://images.unsplash.com/photo-1583505166299-3a3cd32eb830?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    },
+    {
+      nombre: "Fichte",
+      url_pagina: "https://jmlucas68.github.io/fichte/",
+      url_foto: "https://images.unsplash.com/photo-1573633159391-aa43be56fea7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60"
+    }
+  ];
 
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2024/09/03/00/00/ai-generated-immanuel-kant-portrait-9012255_640.png" alt="Kant">
-      <div class="card-content">
-        <a href="https://jmlucas68.github.io/wittgenstein/" target="_blank">Kant</a>
-        <div class="bio">
-          Filósofo alemán (1724–1804), transformó la filosofía con la crítica de la razón pura y su ética del deber.
-        </div>
-        <div class="meta">Escuela: Idealismo trascendental</div>
-      </div>
-    </div>
+  const galeria = document.getElementById('galeria');
 
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2023/07/03/00/00/ai-generated-plato-statue-8102406_640.jpg" alt="Fichte">
-      <div class="card-content">
-        <a href="https://jmlucas68.github.io/fichte/" target="_blank">Fichte</a>
-        <div class="bio">
-          Idealista alemán (1762–1814), desarrolló el idealismo trasnacional del yo, centrado en la acción consciente.
-        </div>
-        <div class="meta">Escuela: Idealismo alemán</div>
-      </div>
-    </div>
+  filosofos.forEach(filosofo => {
+    const div = document.createElement('div');
+    div.className = 'filosofo';
+    div.innerHTML = `
+      <a href="${filosofo.url_pagina}" target="_blank">
+        <img src="${filosofo.url_foto}" alt="${filosofo.nombre}">
+        <div class="nombre">${filosofo.nombre}</div>
+      </a>
+    `;
+    galeria.appendChild(div);
+  });
+</script>
 
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2023/07/03/00/00/ai-generated-plato-statue-8102406_640.jpg" alt="Hegel">
-      <div class="card-content">
-        <a href="https://jmlucas68.github.io/hegel/" target="_blank">Hegel</a>
-        <div class="bio">
-          Filósofo idealista (1770–1831), impulsor de la dialéctica absoluta con la <em>Fenomenología del espíritu</em>.
-        </div>
-        <div class="meta">Escuela: Idealismo alemán</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://cdn.pixabay.com/photo/2023/07/03/00/00/ai-generated-plato-statue-8102406_640.jpg" alt="Wittgenstein">
-      <div class="card-content">
-        <a href="https://jmlucas68.github.io/wittgenstein/" target="_blank">Wittgenstein</a>
-        <div class="bio">
-          Filósofo austrobritánico (1889–1951), renovó la filosofía del lenguaje con obras como <em>Tractatus</em> y sus Investigaciones.
-        </div>
-        <div class="meta">Escuela: Filosofía analítica</div>
-      </div>
-    </div>
-
-  </div>
 </body>
 </html>
