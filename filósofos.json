@@ -7,45 +7,80 @@
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/platon/refs/heads/main/public/images/platon_busto.jpg" 
   },
   {
+    "nombre": "Aristóteles",
+    "nacimiento": -384,
+    "muerte": -322,
+    "url_pagina": "https://es.wikipedia.org/wiki/Aristóteles", 
+    "url_foto": "https://via.placeholder.com/400x500?text=Aristóteles"
+  },
+  {
     "nombre": "San Agustín",
     "nacimiento": 354,
     "muerte": 430,
-    "url_pagina": "https://jmlucas68.github.io/agustin/", 
-    "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/San_Agustin_.jpg" 
+    "url_pagina": "https://jmlucas68.github.io/agustin/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/San_Agustin_.jpg"
   },
   {
     "nombre": "Santo Tomás de Aquino",
     "nacimiento": 1225,
     "muerte": 1274,
-    "url_pagina": "https://jmlucas68.github.io/tomas/", 
+    "url_pagina": "https://jmlucas68.github.io/tomas/",
     "url_foto": "images/Santo Tomas de Aquino.jpg"
+  },
+  {
+    "nombre": "Descartes",
+    "nacimiento": 1596,
+    "muerte": 1650,
+    "url_pagina": "https://es.wikipedia.org/wiki/René_Descartes",
+    "url_foto": "https://via.placeholder.com/400x500?text=Descartes"
+  },
+  {
+    "nombre": "Voltaire",
+    "nacimiento": 1694,
+    "muerte": 1778,
+    "url_pagina": "https://es.wikipedia.org/wiki/Voltaire",
+    "url_foto": "https://via.placeholder.com/400x500?text=Voltaire"
+  },  
+  {
+    "nombre": "Rousseau",
+    "nacimiento": 1712,
+    "muerte": 1778,
+    "url_pagina": "https://es.wikipedia.org/wiki/Jean-Jacques_Rousseau",
+    "url_foto": "https://via.placeholder.com/400x500?text=Rousseau"
   },
   {
     "nombre": "Kant",
     "nacimiento": 1724,
     "muerte": 1804,
-    "url_pagina": "https://jmlucas68.github.io/kant/", 
-    "url_foto": "https://raw.githubusercontent.com/jmlucas68/kant/refs/heads/main/public/images/kant_portrait_1790.jpg" 
+    "url_pagina": "https://jmlucas68.github.io/kant/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/kant/refs/heads/main/public/images/kant_portrait_1790.jpg"
   },
   {
     "nombre": "Fichte",
     "nacimiento": 1762,
     "muerte": 1814,
-    "url_pagina": "https://jmlucas68.github.io/fichte/", 
-    "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Fichte.jpg" 
+    "url_pagina": "https://jmlucas68.github.io/fichte/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Fichte.jpg"
   },
   {
     "nombre": "Hegel",
     "nacimiento": 1770,
     "muerte": 1831,
-    "url_pagina": "https://jmlucas68.github.io/hegel/", 
-    "url_foto": "https://raw.githubusercontent.com/jmlucas68/hegel/refs/heads/main/images/hegel_portrait.jpg" 
+    "url_pagina": "https://jmlucas68.github.io/hegel/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/hegel/refs/heads/main/images/hegel_portrait.jpg"
+  },
+  {
+    "nombre": "Nietzsche",
+    "nacimiento": 1844,
+    "muerte": 1900,
+    "url_pagina": "https://es.wikipedia.org/wiki/Friedrich_Nietzsche",
+    "url_foto": "https://via.placeholder.com/400x500?text=Nietzsche"
   },
   {
     "nombre": "Wittgenstein",
     "nacimiento": 1889,
     "muerte": 1951,
-    "url_pagina": "https://jmlucas68.github.io/wittgenstein/", 
-    "url_foto": "https://raw.githubusercontent.com/jmlucas68/wittgenstein/refs/heads/main/images/wittgenstein_portrait.jpg" 
+    "url_pagina": "https://jmlucas68.github.io/wittgenstein/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/wittgenstein/refs/heads/main/images/wittgenstein_portrait.jpg"
   }
 ]
