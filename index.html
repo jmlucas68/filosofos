@@ -3,82 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <title>Galería de Filósofos</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-    }
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .filosofo {
-      background-color: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.2s;
-    }
-    .filosofo:hover {
-      transform: scale(1.03);
-    }
-    .filosofo img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .nombre {
-      font-weight: bold;
-      padding: 10px;
-    }
-    .nombre a {
-      text-decoration: none;
-      color: #333;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<h1>Galería de Filósofos</h1>
+<h1>🏛️ Galería de Filósofos</h1>
+<p class="intro">Haz clic en cada filósofo para conocer más sobre él.</p>
 
-<div class="galeria" id="galeria">
-  <!-- Aquí se cargarán los filósofos desde el JSON -->
-</div>
+<div id="galeria" class="galeria"></div>
 
 <script>
-  // Cargar el archivo JSON
-  fetch('filósofos.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("No se pudo cargar el archivo JSON");
-      }
-      return response.json();
-    })
+  fetch('filosofos.json')
+    .then(response => response.json())
     .then(filosofos => {
       const galeria = document.getElementById('galeria');
-
-      filosofos.forEach(filosofo => {
-        const div = document.createElement('div');
-        div.className = 'filosofo';
-        div.innerHTML = `
-          <a href="${filosofo.url_pagina}" target="_blank">
-            <img src="${filosofo.url_foto}" alt="${filosofo.nombre}">
-            <div class="nombre">${filosofo.nombre}</div>
+      filosofos.forEach(f => {
+        const card = document.createElement('div');
+        card.className = 'tarjeta';
+        card.innerHTML = `
+          <a href="${f.url_pagina}" target="_blank">
+            <img src="${f.url_foto}" alt="${f.nombre}" onerror="this.src='https://via.placeholder.com/300x400?text=${encodeURIComponent(f.nombre)}';">
+            <div class="info">
+              <strong>${f.nombre}</strong><br>
+              ${f.nacimiento} – ${f.muerte}
+            </div>
           </a>
         `;
-        galeria.appendChild(div);
+        galeria.appendChild(card);
       });
     })
-    .catch(error => {
-      console.error("Error al cargar los datos:", error);
-      document.getElementById('galeria').innerHTML = "<p>Error al cargar los datos.</p>";
+    .catch(err => {
+      console.error("Error cargando los datos:", err);
+      document.getElementById('galeria').innerHTML = "<p>No se pudieron cargar los datos.</p>";
     });
 </script>
 
