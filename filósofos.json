@@ -56,6 +56,13 @@
     "url_foto": "images/Voltaire.jpg"
   },  
   {
+    "nombre": "Hume",
+    "nacimiento": 1711,
+    "muerte": 1776,
+    "url_pagina": "https://jmlucas68.github.io/hume",
+    "url_foto": "images/Hume.jpg"
+  },
+  {
     "nombre": "Rousseau",
     "nacimiento": 1712,
     "muerte": 1778,
