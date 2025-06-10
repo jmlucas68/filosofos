@@ -28,6 +28,13 @@
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/San_Agustin_.jpg"
   },
   {
+    "nombre": "Nicolás de Cusa",
+    "nacimiento": 1401,
+    "muerte": 1464,
+    "url_pagina": "https://jmlucas68.github.io/cusa/",
+    "url_foto": "images/Nicolas de Cusa.jpg"
+  },
+  {
     "nombre": "Santo Tomás de Aquino",
     "nacimiento": 1225,
     "muerte": 1274,
