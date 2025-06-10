@@ -1,5 +1,12 @@
 [
   {
+    "nombre": "Heráclito",
+    "nacimiento": -535,
+    "muerte": -480,
+    "url_pagina": "https://jmlucas68.github.io/heraclito/", 
+    "url_foto": "images/Heraclito.jpg" 
+  },
+  {
     "nombre": "Parménides",
     "nacimiento": -515,
     "muerte": -450,
