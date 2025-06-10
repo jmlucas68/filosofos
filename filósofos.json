@@ -96,5 +96,12 @@
     "muerte": 1951,
     "url_pagina": "https://jmlucas68.github.io/wittgenstein/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/wittgenstein/refs/heads/main/images/wittgenstein_portrait.jpg"
+  },
+  {
+    "nombre": "Paul Ricoeur",
+    "nacimiento": 1913,
+    "muerte": 2005,
+    "url_pagina": "https://jmlucas68.github.io/ricoeur/",
+    "url_foto": "images/Paul_Ricoeur.jpg"
   }
 ]
