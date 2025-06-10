@@ -91,6 +91,13 @@
     "url_foto": "images/Nietzsche.jpg"
   },
   {
+    "nombre": "Husserl",
+    "nacimiento": 1859,
+    "muerte": 1938,
+    "url_pagina": "https://jmlucas68.github.io/husserl/",
+    "url_foto": "images/Husserl.jpg"
+  },
+  {
     "nombre": "Wittgenstein",
     "nacimiento": 1889,
     "muerte": 1951,
