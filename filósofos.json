@@ -161,6 +161,13 @@
     "url_foto": "images/Heidegger.jpg"
   },
   {
+    "nombre": "Sartre",
+    "nacimiento": 1905,
+    "muerte": 1980,
+    "url_pagina": "https://jmlucas68.github.io/sartre/",
+    "url_foto": "images/Sartre.jpg"
+  },
+  {
     "nombre": "Paul Ricoeur",
     "nacimiento": 1913,
     "muerte": 2005,
