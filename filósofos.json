@@ -91,6 +91,13 @@
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/hegel/refs/heads/main/images/hegel_portrait.jpg"
   },
   {
+    "nombre": "Marx",
+    "nacimiento": 1818,
+    "muerte": 1883,
+    "url_pagina": "https://jmlucas68.github.io/marx/",
+    "url_foto": "images/Marx.jpg"
+  },
+  {
     "nombre": "Nietzsche",
     "nacimiento": 1844,
     "muerte": 1900,
