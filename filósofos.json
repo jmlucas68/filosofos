@@ -14,6 +14,13 @@
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Parnenides.jpg" 
   },  
   {
+    "nombre": "Sócrates",
+    "nacimiento": -470,
+    "muerte": -399,
+    "url_pagina": "https://jmlucas68.github.io/socrates/", 
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Socrates.jpg" 
+  },
+  {
     "nombre": "Platón",
     "nacimiento": -428,
     "muerte": -348,
