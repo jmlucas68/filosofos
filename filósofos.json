@@ -98,6 +98,13 @@
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/wittgenstein/refs/heads/main/images/wittgenstein_portrait.jpg"
   },
   {
+    "nombre": "Martin Heidegger",
+    "nacimiento": 1889,
+    "muerte": 1976,
+    "url_pagina": "https://jmlucas68.github.io/heidegger/",
+    "url_foto": "images/Heidegger.jpg"
+  },
+  {
     "nombre": "Paul Ricoeur",
     "nacimiento": 1913,
     "muerte": 2005,
