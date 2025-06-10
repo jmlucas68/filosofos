@@ -63,6 +63,13 @@
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Descartes.webp"
   },
   {
+    "nombre": "Locke",
+    "nacimiento": 1632,
+    "muerte": 1704,
+    "url_pagina": "https://jmlucas68.github.io/locke/",
+    "url_foto": "images/Locke.jpg"
+  },  
+  {
     "nombre": "Voltaire",
     "nacimiento": 1694,
     "muerte": 1778,
