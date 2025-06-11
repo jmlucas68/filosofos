@@ -112,6 +112,13 @@
     "url_foto": "images/Locke.jpg"
   },
   {
+    "nombre": "Leibniz",
+    "nacimiento": 1694,
+    "muerte": 1778,
+    "url_pagina": "https://jmlucas68.github.io/leibniz/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Leibniz.jpg"
+  },
+  {
     "nombre": "Voltaire",
     "nacimiento": 1694,
     "muerte": 1778,
