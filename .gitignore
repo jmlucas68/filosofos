@@ -1,0 +1,22 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/.vs/slnx.sqlite-journal
+/.vs/filosofos/CopilotIndices/17.14.734.62261/CodeChunks.db
+/.vs/filosofos/CopilotIndices/17.14.734.62261/CodeChunks.db-shm
+/.vs/filosofos/CopilotIndices/17.14.734.62261/CodeChunks.db-wal
+/.vs/filosofos/CopilotIndices/17.14.734.62261/SemanticSymbols.db
+/.vs/filosofos/CopilotIndices/17.14.734.62261/SemanticSymbols.db-shm
+/.vs/filosofos/CopilotIndices/17.14.734.62261/SemanticSymbols.db-wal
+/.vs/filosofos/FileContentIndex/11cfd46d-4616-4ff3-837d-6fb2a39cb332.vsidx
+/.vs/filosofos/FileContentIndex/a6df4674-6e2f-4ca0-aa1f-c0ebca79cd55.vsidx
+/.vs/filosofos/FileContentIndex/de9f12b1-d755-4d7a-bd57-f0a0e3e9726c.vsidx
+/.vs/filosofos/v17/.wsuo
+/.vs/filosofos/v17/DocumentLayout.backup.json
+/.vs/filosofos/v17/DocumentLayout.json
+/.vs/filosofos/FileContentIndex/7a70f2a5-3ba4-431d-b23b-02c2997d04aa.vsidx
+/.vs/filosofos/FileContentIndex/1c03d1c4-ad0c-4b21-8a41-4dd0ab285859.vsidx
+*.vsidx
