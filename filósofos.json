@@ -7,6 +7,13 @@
     "url_foto": "images/Tales.jpg"
   },
   {
+    "nombre": "Pitágoras",
+    "nacimiento": -570,
+    "muerte": -490,
+    "url_pagina": "https://jmlucas68.github.io/pitagoras/",
+    "url_foto": "images/Pitagoras.jpg"
+  },
+  {
     "nombre": "Heráclito",
     "nacimiento": -535,
     "muerte": -480,
