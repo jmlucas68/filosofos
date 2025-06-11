@@ -1,37 +1,44 @@
 [
   {
+    "nombre": "Tales de Mileto",
+    "nacimiento": -624,
+    "muerte": -546,
+    "url_pagina": "https://jmlucas68.github.io/tales/",
+    "url_foto": "images/Tales.jpg"
+  },
+  {
     "nombre": "Heráclito",
     "nacimiento": -535,
     "muerte": -480,
-    "url_pagina": "https://jmlucas68.github.io/heraclito/", 
-    "url_foto": "images/Heraclito.jpg" 
+    "url_pagina": "https://jmlucas68.github.io/heraclito/",
+    "url_foto": "images/Heraclito.jpg"
   },
   {
     "nombre": "Parménides",
     "nacimiento": -515,
     "muerte": -450,
-    "url_pagina": "https://jmlucas68.github.io/parmenides/", 
-    "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Parnenides.jpg" 
-  },  
+    "url_pagina": "https://jmlucas68.github.io/parmenides/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Parnenides.jpg"
+  },
   {
     "nombre": "Sócrates",
     "nacimiento": -470,
     "muerte": -399,
-    "url_pagina": "https://jmlucas68.github.io/socrates/", 
-    "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Socrates.jpg" 
+    "url_pagina": "https://jmlucas68.github.io/socrates/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Socrates.jpg"
   },
   {
     "nombre": "Platón",
     "nacimiento": -428,
     "muerte": -348,
-    "url_pagina": "https://jmlucas68.github.io/platon/", 
-    "url_foto": "https://raw.githubusercontent.com/jmlucas68/platon/refs/heads/main/public/images/platon_busto.jpg" 
+    "url_pagina": "https://jmlucas68.github.io/platon/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/platon/refs/heads/main/public/images/platon_busto.jpg"
   },
   {
     "nombre": "Aristóteles",
     "nacimiento": -384,
     "muerte": -322,
-    "url_pagina": "https://jmlucas68.github.io/aristoteles/", 
+    "url_pagina": "https://jmlucas68.github.io/aristoteles/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Aristoteles.jpg"
   },
   {
@@ -82,14 +89,14 @@
     "muerte": 1704,
     "url_pagina": "https://jmlucas68.github.io/locke/",
     "url_foto": "images/Locke.jpg"
-  },  
+  },
   {
     "nombre": "Voltaire",
     "nacimiento": 1694,
     "muerte": 1778,
     "url_pagina": "https://jmlucas68.github.io/voltaire/",
     "url_foto": "images/Voltaire.jpg"
-  },  
+  },
   {
     "nombre": "Hume",
     "nacimiento": 1711,
