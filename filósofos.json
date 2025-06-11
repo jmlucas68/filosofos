@@ -182,6 +182,13 @@
     "url_foto": "images/Husserl.jpg"
   },
   {
+    "nombre": "Russell",
+    "nacimiento": 1872,
+    "muerte": 1970,
+    "url_pagina": "https://jmlucas68.github.io/russell/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Russell.jpg"
+  },
+  {
     "nombre": "Wittgenstein",
     "nacimiento": 1889,
     "muerte": 1951,
