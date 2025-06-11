@@ -105,6 +105,13 @@
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Descartes.webp"
   },
   {
+    "nombre": "Spinoza",
+    "nacimiento": 1632,
+    "muerte": 1704,
+    "url_pagina": "https://jmlucas68.github.io/spinoza/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Hobbes.jpg/Spinoza.jpg"
+  },
+  {
     "nombre": "Locke",
     "nacimiento": 1632,
     "muerte": 1704,
