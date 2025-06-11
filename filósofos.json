@@ -180,5 +180,12 @@
     "muerte": 2005,
     "url_pagina": "https://jmlucas68.github.io/ricoeur/",
     "url_foto": "images/Paul_Ricoeur.jpg"
+  },
+  {
+    "nombre": "Habermas",
+    "nacimiento": 1929,
+    "muerte": " ",
+    "url_pagina": "https://jmlucas68.github.io/habermas/",
+    "url_foto": "images/Habermas.jpg"
   }
 ]
