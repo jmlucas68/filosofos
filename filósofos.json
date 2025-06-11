@@ -70,6 +70,13 @@
     "url_foto": "images/Boecio.jpg"
   },
   {
+    "nombre": "Averroes",
+    "nacimiento": 1126,
+    "muerte": 1198,
+    "url_pagina": "https://jmlucas68.github.io/averroes/",
+    "url_foto": "images/Averroes.jpg"
+  },
+  {
     "nombre": "Santo Tomás de Aquino",
     "nacimiento": 1225,
     "muerte": 1274,
