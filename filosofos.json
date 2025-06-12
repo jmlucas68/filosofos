@@ -310,5 +310,13 @@
     "movimiento": "Escolástica",
     "url_pagina": "https://jmlucas68.github.io/buenaventura",
     "url_foto": "images/Buenaventura.jpg"
+  },
+  {
+    "nombre": "Guillermo de Ockham",
+    "nacimiento": 1285,
+    "muerte": 1349,
+    "movimiento": "Escolástica",
+    "url_pagina": "https://jmlucas68.github.io/ockham",
+    "url_foto": "images/Ockham.jpg"
   }
 ]
