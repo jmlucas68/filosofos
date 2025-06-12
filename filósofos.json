@@ -236,5 +236,12 @@
     "muerte": " ",
     "url_pagina": "https://jmlucas68.github.io/habermas/",
     "url_foto": "images/Habermas.jpg"
+  },
+  {
+    "nombre": "Derrida",
+    "nacimiento": 1930,
+    "muerte": 2004,
+    "url_pagina": "https://jmlucas68.github.io/derrida/",
+    "url_foto": "images/Derrida.jpg"
   }
 ]
