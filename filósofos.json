@@ -3,6 +3,7 @@
     "nombre": "Tales de Mileto",
     "nacimiento": -624,
     "muerte": -546,
+    "movimiento": "Filosofía presocrática",
     "url_pagina": "https://jmlucas68.github.io/tales/",
     "url_foto": "images/Tales.jpg"
   },
@@ -10,6 +11,7 @@
     "nombre": "Pitágoras",
     "nacimiento": -570,
     "muerte": -490,
+    "movimiento": "Pitagorismo / Filosofía presocrática",
     "url_pagina": "https://jmlucas68.github.io/pitagoras/",
     "url_foto": "images/Pitagoras.jpg"
   },
@@ -17,6 +19,7 @@
     "nombre": "Heráclito",
     "nacimiento": -535,
     "muerte": -480,
+    "movimiento": "Filosofía presocrática",
     "url_pagina": "https://jmlucas68.github.io/heraclito/",
     "url_foto": "images/Heraclito.jpg"
   },
@@ -24,6 +27,7 @@
     "nombre": "Parménides",
     "nacimiento": -515,
     "muerte": -450,
+    "movimiento": "Escuela eleática / Filosofía presocrática",
     "url_pagina": "https://jmlucas68.github.io/parmenides/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Parnenides.jpg"
   },
@@ -31,6 +35,7 @@
     "nombre": "Sócrates",
     "nacimiento": -470,
     "muerte": -399,
+    "movimiento": "Filosofía clásica griega",
     "url_pagina": "https://jmlucas68.github.io/socrates/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Socrates.jpg"
   },
@@ -38,6 +43,7 @@
     "nombre": "Platón",
     "nacimiento": -428,
     "muerte": -348,
+    "movimiento": "Filosofía clásica griega",
     "url_pagina": "https://jmlucas68.github.io/platon/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/platon/refs/heads/main/public/images/platon_busto.jpg"
   },
@@ -45,6 +51,7 @@
     "nombre": "Aristóteles",
     "nacimiento": -384,
     "muerte": -322,
+    "movimiento": "Filosofía clásica griega",
     "url_pagina": "https://jmlucas68.github.io/aristoteles/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Aristoteles.jpg"
   },
@@ -52,6 +59,7 @@
     "nombre": "Plotino",
     "nacimiento": 205,
     "muerte": 270,
+    "movimiento": "Neoplatonismo",
     "url_pagina": "https://jmlucas68.github.io/plotino/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Plotino.JPG"
   },
@@ -59,6 +67,7 @@
     "nombre": "San Agustín",
     "nacimiento": 354,
     "muerte": 430,
+    "movimiento": "Patrística / Filosofía medieval",
     "url_pagina": "https://jmlucas68.github.io/agustin/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/San_Agustin_.jpg"
   },
@@ -66,6 +75,7 @@
     "nombre": "Boecio",
     "nacimiento": 480,
     "muerte": 524,
+    "movimiento": "Filosofía medieval",
     "url_pagina": "https://jmlucas68.github.io/boecio/",
     "url_foto": "images/Boecio.jpg"
   },
@@ -73,6 +83,7 @@
     "nombre": "Averroes",
     "nacimiento": 1126,
     "muerte": 1198,
+    "movimiento": "Filosofía islámica medieval / Averroísmo",
     "url_pagina": "https://jmlucas68.github.io/averroes/",
     "url_foto": "images/Averroes.jpg"
   },
@@ -80,6 +91,7 @@
     "nombre": "Santo Tomás de Aquino",
     "nacimiento": 1225,
     "muerte": 1274,
+    "movimiento": "Escolástica",
     "url_pagina": "https://jmlucas68.github.io/tomas/",
     "url_foto": "images/Santo Tomas de Aquino.jpg"
   },
@@ -87,6 +99,7 @@
     "nombre": "Nicolás de Cusa",
     "nacimiento": 1401,
     "muerte": 1464,
+    "movimiento": "Filosofía renacentista",
     "url_pagina": "https://jmlucas68.github.io/cusa/",
     "url_foto": "images/Nicholas de Cusa.jpg"
   },
@@ -94,6 +107,7 @@
     "nombre": "Hobbes",
     "nacimiento": 1588,
     "muerte": 1679,
+    "movimiento": "Empirismo / Filosofía política moderna",
     "url_pagina": "https://jmlucas68.github.io/hobbes",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Hobbes.jpg"
   },
@@ -101,6 +115,7 @@
     "nombre": "Descartes",
     "nacimiento": 1596,
     "muerte": 1650,
+    "movimiento": "Racionalismo",
     "url_pagina": "https://jmlucas68.github.io/descartes",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Descartes.webp"
   },
@@ -108,6 +123,7 @@
     "nombre": "Spinoza",
     "nacimiento": 1632,
     "muerte": 1704,
+    "movimiento": "Racionalismo",
     "url_pagina": "https://jmlucas68.github.io/spinoza/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/spinoza.jpg"
   },
@@ -115,6 +131,7 @@
     "nombre": "Locke",
     "nacimiento": 1632,
     "muerte": 1704,
+    "movimiento": "Empirismo",
     "url_pagina": "https://jmlucas68.github.io/locke/",
     "url_foto": "images/Locke.jpg"
   },
@@ -122,6 +139,7 @@
     "nombre": "Leibniz",
     "nacimiento": 1646,
     "muerte": 1716,
+    "movimiento": "Racionalismo",
     "url_pagina": "https://jmlucas68.github.io/leibniz/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Leibniz.jpg"
   },
@@ -129,6 +147,7 @@
     "nombre": "Voltaire",
     "nacimiento": 1694,
     "muerte": 1778,
+    "movimiento": "Ilustración",
     "url_pagina": "https://jmlucas68.github.io/voltaire/",
     "url_foto": "images/Voltaire.jpg"
   },
@@ -136,6 +155,7 @@
     "nombre": "Hume",
     "nacimiento": 1711,
     "muerte": 1776,
+    "movimiento": "Empirismo / Ilustración",
     "url_pagina": "https://jmlucas68.github.io/hume",
     "url_foto": "images/Hume.jpg"
   },
@@ -143,6 +163,7 @@
     "nombre": "Rousseau",
     "nacimiento": 1712,
     "muerte": 1778,
+    "movimiento": "Ilustración",
     "url_pagina": "https://jmlucas68.github.io/rousseau",
     "url_foto": "images/Rousseau.jpg"
   },
@@ -150,6 +171,7 @@
     "nombre": "Kant",
     "nacimiento": 1724,
     "muerte": 1804,
+    "movimiento": "Idealismo alemán / Ilustración",
     "url_pagina": "https://jmlucas68.github.io/kant/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/kant/refs/heads/main/public/images/kant_portrait_1790.jpg"
   },
@@ -157,6 +179,7 @@
     "nombre": "Fichte",
     "nacimiento": 1762,
     "muerte": 1814,
+    "movimiento": "Idealismo alemán",
     "url_pagina": "https://jmlucas68.github.io/fichte/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Fichte.jpg"
   },
@@ -164,6 +187,7 @@
     "nombre": "Hegel",
     "nacimiento": 1770,
     "muerte": 1831,
+    "movimiento": "Idealismo alemán",
     "url_pagina": "https://jmlucas68.github.io/hegel/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/hegel/refs/heads/main/images/hegel_portrait.jpg"
   },
@@ -171,6 +195,7 @@
     "nombre": "Stuart Mill",
     "nacimiento": 1806,
     "muerte": 1873,
+    "movimiento": "Utilitarismo / Positivismo",
     "url_pagina": "https://jmlucas68.github.io/stuart_mill/",
     "url_foto": "images/Stuart_Mill.jpg"
   },
@@ -178,6 +203,7 @@
     "nombre": "Marx",
     "nacimiento": 1818,
     "muerte": 1883,
+    "movimiento": "Materialismo histórico",
     "url_pagina": "https://jmlucas68.github.io/marx/",
     "url_foto": "images/Marx.jpg"
   },
@@ -185,6 +211,7 @@
     "nombre": "Nietzsche",
     "nacimiento": 1844,
     "muerte": 1900,
+    "movimiento": "Vitalismo",
     "url_pagina": "https://jmlucas68.github.io/nietzsche/",
     "url_foto": "images/Nietzsche.jpg"
   },
@@ -192,6 +219,7 @@
     "nombre": "Husserl",
     "nacimiento": 1859,
     "muerte": 1938,
+    "movimiento": "Fenomenología",
     "url_pagina": "https://jmlucas68.github.io/husserl/",
     "url_foto": "images/Husserl.jpg"
   },
@@ -199,6 +227,7 @@
     "nombre": "Russell",
     "nacimiento": 1872,
     "muerte": 1970,
+    "movimiento": "Filosofía analítica",
     "url_pagina": "https://jmlucas68.github.io/russell/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Russell.jpg"
   },
@@ -206,6 +235,7 @@
     "nombre": "Wittgenstein",
     "nacimiento": 1889,
     "muerte": 1951,
+    "movimiento": "Filosofía analítica",
     "url_pagina": "https://jmlucas68.github.io/wittgenstein/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/wittgenstein/refs/heads/main/images/wittgenstein_portrait.jpg"
   },
@@ -213,6 +243,7 @@
     "nombre": "Martin Heidegger",
     "nacimiento": 1889,
     "muerte": 1976,
+    "movimiento": "Fenomenología / Existencialismo",
     "url_pagina": "https://jmlucas68.github.io/heidegger/",
     "url_foto": "images/Heidegger.jpg"
   },
@@ -220,6 +251,7 @@
     "nombre": "Sartre",
     "nacimiento": 1905,
     "muerte": 1980,
+    "movimiento": "Existencialismo",
     "url_pagina": "https://jmlucas68.github.io/sartre/",
     "url_foto": "images/Sartre.jpg"
   },
@@ -227,6 +259,7 @@
     "nombre": "Paul Ricoeur",
     "nacimiento": 1913,
     "muerte": 2005,
+    "movimiento": "Fenomenología / Hermenéutica",
     "url_pagina": "https://jmlucas68.github.io/ricoeur/",
     "url_foto": "images/Paul_Ricoeur.jpg"
   },
@@ -234,6 +267,7 @@
     "nombre": "Foucault",
     "nacimiento": 1926,
     "muerte": 1984,
+    "movimiento": "Postestructuralismo",
     "url_pagina": "https://jmlucas68.github.io/foucault/",
     "url_foto": "images/Foucault.jpg"
   },
@@ -241,6 +275,7 @@
     "nombre": "Habermas",
     "nacimiento": 1929,
     "muerte": " ",
+    "movimiento": "Teoría Crítica / Escuela de Frankfurt",
     "url_pagina": "https://jmlucas68.github.io/habermas/",
     "url_foto": "images/Habermas.jpg"
   },
@@ -248,6 +283,7 @@
     "nombre": "Derrida",
     "nacimiento": 1930,
     "muerte": 2004,
+    "movimiento": "Postestructuralismo / Deconstrucción",
     "url_pagina": "https://jmlucas68.github.io/derrida/",
     "url_foto": "images/Derrida.jpg"
   }

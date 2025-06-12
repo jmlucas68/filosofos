@@ -4,11 +4,35 @@
   <meta charset="UTF-8" />
   <title>Galería de Filósofos</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Estilos para el botón de navegación */
+    .navegacion {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .btn-nav {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .btn-nav:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
 
 <h1>🏛️ Galería de Filósofos</h1>
 <p class="intro">Haz clic en cada filósofo para conocer más sobre él.</p>
+
+<!-- BOTÓN AÑADIDO -->
+<div class="navegacion">
+  <a href="linea_tiempo.html" class="btn-nav">Ver Línea del Tiempo ⏳</a>
+</div>
 
 <div id="galeria" class="galeria"></div>
 
