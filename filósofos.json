@@ -231,6 +231,13 @@
     "url_foto": "images/Paul_Ricoeur.jpg"
   },
   {
+    "nombre": "Foucault",
+    "nacimiento": 1926,
+    "muerte": 1984,
+    "url_pagina": "https://jmlucas68.github.io/foucault/",
+    "url_foto": "images/Foucault.jpg"
+  },
+  {
     "nombre": "Habermas",
     "nacimiento": 1929,
     "muerte": " ",
