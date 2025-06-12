@@ -294,5 +294,13 @@
     "movimiento": "Epicureísmo / Helenismo",
     "url_pagina": "https://jmlucas68.github.io/epicuro",
     "url_foto": "images/Epicuro.jpg"
+  },
+  {
+    "nombre": "Zenón de Citio",
+    "nacimiento": -334,
+    "muerte": -262,
+    "movimiento": "Estoicismo / Helenismo",
+    "url_pagina": "https://jmlucas68.github.io/zenon",
+    "url_foto": "images/Zenon.jpg"
   }
 ]
