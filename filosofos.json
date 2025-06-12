@@ -302,5 +302,13 @@
     "movimiento": "Estoicismo / Helenismo",
     "url_pagina": "https://jmlucas68.github.io/zenon",
     "url_foto": "images/Zenon.jpg"
+  },
+  {
+    "nombre": "San Buenaventura",
+    "nacimiento": 1217,
+    "muerte": 1274,
+    "movimiento": "Escolástica",
+    "url_pagina": "https://jmlucas68.github.io/buenaventura",
+    "url_foto": "images/Buenaventura.jpg"
   }
 ]
