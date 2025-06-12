@@ -7,11 +7,11 @@
   <style>
     /* Estilos para los botones de navegación */
     .navegacion {
-      display: flex; /* Usa Flexbox para alinear los botones */
-      justify-content: center; /* Centra los botones horizontalmente */
-      gap: 1rem; /* Añade espacio entre los botones */
-      flex-wrap: wrap; /* Permite que los botones pasen a la siguiente línea en pantallas pequeñas */
-      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
     }
     .btn-nav {
       color: white;
@@ -22,19 +22,35 @@
       transition: background-color 0.3s;
       text-align: center;
     }
-    /* Color para el botón de la línea de tiempo */
     .btn-timeline {
       background-color: #007bff;
     }
     .btn-timeline:hover {
       background-color: #0056b3;
     }
-    /* Color para el botón del buscador */
     .btn-search {
-      background-color: #28a745; /* Verde */
+      background-color: #28a745;
     }
     .btn-search:hover {
       background-color: #218838;
+    }
+
+    /* Estilos para el control de ordenación */
+    .control-orden {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .control-orden label {
+      margin-right: 0.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .control-orden select {
+      padding: 8px 12px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      background-color: white;
     }
   </style>
 </head>
@@ -43,23 +59,33 @@
 <h1>🏛️ Galería de Filósofos</h1>
 <p class="intro">Haz clic en cada filósofo para conocer más sobre él.</p>
 
-<!-- BOTONES DE NAVEGACIÓN ACTUALIZADOS -->
+<!-- BOTONES DE NAVEGACIÓN -->
 <div class="navegacion">
   <a href="linea_tiempo.html" class="btn-nav btn-timeline">Ver Línea del Tiempo ⏳</a>
   <a href="buscador.html" class="btn-nav btn-search">Ir al Buscador 🔎</a>
 </div>
 
+<!-- CONTROL DE ORDENACIÓN AÑADIDO -->
+<div class="control-orden">
+  <label for="orden-selector">Ordenar por:</label>
+  <select id="orden-selector">
+    <option value="cronologico" selected>Orden Cronológico (nacimiento)</option>
+    <option value="alfabetico">Orden Alfabético (nombre)</option>
+  </select>
+</div>
+
 <div id="galeria" class="galeria"></div>
 
 <script>
-  fetch('filosofos.json')
-    .then(response => response.json())
-    .then(filosofos => {
-      const galeria = document.getElementById('galeria');
-      // Ordena los filósofos alfabéticamente por nombre para la galería
-      filosofos.sort((a, b) => a.nombre.localeCompare(b.nombre));
-      
-      filosofos.forEach(f => {
+  document.addEventListener('DOMContentLoaded', () => {
+    const galeria = document.getElementById('galeria');
+    const ordenSelector = document.getElementById('orden-selector');
+    let todosLosFilosofos = [];
+
+    // Función para renderizar la galería a partir de una lista
+    function renderizarGaleria(lista) {
+      galeria.innerHTML = ''; // Limpiar la galería antes de volver a dibujar
+      lista.forEach(f => {
         const card = document.createElement('div');
         card.className = 'tarjeta';
         card.innerHTML = `
@@ -73,11 +99,40 @@
         `;
         galeria.appendChild(card);
       });
-    })
-    .catch(err => {
-      console.error("Error cargando los datos:", err);
-      document.getElementById('galeria').innerHTML = "<p>No se pudieron cargar los datos.</p>";
-    });
+    }
+    
+    // Función para ordenar y luego renderizar
+    function ordenarYRenderizar() {
+        const tipoOrden = ordenSelector.value;
+        // Creamos una copia para no modificar el array original
+        let filosofosOrdenados = [...todosLosFilosofos];
+
+        if (tipoOrden === 'alfabetico') {
+            // Ordena alfabéticamente por nombre
+            filosofosOrdenados.sort((a, b) => a.nombre.localeCompare(b.nombre));
+        } else {
+            // Ordena cronológicamente por año de nacimiento (por defecto)
+            filosofosOrdenados.sort((a, b) => a.nacimiento - b.nacimiento);
+        }
+        
+        renderizarGaleria(filosofosOrdenados);
+    }
+
+    // Cargar los datos y renderizar por primera vez
+    fetch('filósofos.json')
+      .then(response => response.json())
+      .then(data => {
+        todosLosFilosofos = data; // Guardamos los datos originales
+        ordenarYRenderizar(); // Renderizamos con el orden por defecto (cronológico)
+      })
+      .catch(err => {
+        console.error("Error cargando los datos:", err);
+        galeria.innerHTML = "<p>No se pudieron cargar los datos.</p>";
+      });
+
+    // Añadir el listener para cuando el usuario cambie la selección
+    ordenSelector.addEventListener('change', ordenarYRenderizar);
+  });
 </script>
 
 </body>
