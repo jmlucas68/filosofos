@@ -286,5 +286,13 @@
     "movimiento": "Postestructuralismo / Deconstrucción",
     "url_pagina": "https://jmlucas68.github.io/derrida/",
     "url_foto": "images/Derrida.jpg"
+  },
+  {
+    "nombre": "Epicuro",
+    "nacimiento": -341,
+    "muerte": -271,
+    "movimiento": "Epicureísmo / Helenismo",
+    "url_pagina": "https://jmlucas68.github.io/epicuro",
+    "url_foto": "images/Epicuro.jpg"
   }
 ]
