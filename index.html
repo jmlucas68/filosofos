@@ -5,22 +5,36 @@
   <title>Galería de Filósofos</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Estilos para el botón de navegación */
+    /* Estilos para los botones de navegación */
     .navegacion {
-      text-align: center;
+      display: flex; /* Usa Flexbox para alinear los botones */
+      justify-content: center; /* Centra los botones horizontalmente */
+      gap: 1rem; /* Añade espacio entre los botones */
+      flex-wrap: wrap; /* Permite que los botones pasen a la siguiente línea en pantallas pequeñas */
       margin-bottom: 2rem;
     }
     .btn-nav {
-      background-color: #007bff;
       color: white;
       padding: 10px 20px;
       text-decoration: none;
       border-radius: 5px;
       font-weight: bold;
       transition: background-color 0.3s;
+      text-align: center;
     }
-    .btn-nav:hover {
+    /* Color para el botón de la línea de tiempo */
+    .btn-timeline {
+      background-color: #007bff;
+    }
+    .btn-timeline:hover {
       background-color: #0056b3;
+    }
+    /* Color para el botón del buscador */
+    .btn-search {
+      background-color: #28a745; /* Verde */
+    }
+    .btn-search:hover {
+      background-color: #218838;
     }
   </style>
 </head>
@@ -29,9 +43,10 @@
 <h1>🏛️ Galería de Filósofos</h1>
 <p class="intro">Haz clic en cada filósofo para conocer más sobre él.</p>
 
-<!-- BOTÓN AÑADIDO -->
+<!-- BOTONES DE NAVEGACIÓN ACTUALIZADOS -->
 <div class="navegacion">
-  <a href="linea_tiempo.html" class="btn-nav">Ver Línea del Tiempo ⏳</a>
+  <a href="linea_tiempo.html" class="btn-nav btn-timeline">Ver Línea del Tiempo ⏳</a>
+  <a href="buscador.html" class="btn-nav btn-search">Ir al Buscador 🔎</a>
 </div>
 
 <div id="galeria" class="galeria"></div>
@@ -41,6 +56,9 @@
     .then(response => response.json())
     .then(filosofos => {
       const galeria = document.getElementById('galeria');
+      // Ordena los filósofos alfabéticamente por nombre para la galería
+      filosofos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+      
       filosofos.forEach(f => {
         const card = document.createElement('div');
         card.className = 'tarjeta';

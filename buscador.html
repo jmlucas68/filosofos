@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Filósofos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 1.5rem;
+      color: #333;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .navegacion {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .btn-nav {
+      background-color: #6c757d;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .btn-nav:hover {
+      background-color: #5a6268;
+    }
+    #controles-busqueda {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    .control-grupo {
+      display: flex;
+      flex-direction: column;
+    }
+    .control-grupo label {
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #34495e;
+    }
+    .control-grupo input {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .tarjeta {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .tarjeta:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .tarjeta a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .tarjeta img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .info {
+      padding: 1rem;
+    }
+    .info strong {
+      font-size: 1.2rem;
+      color: #2c3e50;
+    }
+    .info small {
+      color: #666;
+      display: block;
+      margin: 0.25rem 0;
+    }
+    .info em {
+      color: #16a085;
+      font-style: normal;
+      font-weight: bold;
+    }
+    .sin-resultados {
+        text-align: center;
+        grid-column: 1 / -1;
+        padding: 2rem;
+        font-size: 1.2rem;
+        color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🔎 Buscador de Filósofos</h1>
+    <div class="navegacion">
+      <a href="index.html" class="btn-nav">🏛️ Volver a la Galería</a>
+    </div>
+
+    <div id="controles-busqueda">
+      <div class="control-grupo">
+        <label for="filtro-nombre">Nombre del filósofo</label>
+        <input type="text" id="filtro-nombre" placeholder="Ej: Platón">
+      </div>
+      <div class="control-grupo">
+        <label for="filtro-movimiento">Movimiento filosófico</label>
+        <input type="text" id="filtro-movimiento" placeholder="Ej: Racionalismo">
+      </div>
+      <div class="control-grupo">
+        <label for="filtro-siglo">Siglo (Ej: 17, -5 para S.V a.C.)</label>
+        <input type="number" id="filtro-siglo" placeholder="Ej: 18 para S.XVIII">
+      </div>
+    </div>
+
+    <div id="resultados" class="galeria"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const inputNombre = document.getElementById('filtro-nombre');
+      const inputMovimiento = document.getElementById('filtro-movimiento');
+      const inputSiglo = document.getElementById('filtro-siglo');
+      const resultadosDiv = document.getElementById('resultados');
+
+      let todosLosFilosofos = [];
+
+      // Cargar los datos del JSON
+      fetch('filosofos.json')
+        .then(response => response.json())
+        .then(data => {
+          todosLosFilosofos = data;
+          renderizarResultados(todosLosFilosofos); // Mostrar todos al inicio
+        })
+        .catch(err => {
+          console.error("Error al cargar los datos:", err);
+          resultadosDiv.innerHTML = '<p class="sin-resultados">No se pudieron cargar los datos de los filósofos.</p>';
+        });
+
+      // Función principal para buscar y filtrar
+      function buscarYFiltrar() {
+        const filtroNombre = inputNombre.value.trim().toLowerCase();
+        const filtroMovimiento = inputMovimiento.value.trim().toLowerCase();
+        const filtroSiglo = parseInt(inputSiglo.value, 10); // Puede ser NaN si está vacío
+
+        const resultados = todosLosFilosofos.filter(f => {
+          // 1. Filtrar por nombre
+          const nombreMatch = !filtroNombre || f.nombre.toLowerCase().includes(filtroNombre);
+
+          // 2. Filtrar por movimiento
+          const movimientoMatch = !filtroMovimiento || (f.movimiento && f.movimiento.toLowerCase().includes(filtroMovimiento));
+
+          // 3. Filtrar por siglo
+          let sigloMatch = true; // Por defecto, pasa el filtro si no se especifica siglo
+          if (!isNaN(filtroSiglo) && filtroSiglo !== 0) {
+            let inicioSiglo, finSiglo;
+
+            // Calcular el rango de años del siglo
+            if (filtroSiglo > 0) { // Siglos d.C.
+              inicioSiglo = (filtroSiglo - 1) * 100;
+              finSiglo = (filtroSiglo * 100) - 1;
+            } else { // Siglos a.C.
+              const sigloAbs = Math.abs(filtroSiglo);
+              inicioSiglo = - (sigloAbs * 100);
+              finSiglo = - ((sigloAbs - 1) * 100 + 1);
+            }
+
+            // Tratar a los filósofos vivos (muerte como string vacío)
+            const muerteFilosofo = (typeof f.muerte === 'string' && f.muerte.trim() === '')
+              ? new Date().getFullYear()
+              : f.muerte;
+
+            // Lógica de solapamiento: su vida debe tocar el siglo
+            // (nace antes y muere después) OR (nace antes y muere dentro) OR (nace dentro y muere después) OR (nace y muere dentro)
+            // Simplificado a: su nacimiento es antes del fin del siglo Y su muerte es después del inicio del siglo.
+            sigloMatch = f.nacimiento <= finSiglo && muerteFilosofo >= inicioSiglo;
+          }
+
+          return nombreMatch && movimientoMatch && sigloMatch;
+        });
+
+        renderizarResultados(resultados);
+      }
+
+      // Función para mostrar los resultados en el HTML
+      function renderizarResultados(lista) {
+        resultadosDiv.innerHTML = ''; // Limpiar resultados anteriores
+
+        if (lista.length === 0) {
+          resultadosDiv.innerHTML = '<p class="sin-resultados">No se encontraron filósofos con esos criterios.</p>';
+          return;
+        }
+
+        lista.forEach(f => {
+          const card = document.createElement('div');
+          card.className = 'tarjeta';
+          card.innerHTML = `
+            <a href="${f.url_pagina}" target="_blank">
+              <img src="${f.url_foto}" alt="${f.nombre}" onerror="this.src='https://via.placeholder.com/300x200?text=${encodeURIComponent(f.nombre)}';">
+              <div class="info">
+                <strong>${f.nombre}</strong>
+                <small>${f.nacimiento} – ${f.muerte}</small>
+                <em>${f.movimiento || 'N/A'}</em>
+              </div>
+            </a>
+          `;
+          resultadosDiv.appendChild(card);
+        });
+      }
+
+      // Añadir listeners a los inputs para que la búsqueda sea en tiempo real
+      inputNombre.addEventListener('input', buscarYFiltrar);
+      inputMovimiento.addEventListener('input', buscarYFiltrar);
+      inputSiglo.addEventListener('input', buscarYFiltrar);
+    });
+  </script>
+
+</body>
+</html>
