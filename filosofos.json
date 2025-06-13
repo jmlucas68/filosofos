@@ -342,5 +342,13 @@
     "movimiento": "Existencialismo",
     "url_pagina": "https://jmlucas68.github.io/kierkegaard",
     "url_foto": "images/Kierkegaard.jpg"
+  },
+  {
+    "nombre": "Edith Stein",
+    "nacimiento": 1891,
+    "muerte": 1942,
+    "movimiento": "Personalismo",
+    "url_pagina": "https://jmlucas68.github.io/stein",
+    "url_foto": "images/Stein.jpg"
   }
 ]
