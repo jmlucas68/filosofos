@@ -326,5 +326,13 @@
     "movimiento": "Existencialismo",
     "url_pagina": "https://jmlucas68.github.io/arendt",
     "url_foto": "images/Arendt.jpg"
+  },
+  {
+    "nombre": "Simone de Beauvoir",
+    "nacimiento": 1908,
+    "muerte": 1986,
+    "movimiento": "Existencialismo",
+    "url_pagina": "https://jmlucas68.github.io/beauvoir",
+    "url_foto": "images/Beauvoir.jpg"
   }
 ]
