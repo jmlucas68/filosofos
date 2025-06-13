@@ -414,5 +414,13 @@
     "movimiento": "Escuela de Fráncfort",
     "url_pagina": "https://jmlucas68.github.io/bueno",
     "url_foto": "images/Bueno.jpg"
+  },
+  {
+    "nombre": "Malebranche",
+    "nacimiento": 1638,
+    "muerte": 1715,
+    "movimiento": "Racionalisto",
+    "url_pagina": "https://jmlucas68.github.io/malebranche",
+    "url_foto": "images/Malebranche.jpg"
   }
 ]
