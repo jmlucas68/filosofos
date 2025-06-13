@@ -209,6 +209,9 @@
       function renderizarResultados(lista) {
         resultadosDiv.innerHTML = ''; // Limpiar resultados anteriores
 
+        // Ordenar cronológicamente por nacimiento (ascendente)
+        lista = lista.slice().sort((a, b) => a.nacimiento - b.nacimiento);
+
         if (lista.length === 0) {
           resultadosDiv.innerHTML = '<p class="sin-resultados">No se encontraron filósofos con esos criterios.</p>';
           return;
