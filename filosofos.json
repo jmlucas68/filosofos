@@ -350,5 +350,13 @@
     "movimiento": "Personalismo",
     "url_pagina": "https://jmlucas68.github.io/stein",
     "url_foto": "images/Stein.jpg"
+  },
+  {
+    "nombre": "Gianni Vattimo",
+    "nacimiento": 1936,
+    "muerte": 2023,
+    "movimiento": "Postmodernismo",
+    "url_pagina": "https://jmlucas68.github.io/vattimo",
+    "url_foto": "images/Vattimo.jpg"
   }
 ]
