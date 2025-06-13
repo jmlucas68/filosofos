@@ -374,5 +374,13 @@
     "movimiento": "Pesimismo filosófico",
     "url_pagina": "https://jmlucas68.github.io/schopenhauer",
     "url_foto": "images/Schopenhauer.jpg"
+  },
+  {
+    "nombre": "Adorno",
+    "nacimiento": 1903,
+    "muerte": 1969,
+    "movimiento": "Escuela de Fráncfort",
+    "url_pagina": "https://jmlucas68.github.io/adorno",
+    "url_foto": "images/Adorno.jpg"
   }
 ]
