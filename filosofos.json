@@ -382,5 +382,13 @@
     "movimiento": "Escuela de Fráncfort",
     "url_pagina": "https://jmlucas68.github.io/adorno",
     "url_foto": "images/Adorno.jpg"
+  },
+  {
+    "nombre": "Walter Benjamin",
+    "nacimiento": 1892,
+    "muerte": 1940,
+    "movimiento": "Escuela de Fráncfort",
+    "url_pagina": "https://jmlucas68.github.io/benjamin",
+    "url_foto": "images/Benjamin.jpg"
   }
 ]
