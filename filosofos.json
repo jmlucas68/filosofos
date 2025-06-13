@@ -422,5 +422,13 @@
     "movimiento": "Racionalisto",
     "url_pagina": "https://jmlucas68.github.io/malebranche",
     "url_foto": "images/Malebranche.jpg"
+  },
+  {
+    "nombre": "Anaxágoras",
+    "nacimiento": -500,
+    "muerte": -428,
+    "movimiento": "Filosofía presocrática",
+    "url_pagina": "https://jmlucas68.github.io/anaxagoras",
+    "url_foto": "images/Anaxagoras.jpg"
   }
 ]
