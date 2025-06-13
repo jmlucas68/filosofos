@@ -430,5 +430,13 @@
     "movimiento": "Filosofía presocrática",
     "url_pagina": "https://jmlucas68.github.io/anaxagoras",
     "url_foto": "images/Anaxagoras.jpg"
+  },
+  {
+    "nombre": "Anaximandro",
+    "nacimiento": -610,
+    "muerte": -546,
+    "movimiento": "Filosofía presocrática",
+    "url_pagina": "https://jmlucas68.github.io/anaximandro",
+    "url_foto": "images/Anaximandro.jpg"
   }
 ]
