@@ -358,5 +358,13 @@
     "movimiento": "Postmodernismo",
     "url_pagina": "https://jmlucas68.github.io/vattimo",
     "url_foto": "images/Vattimo.jpg"
+  },
+  {
+    "nombre": "Antonio Gramsci",
+    "nacimiento": 1891,
+    "muerte": 1937,
+    "movimiento": "Marxismo",
+    "url_pagina": "https://jmlucas68.github.io/gramsci",
+    "url_foto": "images/Gramsci.jpg"
   }
 ]
