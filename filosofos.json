@@ -318,5 +318,13 @@
     "movimiento": "Escolástica",
     "url_pagina": "https://jmlucas68.github.io/ockham",
     "url_foto": "images/Ockham.jpg"
+  },
+  {
+    "nombre": "Hannah Arendt",
+    "nacimiento": 1906,
+    "muerte": 1975,
+    "movimiento": "Existencialismo",
+    "url_pagina": "https://jmlucas68.github.io/arendt",
+    "url_foto": "images/Arendt.jpg"
   }
 ]
