@@ -446,5 +446,13 @@
     "movimiento": "Filosofía presocrática",
     "url_pagina": "https://jmlucas68.github.io/anaximenes",
     "url_foto": "images/Anaximenes.jpg"
+  },
+  {
+    "nombre": "George Berkeley",
+    "nacimiento": 1685,
+    "muerte": 1753,
+    "movimiento": "Empirismo",
+    "url_pagina": "https://jmlucas68.github.io/berkeley",
+    "url_foto": "images/Berkeley.jpg"
   }
 ]
