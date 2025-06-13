@@ -390,5 +390,13 @@
     "movimiento": "Escuela de Fráncfort",
     "url_pagina": "https://jmlucas68.github.io/benjamin",
     "url_foto": "images/Benjamin.jpg"
+  },
+  {
+    "nombre": "Ortega y Gasset",
+    "nacimiento": 1883,
+    "muerte": 1955,
+    "movimiento": "Raciovitalismo",
+    "url_pagina": "https://jmlucas68.github.io/ortega",
+    "url_foto": "images/Ortega.jpg"
   }
 ]
