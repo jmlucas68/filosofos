@@ -334,5 +334,13 @@
     "movimiento": "Existencialismo",
     "url_pagina": "https://jmlucas68.github.io/beauvoir",
     "url_foto": "images/Beauvoir.jpg"
+  },
+  {
+    "nombre": "Kierkegaard",
+    "nacimiento": 1813,
+    "muerte": 1855,
+    "movimiento": "Existencialismo",
+    "url_pagina": "https://jmlucas68.github.io/kierkegaard",
+    "url_foto": "images/Beauvoir.jpg"
   }
 ]
