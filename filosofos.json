@@ -366,5 +366,13 @@
     "movimiento": "Marxismo",
     "url_pagina": "https://jmlucas68.github.io/gramsci",
     "url_foto": "images/Gramsci.jpg"
+  },
+  {
+    "nombre": "Schopenhauer",
+    "nacimiento": 1788,
+    "muerte": 1860,
+    "movimiento": "Pesimismo filosófico",
+    "url_pagina": "https://jmlucas68.github.io/schopenhauer",
+    "url_foto": "images/Schopenhauer.jpg"
   }
 ]
