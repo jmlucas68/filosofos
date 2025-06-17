@@ -462,5 +462,13 @@
     "movimiento": "Existencialismo",
     "url_pagina": "https://jmlucas68.github.io/jaspers",
     "url_foto": "images/Jaspers.jpg"
+  },
+  {
+    "nombre": "Empédocles",
+    "nacimiento": -495,
+    "muerte": -435,
+    "movimiento": "Filosofía presocrática",
+    "url_pagina": "https://jmlucas68.github.io/empedocles",
+    "url_foto": "images/Empedocles.jpg"
   }
 ]
