@@ -478,5 +478,13 @@
     "movimiento": "Filosofía presocrática",
     "url_pagina": "https://jmlucas68.github.io/jenofanes",
     "url_foto": "images/Jenofanes.jpg"
+  },
+  {
+    "nombre": "Adam Smith",
+    "nacimiento": 1723,
+    "muerte": 1790,
+    "movimiento": "Liberalismo",
+    "url_pagina": "https://jmlucas68.github.io/smith",
+    "url_foto": "images/Smith.jpg"
   }
 ]
