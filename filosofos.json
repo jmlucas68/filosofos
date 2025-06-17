@@ -486,5 +486,13 @@
     "movimiento": "Liberalismo",
     "url_pagina": "https://jmlucas68.github.io/smith",
     "url_foto": "images/Smith.jpg"
+  },
+  {
+    "nombre": "Avicena",
+    "nacimiento": 980,
+    "muerte": 1037,
+    "movimiento": "Filosofía islámica medieval",
+    "url_pagina": "https://jmlucas68.github.io/avicena",
+    "url_foto": "images/Avicena.jpg"
   }
 ]
