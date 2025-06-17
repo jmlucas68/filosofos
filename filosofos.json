@@ -454,5 +454,13 @@
     "movimiento": "Empirismo",
     "url_pagina": "https://jmlucas68.github.io/berkeley",
     "url_foto": "images/Berkeley.jpg"
+  },
+  {
+    "nombre": "Karl Jaspers",
+    "nacimiento": 1883,
+    "muerte": 1969,
+    "movimiento": "Existencialismo",
+    "url_pagina": "https://jmlucas68.github.io/jaspers",
+    "url_foto": "images/Jaspers.jpg"
   }
 ]
