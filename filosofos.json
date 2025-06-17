@@ -502,5 +502,13 @@
     "movimiento": "Filosofía presocrática/Atomismo",
     "url_pagina": "https://jmlucas68.github.io/democrito",
     "url_foto": "images/Democrito.jpg"
+  },
+  {
+    "nombre": "Zenón de Elea",
+    "nacimiento": -490,
+    "muerte": -430,
+    "movimiento": "Escuela eleática / Filosofía presocrática",
+    "url_pagina": "https://jmlucas68.github.io/zenon",
+    "url_foto": "images/Zenon.jpg"
   }
 ]
