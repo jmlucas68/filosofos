@@ -510,5 +510,13 @@
     "movimiento": "Escuela eleática / Filosofía presocrática",
     "url_pagina": "https://jmlucas68.github.io/zenon_elea",
     "url_foto": "images/Zenon_Elea.jpg"
+  },
+  {
+    "nombre": "Schelling",
+    "nacimiento": 1775,
+    "muerte": 1854,
+    "movimiento": "Idealismo alemán",
+    "url_pagina": "https://jmlucas68.github.io/schelling",
+    "url_foto": "images/Schelling.jpg"
   }
 ]
