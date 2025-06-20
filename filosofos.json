@@ -518,5 +518,13 @@
     "movimiento": "Idealismo alemán",
     "url_pagina": "https://jmlucas68.github.io/schelling",
     "url_foto": "images/Schelling.jpg"
+  },
+  {
+    "nombre": "Francis Bacon",
+    "nacimiento": 1561,
+    "muerte": 1626,
+    "movimiento": "Empirismo",
+    "url_pagina": "https://jmlucas68.github.io/bacon",
+    "url_foto": "images/Francis_Bacon.jpg"
   }
 ]
