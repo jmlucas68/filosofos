@@ -542,5 +542,13 @@
     "movimiento": "Escolástica",
     "url_pagina": "https://jmlucas68.github.io/scoto",
     "url_foto": "images/Scoto.jpg"
+  },
+  {
+    "nombre": "Friedrich Engels",
+    "nacimiento": 1820,
+    "muerte": 1895,
+    "movimiento": "Marxixmo",
+    "url_pagina": "https://jmlucas68.github.io/engels",
+    "url_foto": "images/Engels.jpg"
   }
 ]
