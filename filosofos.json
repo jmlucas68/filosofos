@@ -534,5 +534,13 @@
     "movimiento": "Positivismo",
     "url_pagina": "https://jmlucas68.github.io/comte",
     "url_foto": "images/Comte.jpg"
+  },
+  {
+    "nombre": "Duns Scoto",
+    "nacimiento": 1266,
+    "muerte": 1308,
+    "movimiento": "Escolástica",
+    "url_pagina": "https://jmlucas68.github.io/scoto",
+    "url_foto": "images/Scoto.jpg"
   }
 ]
