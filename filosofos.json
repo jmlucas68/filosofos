@@ -526,5 +526,13 @@
     "movimiento": "Empirismo",
     "url_pagina": "https://jmlucas68.github.io/bacon",
     "url_foto": "images/Francis_Bacon.jpg"
+  },
+  {
+    "nombre": "Auguste Comte",
+    "nacimiento": 1798,
+    "muerte": 1857,
+    "movimiento": "Positivismo",
+    "url_pagina": "https://jmlucas68.github.io/comte",
+    "url_foto": "images/Comte.jpg"
   }
 ]
