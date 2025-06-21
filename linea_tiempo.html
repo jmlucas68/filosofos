@@ -3,390 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Línea del Tiempo de Filósofos y Eventos Históricos</title>
+    <title>Línea de Tiempo de Filósofos Griegos</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-timeline@latest/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <link href="https://unpkg.com/vis-timeline@latest/styles/vis-timeline-graph2d.min.css" rel="stylesheet" type="text/css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
+        body, html {
+            height: 100%;
             margin: 0;
-            padding: 1rem;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #f0f0f0;
         }
 
-        h1 {
+        /* --- NUEVO: Estilos para los controles de navegación --- */
+        .controles {
+            padding: 10px;
+            background-color: #e9e9e9;
             text-align: center;
-            margin-bottom: 1rem;
-        }
-        /* Estilos para el botón de navegación */
-        .navegacion {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .btn-nav {
-            background-color: #6c757d;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            margin: 0 5px;
+            border-bottom: 1px solid lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
         }
 
-            .btn-nav:hover {
-                background-color: #5a6268;
+            .controles label {
+                font-weight: bold;
             }
 
-        .filtros {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .btn-filtro {
-            background-color: #007bff;
-            color: white;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 5px;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-            .btn-filtro:hover {
-                background-color: #0056b3;
-            }
-
-            .btn-filtro.active {
-                background-color: #28a745;
-            }
-
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-            .timeline::after {
-                content: '';
-                position: absolute;
-                width: 6px;
-                background-color: #2196F3;
-                top: 0;
-                bottom: 0;
-                left: 50%;
-                margin-left: -3px;
-            }
-
-        .entry {
-            padding: 1rem 2rem;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-            transition: opacity 0.3s;
-        }
-
-            .entry.left {
-                left: 0;
-            }
-
-            .entry.right {
-                left: 50%;
-            }
-
-            .entry.filosofo::before {
-                content: " ";
-                position: absolute;
-                top: 15px;
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                background-color: white;
-                border: 4px solid #2196F3;
-                z-index: 1;
-            }
-
-            .entry.evento::before {
-                content: " ";
-                position: absolute;
-                top: 15px;
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                background-color: white;
-                border: 4px solid #dc3545;
-                z-index: 1;
-            }
-
-            .entry.left::before {
-                right: -13px;
-            }
-
-            .entry.right::before {
-                left: -13px;
-            }
-
-        .content {
-            padding: 1rem;
-            background-color: white;
-            position: relative;
-            border-radius: 6px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-            .content.filosofo {
-                border-left: 4px solid #2196F3;
-            }
-
-            .content.evento {
-                border-left: 4px solid #dc3545;
-            }
-
-            .content img {
-                width: 100px;
-                height: auto;
-                float: left;
-                margin-right: 1rem;
+            .controles input {
+                padding: 5px;
+                width: 180px;
+                border: 1px solid #ccc;
                 border-radius: 4px;
             }
 
-        .movimiento {
-            font-style: italic;
-            color: #666;
-            margin-top: 0.5rem;
-            clear: both;
-        }
-
-        .tipo-badge {
-            display: inline-block;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-
-        .badge-filosofo {
-            background-color: #e3f2fd;
-            color: #1976d2;
-        }
-
-        .badge-evento {
-            background-color: #ffebee;
-            color: #d32f2f;
-        }
-
-        .year {
-            font-weight: bold;
-            color: #333;
-            font-size: 1.1rem;
-        }
-
-        .entry.hidden {
-            display: none;
-        }
-
-        .leyenda {
-            text-align: center;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .leyenda-item {
-            display: inline-block;
-            margin: 0 15px;
-        }
-
-        .leyenda-color {
-            display: inline-block;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            margin-right: 5px;
-            vertical-align: middle;
-        }
-
-        .color-filosofo {
-            background-color: #2196F3;
-        }
-
-        .color-evento {
-            background-color: #dc3545;
-        }
-
-        @media screen and (max-width: 768px) {
-            .entry {
-                width: 100%;
-                left: 0;
-                padding-left: 3rem;
-                padding-right: 1rem;
+            .controles button {
+                padding: 6px 12px;
+                cursor: pointer;
+                background-color: #4A90E2;
+                color: white;
+                border: none;
+                border-radius: 4px;
             }
 
-                .entry.right {
-                    left: 0;
+                .controles button:hover {
+                    background-color: #357ABD;
                 }
+        /* --- FIN NUEVO --- */
 
-            .timeline::after {
-                left: 20px;
-            }
-
-            .entry::before {
-                left: 8px;
-            }
-
-            .entry.right::before, .entry.left::before {
-                left: 8px;
-            }
+        #timeline {
+            width: 100%;
+            height: calc(100vh - 55px); /* Ajustar altura para los controles */
+            border: 1px solid lightgray;
+            background-color: #ffffff;
         }
+
+        .vis-item {
+            border-color: #4A90E2;
+            background-color: #D4E4F7;
+            color: #333;
+        }
+
+            .vis-item.vis-selected {
+                border-color: #FF5722;
+                background-color: #FFDAB9;
+            }
+
+            .vis-item .vis-item-content {
+                padding: 5px;
+                display: flex;
+                align-items: center;
+            }
+
+            .vis-item img {
+                width: 30px;
+                height: 30px;
+                margin-right: 8px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .vis-item.vis-background {
+                background-color: rgba(230, 230, 250, 0.5);
+            }
+
+            .vis-item.vis-point {
+                background-color: #FFC107;
+                border-color: #FFA000;
+            }
     </style>
 </head>
 <body>
-    <h1>Línea del Tiempo de Filósofos y Eventos Históricos</h1>
 
-    <div class="navegacion">
-        <a href="index.html" class="btn-nav">🏛️ Volver a la Galería</a>
+    <!-- NUEVO: Controles para navegar a un siglo específico -->
+    <div class="controles">
+        <label for="sigloInput">Ir al siglo:</label>
+        <input type="number" id="sigloInput" placeholder="Ej: -5 para V a.C., 15 para XV d.C.">
+        <button id="irASigloBtn">Ir</button>
     </div>
+    <!-- FIN NUEVO -->
 
-    <div class="leyenda">
-        <div class="leyenda-item">
-            <span class="leyenda-color color-filosofo"></span>
-            Filósofos
-        </div>
-        <div class="leyenda-item">
-            <span class="leyenda-color color-evento"></span>
-            Eventos Históricos
-        </div>
-    </div>
+    <div id="timeline"></div>
 
-    <div class="filtros">
-        <button class="btn-filtro active" onclick="filtrar('todos')">Mostrar Todo</button>
-        <button class="btn-filtro" onclick="filtrar('filosofos')">Solo Filósofos</button>
-        <button class="btn-filtro" onclick="filtrar('eventos')">Solo Eventos</button>
-    </div>
+    <script type="text/javascript">
+        // --- NUEVO: Declaramos la variable timeline fuera para que sea accesible globalmente ---
+        let timeline = null;
 
-    <div class="timeline" id="timeline"></div>
+        // Usamos una función asíncrona para cargar los datos antes de crear la línea de tiempo
+        async function inicializarTimeline() {
+            try {
+                // 1. Cargar los datos de los ficheros JSON
+                const [filosofos, eventosHistoricos] = await Promise.all([
+                    fetch('filosofos.json').then(response => response.json()),
+                    fetch('eventos.json').then(response => response.json())
+                ]);
 
-    <script>
-    let todosLosElementos = [];
+                // 2. Mapear los filósofos
+                const itemsFilosofos = filosofos.map(f => ({
+                    id: f.id,
+                    group: f.id,
+                    content: `<img src="${f.imagen}" alt="${f.nombre}"> ${f.nombre}`,
+                    start: f.nacimiento,
+                    end: f.muerte,
+                    type: 'range'
+                }));
 
-    function formatearAnio(anio) {
-      if (anio < 0) {
-        return Math.abs(anio) + ' a.C.';
-      }
-      return anio + ' d.C.';
-    }
+                // 3. Combinar datos
+                const items = new vis.DataSet(itemsFilosofos.concat(eventosHistoricos));
 
-    function convertirAnio(anio) {
-      // Convierte años negativos (a.C.) a un formato que permita ordenar correctamente
-      return anio < 0 ? anio : anio;
-    }
+                // 4. Crear los grupos
+                const groups = new vis.DataSet(filosofos.map(f => ({
+                    id: f.id,
+                    content: f.nombre
+                })));
 
-    async function cargarDatos() {
-      try {
-        // Cargar filósofos
-        const responseFilosofos = await fetch("filosofos.json");
-        const filosofos = await responseFilosofos.json();
+                // 5. Opciones de configuración
+                const options = {
+                    stack: true,
+                    stackSubgroups: true,
+                    zoomMin: 1000 * 60 * 60 * 24 * 365 * 10,
+                    zoomMax: 1000 * 60 * 60 * 24 * 365 * 3000,
+                    start: '-700',
+                    end: '1500',
+                    orientation: 'top',
+                    groupOrder: 'content'
+                };
 
-        // Cargar eventos
-        const responseEventos = await fetch("eventos.json");
-        const eventos = await responseEventos.json();
+                // 6. Crear la línea de tiempo
+                const container = document.getElementById('timeline');
+                // --- NUEVO: Asignamos a la variable global ---
+                timeline = new vis.Timeline(container, items, groups, options);
 
-        // Combinar y formatear datos
-        const filosofosFormateados = filosofos.map(f => ({
-          tipo: 'filosofo',
-          anio: f.nacimiento,
-          nombre: f.nombre,
-          descripcion: `${formatearAnio(f.nacimiento)} – ${formatearAnio(f.muerte)}`,
-          movimiento: f.movimiento || 'N/A',
-          url_foto: f.url_foto,
-          url_pagina: f.url_pagina
-        }));
-
-        const eventosFormateados = eventos.map(e => ({
-          tipo: 'evento',
-          anio: e.year,
-          nombre: e.name,
-          descripcion: e.description,
-          movimiento: null
-        }));
-
-        // Combinar y ordenar por año
-        todosLosElementos = [...filosofosFormateados, ...eventosFormateados];
-        todosLosElementos.sort((a, b) => convertirAnio(a.anio) - convertirAnio(b.anio));
-
-        mostrarTimeline();
-      } catch (error) {
-        console.error("Error al cargar los datos:", error);
-        document.getElementById('timeline').innerHTML = "<p>No se pudieron cargar los datos.</p>";
-      }
-    }
-
-    function mostrarTimeline() {
-      const timeline = document.getElementById('timeline');
-      timeline.innerHTML = '';
-
-      todosLosElementos.forEach((elemento, index) => {
-        const side = index % 2 === 0 ? 'left' : 'right';
-        const entry = document.createElement('div');
-        entry.className = `entry ${side} ${elemento.tipo}`;
-        entry.setAttribute('data-tipo', elemento.tipo);
-
-        let contenidoHTML = '';
-
-        if (elemento.tipo === 'filosofo') {
-          contenidoHTML = `
-            <div class="content filosofo">
-              <div class="tipo-badge badge-filosofo">FILÓSOFO</div>
-              ${elemento.url_foto ? `<a href="${elemento.url_pagina}" target="_blank">
-                <img src="${elemento.url_foto}" alt="${elemento.nombre}" onerror="this.style.display='none';">
-              </a>` : ''}
-              <h3>${elemento.nombre}</h3>
-              <div class="year">${elemento.descripcion}</div>
-              <div class="movimiento">${elemento.movimiento}</div>
-            </div>
-          `;
-        } else {
-          contenidoHTML = `
-            <div class="content evento">
-              <div class="tipo-badge badge-evento">EVENTO HISTÓRICO</div>
-              <h3>${elemento.nombre}</h3>
-              <div class="year">${formatearAnio(elemento.anio)}</div>
-              <p>${elemento.descripcion}</p>
-            </div>
-          `;
+            } catch (error) {
+                console.error("Error al cargar los datos o inicializar la línea de tiempo:", error);
+                document.getElementById('timeline').innerText = "Hubo un error al cargar los datos. Por favor, revisa la consola del navegador.";
+            }
         }
 
-        entry.innerHTML = contenidoHTML;
-        timeline.appendChild(entry);
-      });
-    }
+        // Llamar a la función para que se inicie el proceso
+        inicializarTimeline();
 
-    function filtrar(tipo) {
-      // Actualizar botones activos
-      document.querySelectorAll('.btn-filtro').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      event.target.classList.add('active');
+        // --- NUEVO: Lógica para el botón de navegación por siglo ---
+        document.getElementById('irASigloBtn').addEventListener('click', function() {
+            const sigloInput = document.getElementById('sigloInput');
+            const siglo = parseInt(sigloInput.value, 10);
 
-      // Filtrar elementos
-      const entries = document.querySelectorAll('.entry');
-      entries.forEach(entry => {
-        const tipoElemento = entry.getAttribute('data-tipo');
+            if (isNaN(siglo) || siglo === 0) {
+                alert("Por favor, introduce un número de siglo válido (distinto de cero).\nUsa números negativos para los siglos antes de Cristo.");
+                return;
+            }
 
-        if (tipo === 'todos') {
-          entry.classList.remove('hidden');
-        } else if (tipo === 'filosofos' && tipoElemento === 'filosofo') {
-          entry.classList.remove('hidden');
-        } else if (tipo === 'eventos' && tipoElemento === 'evento') {
-          entry.classList.remove('hidden');
-        } else {
-          entry.classList.add('hidden');
-        }
-      });
-    }
+            // Si la línea de tiempo no se ha creado, no hacemos nada
+            if (!timeline) {
+                console.error("La línea de tiempo aún no está inicializada.");
+                return;
+            }
 
-    // Cargar datos al iniciar la página
-    cargarDatos();
+            let anioInicio;
+            if (siglo > 0) {
+                // El siglo XV (15) empieza en el año 1400. Fórmula: (siglo - 1) * 100
+                anioInicio = (siglo - 1) * 100;
+            } else { // siglo < 0
+                // El siglo V a.C. (-5) empieza en el año -500. Fórmula: siglo * 100
+                anioInicio = siglo * 100;
+            }
+
+            // Mover la línea de tiempo al año calculado con una animación suave
+            timeline.moveTo(anioInicio.toString(), {
+                animation: {
+                    duration: 1000, // 1 segundo
+                    easingFunction: 'easeInOutQuad'
+                }
+            });
+        });
+        // --- FIN NUEVO ---
     </script>
 </body>
 </html>
