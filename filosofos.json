@@ -558,5 +558,13 @@
     "movimiento": "Cinismo",
     "url_pagina": "https://jmlucas68.github.io/diogenes",
     "url_foto": "images/Diogenes.jpg"
+  },
+  {
+    "nombre": "Gottlob Frege",
+    "nacimiento": 1848,
+    "muerte": 1925,
+    "movimiento": "Filosofía Analítica",
+    "url_pagina": "https://jmlucas68.github.io/frege",
+    "url_foto": "images/Frege.jpg"
   }
 ]
