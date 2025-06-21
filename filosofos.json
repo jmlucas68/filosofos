@@ -598,5 +598,13 @@
     "movimiento": "Positivismo lógico",
     "url_pagina": "https://jmlucas68.github.io/carnap",
     "url_foto": "images/Carnap.jpg"
+  },
+  {
+    "nombre": "Alfred North Whitehead",
+    "nacimiento": 1861,
+    "muerte": 1947,
+    "movimiento": "Positivismo lógico",
+    "url_pagina": "https://jmlucas68.github.io/whitehead",
+    "url_foto": "images/Whitehead.jpg"
   }
 ]
