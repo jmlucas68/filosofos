@@ -590,5 +590,13 @@
     "movimiento": "Postestructuralismo",
     "url_pagina": "https://jmlucas68.github.io/butler",
     "url_foto": "images/Butler.jpg"
+  },
+  {
+    "nombre": "Rudolf Carnap",
+    "nacimiento": 1891,
+    "muerte": 1970,
+    "movimiento": "Positivismo lógico",
+    "url_pagina": "https://jmlucas68.github.io/carnap",
+    "url_foto": "images/Carnap.jpg"
   }
 ]
