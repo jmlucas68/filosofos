@@ -566,5 +566,13 @@
     "movimiento": "Filosofía Analítica",
     "url_pagina": "https://jmlucas68.github.io/frege",
     "url_foto": "images/Frege.jpg"
+  },
+  {
+    "nombre": "W. V. Quine",
+    "nacimiento": 1908,
+    "muerte": 2000,
+    "movimiento": "Filosofía Analítica",
+    "url_pagina": "https://jmlucas68.github.io/quine",
+    "url_foto": "images/Quine.jpg"
   }
 ]
