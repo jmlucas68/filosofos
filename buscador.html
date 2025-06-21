@@ -1,150 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buscador de Filósofos</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f2f5;
-      margin: 0;
-      padding: 1.5rem;
-      color: #333;
-    }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-    }
-    .navegacion {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .btn-nav {
-      background-color: #6c757d;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-    .btn-nav:hover {
-      background-color: #5a6268;
-    }
-    #controles-busqueda {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-    }
-    .control-grupo {
-      display: flex;
-      flex-direction: column;
-    }
-    .control-grupo label {
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-      color: #34495e;
-    }
-    .control-grupo input {
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .tarjeta {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .tarjeta:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-    .tarjeta a {
-      text-decoration: none;
-      color: inherit;
-    }
-    .tarjeta img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-    }
-    .info {
-      padding: 1rem;
-    }
-    .info strong {
-      font-size: 1.2rem;
-      color: #2c3e50;
-    }
-    .info small {
-      color: #666;
-      display: block;
-      margin: 0.25rem 0;
-    }
-    .info em {
-      color: #16a085;
-      font-style: normal;
-      font-weight: bold;
-    }
-    .sin-resultados {
-        text-align: center;
-        grid-column: 1 / -1;
-        padding: 2rem;
-        font-size: 1.2rem;
-        color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Filósofos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 1.5rem;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .navegacion {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn-nav {
+            background-color: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+            .btn-nav:hover {
+                background-color: #5a6268;
+            }
+
+        #controles-busqueda {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .control-grupo {
+            display: flex;
+            flex-direction: column;
+        }
+
+            .control-grupo label {
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+                color: #34495e;
+            }
+
+            .control-grupo input {
+                padding: 0.75rem;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                font-size: 1rem;
+            }
+
+        .contador-resultados {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #e8f5e8;
+            border-radius: 8px;
+            border: 2px solid #27ae60;
+        }
+
+            .contador-resultados h2 {
+                margin: 0;
+                color: #27ae60;
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tarjeta {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+            .tarjeta:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            }
+
+            .tarjeta a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            .tarjeta img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                display: block;
+            }
+
+        .info {
+            padding: 1rem;
+        }
+
+            .info strong {
+                font-size: 1.2rem;
+                color: #2c3e50;
+            }
+
+            .info small {
+                color: #666;
+                display: block;
+                margin: 0.25rem 0;
+            }
+
+            .info em {
+                color: #16a085;
+                font-style: normal;
+                font-weight: bold;
+            }
+
+        .sin-resultados {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: #777;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>🔎 Buscador de Filósofos</h1>
-    <div class="navegacion">
-      <a href="index.html" class="btn-nav">🏛️ Volver a la Galería</a>
+    <div class="container">
+        <h1>🔎 Buscador de Filósofos</h1>
+        <div class="navegacion">
+            <a href="index.html" class="btn-nav">🏛️ Volver a la Galería</a>
+        </div>
+
+        <div id="controles-busqueda">
+            <div class="control-grupo">
+                <label for="filtro-nombre">Nombre del filósofo</label>
+                <input type="text" id="filtro-nombre" placeholder="Ej: Platón">
+            </div>
+            <div class="control-grupo">
+                <label for="filtro-movimiento">Movimiento filosófico</label>
+                <input type="text" id="filtro-movimiento" placeholder="Ej: Racionalismo">
+            </div>
+            <div class="control-grupo">
+                <label for="filtro-siglo">Siglo (Ej: 17, -5 para S.V a.C.)</label>
+                <input type="number" id="filtro-siglo" placeholder="Ej: 18 para S.XVIII">
+            </div>
+        </div>
+
+        <div id="contador-resultados" class="contador-resultados">
+            <h2>Filósofos encontrados: <span id="numero-resultados">0</span></h2>
+        </div>
+
+        <div id="resultados" class="galeria"></div>
     </div>
 
-    <div id="controles-busqueda">
-      <div class="control-grupo">
-        <label for="filtro-nombre">Nombre del filósofo</label>
-        <input type="text" id="filtro-nombre" placeholder="Ej: Platón">
-      </div>
-      <div class="control-grupo">
-        <label for="filtro-movimiento">Movimiento filosófico</label>
-        <input type="text" id="filtro-movimiento" placeholder="Ej: Racionalismo">
-      </div>
-      <div class="control-grupo">
-        <label for="filtro-siglo">Siglo (Ej: 17, -5 para S.V a.C.)</label>
-        <input type="number" id="filtro-siglo" placeholder="Ej: 18 para S.XVIII">
-      </div>
-    </div>
-
-    <div id="resultados" class="galeria"></div>
-  </div>
-
-  <script>
+    <script>
     document.addEventListener('DOMContentLoaded', () => {
       const inputNombre = document.getElementById('filtro-nombre');
       const inputMovimiento = document.getElementById('filtro-movimiento');
       const inputSiglo = document.getElementById('filtro-siglo');
       const resultadosDiv = document.getElementById('resultados');
+      const numeroResultados = document.getElementById('numero-resultados');
 
       let todosLosFilosofos = [];
 
@@ -158,6 +198,7 @@
         .catch(err => {
           console.error("Error al cargar los datos:", err);
           resultadosDiv.innerHTML = '<p class="sin-resultados">No se pudieron cargar los datos de los filósofos.</p>';
+          numeroResultados.textContent = '0';
         });
 
       // Función principal para buscar y filtrar
@@ -209,6 +250,9 @@
       function renderizarResultados(lista) {
         resultadosDiv.innerHTML = ''; // Limpiar resultados anteriores
 
+        // Actualizar el contador de resultados
+        numeroResultados.textContent = lista.length;
+
         // Ordenar cronológicamente por nacimiento (ascendente)
         lista = lista.slice().sort((a, b) => a.nacimiento - b.nacimiento);
 
@@ -239,7 +283,7 @@
       inputMovimiento.addEventListener('input', buscarYFiltrar);
       inputSiglo.addEventListener('input', buscarYFiltrar);
     });
-  </script>
+    </script>
 
 </body>
 </html>
