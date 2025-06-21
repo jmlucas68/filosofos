@@ -606,5 +606,13 @@
     "movimiento": "Positivismo lógico",
     "url_pagina": "https://jmlucas68.github.io/whitehead",
     "url_foto": "images/Whitehead.jpg"
+  },
+  {
+    "nombre": "Kurt Gödel",
+    "nacimiento": 1906,
+    "muerte": 1978,
+    "movimiento": "Platonismo matemático",
+    "url_pagina": "https://jmlucas68.github.io/godel",
+    "url_foto": "images/Godel.jpg"
   }
 ]
