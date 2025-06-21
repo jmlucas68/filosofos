@@ -550,5 +550,13 @@
     "movimiento": "Marxixmo",
     "url_pagina": "https://jmlucas68.github.io/engels",
     "url_foto": "images/Engels.jpg"
+  },
+  {
+    "nombre": "Diógenes de Sinope",
+    "nacimiento": -412,
+    "muerte": -323,
+    "movimiento": "Cinismo",
+    "url_pagina": "https://jmlucas68.github.io/diogenes",
+    "url_foto": "images/Diogenes.jpg"
   }
 ]
