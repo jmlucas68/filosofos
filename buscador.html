@@ -42,6 +42,10 @@
                 background-color: #5a6268;
             }
 
+        #btn-aleatorio:hover {
+            background-color: #c0392b;
+        }
+
         #controles-busqueda {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -154,6 +158,9 @@
         <h1>🔎 Buscador de Filósofos</h1>
         <div class="navegacion">
             <a href="index.html" class="btn-nav">🏛️ Volver a la Galería</a>
+            <button id="btn-aleatorio" class="btn-nav" style="margin-left: 10px; background-color: #e74c3c; border: none; cursor: pointer;">
+                🎲 Filósofo Aleatorio
+            </button>
         </div>
 
         <div id="controles-busqueda">
@@ -185,6 +192,7 @@
       const inputSiglo = document.getElementById('filtro-siglo');
       const resultadosDiv = document.getElementById('resultados');
       const numeroResultados = document.getElementById('numero-resultados');
+      const btnAleatorio = document.getElementById('btn-aleatorio');
 
       let todosLosFilosofos = [];
 
@@ -278,10 +286,30 @@
         });
       }
 
+      // Función para mostrar un filósofo aleatorio
+      function mostrarFilosofoAleatorio() {
+        if (todosLosFilosofos.length === 0) return;
+
+        // Limpiar filtros
+        inputNombre.value = '';
+        inputMovimiento.value = '';
+        inputSiglo.value = '';
+
+        // Seleccionar filósofo aleatorio
+        const indiceAleatorio = Math.floor(Math.random() * todosLosFilosofos.length);
+        const filosofoAleatorio = todosLosFilosofos[indiceAleatorio];
+
+        // Mostrar solo el filósofo aleatorio
+        renderizarResultados([filosofoAleatorio]);
+      }
+
       // Añadir listeners a los inputs para que la búsqueda sea en tiempo real
       inputNombre.addEventListener('input', buscarYFiltrar);
       inputMovimiento.addEventListener('input', buscarYFiltrar);
       inputSiglo.addEventListener('input', buscarYFiltrar);
+
+      // Añadir listener al botón aleatorio
+      btnAleatorio.addEventListener('click', mostrarFilosofoAleatorio);
     });
     </script>
 
