@@ -582,5 +582,13 @@
     "movimiento": "Filosofía Analítica",
     "url_pagina": "https://jmlucas68.github.io/austin",
     "url_foto": "images/Austin.jpg"
+  },
+  {
+    "nombre": "Judith Butler",
+    "nacimiento": 1956,
+    "muerte": " ",
+    "movimiento": "Postestructuralismo",
+    "url_pagina": "https://jmlucas68.github.io/butler",
+    "url_foto": "images/Butler.jpg"
   }
 ]
