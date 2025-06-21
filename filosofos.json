@@ -574,5 +574,13 @@
     "movimiento": "Filosofía Analítica",
     "url_pagina": "https://jmlucas68.github.io/quine",
     "url_foto": "images/Quine.jpg"
+  },
+  {
+    "nombre": "J. L. Austin",
+    "nacimiento": 1911,
+    "muerte": 1960,
+    "movimiento": "Filosofía Analítica",
+    "url_pagina": "https://jmlucas68.github.io/austin",
+    "url_foto": "images/Austin.jpg"
   }
 ]
