@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+# Crear el index.html modificado con el botón de Estudio
+index_html = """<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -176,12 +177,12 @@
             .header h1 {
                 font-size: 2rem;
             }
-
+            
             .nav-container {
                 flex-direction: column;
                 align-items: center;
             }
-
+            
             .philosophers-grid {
                 grid-template-columns: 1fr;
                 padding: 20px 10px;
@@ -195,7 +196,7 @@
         <p style="text-align: center; color: #666; margin-bottom: 20px;">
             Explora el pensamiento de los grandes filósofos de la historia
         </p>
-
+        
         <!-- Botón prominente de Estudio -->
         <div style="text-align: center; margin: 20px 0;">
             <a href="estudio/estudio.html" class="study-btn">
@@ -367,9 +368,9 @@
         function toggleTimeline() {
             const grid = document.getElementById('philosophersGrid');
             const timeline = document.getElementById('timeline');
-
+            
             isTimelineView = !isTimelineView;
-
+            
             if (isTimelineView) {
                 grid.classList.add('hidden');
                 timeline.classList.remove('hidden');
@@ -383,7 +384,7 @@
         function renderTimeline() {
             const timeline = document.getElementById('timeline');
             const sorted = [...philosophers].sort((a, b) => a.period - b.period);
-
+            
             timeline.innerHTML = '';
             sorted.forEach(philosopher => {
                 const item = document.createElement('div');
@@ -404,7 +405,7 @@
                 philosopher.school.toLowerCase().includes(searchTerm) ||
                 philosopher.description.toLowerCase().includes(searchTerm)
             );
-
+            
             if (!isTimelineView) {
                 renderPhilosophers(filtered);
             }
@@ -417,4 +418,11 @@
         sortChronological();
     </script>
 </body>
-</html>
+</html>"""
+
+# Guardar el archivo
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(index_html)
+
+print("✅ Archivo index.html principal creado con botón de Estudio")
+print("📍 Ubicación del botón: Prominente en la parte superior, lleva a estudio/estudio.html")
