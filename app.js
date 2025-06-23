@@ -26,7 +26,7 @@ function initializeApp() {
 
 function loadPhilosophersData() {
     // Load data dynamically from JSON file
-    fetch('philosophers_data_complete.json')
+    fetch('https://jmlucas68.github.io/filosofos/philosophers_data_complete.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
