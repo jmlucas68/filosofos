@@ -1,6 +1,6 @@
-# JavaScript Completamente Dinámico para Filósofos
+// JavaScript Completamente Dinámico para Filósofos
 
-```javascript
+javascript
 // Variables globales para almacenar datos cargados dinámicamente
 let filosofosData = [];
 let quizData = {};
