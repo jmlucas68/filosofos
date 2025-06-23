@@ -1,246 +1,52 @@
-// Application State
-let currentScreen = 'main';
-let philosophers = [];
-let currentQuizConfig = {
-    questionCount: 10,
-    timerEnabled: false
-};
-let currentQuiz = {
-    questions: [],
-    currentQuestion: 0,
-    score: 0,
-    streak: 0,
-    startTime: null,
-    answers: []
-};
-let gameStats = {
-    totalXP: parseInt(localStorage.getItem('philosopherXP') || '0'),
-    level: 'Novato',
-    gamesPlayed: parseInt(localStorage.getItem('philosopherGames') || '0'),
-    bestStreak: parseInt(localStorage.getItem('philosopherBestStreak') || '0')
-};
-
-// Quiz questions bank
-const questionTemplates = {
-    quotes: [
-        { question: "¿Quién dijo: 'Esse est percipi'?", answer: "George Berkeley" },
-        { question: "¿Quién dijo: 'El aire infinito es el principio de todas las cosas'?", answer: "Anaxímenes de Mileto" },
-        { question: "¿Quién dijo: 'El hombre es por naturaleza un animal político'?", answer: "Aristóteles" },
-        { question: "¿Quién dijo: 'Ama y haz lo que quieras'?", answer: "San Agustín de Hipona" },
-        { question: "¿Quién dijo: 'La ignorancia lleva al miedo, el miedo al odio'?", answer: "Averroes" },
-        { question: "¿Quién dijo: 'No se nace mujer, se llega a serlo'?", answer: "Simone de Beauvoir" },
-        { question: "¿Quién dijo: 'No hay vida correcta en la vida falsa'?", answer: "Theodor Adorno" },
-        { question: "¿Quién dijo: 'La banalidad del mal'?", answer: "Hannah Arendt" },
-        { question: "¿Quién dijo: 'Todas las cosas estaban juntas, luego vino la Mente y las ordenó'?", answer: "Anaxágoras de Clazómenas" },
-        { question: "¿Quién dijo: 'Un médico ignorante es el ayudante de campo de la muerte'?", answer: "Avicena" }
-    ],
-    works: [
-        { question: "¿Quién escribió 'El Canon de Medicina'?", answer: "Avicena" },
-        { question: "¿Quién escribió 'Ética a Nicómaco'?", answer: "Aristóteles" },
-        { question: "¿Quién escribió 'Confesiones'?", answer: "San Agustín de Hipona" },
-        { question: "¿Quién escribió 'La Consolación de la Filosofía'?", answer: "Boecio" },
-        { question: "¿Quién escribió 'El segundo sexo'?", answer: "Simone de Beauvoir" },
-        { question: "¿Quién escribió 'Dialéctica de la Ilustración'?", answer: "Theodor Adorno" },
-        { question: "¿Quién escribió 'Los orígenes del totalitarismo'?", answer: "Hannah Arendt" },
-        { question: "¿Quién escribió 'Cómo hacer cosas con palabras'?", answer: "John Austin" },
-        { question: "¿Quién escribió 'Tratado sobre los principios del conocimiento humano'?", answer: "George Berkeley" },
-        { question: "¿Quién escribió 'El papel de la filosofía'?", answer: "Gustavo Bueno" }
-    ],
-    periods: [
-        { question: "¿Qué filósofo vivió en el período 384-322 a.C.?", answer: "Aristóteles" },
-        { question: "¿Qué filósofo vivió en el período 585-525 a.C.?", answer: "Anaxímenes de Mileto" },
-        { question: "¿Qué filósofo vivió en el período 354-430 d.C.?", answer: "San Agustín de Hipona" },
-        { question: "¿Qué filósofo vivió en el período 1126-1198 d.C.?", answer: "Averroes" },
-        { question: "¿Qué filósofo vivió en el período 1685-1753 d.C.?", answer: "George Berkeley" },
-        { question: "¿Qué filósofo vivió en el período 1906-1975 d.C.?", answer: "Hannah Arendt" },
-        { question: "¿Qué filósofo vivió en el período 980-1037 d.C.?", answer: "Avicena" },
-        { question: "¿Qué filósofo vivió en el período 500-428 a.C.?", answer: "Anaxágoras de Clazómenas" }
-    ],
-    schools: [
-        { question: "¿Qué filósofo pertenecía a la Filosofía Presocrática?", answer: "Anaxímenes de Mileto" },
-        { question: "¿Qué filósofo pertenecía al Aristotelismo Islámico?", answer: "Avicena" },
-        { question: "¿Qué filósofo pertenecía al Empirismo inglés?", answer: "John Locke" },
-        { question: "¿Qué filósofo pertenecía a la Escuela de Frankfurt?", answer: "Walter Benjamin" },
-        { question: "¿Qué filósofo pertenecía al Existencialismo feminista?", answer: "Simone de Beauvoir" },
-        { question: "¿Qué filósofo pertenecía a la Teoría Crítica?", answer: "Theodor Adorno" },
-        { question: "¿Qué filósofo pertenecía al Positivismo lógico?", answer: "Rudolf Carnap" },
-        { question: "¿Qué filósofo pertenecía al Materialismo filosófico?", answer: "Gustavo Bueno" }
-    ]
-};
+// Application State 
+let currentScreen = 'main'; 
+let philosophers = []; 
+let questionTemplates = {};
+let currentQuizConfig = { questionCount: 10, timerEnabled: false }; 
+let currentQuiz = { questions: [], currentQuestion: 0, score: 0, streak: 0, startTime: null, answers: [] }; 
+let gameStats = { totalXP: parseInt(localStorage.getItem('philosopherXP') || '0'), level: 'Novato', gamesPlayed: parseInt(localStorage.getItem('philosopherGames') || '0'), bestStreak: parseInt(localStorage.getItem('philosopherBestStreak') || '0') };
 
 // Initialize application
-document.addEventListener('DOMContentLoaded', function() {
-    initializeApp();
+document.addEventListener('DOMContentLoaded', function() { 
+    initializeApp(); 
 });
 
-function initializeApp() {
-    // Load philosophers data
-    loadPhilosophersData();
-    
+function initializeApp() { 
+    // Load philosophers data dynamically
+    loadPhilosophersData(); 
     // Setup event listeners
-    setupEventListeners();
-    
+    setupEventListeners(); 
     // Initialize theme
-    initializeTheme();
-    
+    initializeTheme(); 
     // Load saved stats
-    updateLevelFromXP();
-    
+    updateLevelFromXP(); 
     // Show main screen
-    showScreen('main');
+    showScreen('main'); 
 }
 
 function loadPhilosophersData() {
-    // Use the provided data directly
-    philosophers = [
-        {
-            "nombre": "Anaxímenes de Mileto",
-            "periodo": "585-525 a.C.",
-            "corriente": "Filosofía Presocrática",
-            "obras": ["Sobre la naturaleza"],
-            "citas": ["El aire infinito es el principio de todas las cosas"],
-            "ideas": ["El aire como arché", "Teoría de la rarefacción y condensación"]
-        },
-        {
-            "nombre": "Anaxágoras de Clazómenas", 
-            "periodo": "500-428 a.C.",
-            "corriente": "Filosofía Presocrática",
-            "obras": ["Sobre la naturaleza"],
-            "citas": ["Todas las cosas estaban juntas, luego vino la Mente y las ordenó"],
-            "ideas": ["El Nous como principio ordenador", "Teoría de las homeomerías"]
-        },
-        {
-            "nombre": "Aristóteles",
-            "periodo": "384-322 a.C.", 
-            "corriente": "Filosofía Clásica",
-            "obras": ["Ética a Nicómaco", "Política", "Metafísica"],
-            "citas": ["El hombre es por naturaleza un animal político"],
-            "ideas": ["Teoría de las cuatro causas", "Lógica formal", "Ética de la virtud"]
-        },
-        {
-            "nombre": "San Agustín de Hipona",
-            "periodo": "354-430 d.C.",
-            "corriente": "Filosofía Cristiana", 
-            "obras": ["Confesiones", "La Ciudad de Dios"],
-            "citas": ["Ama y haz lo que quieras"],
-            "ideas": ["Síntesis platonismo-cristianismo", "Teoría de la iluminación divina"]
-        },
-        {
-            "nombre": "Boecio",
-            "periodo": "477-524 d.C.",
-            "corriente": "Neoplatonismo cristiano",
-            "obras": ["La Consolación de la Filosofía"],
-            "citas": ["Nada más es la filosofía que la verdadera religión"],
-            "ideas": ["Conciliación fe-razón", "Teoría del tiempo y eternidad"]
-        },
-        {
-            "nombre": "Avicena",
-            "periodo": "980-1037 d.C.",
-            "corriente": "Aristotelismo Islámico",
-            "obras": ["El Canon de Medicina", "El libro del saber"],
-            "citas": ["Un médico ignorante es el ayudante de campo de la muerte"],
-            "ideas": ["Síntesis aristotelismo-islam", "Teoría del hombre flotante"]
-        },
-        {
-            "nombre": "Averroes",
-            "periodo": "1126-1198 d.C.",
-            "corriente": "Aristotelismo Islámico", 
-            "obras": ["Comentarios a Aristóteles", "La destrucción de la destrucción"],
-            "citas": ["La ignorancia lleva al miedo, el miedo al odio"],
-            "ideas": ["Defensa autonomía de la razón", "Comentarios exhaustivos Aristóteles"]
-        },
-        {
-            "nombre": "San Buenaventura",
-            "periodo": "1221-1274 d.C.",
-            "corriente": "Escolástica Franciscana",
-            "obras": ["Itinerarium mentis in Deum", "Breviloquium"],
-            "citas": ["Como el ojo corporal no puede ver sin la luz del sol"],
-            "ideas": ["Teoría tres ojos del alma", "Síntesis agustiniano-franciscana"]
-        },
-        {
-            "nombre": "George Berkeley",
-            "periodo": "1685-1753 d.C.",
-            "corriente": "Empirismo irlandés",
-            "obras": ["Tratado sobre los principios del conocimiento humano"],
-            "citas": ["Esse est percipi"],
-            "ideas": ["Inmaterialismo filosófico", "Idealismo subjetivo"]
-        },
-        {
-            "nombre": "John Locke",
-            "periodo": "1632-1704 d.C.",
-            "corriente": "Empirismo inglés",
-            "obras": ["Ensayo sobre el entendimiento humano", "Dos tratados sobre el gobierno civil"],
-            "citas": ["No hay nada en el intelecto que no estuviera antes en los sentidos"],
-            "ideas": ["Teoría de la tabula rasa", "Derechos naturales"]
-        },
-        {
-            "nombre": "Walter Benjamin",
-            "periodo": "1892-1940 d.C.",
-            "corriente": "Escuela de Frankfurt",
-            "obras": ["La obra de arte en la época de su reproductibilidad técnica"],
-            "citas": ["No hay documento de cultura que no sea documento de barbarie"],
-            "ideas": ["Concepto del aura", "Materialismo histórico mesiánico"]
-        },
-        {
-            "nombre": "Theodor Adorno",
-            "periodo": "1903-1969 d.C.",
-            "corriente": "Teoría Crítica",
-            "obras": ["Dialéctica de la Ilustración", "Mínima Moralia"],
-            "citas": ["No hay vida correcta en la vida falsa"],
-            "ideas": ["Crítica razón instrumental", "Teoría industria cultural"]
-        },
-        {
-            "nombre": "Hannah Arendt",
-            "periodo": "1906-1975 d.C.",
-            "corriente": "Filosofía Política",
-            "obras": ["Los orígenes del totalitarismo", "La condición humana"],
-            "citas": ["La banalidad del mal"],
-            "ideas": ["Análisis del totalitarismo", "Teoría de la vita activa"]
-        },
-        {
-            "nombre": "John Austin",
-            "periodo": "1911-1960 d.C.",
-            "corriente": "Filosofía Analítica",
-            "obras": ["Cómo hacer cosas con palabras"],
-            "citas": ["Decir algo es hacer algo"],
-            "ideas": ["Teoría actos de habla", "Filosofía lenguaje ordinario"]
-        },
-        {
-            "nombre": "Simone de Beauvoir",
-            "periodo": "1908-1986 d.C.",
-            "corriente": "Existencialismo feminista",
-            "obras": ["El segundo sexo", "La ética de la ambigüedad"],
-            "citas": ["No se nace mujer, se llega a serlo"],
-            "ideas": ["Teoría feminista existencialista", "Concepto mujer como Otro"]
-        },
-        {
-            "nombre": "Rudolf Carnap",
-            "periodo": "1891-1970 d.C.",
-            "corriente": "Positivismo lógico",
-            "obras": ["La estructura lógica del mundo"],
-            "citas": ["Las proposiciones de la metafísica carecen de sentido"],
-            "ideas": ["Positivismo lógico", "Análisis lógico del lenguaje"]
-        },
-        {
-            "nombre": "Gustavo Bueno",
-            "periodo": "1924-2016 d.C.",
-            "corriente": "Materialismo filosófico",
-            "obras": ["El papel de la filosofía", "Teoría del cierre categorial"],
-            "citas": ["La filosofía no es un saber sobre objetos"],
-            "ideas": ["Materialismo filosófico", "Teoría del cierre categorial"]
-        },
-        {
-            "nombre": "Judith Butler",
-            "periodo": "1956-presente",
-            "corriente": "Filosofía de género",
-            "obras": ["El género en disputa", "Cuerpos que importan"],
-            "citas": ["El género es una construcción social"],
-            "ideas": ["Teoría performatividad género", "Crítica sujeto cartesiano"]
-        }
-    ];
-    
-    renderPhilosophers();
-    setupFilters();
+    // Load data dynamically from JSON file
+    fetch('philosophers_data_complete.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            philosophers = data.filosofos;
+            questionTemplates = data.quiz_questions;
+            console.log(`Loaded ${philosophers.length} philosophers and ${Object.keys(questionTemplates).length} question categories`);
+
+            // Initialize UI after data is loaded
+            renderPhilosophers();
+            setupFilters();
+        })
+        .catch(error => {
+            console.error('Error loading philosophers data:', error);
+            // Fallback to basic data if file not found
+            alert('No se pudo cargar el archivo de datos. Asegúrate de que philosophers_data_complete.json esté en la misma carpeta.');
+        });
 }
 
 function setupEventListeners() {
