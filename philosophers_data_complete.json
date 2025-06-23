@@ -1,5 +1,5 @@
 {
-  "filosofos_a_añadir": [
+  "filosofos": [
     {
       "nombre": "Sócrates",
       "periodo": "470-399 a.C.",
@@ -249,7 +249,7 @@
       ]
     }
   ],
-  "nuevas_preguntas_quiz": {
+  "quiz_questions": {
     "periods": [
       {
         "question": "¿Qué filósofo vivió en el período 470-399 a.C.?",
