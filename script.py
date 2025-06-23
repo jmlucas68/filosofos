@@ -1,428 +1,289 @@
-# Crear el index.html modificado con el botón de Estudio
-index_html = """<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🏛️ Galería de Filósofos</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+import json
+from pathlib import Path
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: #333;
-        }
-
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .header h1 {
-            text-align: center;
-            color: #4a5568;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-
-        .nav-btn, .study-btn {
-            background: linear-gradient(45deg, #4CAF50, #45a049);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .study-btn {
-            background: linear-gradient(45deg, #FF6B6B, #FF5252);
-            font-size: 18px;
-            padding: 15px 30px;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-        }
-
-        .nav-btn:hover, .study-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .study-btn:hover {
-            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
-        }
-
-        .controls {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .search-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .search-input {
-            padding: 12px 20px;
-            border: 2px solid #ddd;
-            border-radius: 25px;
-            font-size: 16px;
-            width: 300px;
-            max-width: 90%;
-            outline: none;
-            transition: border-color 0.3s ease;
-        }
-
-        .search-input:focus {
-            border-color: #667eea;
-        }
-
-        .philosophers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 40px 20px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .philosopher-card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .philosopher-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-
-        .philosopher-name {
-            font-size: 1.4rem;
-            font-weight: bold;
-            color: #2d3748;
-            margin-bottom: 8px;
-        }
-
-        .philosopher-dates {
-            color: #718096;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-
-        .philosopher-school {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-
-        .philosopher-description {
-            color: #4a5568;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .timeline-item {
-            background: rgba(255, 255, 255, 0.9);
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            position: relative;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .nav-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .philosophers-grid {
-                grid-template-columns: 1fr;
-                padding: 20px 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>🏛️ Galería de Filósofos</h1>
-        <p style="text-align: center; color: #666; margin-bottom: 20px;">
-            Explora el pensamiento de los grandes filósofos de la historia
-        </p>
+def load_philosophers_data(json_file_path="philosophers_data.json"):
+    """
+    Carga los datos de filósofos desde un archivo JSON externo.
+    
+    Args:
+        json_file_path (str): Ruta al archivo JSON con los datos de filósofos
         
-        <!-- Botón prominente de Estudio -->
-        <div style="text-align: center; margin: 20px 0;">
-            <a href="estudio/estudio.html" class="study-btn">
-                📚 Ir al Quiz de Estudio
-            </a>
-        </div>
+    Returns:
+        list: Lista de diccionarios con información de cada filósofo
+    """
+    try:
+        # Verificar si el archivo existe
+        if not Path(json_file_path).exists():
+            raise FileNotFoundError(f"El archivo {json_file_path} no se encuentra")
+        
+        # Leer el archivo JSON
+        with open(json_file_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+        
+        # Extraer la lista de filósofos
+        philosophers = data.get('filosofos', [])
+        
+        if not philosophers:
+            print("Advertencia: No se encontraron filósofos en el archivo JSON")
+        
+        return philosophers
+        
+    except json.JSONDecodeError as e:
+        print(f"Error al leer el archivo JSON: {e}")
+        return []
+    except FileNotFoundError as e:
+        print(f"Error: {e}")
+        return []
+    except Exception as e:
+        print(f"Error inesperado: {e}")
+        return []
 
-        <div class="nav-container">
-            <button class="nav-btn" onclick="sortChronological()">⏰ Orden Cronológico</button>
-            <button class="nav-btn" onclick="sortAlphabetical()">📝 Orden Alfabético</button>
-            <button class="nav-btn" onclick="toggleTimeline()">⏳ Línea del Tiempo</button>
-        </div>
+def display_philosopher_info(philosopher):
+    """
+    Muestra la información de un filósofo de forma organizada.
+    
+    Args:
+        philosopher (dict): Diccionario con información del filósofo
+    """
+    print("=" * 60)
+    print(f"NOMBRE: {philosopher.get('nombre', 'N/A')}")
+    print(f"PERÍODO: {philosopher.get('periodo', 'N/A')}")
+    print(f"NACIONALIDAD: {philosopher.get('nacionalidad', 'N/A')}")
+    print(f"CORRIENTE: {philosopher.get('corriente', 'N/A')}")
+    
+    print("\nOBRAS PRINCIPALES:")
+    obras = philosopher.get('obras', [])
+    for i, obra in enumerate(obras, 1):
+        print(f"  {i}. {obra}")
+    
+    print("\nCITAS FAMOSAS:")
+    citas = philosopher.get('citas', [])
+    for i, cita in enumerate(citas, 1):
+        print(f"  {i}. \"{cita}\"")
+    
+    print("\nIDEAS PRINCIPALES:")
+    ideas = philosopher.get('ideas', [])
+    for i, idea in enumerate(ideas, 1):
+        print(f"  {i}. {idea}")
+    
+    print("=" * 60)
 
-        <div class="search-container">
-            <input type="text" class="search-input" id="searchInput" placeholder="🔎 Buscar filósofo...">
-        </div>
-    </div>
+def search_philosopher_by_name(philosophers, name):
+    """
+    Busca un filósofo por nombre.
+    
+    Args:
+        philosophers (list): Lista de filósofos
+        name (str): Nombre del filósofo a buscar
+        
+    Returns:
+        dict or None: Diccionario del filósofo encontrado o None
+    """
+    for philosopher in philosophers:
+        if name.lower() in philosopher.get('nombre', '').lower():
+            return philosopher
+    return None
 
-    <div class="philosophers-grid" id="philosophersGrid">
-        <!-- Los filósofos se cargarán aquí -->
-    </div>
+def filter_by_period(philosophers, period_keyword):
+    """
+    Filtra filósofos por período histórico.
+    
+    Args:
+        philosophers (list): Lista de filósofos
+        period_keyword (str): Palabra clave del período (ej: "a.C.", "d.C.")
+        
+    Returns:
+        list: Lista de filósofos que coinciden con el período
+    """
+    filtered = []
+    for philosopher in philosophers:
+        if period_keyword.lower() in philosopher.get('periodo', '').lower():
+            filtered.append(philosopher)
+    return filtered
 
-    <div class="timeline hidden" id="timeline">
-        <!-- La línea del tiempo se cargará aquí -->
-    </div>
+def filter_by_current(philosophers, current_keyword):
+    """
+    Filtra filósofos por corriente filosófica.
+    
+    Args:
+        philosophers (list): Lista de filósofos
+        current_keyword (str): Palabra clave de la corriente
+        
+    Returns:
+        list: Lista de filósofos que coinciden con la corriente
+    """
+    filtered = []
+    for philosopher in philosophers:
+        if current_keyword.lower() in philosopher.get('corriente', '').lower():
+            filtered.append(philosopher)
+    return filtered
 
-    <script>
-        // Base de datos de filósofos
-        const philosophers = [
-            {
-                name: "Anaxímenes de Mileto",
-                dates: "585-525 a.C.",
-                school: "Filosofía Presocrática",
-                description: "Filósofo presocrático que propuso el aire como principio originario (arché) de todas las cosas.",
-                period: -550
-            },
-            {
-                name: "Anaxágoras de Clazómenas",
-                dates: "500-428 a.C.",
-                school: "Filosofía Presocrática",
-                description: "Introdujo el concepto del Nous (mente cósmica) como principio ordenador del universo.",
-                period: -464
-            },
-            {
-                name: "Aristóteles",
-                dates: "384-322 a.C.",
-                school: "Filosofía Clásica",
-                description: "Discípulo de Platón, fundó el Liceo y desarrolló un sistema comprehensivo que abarca lógica, ética y metafísica.",
-                period: -353
-            },
-            {
-                name: "San Agustín de Hipona",
-                dates: "354-430 d.C.",
-                school: "Filosofía Cristiana",
-                description: "Figura central de la filosofía cristiana que sintetizó el platonismo con el cristianismo.",
-                period: 392
-            },
-            {
-                name: "Boecio",
-                dates: "477-524 d.C.",
-                school: "Neoplatonismo",
-                description: "Filósofo romano que escribió 'La Consolación de la Filosofía' y tradujo obras aristotélicas.",
-                period: 501
-            },
-            {
-                name: "Avicena (Ibn Sina)",
-                dates: "980-1037 d.C.",
-                school: "Aristotelismo Islámico",
-                description: "Polímata persa conocido como el 'Príncipe de los Sabios', escribió el Canon de Medicina.",
-                period: 1009
-            },
-            {
-                name: "Averroes (Ibn Rushd)",
-                dates: "1126-1198 d.C.",
-                school: "Aristotelismo Islámico",
-                description: "Filósofo andalusí conocido como 'el Comentador' por sus análisis de Aristóteles.",
-                period: 1162
-            },
-            {
-                name: "San Buenaventura",
-                dates: "1221-1274 d.C.",
-                school: "Escolástica Franciscana",
-                description: "Doctor Seráfico que desarrolló la síntesis agustiniano-franciscana y la teoría de los tres ojos del alma.",
-                period: 1248
-            },
-            {
-                name: "George Berkeley",
-                dates: "1685-1753 d.C.",
-                school: "Empirismo Irlandés",
-                description: "Desarrolló el inmaterialismo filosófico con su famosa máxima 'Esse est percipi' (Ser es ser percibido).",
-                period: 1719
-            },
-            {
-                name: "John Locke",
-                dates: "1632-1704 d.C.",
-                school: "Empirismo Inglés",
-                description: "Padre del liberalismo clásico, desarrolló la teoría de la 'tabula rasa' y los derechos naturales.",
-                period: 1668
-            },
-            {
-                name: "Walter Benjamin",
-                dates: "1892-1940 d.C.",
-                school: "Escuela de Frankfurt",
-                description: "Teórico crítico alemán que desarrolló conceptos sobre el 'aura' y la reproductibilidad técnica.",
-                period: 1916
-            },
-            {
-                name: "Theodor Adorno",
-                dates: "1903-1969 d.C.",
-                school: "Teoría Crítica",
-                description: "Miembro de la Escuela de Frankfurt, desarrolló la crítica de la razón instrumental.",
-                period: 1936
-            },
-            {
-                name: "Hannah Arendt",
-                dates: "1906-1975 d.C.",
-                school: "Filosofía Política",
-                description: "Teórica política que desarrolló el concepto de 'banalidad del mal' y analizó el totalitarismo.",
-                period: 1941
-            },
-            {
-                name: "John Langshaw Austin",
-                dates: "1911-1960 d.C.",
-                school: "Filosofía Analítica",
-                description: "Pionero en la filosofía del lenguaje ordinario, desarrolló la teoría de los actos de habla.",
-                period: 1936
-            },
-            {
-                name: "Simone de Beauvoir",
-                dates: "1908-1986 d.C.",
-                school: "Existencialismo Feminista",
-                description: "Filósofa existencialista y pionera del feminismo moderno, autora de 'El segundo sexo'.",
-                period: 1947
-            }
-        ];
+def get_random_philosopher(philosophers):
+    """
+    Obtiene un filósofo aleatorio de la lista.
+    
+    Args:
+        philosophers (list): Lista de filósofos
+        
+    Returns:
+        dict: Diccionario del filósofo seleccionado aleatoriamente
+    """
+    import random
+    if philosophers:
+        return random.choice(philosophers)
+    return None
 
-        let currentSort = 'chronological';
-        let isTimelineView = false;
-
-        function renderPhilosophers(philosopherList = philosophers) {
-            const grid = document.getElementById('philosophersGrid');
-            grid.innerHTML = '';
-
-            philosopherList.forEach(philosopher => {
-                const card = document.createElement('div');
-                card.className = 'philosopher-card';
-                card.innerHTML = `
-                    <div class="philosopher-name">${philosopher.name}</div>
-                    <div class="philosopher-dates">${philosopher.dates}</div>
-                    <div class="philosopher-school">${philosopher.school}</div>
-                    <div class="philosopher-description">${philosopher.description}</div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        function sortChronological() {
-            currentSort = 'chronological';
-            const sorted = [...philosophers].sort((a, b) => a.period - b.period);
-            renderPhilosophers(sorted);
-        }
-
-        function sortAlphabetical() {
-            currentSort = 'alphabetical';
-            const sorted = [...philosophers].sort((a, b) => a.name.localeCompare(b.name));
-            renderPhilosophers(sorted);
-        }
-
-        function toggleTimeline() {
-            const grid = document.getElementById('philosophersGrid');
-            const timeline = document.getElementById('timeline');
+def export_to_txt(philosophers, filename="filosofos_export.txt"):
+    """
+    Exporta la información de los filósofos a un archivo de texto.
+    
+    Args:
+        philosophers (list): Lista de filósofos
+        filename (str): Nombre del archivo de salida
+    """
+    try:
+        with open(filename, 'w', encoding='utf-8') as file:
+            file.write("🏛️ GALERÍA DE FILÓSOFOS - EXPORTACIÓN\n")
+            file.write("=" * 60 + "\n\n")
             
-            isTimelineView = !isTimelineView;
+            for philosopher in philosophers:
+                file.write(f"NOMBRE: {philosopher.get('nombre', 'N/A')}\n")
+                file.write(f"PERÍODO: {philosopher.get('periodo', 'N/A')}\n")
+                file.write(f"NACIONALIDAD: {philosopher.get('nacionalidad', 'N/A')}\n")
+                file.write(f"CORRIENTE: {philosopher.get('corriente', 'N/A')}\n")
+                
+                file.write("\nOBRAS PRINCIPALES:\n")
+                for i, obra in enumerate(philosopher.get('obras', []), 1):
+                    file.write(f"  {i}. {obra}\n")
+                
+                file.write("\nCITAS FAMOSAS:\n")
+                for i, cita in enumerate(philosopher.get('citas', []), 1):
+                    file.write(f"  {i}. \"{cita}\"\n")
+                
+                file.write("\nIDEAS PRINCIPALES:\n")
+                for i, idea in enumerate(philosopher.get('ideas', []), 1):
+                    file.write(f"  {i}. {idea}\n")
+                
+                file.write("\n" + "=" * 60 + "\n\n")
+        
+        print(f"✅ Datos exportados exitosamente a: {filename}")
+        
+    except Exception as e:
+        print(f"❌ Error al exportar: {e}")
+
+def main():
+    """
+    Función principal del programa.
+    """
+    print("🏛️  SISTEMA DE GESTIÓN DE FILÓSOFOS  🏛️")
+    print("=" * 60)
+    
+    # Cargar datos desde el archivo JSON
+    philosophers = load_philosophers_data()
+    
+    if not philosophers:
+        print("No se pudieron cargar los datos de filósofos. Programa terminado.")
+        return
+    
+    print(f"✅ Se cargaron {len(philosophers)} filósofos exitosamente\n")
+    
+    while True:
+        print("\n--- MENÚ PRINCIPAL ---")
+        print("1. Mostrar todos los filósofos")
+        print("2. Buscar filósofo por nombre")
+        print("3. Filtrar por período histórico")
+        print("4. Filtrar por corriente filosófica")
+        print("5. Filósofo aleatorio")
+        print("6. Mostrar estadísticas")
+        print("7. Exportar a archivo de texto")
+        print("8. Salir")
+        
+        choice = input("\nSeleccione una opción (1-8): ").strip()
+        
+        if choice == '1':
+            print("\n📚 TODOS LOS FILÓSOFOS:")
+            for philosopher in philosophers:
+                display_philosopher_info(philosopher)
+                
+        elif choice == '2':
+            name = input("\nIngrese el nombre del filósofo: ").strip()
+            philosopher = search_philosopher_by_name(philosophers, name)
+            if philosopher:
+                print("\n🔍 FILÓSOFO ENCONTRADO:")
+                display_philosopher_info(philosopher)
+            else:
+                print(f"❌ No se encontró ningún filósofo con el nombre '{name}'")
+                
+        elif choice == '3':
+            period = input("\nIngrese período a filtrar (ej: 'a.C.', 'd.C.'): ").strip()
+            filtered = filter_by_period(philosophers, period)
+            if filtered:
+                print(f"\n📅 FILÓSOFOS DEL PERÍODO '{period}':")
+                for philosopher in filtered:
+                    display_philosopher_info(philosopher)
+            else:
+                print(f"❌ No se encontraron filósofos del período '{period}'")
+                
+        elif choice == '4':
+            current = input("\nIngrese corriente filosófica (ej: 'Presocrática', 'Clásica'): ").strip()
+            filtered = filter_by_current(philosophers, current)
+            if filtered:
+                print(f"\n🏛️ FILÓSOFOS DE LA CORRIENTE '{current}':")
+                for philosopher in filtered:
+                    display_philosopher_info(philosopher)
+            else:
+                print(f"❌ No se encontraron filósofos de la corriente '{current}'")
+                
+        elif choice == '5':
+            random_philosopher = get_random_philosopher(philosophers)
+            if random_philosopher:
+                print("\n🎲 FILÓSOFO ALEATORIO:")
+                display_philosopher_info(random_philosopher)
+            else:
+                print("❌ No se pudo obtener un filósofo aleatorio")
+                
+        elif choice == '6':
+            print("\n📊 ESTADÍSTICAS:")
+            print(f"Total de filósofos: {len(philosophers)}")
             
-            if (isTimelineView) {
-                grid.classList.add('hidden');
-                timeline.classList.remove('hidden');
-                renderTimeline();
-            } else {
-                grid.classList.remove('hidden');
-                timeline.classList.add('hidden');
-            }
-        }
-
-        function renderTimeline() {
-            const timeline = document.getElementById('timeline');
-            const sorted = [...philosophers].sort((a, b) => a.period - b.period);
+            # Contar por corrientes
+            corrientes = {}
+            for philosopher in philosophers:
+                corriente = philosopher.get('corriente', 'Sin clasificar')
+                corrientes[corriente] = corrientes.get(corriente, 0) + 1
             
-            timeline.innerHTML = '';
-            sorted.forEach(philosopher => {
-                const item = document.createElement('div');
-                item.className = 'timeline-item';
-                item.innerHTML = `
-                    <h3>${philosopher.name}</h3>
-                    <p><strong>${philosopher.dates}</strong> - ${philosopher.school}</p>
-                    <p>${philosopher.description}</p>
-                `;
-                timeline.appendChild(item);
-            });
-        }
-
-        function searchPhilosophers() {
-            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-            const filtered = philosophers.filter(philosopher => 
-                philosopher.name.toLowerCase().includes(searchTerm) ||
-                philosopher.school.toLowerCase().includes(searchTerm) ||
-                philosopher.description.toLowerCase().includes(searchTerm)
-            );
+            print("\nPor corriente filosófica:")
+            for corriente, count in sorted(corrientes.items()):
+                print(f"  - {corriente}: {count}")
+                
+            # Contar por períodos
+            periodos = {}
+            for philosopher in philosophers:
+                periodo = philosopher.get('periodo', 'Sin período')
+                if 'a.C.' in periodo:
+                    epoca = 'Antigüedad'
+                elif any(x in periodo for x in ['d.C.', 'siglo']):
+                    epoca = 'Era Cristiana'
+                else:
+                    epoca = 'Sin clasificar'
+                periodos[epoca] = periodos.get(epoca, 0) + 1
             
-            if (!isTimelineView) {
-                renderPhilosophers(filtered);
-            }
-        }
+            print("\nPor época:")
+            for epoca, count in sorted(periodos.items()):
+                print(f"  - {epoca}: {count}")
+                
+        elif choice == '7':
+            filename = input("\nIngrese nombre del archivo (presione Enter para usar 'filosofos_export.txt'): ").strip()
+            if not filename:
+                filename = "filosofos_export.txt"
+            export_to_txt(philosophers, filename)
+            
+        elif choice == '8':
+            print("\n👋 ¡Hasta pronto!")
+            break
+            
+        else:
+            print("❌ Opción no válida. Intente nuevamente.")
 
-        // Event listeners
-        document.getElementById('searchInput').addEventListener('input', searchPhilosophers);
-
-        // Inicializar la aplicación
-        sortChronological();
-    </script>
-</body>
-</html>"""
-
-# Guardar el archivo
-with open('index.html', 'w', encoding='utf-8') as f:
-    f.write(index_html)
-
-print("✅ Archivo index.html principal creado con botón de Estudio")
-print("📍 Ubicación del botón: Prominente en la parte superior, lleva a estudio/estudio.html")
+if __name__ == "__main__":
+    main()
