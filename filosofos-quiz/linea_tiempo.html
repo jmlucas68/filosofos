@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea del Tiempo de Filósofos y Eventos Históricos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        /* Estilos para el botón de navegación */
+        .navegacion {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn-nav {
+            background-color: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin: 0 5px;
+        }
+
+            .btn-nav:hover {
+                background-color: #5a6268;
+            }
+
+        .navegacion-siglos {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+            .navegacion-siglos label {
+                margin-right: 10px;
+                font-weight: bold;
+            }
+
+            .navegacion-siglos select {
+                padding: 8px 12px;
+                border: 2px solid #ddd;
+                border-radius: 4px;
+                margin-right: 10px;
+                font-size: 1rem;
+            }
+
+                .navegacion-siglos select:focus {
+                    outline: none;
+                    border-color: #007bff;
+                }
+
+        .filtros {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn-filtro {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .btn-filtro:hover {
+                background-color: #0056b3;
+            }
+
+            .btn-filtro.active {
+                background-color: #28a745;
+            }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+            .timeline::after {
+                content: '';
+                position: absolute;
+                width: 6px;
+                background-color: #2196F3;
+                top: 0;
+                bottom: 0;
+                left: 50%;
+                margin-left: -3px;
+            }
+
+        .entry {
+            padding: 1rem 2rem;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            transition: opacity 0.3s;
+        }
+
+            .entry.left {
+                left: 0;
+            }
+
+            .entry.right {
+                left: 50%;
+            }
+
+            .entry.filosofo::before {
+                content: " ";
+                position: absolute;
+                top: 15px;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: white;
+                border: 4px solid #2196F3;
+                z-index: 1;
+            }
+
+            .entry.evento::before {
+                content: " ";
+                position: absolute;
+                top: 15px;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: white;
+                border: 4px solid #dc3545;
+                z-index: 1;
+            }
+
+            .entry.left::before {
+                right: -13px;
+            }
+
+            .entry.right::before {
+                left: -13px;
+            }
+
+        .content {
+            padding: 1rem;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+            .content.filosofo {
+                border-left: 4px solid #2196F3;
+            }
+
+            .content.evento {
+                border-left: 4px solid #dc3545;
+            }
+
+            .content img {
+                width: 100px;
+                height: auto;
+                float: left;
+                margin-right: 1rem;
+                border-radius: 4px;
+            }
+
+        .movimiento {
+            font-style: italic;
+            color: #666;
+            margin-top: 0.5rem;
+            clear: both;
+        }
+
+        .tipo-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-filosofo {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-evento {
+            background-color: #ffebee;
+            color: #d32f2f;
+        }
+
+        .year {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .entry.hidden {
+            display: none;
+        }
+
+        .leyenda {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .leyenda-item {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        .leyenda-color {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .color-filosofo {
+            background-color: #2196F3;
+        }
+
+        .color-evento {
+            background-color: #dc3545;
+        }
+
+        @media screen and (max-width: 768px) {
+            .entry {
+                width: 100%;
+                left: 0;
+                padding-left: 3rem;
+                padding-right: 1rem;
+            }
+
+                .entry.right {
+                    left: 0;
+                }
+
+            .timeline::after {
+                left: 20px;
+            }
+
+            .entry::before {
+                left: 8px;
+            }
+
+            .entry.right::before, .entry.left::before {
+                left: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Línea del Tiempo de Filósofos y Eventos Históricos</h1>
+
+    <div class="navegacion">
+        <a href="index.html" class="btn-nav">🏛️ Volver a la Galería</a>
+    </div>
+
+    <div class="leyenda">
+        <div class="leyenda-item">
+            <span class="leyenda-color color-filosofo"></span>
+            Filósofos
+        </div>
+        <div class="leyenda-item">
+            <span class="leyenda-color color-evento"></span>
+            Eventos Históricos
+        </div>
+    </div>
+
+    <div class="filtros">
+        <button class="btn-filtro active" onclick="filtrar('todos')">Mostrar Todo</button>
+        <button class="btn-filtro" onclick="filtrar('filosofos')">Solo Filósofos</button>
+        <button class="btn-filtro" onclick="filtrar('eventos')">Solo Eventos</button>
+    </div>
+
+    <div class="navegacion-siglos">
+        <label for="selector-siglo">Ir al siglo:</label>
+        <select id="selector-siglo" onchange="irAlSiglo()">
+            <option value="">Selecciona un siglo</option>
+        </select>
+        <button class="btn-nav" onclick="volverAlInicio()">⬆️ Volver al inicio</button>
+    </div>
+
+    <div class="timeline" id="timeline"></div>
+
+    <script>
+    let todosLosElementos = [];
+    let siglosDisponibles = new Set();
+
+    function calcularSiglo(anio) {
+      if (anio < 0) {
+        // Para años a.C., el siglo se calcula de manera diferente
+        return Math.ceil(Math.abs(anio) / 100);
+      } else {
+        // Para años d.C.
+        return Math.ceil(anio / 100);
+      }
+    }
+
+    function formatearSiglo(siglo, esAC) {
+      const numeroRomano = convertirANumeroRomano(siglo);
+      return esAC ? `Siglo ${numeroRomano} a.C.` : `Siglo ${numeroRomano} d.C.`;
+    }
+
+    function convertirANumeroRomano(num) {
+      const valores = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+      const romanos = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+      let resultado = '';
+
+      for (let i = 0; i < valores.length; i++) {
+        while (num >= valores[i]) {
+          resultado += romanos[i];
+          num -= valores[i];
+        }
+      }
+      return resultado;
+    }
+
+    function formatearAnio(anio) {
+      if (anio < 0) {
+        return Math.abs(anio) + ' a.C.';
+      }
+      return anio + ' d.C.';
+    }
+
+    function convertirAnio(anio) {
+      // Convierte años negativos (a.C.) a un formato que permita ordenar correctamente
+      return anio < 0 ? anio : anio;
+    }
+
+    async function cargarDatos() {
+      try {
+        // Cargar filósofos
+        const responseFilosofos = await fetch("filosofos.json");
+        const filosofos = await responseFilosofos.json();
+
+        // Cargar eventos
+        const responseEventos = await fetch("eventos.json");
+        const eventos = await responseEventos.json();
+
+        // Combinar y formatear datos
+        const filosofosFormateados = filosofos.map(f => ({
+          tipo: 'filosofo',
+          anio: f.nacimiento,
+          nombre: f.nombre,
+          descripcion: `${formatearAnio(f.nacimiento)} – ${formatearAnio(f.muerte)}`,
+          movimiento: f.movimiento || 'N/A',
+          url_foto: f.url_foto,
+          url_pagina: f.url_pagina
+        }));
+
+        const eventosFormateados = eventos.map(e => ({
+          tipo: 'evento',
+          anio: e.year,
+          nombre: e.name,
+          descripcion: e.description,
+          movimiento: null
+        }));
+
+        // Combinar y ordenar por año
+        todosLosElementos = [...filosofosFormateados, ...eventosFormateados];
+        todosLosElementos.sort((a, b) => convertirAnio(a.anio) - convertirAnio(b.anio));
+
+        // Calcular siglos disponibles
+        todosLosElementos.forEach(elemento => {
+          const siglo = calcularSiglo(elemento.anio);
+          const esAC = elemento.anio < 0;
+          const claveSiglo = esAC ? `-${siglo}` : `${siglo}`;
+          siglosDisponibles.add(claveSiglo);
+        });
+
+        mostrarTimeline();
+        llenarSelectorSiglos();
+      } catch (error) {
+        console.error("Error al cargar los datos:", error);
+        document.getElementById('timeline').innerHTML = "<p>No se pudieron cargar los datos.</p>";
+      }
+    }
+
+    function mostrarTimeline() {
+      const timeline = document.getElementById('timeline');
+      timeline.innerHTML = '';
+
+      todosLosElementos.forEach((elemento, index) => {
+        const side = index % 2 === 0 ? 'left' : 'right';
+        const entry = document.createElement('div');
+        entry.className = `entry ${side} ${elemento.tipo}`;
+        entry.setAttribute('data-tipo', elemento.tipo);
+        entry.setAttribute('data-anio', elemento.anio);
+        entry.setAttribute('data-siglo', elemento.anio < 0 ? `-${calcularSiglo(elemento.anio)}` : `${calcularSiglo(elemento.anio)}`);
+
+        let contenidoHTML = '';
+
+        if (elemento.tipo === 'filosofo') {
+          contenidoHTML = `
+            <div class="content filosofo">
+              <div class="tipo-badge badge-filosofo">FILÓSOFO</div>
+              ${elemento.url_foto ? `<a href="${elemento.url_pagina}" target="_blank">
+                <img src="${elemento.url_foto}" alt="${elemento.nombre}" onerror="this.style.display='none';">
+              </a>` : ''}
+              <h3>${elemento.nombre}</h3>
+              <div class="year">${elemento.descripcion}</div>
+              <div class="movimiento">${elemento.movimiento}</div>
+            </div>
+          `;
+        } else {
+          contenidoHTML = `
+            <div class="content evento">
+              <div class="tipo-badge badge-evento">EVENTO HISTÓRICO</div>
+              <h3>${elemento.nombre}</h3>
+              <div class="year">${formatearAnio(elemento.anio)}</div>
+              <p>${elemento.descripcion}</p>
+            </div>
+          `;
+        }
+
+        entry.innerHTML = contenidoHTML;
+        timeline.appendChild(entry);
+      });
+    }
+
+    function llenarSelectorSiglos() {
+      const selector = document.getElementById('selector-siglo');
+      const siglosOrdenados = Array.from(siglosDisponibles).sort((a, b) => {
+        const numA = parseInt(a);
+        const numB = parseInt(b);
+        return numA - numB;
+      });
+
+      siglosOrdenados.forEach(claveSiglo => {
+        const option = document.createElement('option');
+        option.value = claveSiglo;
+        const sigloNum = Math.abs(parseInt(claveSiglo));
+        const esAC = parseInt(claveSiglo) < 0;
+        option.textContent = formatearSiglo(sigloNum, esAC);
+        selector.appendChild(option);
+      });
+    }
+
+    function irAlSiglo() {
+      const selector = document.getElementById('selector-siglo');
+      const sigloSeleccionado = selector.value;
+
+      if (!sigloSeleccionado) return;
+
+      // Buscar el primer elemento de ese siglo
+      const primerElementoDelSiglo = document.querySelector(`[data-siglo="${sigloSeleccionado}"]`);
+
+      if (primerElementoDelSiglo) {
+        primerElementoDelSiglo.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
+
+        // Añadir un efecto de resaltado temporal
+        primerElementoDelSiglo.style.transform = 'scale(1.05)';
+        primerElementoDelSiglo.style.transition = 'transform 0.3s ease';
+
+        setTimeout(() => {
+          primerElementoDelSiglo.style.transform = 'scale(1)';
+        }, 1000);
+      }
+    }
+
+    function volverAlInicio() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.getElementById('selector-siglo').value = '';
+    }
+
+    function filtrar(tipo) {
+      // Actualizar botones activos
+      document.querySelectorAll('.btn-filtro').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+
+      // Filtrar elementos
+      const entries = document.querySelectorAll('.entry');
+      entries.forEach(entry => {
+        const tipoElemento = entry.getAttribute('data-tipo');
+
+        if (tipo === 'todos') {
+          entry.classList.remove('hidden');
+        } else if (tipo === 'filosofos' && tipoElemento === 'filosofo') {
+          entry.classList.remove('hidden');
+        } else if (tipo === 'eventos' && tipoElemento === 'evento') {
+          entry.classList.remove('hidden');
+        } else {
+          entry.classList.add('hidden');
+        }
+      });
+    }
+
+    // Cargar datos al iniciar la página
+    cargarDatos();
+    </script>
+</body>
+</html>
