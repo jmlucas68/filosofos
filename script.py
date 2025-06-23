@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-def load_philosophers_data(json_file_path="philosophers_data.json"):
+def load_philosophers_data(json_file_path="philosophers_data_complete.json"):
     """
     Carga los datos de filósofos desde un archivo JSON externo.
     
