@@ -1,423 +1,398 @@
-[
-  {
-    "filosofos_a_añadir": [
-      {
-        "nombre": "Sócrates",
-        "periodo": "470-399 a.C.",
-        "nacionalidad": "Griega",
-        "corriente": "Filosofía Clásica Griega",
-        "obras": [
-          "No escribió obras (enseñanza oral)",
-          "Conocido a través de Platón y Jenofonte",
-          "Apología de Sócrates (por Platón)",
-          "Critón (por Platón)"
-        ],
-        "citas": [
-          "Solo sé que no sé nada",
-          "Una vida sin examen no merece la pena ser vivida",
-          "Conócete a ti mismo",
-          "El sabio no es el que sabe, sino el que sabe que no sabe"
-        ],
-        "ideas": [
-          "Método socrático (mayéutica)",
-          "Ironía socrática",
-          "La virtud es conocimiento",
-          "Intelectualismo moral",
-          "Búsqueda de definiciones universales"
-        ]
-      },
-      {
-        "nombre": "Platón",
-        "periodo": "428-348 a.C.",
-        "nacionalidad": "Griega",
-        "corriente": "Filosofía Clásica Griega",
-        "obras": [
-          "La República",
-          "Fedón",
-          "Fedro",
-          "El Banquete",
-          "Menón",
-          "Apología de Sócrates",
-          "Las Leyes"
-        ],
-        "citas": [
-          "La belleza es el esplendor de la verdad",
-          "El sabio habla porque tiene algo que decir; el necio porque tiene que decir algo",
-          "Solo los muertos han visto el final de la guerra",
-          "La música es para el alma lo que la gimnasia para el cuerpo"
-        ],
-        "ideas": [
-          "Teoría de las Ideas o Formas",
-          "Alegoría de la caverna",
-          "El Estado ideal y los guardianes",
-          "Alma tripartita (razón, voluntad, apetito)",
-          "Dualismo platónico",
-          "Dialéctica como método filosófico"
-        ]
-      },
-      {
-        "nombre": "Immanuel Kant",
-        "periodo": "1724-1804 d.C.",
-        "nacionalidad": "Alemana",
-        "corriente": "Idealismo Alemán / Ilustración",
-        "obras": [
-          "Crítica de la razón pura",
-          "Crítica de la razón práctica",
-          "Crítica del juicio",
-          "Fundamentación de la metafísica de las costumbres",
-          "La paz perpetua",
-          "¿Qué es la Ilustración?"
-        ],
-        "citas": [
-          "Dos cosas me llenan el ánimo de admiración: el cielo estrellado sobre mí y la ley moral en mí",
-          "Atrévete a saber",
-          "Obra de tal modo que la máxima de tu voluntad pueda valer como ley universal",
-          "La razón sin experiencia es vacía, la experiencia sin razón es ciega"
-        ],
-        "ideas": [
-          "Giro copernicano en filosofía",
-          "Imperativo categórico",
-          "Fenómenos y noúmenos",
-          "Juicios sintéticos a priori",
-          "Autonomía moral",
-          "Crítica de la razón"
-        ]
-      },
-      {
-        "nombre": "René Descartes",
-        "periodo": "1596-1650 d.C.",
-        "nacionalidad": "Francesa",
-        "corriente": "Racionalismo",
-        "obras": [
-          "Discurso del método",
-          "Meditaciones metafísicas",
-          "Principios de filosofía",
-          "Las pasiones del alma",
-          "Reglas para la dirección del espíritu"
-        ],
-        "citas": [
-          "Pienso, luego existo (Cogito ergo sum)",
-          "De omnibus dubitandum (Hay que dudar de todo)",
-          "La lectura de todos los buenos libros es una conversación con las mejores personas de los siglos pasados",
-          "Para investigar la verdad es preciso dudar de todas las cosas"
-        ],
-        "ideas": [
-          "Duda metódica",
-          "Cogito ergo sum",
-          "Dualismo sustancial (res extensa y res cogitans)",
-          "Método científico",
-          "Racionalismo filosófico",
-          "Pruebas de la existencia de Dios"
-        ]
-      },
-      {
-        "nombre": "Friedrich Nietzsche",
-        "periodo": "1844-1900 d.C.",
-        "nacionalidad": "Alemana",
-        "corriente": "Vitalismo / Filosofía de la Sospecha",
-        "obras": [
-          "Así habló Zaratustra",
-          "Más allá del bien y del mal",
-          "La genealogía de la moral",
-          "El nacimiento de la tragedia",
-          "La gaya ciencia",
-          "El Anticristo"
-        ],
-        "citas": [
-          "Dios ha muerto",
-          "Lo que no me mata me hace más fuerte",
-          "Conviértete en quien eres",
-          "El hombre es algo que debe ser superado",
-          "No hay hechos, solo interpretaciones"
-        ],
-        "ideas": [
-          "Voluntad de poder",
-          "Superhombre (Übermensch)",
-          "Eterno retorno",
-          "Crítica de la moral cristiana",
-          "Nihilismo",
-          "Transvaloración de todos los valores"
-        ]
-      },
-      {
-        "nombre": "Georg Wilhelm Friedrich Hegel",
-        "periodo": "1770-1831 d.C.",
-        "nacionalidad": "Alemana",
-        "corriente": "Idealismo Alemán",
-        "obras": [
-          "Fenomenología del espíritu",
-          "Ciencia de la lógica",
-          "Filosofía del derecho",
-          "Lecciones sobre filosofía de la historia",
-          "Enciclopedia de las ciencias filosóficas"
-        ],
-        "citas": [
-          "Lo real es racional y lo racional es real",
-          "La historia del mundo es el tribunal del mundo",
-          "Nada grande se ha hecho sin pasión",
-          "La verdad es el todo"
-        ],
-        "ideas": [
-          "Dialéctica (tesis-antítesis-síntesis)",
-          "Espíritu Absoluto",
-          "Filosofía de la historia",
-          "Autoconciencia",
-          "Reconocimiento intersubjetivo",
-          "Sistema filosófico total"
-        ]
-      },
-      {
-        "nombre": "Karl Marx",
-        "periodo": "1818-1883 d.C.",
-        "nacionalidad": "Alemana",
-        "corriente": "Materialismo Histórico / Marxismo",
-        "obras": [
-          "El Capital",
-          "Manifiesto del Partido Comunista",
-          "La ideología alemana",
-          "Los Manuscritos económico-filosóficos",
-          "Contribución a la crítica de la economía política"
-        ],
-        "citas": [
-          "Los filósofos se han limitado a interpretar el mundo; de lo que se trata es de transformarlo",
-          "La historia de todas las sociedades hasta nuestros días es la historia de la lucha de clases",
-          "La religión es el opio del pueblo",
-          "No es la conciencia la que determina la vida, sino la vida la que determina la conciencia"
-        ],
-        "ideas": [
-          "Materialismo histórico",
-          "Lucha de clases",
-          "Plusvalía",
-          "Alienación del trabajo",
-          "Dictadura del proletariado",
-          "Crítica al capitalismo"
-        ]
-      },
-      {
-        "nombre": "David Hume",
-        "periodo": "1711-1776 d.C.",
-        "nacionalidad": "Escocesa",
-        "corriente": "Empirismo / Escepticismo",
-        "obras": [
-          "Tratado de la naturaleza humana",
-          "Investigación sobre el entendimiento humano",
-          "Investigación sobre los principios de la moral",
-          "Historia natural de la religión",
-          "Diálogos sobre la religión natural"
-        ],
-        "citas": [
-          "La razón es esclava de las pasiones",
-          "No se puede derivar un 'debe' de un 'es'",
-          "La costumbre es la gran guía de la vida humana",
-          "No hay ideas innatas en la mente humana"
-        ],
-        "ideas": [
-          "Escepticismo sobre la causalidad",
-          "Crítica del principio de inducción",
-          "Problema de Hume (ser/deber ser)",
-          "Empirismo radical",
-          "Teoría de las impresiones e ideas",
-          "Crítica a los milagros"
-        ]
-      },
-      {
-        "nombre": "Jean-Paul Sartre",
-        "periodo": "1905-1980 d.C.",
-        "nacionalidad": "Francesa",
-        "corriente": "Existencialismo",
-        "obras": [
-          "El ser y la nada",
-          "La náusea",
-          "El existencialismo es un humanismo",
-          "Sin salida",
-          "Crítica de la razón dialéctica",
-          "Las moscas"
-        ],
-        "citas": [
-          "La existencia precede a la esencia",
-          "El hombre está condenado a ser libre",
-          "El infierno son los otros",
-          "El hombre es una pasión inútil",
-          "Si te sientes solo cuando estás solo, estás mal acompañado"
-        ],
-        "ideas": [
-          "Existencialismo ateo",
-          "Libertad absoluta",
-          "Mala fe (mauvaise foi)",
-          "Ser-para-sí y ser-en-sí",
-          "Angustia existencial",
-          "Responsabilidad total"
-        ]
-      }
-    ],
-    "nuevas_preguntas_quiz": {
-      "quotes": [
-        {
-          "question": "¿Quién dijo: 'Solo sé que no sé nada'?",
-          "answer": "Sócrates"
-        },
-        {
-          "question": "¿Quién dijo: 'Pienso, luego existo'?",
-          "answer": "René Descartes"
-        },
-        {
-          "question": "¿Quién dijo: 'Dios ha muerto'?",
-          "answer": "Friedrich Nietzsche"
-        },
-        {
-          "question": "¿Quién dijo: 'Lo real es racional y lo racional es real'?",
-          "answer": "Georg Wilhelm Friedrich Hegel"
-        },
-        {
-          "question": "¿Quién dijo: 'Los filósofos se han limitado a interpretar el mundo; de lo que se trata es de transformarlo'?",
-          "answer": "Karl Marx"
-        },
-        {
-          "question": "¿Quién dijo: 'La razón es esclava de las pasiones'?",
-          "answer": "David Hume"
-        },
-        {
-          "question": "¿Quién dijo: 'La existencia precede a la esencia'?",
-          "answer": "Jean-Paul Sartre"
-        },
-        {
-          "question": "¿Quién dijo: 'Una vida sin examen no merece la pena ser vivida'?",
-          "answer": "Sócrates"
-        },
-        {
-          "question": "¿Quién dijo: 'Atrévete a saber'?",
-          "answer": "Immanuel Kant"
-        },
-        {
-          "question": "¿Quién dijo: 'Conviértete en quien eres'?",
-          "answer": "Friedrich Nietzsche"
-        }
+{
+  "filosofos_a_añadir": [
+    {
+      "nombre": "Sócrates",
+      "periodo": "470-399 a.C.",
+      "nacionalidad": "Griega",
+      "corriente": "Filosofía Clásica Griega",
+      "obras": [
+        "No escribió obras (enseñanza oral)",
+        "Conocido a través de Platón y Jenofonte",
+        "Apología de Sócrates (por Platón)",
+        "Critón (por Platón)"
       ],
-      "works": [
-        {
-          "question": "¿Quién escribió 'La República'?",
-          "answer": "Platón"
-        },
-        {
-          "question": "¿Quién escribió 'Crítica de la razón pura'?",
-          "answer": "Immanuel Kant"
-        },
-        {
-          "question": "¿Quién escribió 'Discurso del método'?",
-          "answer": "René Descartes"
-        },
-        {
-          "question": "¿Quién escribió 'Así habló Zaratustra'?",
-          "answer": "Friedrich Nietzsche"
-        },
-        {
-          "question": "¿Quién escribió 'Fenomenología del espíritu'?",
-          "answer": "Georg Wilhelm Friedrich Hegel"
-        },
-        {
-          "question": "¿Quién escribió 'El Capital'?",
-          "answer": "Karl Marx"
-        },
-        {
-          "question": "¿Quién escribió 'Tratado de la naturaleza humana'?",
-          "answer": "David Hume"
-        },
-        {
-          "question": "¿Quién escribió 'El ser y la nada'?",
-          "answer": "Jean-Paul Sartre"
-        }
+      "citas": [
+        "Solo sé que no sé nada",
+        "Una vida sin examen no merece la pena ser vivida",
+        "Conócete a ti mismo",
+        "El sabio no es el que sabe, sino el que sabe que no sabe"
       ],
-      "periods": [
-        {
-          "question": "¿Qué filósofo vivió en el período 470-399 a.C.?",
-          "answer": "Sócrates"
-        },
-        {
-          "question": "¿Qué filósofo vivió en el período 428-348 a.C.?",
-          "answer": "Platón"
-        },
-        {
-          "question": "¿Qué filósofo vivió en el período 1724-1804 d.C.?",
-          "answer": "Immanuel Kant"
-        },
-        {
-          "question": "¿Qué filósofo vivió en el período 1596-1650 d.C.?",
-          "answer": "René Descartes"
-        },
-        {
-          "question": "¿Qué filósofo vivió en el período 1844-1900 d.C.?",
-          "answer": "Friedrich Nietzsche"
-        },
-        {
-          "question": "¿Qué filósofo vivió en el período 1770-1831 d.C.?",
-          "answer": "Georg Wilhelm Friedrich Hegel"
-        },
-        {
-          "question": "¿Qué filósofo vivió en el período 1818-1883 d.C.?",
-          "answer": "Karl Marx"
-        },
-        {
-          "question": "¿Qué filósofo vivió en el período 1711-1776 d.C.?",
-          "answer": "David Hume"
-        },
-        {
-          "question": "¿Qué filósofo vivió en el período 1905-1980 d.C.?",
-          "answer": "Jean-Paul Sartre"
-        }
-      ],
-      "schools": [
-        {
-          "question": "¿Qué filósofo pertenecía a la Filosofía Clásica Griega?",
-          "answer": "Sócrates"
-        },
-        {
-          "question": "¿Qué filósofo pertenecía al Racionalismo?",
-          "answer": "René Descartes"
-        },
-        {
-          "question": "¿Qué filósofo pertenecía al Idealismo Alemán?",
-          "answer": "Immanuel Kant"
-        },
-        {
-          "question": "¿Qué filósofo pertenecía al Vitalismo?",
-          "answer": "Friedrich Nietzsche"
-        },
-        {
-          "question": "¿Qué filósofo pertenecía al Materialismo Histórico?",
-          "answer": "Karl Marx"
-        },
-        {
-          "question": "¿Qué filósofo pertenecía al Empirismo?",
-          "answer": "David Hume"
-        },
-        {
-          "question": "¿Qué filósofo pertenecía al Existencialismo?",
-          "answer": "Jean-Paul Sartre"
-        }
+      "ideas": [
+        "Método socrático (mayéutica)",
+        "Ironía socrática",
+        "La virtud es conocimiento",
+        "Intelectualismo moral",
+        "Búsqueda de definiciones universales"
       ]
     },
-    "instrucciones_uso": {
-      "como_añadir_filosofos": "Para añadir estos filósofos al archivo principal, copia cada objeto del array 'filosofos_a_añadir' y pégalo en el array 'filosofos' del archivo philosophers_data_complete.json",
-      "como_añadir_preguntas": "Para añadir las preguntas del quiz, copia el contenido de 'nuevas_preguntas_quiz' y añade cada pregunta a la categoría correspondiente en el archivo principal",
-      "verificacion": "Asegúrate de mantener la estructura JSON correcta y de que no haya filósofos duplicados"
+    {
+      "nombre": "Platón",
+      "periodo": "428-348 a.C.",
+      "nacionalidad": "Griega",
+      "corriente": "Filosofía Clásica Griega",
+      "obras": [
+        "La República",
+        "Fedón",
+        "Fedro",
+        "El Banquete",
+        "Menón",
+        "Apología de Sócrates",
+        "Las Leyes"
+      ],
+      "citas": [
+        "La belleza es el esplendor de la verdad",
+        "El sabio habla porque tiene algo que decir; el necio porque tiene que decir algo",
+        "Solo los muertos han visto el final de la guerra",
+        "La música es para el alma lo que la gimnasia para el cuerpo"
+      ],
+      "ideas": [
+        "Teoría de las Ideas o Formas",
+        "Alegoría de la caverna",
+        "El Estado ideal y los guardianes",
+        "Alma tripartita (razón, voluntad, apetito)",
+        "Dualismo platónico",
+        "Dialéctica como método filosófico"
+      ]
     },
-    "estadisticas": {
-      "filosofos_añadidos": 9,
-      "nuevas_preguntas_quotes": 10,
-      "nuevas_preguntas_works": 8,
-      "nuevas_preguntas_periods": 9,
-      "nuevas_preguntas_schools": 7,
-      "total_nuevas_preguntas": 34,
-      "periodos_cubiertos": "Desde 470 a.C. hasta 1980 d.C.",
-      "corrientes_añadidas": [
-        "Filosofía Clásica Griega",
-        "Racionalismo",
-        "Idealismo Alemán",
-        "Vitalismo",
-        "Materialismo Histórico",
-        "Empirismo",
-        "Existencialismo"
+    {
+      "nombre": "Immanuel Kant",
+      "periodo": "1724-1804 d.C.",
+      "nacionalidad": "Alemana",
+      "corriente": "Idealismo Alemán / Ilustración",
+      "obras": [
+        "Crítica de la razón pura",
+        "Crítica de la razón práctica",
+        "Crítica del juicio",
+        "Fundamentación de la metafísica de las costumbres",
+        "La paz perpetua",
+        "¿Qué es la Ilustración?"
+      ],
+      "citas": [
+        "Dos cosas me llenan el ánimo de admiración: el cielo estrellado sobre mí y la ley moral en mí",
+        "Atrévete a saber",
+        "Obra de tal modo que la máxima de tu voluntad pueda valer como ley universal",
+        "La razón sin experiencia es vacía, la experiencia sin razón es ciega"
+      ],
+      "ideas": [
+        "Giro copernicano en filosofía",
+        "Imperativo categórico",
+        "Fenómenos y noúmenos",
+        "Juicios sintéticos a priori",
+        "Autonomía moral",
+        "Crítica de la razón"
+      ]
+    },
+    {
+      "nombre": "René Descartes",
+      "periodo": "1596-1650 d.C.",
+      "nacionalidad": "Francesa",
+      "corriente": "Racionalismo",
+      "obras": [
+        "Discurso del método",
+        "Meditaciones metafísicas",
+        "Principios de filosofía",
+        "Las pasiones del alma",
+        "Reglas para la dirección del espíritu"
+      ],
+      "citas": [
+        "Pienso, luego existo (Cogito ergo sum)",
+        "De omnibus dubitandum (Hay que dudar de todo)",
+        "La lectura de todos los buenos libros es una conversación con las mejores personas de los siglos pasados",
+        "Para investigar la verdad es preciso dudar de todas las cosas"
+      ],
+      "ideas": [
+        "Duda metódica",
+        "Cogito ergo sum",
+        "Dualismo sustancial (res extensa y res cogitans)",
+        "Método científico",
+        "Racionalismo filosófico",
+        "Pruebas de la existencia de Dios"
+      ]
+    },
+    {
+      "nombre": "Friedrich Nietzsche",
+      "periodo": "1844-1900 d.C.",
+      "nacionalidad": "Alemana",
+      "corriente": "Vitalismo / Filosofía de la Sospecha",
+      "obras": [
+        "Así habló Zaratustra",
+        "Más allá del bien y del mal",
+        "La genealogía de la moral",
+        "El nacimiento de la tragedia",
+        "La gaya ciencia",
+        "El Anticristo"
+      ],
+      "citas": [
+        "Dios ha muerto",
+        "Lo que no me mata me hace más fuerte",
+        "Conviértete en quien eres",
+        "El hombre es algo que debe ser superado",
+        "No hay hechos, solo interpretaciones"
+      ],
+      "ideas": [
+        "Voluntad de poder",
+        "Superhombre (Übermensch)",
+        "Eterno retorno",
+        "Crítica de la moral cristiana",
+        "Nihilismo",
+        "Transvaloración de todos los valores"
+      ]
+    },
+    {
+      "nombre": "Georg Wilhelm Friedrich Hegel",
+      "periodo": "1770-1831 d.C.",
+      "nacionalidad": "Alemana",
+      "corriente": "Idealismo Alemán",
+      "obras": [
+        "Fenomenología del espíritu",
+        "Ciencia de la lógica",
+        "Filosofía del derecho",
+        "Lecciones sobre filosofía de la historia",
+        "Enciclopedia de las ciencias filosóficas"
+      ],
+      "citas": [
+        "Lo real es racional y lo racional es real",
+        "La historia del mundo es el tribunal del mundo",
+        "Nada grande se ha hecho sin pasión",
+        "La verdad es el todo"
+      ],
+      "ideas": [
+        "Dialéctica (tesis-antítesis-síntesis)",
+        "Espíritu Absoluto",
+        "Filosofía de la historia",
+        "Autoconciencia",
+        "Reconocimiento intersubjetivo",
+        "Sistema filosófico total"
+      ]
+    },
+    {
+      "nombre": "Karl Marx",
+      "periodo": "1818-1883 d.C.",
+      "nacionalidad": "Alemana",
+      "corriente": "Materialismo Histórico / Marxismo",
+      "obras": [
+        "El Capital",
+        "Manifiesto del Partido Comunista",
+        "La ideología alemana",
+        "Los Manuscritos económico-filosóficos",
+        "Contribución a la crítica de la economía política"
+      ],
+      "citas": [
+        "Los filósofos se han limitado a interpretar el mundo; de lo que se trata es de transformarlo",
+        "La historia de todas las sociedades hasta nuestros días es la historia de la lucha de clases",
+        "La religión es el opio del pueblo",
+        "No es la conciencia la que determina la vida, sino la vida la que determina la conciencia"
+      ],
+      "ideas": [
+        "Materialismo histórico",
+        "Lucha de clases",
+        "Plusvalía",
+        "Alienación del trabajo",
+        "Dictadura del proletariado",
+        "Crítica al capitalismo"
+      ]
+    },
+    {
+      "nombre": "David Hume",
+      "periodo": "1711-1776 d.C.",
+      "nacionalidad": "Escocesa",
+      "corriente": "Empirismo / Escepticismo",
+      "obras": [
+        "Tratado de la naturaleza humana",
+        "Investigación sobre el entendimiento humano",
+        "Investigación sobre los principios de la moral",
+        "Historia natural de la religión",
+        "Diálogos sobre la religión natural"
+      ],
+      "citas": [
+        "La razón es esclava de las pasiones",
+        "No se puede derivar un 'debe' de un 'es'",
+        "La costumbre es la gran guía de la vida humana",
+        "No hay ideas innatas en la mente humana"
+      ],
+      "ideas": [
+        "Escepticismo sobre la causalidad",
+        "Crítica del principio de inducción",
+        "Problema de Hume (ser/deber ser)",
+        "Empirismo radical",
+        "Teoría de las impresiones e ideas",
+        "Crítica a los milagros"
+      ]
+    },
+    {
+      "nombre": "Jean-Paul Sartre",
+      "periodo": "1905-1980 d.C.",
+      "nacionalidad": "Francesa",
+      "corriente": "Existencialismo",
+      "obras": [
+        "El ser y la nada",
+        "La náusea",
+        "El existencialismo es un humanismo",
+        "Sin salida",
+        "Crítica de la razón dialéctica",
+        "Las moscas"
+      ],
+      "citas": [
+        "La existencia precede a la esencia",
+        "El hombre está condenado a ser libre",
+        "El infierno son los otros",
+        "El hombre es una pasión inútil",
+        "Si te sientes solo cuando estás solo, estás mal acompañado"
+      ],
+      "ideas": [
+        "Existencialismo ateo",
+        "Libertad absoluta",
+        "Mala fe (mauvaise foi)",
+        "Ser-para-sí y ser-en-sí",
+        "Angustia existencial",
+        "Responsabilidad total"
       ]
     }
+  ],
+  "nuevas_preguntas_quiz": {
+    "periods": [
+      {
+        "question": "¿Qué filósofo vivió en el período 470-399 a.C.?",
+        "answer": "Sócrates"
+      },
+      {
+        "question": "¿Qué filósofo vivió en el período 428-348 a.C.?",
+        "answer": "Platón"
+      },
+      {
+        "question": "¿Qué filósofo vivió en el período 1724-1804 d.C.?",
+        "answer": "Immanuel Kant"
+      },
+      {
+        "question": "¿Qué filósofo vivió en el período 1596-1650 d.C.?",
+        "answer": "René Descartes"
+      },
+      {
+        "question": "¿Qué filósofo vivió en el período 1844-1900 d.C.?",
+        "answer": "Friedrich Nietzsche"
+      },
+      {
+        "question": "¿Qué filósofo vivió en el período 1770-1831 d.C.?",
+        "answer": "Georg Wilhelm Friedrich Hegel"
+      },
+      {
+        "question": "¿Qué filósofo vivió en el período 1818-1883 d.C.?",
+        "answer": "Karl Marx"
+      },
+      {
+        "question": "¿Qué filósofo vivió en el período 1711-1776 d.C.?",
+        "answer": "David Hume"
+      },
+      {
+        "question": "¿Qué filósofo vivió en el período 1905-1980 d.C.?",
+        "answer": "Jean-Paul Sartre"
+      }
+    ],
+    "quotes": [
+      {
+        "question": "¿Quién dijo: 'Solo sé que no sé nada'?",
+        "answer": "Sócrates"
+      },
+      {
+        "question": "¿Quién dijo: 'Pienso, luego existo'?",
+        "answer": "René Descartes"
+      },
+      {
+        "question": "¿Quién dijo: 'Dios ha muerto'?",
+        "answer": "Friedrich Nietzsche"
+      },
+      {
+        "question": "¿Quién dijo: 'Lo real es racional y lo racional es real'?",
+        "answer": "Georg Wilhelm Friedrich Hegel"
+      },
+      {
+        "question": "¿Quién dijo: 'Los filósofos se han limitado a interpretar el mundo; de lo que se trata es de transformarlo'?",
+        "answer": "Karl Marx"
+      },
+      {
+        "question": "¿Quién dijo: 'La razón es esclava de las pasiones'?",
+        "answer": "David Hume"
+      },
+      {
+        "question": "¿Quién dijo: 'La existencia precede a la esencia'?",
+        "answer": "Jean-Paul Sartre"
+      },
+      {
+        "question": "¿Quién dijo: 'Una vida sin examen no merece la pena ser vivida'?",
+        "answer": "Sócrates"
+      },
+      {
+        "question": "¿Quién dijo: 'Atrévete a saber'?",
+        "answer": "Immanuel Kant"
+      },
+      {
+        "question": "¿Quién dijo: 'Conviértete en quien eres'?",
+        "answer": "Friedrich Nietzsche"
+      }
+    ],
+    "schools": [
+      {
+        "question": "¿Qué filósofo pertenecía a la Filosofía Clásica Griega?",
+        "answer": "Sócrates"
+      },
+      {
+        "question": "¿Qué filósofo pertenecía al Racionalismo?",
+        "answer": "René Descartes"
+      },
+      {
+        "question": "¿Qué filósofo pertenecía al Idealismo Alemán?",
+        "answer": "Immanuel Kant"
+      },
+      {
+        "question": "¿Qué filósofo pertenecía al Vitalismo?",
+        "answer": "Friedrich Nietzsche"
+      },
+      {
+        "question": "¿Qué filósofo pertenecía al Materialismo Histórico?",
+        "answer": "Karl Marx"
+      },
+      {
+        "question": "¿Qué filósofo pertenecía al Empirismo?",
+        "answer": "David Hume"
+      },
+      {
+        "question": "¿Qué filósofo pertenecía al Existencialismo?",
+        "answer": "Jean-Paul Sartre"
+      }
+    ],
+    "works": [
+      {
+        "question": "¿Quién escribió 'La República'?",
+        "answer": "Platón"
+      },
+      {
+        "question": "¿Quién escribió 'Crítica de la razón pura'?",
+        "answer": "Immanuel Kant"
+      },
+      {
+        "question": "¿Quién escribió 'Discurso del método'?",
+        "answer": "René Descartes"
+      },
+      {
+        "question": "¿Quién escribió 'Así habló Zaratustra'?",
+        "answer": "Friedrich Nietzsche"
+      },
+      {
+        "question": "¿Quién escribió 'Fenomenología del espíritu'?",
+        "answer": "Georg Wilhelm Friedrich Hegel"
+      },
+      {
+        "question": "¿Quién escribió 'El Capital'?",
+        "answer": "Karl Marx"
+      },
+      {
+        "question": "¿Quién escribió 'Tratado de la naturaleza humana'?",
+        "answer": "David Hume"
+      },
+      {
+        "question": "¿Quién escribió 'El ser y la nada'?",
+        "answer": "Jean-Paul Sartre"
+      }
+    ]
   }
-]
+}
