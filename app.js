@@ -16,7 +16,7 @@ let quizActual = {
 async function cargarFilosofosDesdeJSON() {
     try {
         console.log('Cargando filósofos desde filosofos.json...');
-        const response = await fetch('filosofos.json');
+        const response = await fetch('https://jmlucas68.github.io/filosofos/filosofos.json');
         
         if (!response.ok) {
             throw new Error(`Error HTTP ${response.status}: ${response.statusText}`);
