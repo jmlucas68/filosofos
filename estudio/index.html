@@ -71,10 +71,14 @@
             font-weight: 600;
             margin-bottom: 30px;
             min-height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center; /* <-- CORRECCIÓN: Asegura que el texto se alinee al centro y envuelva correctamente */
+            /* ---- INICIO DE LA CORRECCIÓN ---- */
+            /* Eliminamos flexbox y usamos padding para el centrado vertical y text-align */
+            display: block; /* Aseguramos que sea un bloque */
+            width: 100%; /* Ocupa todo el ancho disponible */
+            padding: 20px 0; /* Espaciado para simular centrado vertical */
+            line-height: 1.4; /* Mejora la legibilidad en múltiples líneas */
+            text-align: center; /* Centra el texto de forma fiable */
+            /* ---- FIN DE LA CORRECCIÓN ---- */
         }
 
         .answer-options {
