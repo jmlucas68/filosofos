@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Filosofía - Versión Moderna</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Pantalla de inicio -->
+        <div id="startScreen" class="screen active">
+            <div class="start-content">
+                <div class="logo-container">
+                    <div class="logo-icon">🧠</div>
+                    <h1 class="quiz-title">Quiz de Filosofía</h1>
+                    <p class="quiz-subtitle">Versión Moderna</p>
+                </div>
+                
+                <p class="quiz-description">
+                    Explora el fascinante mundo del pensamiento filosófico. Pon a prueba tu conocimiento sobre grandes filósofos, sus obras maestras y las corrientes que definieron la historia del pensamiento humano.
+                </p>
+                
+                <div class="quiz-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Preguntas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Opciones</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Categorías</div>
+                    </div>
+                </div>
+                
+                <button class="start-button" onclick="startQuiz()">
+                    <span class="button-text">Comenzar Quiz</span>
+                    <div class="button-icon">→</div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Pantalla del quiz -->
+        <div id="quizScreen" class="screen">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <div class="progress-section">
+                        <div class="progress-info">
+                            <span id="questionCounter" class="question-counter">Pregunta 1 de 10</span>
+                            <span id="scoreCounter" class="score-counter">
+                                <span class="score-icon">✨</span>
+                                <span class="score-text">Aciertos: 0</span>
+                            </span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="progressFill" class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="question-container">
+                    <div class="question-card">
+                        <div class="question-header">
+                            <div class="question-icon">💭</div>
+                        </div>
+                        <h2 id="questionText" class="question-text"></h2>
+                        
+                        <div id="optionsContainer" class="options-grid">
+                            <!-- Las opciones se generarán dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="feedbackContainer" class="feedback-container hidden">
+                    <div id="feedbackMessage" class="feedback-message"></div>
+                    <button id="nextButton" class="next-button hidden" onclick="nextQuestion()">
+                        <span class="button-text">Siguiente</span>
+                        <div class="button-icon">→</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pantalla de resultados -->
+        <div id="endScreen" class="screen">
+            <div class="results-content">
+                <div class="trophy-animation">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="trophy-glow"></div>
+                </div>
+                
+                <h1 class="results-title">¡Quiz Completado!</h1>
+                
+                <div class="score-display">
+                    <div class="final-score">
+                        <span id="finalScore" class="score-number">0</span>
+                        <span class="score-separator">/</span>
+                        <span class="score-total">10</span>
+                    </div>
+                    <div id="scorePercentage" class="score-percentage">0%</div>
+                </div>
+                
+                <div class="performance-badge" id="performanceBadge">
+                    <div class="badge-icon">⭐</div>
+                    <div class="badge-text">Excelente</div>
+                </div>
+                
+                <p id="scoreMessage" class="score-message"></p>
+                
+                <div class="action-buttons">
+                    <button class="restart-button" onclick="restartQuiz()">
+                        <span class="button-icon">🔄</span>
+                        <span class="button-text">Reintentar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
