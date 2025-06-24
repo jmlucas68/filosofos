@@ -630,5 +630,13 @@
     "movimiento": "Existencialismo",
     "url_pagina": "https://jmlucas68.github.io/camus",
     "url_foto": "images/Camus.jpg"
+  },
+  {
+    "nombre": "Thomas Kuhn",
+    "nacimiento": 1922,
+    "muerte": 1996,
+    "movimiento": "Filosofía de la ciencia",
+    "url_pagina": "https://jmlucas68.github.io/kuhn",
+    "url_foto": "images/Kuhn.jpg"
   }
 ]
