@@ -3,185 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filósofos de la Historia - Sistema Dinámico</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Galería de Filósofos</title>
+    <link rel="stylesheet" href="style-estudio.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="header-content">
-                <h1>Filósofos de la Historia</h1>
-                <nav>
-                    <ul class="main-nav">
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#filosofos">Filósofos Destacados</a></li>
-                        <li><a href="#quiz">Quiz de Filosofía</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Explorando el Pensamiento Filosófico</h2>
-                <p>Descubre las mentes más brillantes de la historia de la filosofía. Desde Tales de Mileto hasta los pensadores contemporáneos, explora sus ideas y pon a prueba tus conocimientos.</p>
-                <p>Esta aplicación carga dinámicamente los datos de filósofos desde archivos JSON, demostrando un sistema moderno y escalable.</p>
-                <a href="#filosofos" class="btn btn--primary btn--lg">Explorar Filósofos</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="filosofos" class="filosofos-section">
-        <div class="container">
-            <h2>Filósofos Destacados</h2>
-            <div class="loading-info">
-                <div id="loading-status" class="loading-status">
-                    <div class="spinner"></div>
-                    <span>Cargando filósofos desde JSON...</span>
-                </div>
-                <div id="data-info" class="data-info hidden">
-                    <span id="filosofos-count">0</span> filósofos cargados dinámicamente
+    <!-- Pantalla Principal -->
+    <div id="main-screen" class="screen active">
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="main-title">
+                        <span class="title-icon">🏛️</span>
+                        Galería de Filósofos
+                    </h1>
+                    <div class="header-controls">
+                        <button id="theme-toggle" class="btn btn--outline theme-btn">
+                            <span class="theme-icon">🌙</span>
+                        </button>
+                    </div>
                 </div>
             </div>
-            
-            <div class="search-section" id="search-section" style="display: none;">
-                <div class="form-group">
-                    <input type="text" 
-                           id="buscar-filosofo" 
-                           class="form-control search-input" 
-                           placeholder="Buscar por nombre o corriente filosófica...">
-                </div>
-                <div id="search-results" class="search-results">
-                    Mostrando todos los filósofos
-                </div>
-            </div>
+        </header>
 
-            <div id="filosofos-grid" class="filosofos-grid">
-                <!-- Los filósofos se cargan dinámicamente aquí -->
-            </div>
+        <main class="main-content">
+            <div class="container">
+                <section class="hero-section">
+                    <h2 class="hero-title">Explora el Pensamiento de los Grandes Maestros</h2>
+                    <p class="hero-description">
+                        Descubre las ideas, obras y filosofías que han moldeado el pensamiento occidental
+                        a través de los siglos.
+                    </p>
+                    <div class="hero-actions">
+                        <button id="study-btn" class="btn btn--primary btn--lg">
+                            📚 Iniciar Estudio
+                        </button>
+                        <button id="explore-btn" class="btn btn--secondary btn--lg">
+                            🔍 Explorar Galería
+                        </button>
+                    </div>
+                    <!-- Botón de regreso prominente en la parte superior -->
+                    <div class="return-button-container">
+                        <a href="https://jmlucas68.github.io/filosofos/index.html" class="btn btn--outline return-btn">
+                            <span class="return-icon">←</span> Volver a Galería Principal
+                        </a>
+                    </div>
+                </section>
 
-            <div id="error-state" class="error-state hidden">
-                <h3>Error al cargar datos</h3>
-                <p>No se pudieron cargar los filósofos. Verifica la consola para más detalles.</p>
-                <button class="btn btn--secondary" onclick="location.reload()">Reintentar</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="quiz" class="quiz-section">
-        <div class="container">
-            <h2>Quiz Interactivo de Filosofía</h2>
-            <div class="card quiz-card">
-                <div class="card__body">
-                    <div id="quiz-inicio">
-                        <p>Pon a prueba tus conocimientos sobre filosofía. Las preguntas se cargan dinámicamente desde datos JSON organizados en 4 categorías.</p>
-                        <div class="quiz-categories">
-                            <button class="btn btn--secondary categoria-btn" data-categoria="periods">
-                                <span class="categoria-titulo">Períodos Históricos</span>
-                                <span class="categoria-desc">Fechas y épocas de los filósofos</span>
-                            </button>
-                            <button class="btn btn--secondary categoria-btn" data-categoria="quotes">
-                                <span class="categoria-titulo">Citas Famosas</span>
-                                <span class="categoria-desc">Frases célebres de grandes pensadores</span>
-                            </button>
-                            <button class="btn btn--secondary categoria-btn" data-categoria="schools">
-                                <span class="categoria-titulo">Escuelas de Pensamiento</span>
-                                <span class="categoria-desc">Corrientes y movimientos filosóficos</span>
-                            </button>
-                            <button class="btn btn--secondary categoria-btn" data-categoria="works">
-                                <span class="categoria-titulo">Obras Principales</span>
-                                <span class="categoria-desc">Libros y tratados importantes</span>
-                            </button>
+                <section id="gallery-section" class="gallery-section">
+                    <div class="section-header">
+                        <h3>Filósofos Destacados</h3>
+                        <div class="filters">
+                            <select id="period-filter" class="form-control filter-select">
+                                <option value="">Todos los períodos</option>
+                            </select>
+                            <select id="school-filter" class="form-control filter-select">
+                                <option value="">Todas las corrientes</option>
+                            </select>
                         </div>
                     </div>
-
-                    <div id="quiz-pregunta" class="hidden">
-                        <div class="quiz-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" id="progress-fill"></div>
-                            </div>
-                            <span id="progress-text">Pregunta 1 de 8</span>
-                        </div>
-                        
-                        <h3 id="quiz-question-text" class="question-text"></h3>
-                        
-                        <div id="opciones-container" class="opciones-container">
-                            <!-- Las opciones se generan dinámicamente -->
-                        </div>
-                        
-                        <div id="quiz-feedback" class="quiz-feedback hidden"></div>
-                        
-                        <div class="quiz-controls">
-                            <button id="siguiente-pregunta" class="btn btn--primary hidden">
-                                Siguiente Pregunta
-                            </button>
-                        </div>
+                    <div id="philosophers-grid" class="philosophers-grid">
+                        <!-- Los filósofos se cargarán dinámicamente -->
                     </div>
+                </section>
+            </div>
+        </main>
+    </div>
 
-                    <div id="quiz-resultados" class="hidden">
-                        <div class="results-header">
-                            <h3>¡Quiz Completado!</h3>
-                            <div class="score-display">
-                                <span class="score-number" id="quiz-puntuacion">0</span>
-                                <span class="score-total">/ <span id="quiz-total">0</span></span>
+    <!-- Pantalla de Quiz -->
+    <div id="quiz-screen" class="screen">
+        <header class="quiz-header">
+            <div class="container">
+                <div class="quiz-nav">
+                    <button id="back-to-main" class="btn btn--outline back-btn">
+                        ← Volver a Galería Principal
+                    </button>
+                    <div class="quiz-title">
+                        <h1>Quiz de Filósofos Avanzado</h1>
+                    </div>
+                    <div class="theme-toggle-container">
+                        <button id="quiz-theme-toggle" class="btn btn--outline theme-btn">
+                            <span class="theme-icon">🌙</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Quiz Setup -->
+        <div id="quiz-setup" class="quiz-section active">
+            <div class="container">
+                <div class="quiz-setup-content">
+                    <div class="setup-section">
+                        <h3>Configuración del Quiz</h3>
+                        <div class="question-selector">
+                            <label class="form-label">Número de preguntas:</label>
+                            <div class="question-buttons">
+                                <button class="question-btn active" data-questions="10">10</button>
+                                <button class="question-btn" data-questions="20">20</button>
+                                <button class="question-btn" data-questions="30">30</button>
                             </div>
                         </div>
                         
-                        <div id="results-message" class="results-message"></div>
-                        
-                        <div class="quiz-actions">
-                            <button id="reiniciar-quiz" class="btn btn--primary">Intentar Otra Categoría</button>
-                            <button id="ver-detalles" class="btn btn--secondary">Ver Detalles</button>
+                        <div class="timer-option">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="enable-timer"> 
+                                <span class="checkmark"></span>
+                                Activar temporizador (30 seg por pregunta)
+                            </label>
                         </div>
-                        
-                        <div id="quiz-detalles" class="quiz-details hidden">
-                            <!-- Detalles de respuestas se muestran aquí -->
+                    </div>
+
+                    <div class="philosophers-preview">
+                        <h3>Filósofos en el Quiz</h3>
+                        <div id="philosophers-compact-grid" class="philosophers-compact-grid">
+                            <!-- Filósofos compactos se cargarán aquí -->
                         </div>
+                    </div>
+
+                    <div class="start-section">
+                        <button id="start-quiz" class="btn btn--primary btn--lg quiz-start-btn">
+                            🚀 Iniciar Quiz
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Filósofos de la Historia</h3>
-                    <p>Sistema dinámico de carga de datos filosóficos con tecnología web moderna.</p>
-                    <p><strong>Características:</strong></p>
-                    <ul>
-                        <li>Carga dinámica desde JSON</li>
-                        <li>77 filósofos ordenados cronológicamente</li>
-                        <li>Quiz interactivo con 40+ preguntas</li>
-                        <li>Búsqueda en tiempo real</li>
-                    </ul>
+        <!-- Quiz Game -->
+        <div id="quiz-game" class="quiz-section">
+            <div class="container">
+                <div class="quiz-progress">
+                    <div class="progress-info">
+                        <span id="question-counter">1 / 10</span>
+                        <div id="timer-display" class="timer hidden">30s</div>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
                 </div>
-                <div class="footer-nav">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#filosofos">Filósofos Destacados</a></li>
-                        <li><a href="#quiz">Quiz de Filosofía</a></li>
-                    </ul>
+
+                <div class="quiz-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Puntuación</span>
+                        <span id="current-score" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Racha</span>
+                        <span id="current-streak" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">XP</span>
+                        <span id="current-xp" class="stat-value">0</span>
+                    </div>
                 </div>
-                <div class="footer-tech">
-                    <h4>Información Técnica</h4>
-                    <p>Datos cargados dinámicamente usando fetch() API</p>
-                    <p>Validación y logging detallado en consola</p>
-                    <p>Diseño responsive y accesible</p>
+
+                <div class="question-container">
+                    <div id="question-text" class="question-text"></div>
+                    <div id="options-container" class="options-container">
+                        <!-- Las opciones se cargarán dinámicamente -->
+                    </div>
+                    <div id="feedback" class="feedback hidden"></div>
                 </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Sistema Dinámico de Filósofos. Implementación con carga dinámica de datos.</p>
+
+                <div class="quiz-actions">
+                    <button id="next-question" class="btn btn--primary quiz-next-btn hidden">
+                        Siguiente Pregunta →
+                    </button>
+                </div>
             </div>
         </div>
-    </footer>
+
+        <!-- Quiz Results -->
+        <div id="quiz-results" class="quiz-section">
+            <div class="container">
+                <div class="results-content">
+                    <div class="results-header">
+                        <h2>¡Quiz Completado!</h2>
+                        <div id="final-score" class="final-score"></div>
+                    </div>
+
+                    <div class="results-stats">
+                        <div class="stat-card">
+                            <div class="stat-number" id="correct-answers">0</div>
+                            <div class="stat-label">Respuestas Correctas</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="accuracy-percentage">0%</div>
+                            <div class="stat-label">Precisión</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="total-time">0s</div>
+                            <div class="stat-label">Tiempo Total</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="earned-xp">0</div>
+                            <div class="stat-label">XP Ganados</div>
+                        </div>
+                    </div>
+
+                    <div id="achievements" class="achievements hidden">
+                        <h3>¡Logros Desbloqueados!</h3>
+                        <div id="achievement-badges" class="achievement-badges">
+                            <!-- Los badges se mostrarán aquí -->
+                        </div>
+                    </div>
+
+                    <div id="level-progress" class="level-progress">
+                        <h3>Progreso de Nivel</h3>
+                        <div class="level-info">
+                            <span id="current-level">Novato</span>
+                            <span id="level-xp">0 / 100 XP</span>
+                        </div>
+                        <div class="level-bar">
+                            <div id="level-fill" class="level-fill"></div>
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button id="restart-quiz" class="btn btn--primary btn--lg">
+                            🔄 Repetir Quiz
+                        </button>
+                        <button id="back-to-setup" class="btn btn--secondary btn--lg">
+                            ⚙️ Nueva Configuración
+                        </button>
+                        <button id="back-to-gallery" class="btn btn--outline btn--lg">
+                            ← Volver a Galería
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Detalles del Filósofo -->
+    <div id="philosopher-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">×</button>
+            <div id="philosopher-details">
+                <!-- Los detalles se cargarán dinámicamente -->
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
