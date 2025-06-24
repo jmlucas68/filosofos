@@ -614,5 +614,13 @@
     "movimiento": "Platonismo matemático",
     "url_pagina": "https://jmlucas68.github.io/godel",
     "url_foto": "images/Godel.jpg"
+  },
+  {
+    "nombre": "Karl Popper",
+    "nacimiento": 1902,
+    "muerte": 1994,
+    "movimiento": "Filosofía de la ciencia",
+    "url_pagina": "https://jmlucas68.github.io/popper",
+    "url_foto": "images/Popper.jpg"
   }
 ]
