@@ -70,10 +70,11 @@
             font-size: 1.4rem;
             font-weight: 600;
             margin-bottom: 30px;
-            min-height: 100px; /* Para evitar saltos de layout */
+            min-height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center; /* <-- CORRECCIÓN: Asegura que el texto se alinee al centro y envuelva correctamente */
         }
 
         .answer-options {
@@ -206,7 +207,7 @@
         const nextBtn = document.getElementById('next-btn');
         const playAgainBtn = document.getElementById('play-again-btn');
         const scoreEl = document.getElementById('score');
-        const resultsTextEl = document.getElementById('results-text'); // <-- CORRECCIÓN 1: Declarar la variable
+        const resultsTextEl = document.getElementById('results-text');
 
         let filosofosData = [];
         let currentQuestions = [];
@@ -241,7 +242,7 @@
 
         function generateQuestions() {
             const questions = [];
-            const usedItems = new Set(); // Para no repetir la misma cita/obra/idea
+            const usedItems = new Set();
 
             while (questions.length < TOTAL_QUESTIONS) {
                 const questionType = ['obras', 'citas', 'ideas'][Math.floor(Math.random() * 3)];
@@ -351,7 +352,7 @@
             else if (percentage >= 40) message = "No está mal, pero hay que repasar un poco más.";
             else message = "El camino a la sabiduría es largo. ¡Sigue intentándolo!";
 
-            resultsTextEl.textContent = message; // <-- CORRECCIÓN 2: Usar la variable correcta
+            resultsTextEl.textContent = message;
             scoreEl.textContent = `${score} / ${TOTAL_QUESTIONS}`;
         }
 
