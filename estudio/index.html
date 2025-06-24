@@ -2,375 +2,382 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz de Filósofos</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --main-bg: #1e293b;
-            --card-bg: #f1f5f9;
-            --accent: #3b82f6;
-            --accent2: #f59e0b;
-            --correct: #10b981;
-            --wrong: #ef4444;
-            --option-bg: #e0e7ef;
-            --option-hover: #c7d2fe;
-            --text-main: #0f172a;
-            --text-light: #f1f5f9;
+            --primary-bg: #f0f2f5;
+            --secondary-bg: #ffffff;
+            --text-color: #333;
+            --accent-color: #007bff;
+            --correct-color: #28a745;
+            --incorrect-color: #dc3545;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
-            background: linear-gradient(135deg, var(--main-bg) 60%, #334155 100%);
-            font-family: 'Inter', Arial, sans-serif;
-            color: var(--text-main);
-            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 20px;
         }
 
-        #quiz-container {
-            background: var(--card-bg);
-            border-radius: 24px;
-            box-shadow: 0 8px 32px rgba(30, 41, 59, 0.18);
+        .app-container {
             width: 100%;
-            max-width: 420px;
-            padding: 2.5rem 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 520px;
-            position: relative;
+            max-width: 700px;
+            background: var(--secondary-bg);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
             overflow: hidden;
-            transition: box-shadow 0.3s;
-        }
-
-        h1 {
-            color: var(--accent);
-            font-size: 2.1rem;
-            font-weight: 800;
-            margin-bottom: 0.7em;
-            letter-spacing: -1px;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: #e5e7eb;
-            border-radius: 10px;
-            margin-bottom: 1.5em;
-            overflow: hidden;
-        }
-
-        .progress {
-            height: 100%;
-            background: linear-gradient(90deg, var(--accent), var(--accent2));
-            transition: width 0.4s;
-        }
-
-        .question-card {
-            background: var(--option-bg);
-            border-radius: 16px;
-            padding: 1.2em 1em;
-            width: 100%;
-            margin-bottom: 1.7em;
-            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.08);
-            font-size: 1.17rem;
-            font-weight: 600;
-            min-height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             text-align: center;
-            color: var(--main-bg);
         }
 
-        .options {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-            margin-bottom: 2em;
+        .header {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 20px;
         }
 
-        .option-btn {
-            font-size: 1.08rem;
-            font-weight: 500;
-            background: var(--option-bg);
-            border: none;
-            border-radius: 12px;
-            padding: 0.8em 1em;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 0.7em;
-            color: var(--main-bg);
-            box-shadow: 0 1px 4px rgba(59, 130, 246, 0.04);
-            outline: none;
-            position: relative;
+            .header h1 {
+                margin: 0;
+                font-size: 1.8rem;
+            }
+
+        .quiz-container, .results-container {
+            padding: 30px;
         }
 
-            .option-btn:hover:not([disabled]) {
-                background: var(--option-hover);
-                color: var(--accent);
-            }
+        #question-counter {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 15px;
+        }
 
-            .option-btn[data-correct="true"] {
-                background: var(--correct);
-                color: var(--text-light);
-                font-weight: 700;
-            }
-
-            .option-btn[data-correct="false"] {
-                background: var(--wrong);
-                color: var(--text-light);
-                font-weight: 700;
-            }
-
-        .option-circle {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            background: var(--accent2);
-            color: var(--text-light);
+        #question-text {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            min-height: 100px; /* Para evitar saltos de layout */
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
+        }
+
+        .answer-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: var(--secondary-bg);
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            width: 100%;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+            .btn:hover:not(:disabled) {
+                background-color: var(--accent-color);
+                color: white;
+                border-color: var(--accent-color);
+                transform: translateY(-2px);
+            }
+
+            .btn:disabled {
+                cursor: not-allowed;
+            }
+
+            .btn.correct {
+                background-color: var(--correct-color);
+                color: white;
+                border-color: var(--correct-color);
+            }
+
+            .btn.incorrect {
+                background-color: var(--incorrect-color);
+                color: white;
+                border-color: var(--incorrect-color);
+            }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+        }
+
+        #next-btn, #start-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 30px;
             font-size: 1.1rem;
-            transition: background 0.2s;
+            cursor: pointer;
+            transition: background-color 0.2s;
         }
 
-        .option-btn:hover .option-circle {
-            background: var(--accent);
-        }
+            #next-btn:hover, #start-btn:hover {
+                background-color: #0056b3;
+            }
 
-        .hidden {
+        .hide {
             display: none;
         }
 
-        .result {
-            margin-top: 2em;
-            text-align: center;
+        #results-text {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
         }
 
-        .result-score {
-            font-size: 2.3rem;
-            font-weight: 800;
-            color: var(--accent2);
-            margin-bottom: 0.2em;
+        #score {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-bottom: 30px;
         }
 
-        .result-msg {
-            font-size: 1.2rem;
-            color: var(--accent);
-            margin-bottom: 1.5em;
-        }
-
-        .restart-btn {
-            background: var(--accent2);
-            color: var(--text-light);
-            border: none;
-            border-radius: 12px;
-            padding: 0.9em 1.5em;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            margin-top: 1em;
-            transition: background 0.2s;
-        }
-
-            .restart-btn:hover {
-                background: var(--accent);
-            }
-
+        /* Responsive */
         @media (max-width: 600px) {
-            #quiz-container {
-                padding: 1.2rem 0.5rem;
-                min-height: 420px;
+            .answer-options {
+                grid-template-columns: 1fr;
             }
 
-            .question-card {
-                font-size: 1rem;
-                min-height: 58px;
-            }
-
-            .option-btn {
-                font-size: 0.97rem;
-                padding: 0.7em 0.5em;
+            #question-text {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <div id="quiz-container">
-        <h1>Quiz de Filósofos</h1>
-        <div id="start-screen">
-            <p style="color:#64748b;font-size:1.1rem;margin-bottom:1.5em;">
-                Pon a prueba tus conocimientos sobre filósofos: obras, citas y corrientes. <br>
-                <span style="color:var(--accent2);font-weight:600;">10 preguntas aleatorias</span> por intento.
-            </p>
-            <button class="restart-btn" onclick="startQuiz()">Comenzar</button>
+
+    <div class="app-container">
+        <div class="header">
+            <h1>Quiz de Filósofos</h1>
         </div>
-        <div id="quiz-screen" class="hidden">
-            <div class="progress-bar"><div class="progress" id="progress"></div></div>
-            <div class="question-card" id="question"></div>
-            <div class="options" id="options"></div>
+
+        <div id="start-screen" class="quiz-container">
+            <p id="start-text" style="margin-bottom: 20px; font-size: 1.2rem;">Pon a prueba tu conocimiento filosófico.</p>
+            <button id="start-btn">Comenzar Quiz</button>
         </div>
-        <div id="result-screen" class="hidden">
-            <div class="result">
-                <div class="result-score" id="result-score"></div>
-                <div class="result-msg" id="result-msg"></div>
-                <button class="restart-btn" onclick="startQuiz()">Intentar de nuevo</button>
+
+        <div id="quiz-container" class="quiz-container hide">
+            <div id="question-counter"></div>
+            <div id="question-text">Cargando pregunta...</div>
+            <div id="answer-options" class="answer-options"></div>
+            <div class="controls">
+                <button id="next-btn" class="hide">Siguiente</button>
             </div>
         </div>
+
+        <div id="results-container" class="results-container hide">
+            <div id="results-text">¡Completado!</div>
+            <div id="score"></div>
+            <button id="play-again-btn" class="btn" style="background-color: var(--accent-color); color: white;">Volver a Jugar</button>
+        </div>
     </div>
+
     <script>
-        // Utilidades
-        function shuffle(array) {
+        const startScreen = document.getElementById('start-screen');
+        const startBtn = document.getElementById('start-btn');
+        const quizContainer = document.getElementById('quiz-container');
+        const resultsContainer = document.getElementById('results-container');
+        const questionCounterEl = document.getElementById('question-counter');
+        const questionTextEl = document.getElementById('question-text');
+        const answerOptionsEl = document.getElementById('answer-options');
+        const nextBtn = document.getElementById('next-btn');
+        const playAgainBtn = document.getElementById('play-again-btn');
+        const scoreEl = document.getElementById('score');
+
+        let filosofosData = [];
+        let currentQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const TOTAL_QUESTIONS = 10;
+
+        async function loadPhilosophers() {
+            try {
+                const response = await fetch('filosofos_data.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                filosofosData = data.filosofos;
+                startBtn.disabled = false;
+                startBtn.textContent = 'Comenzar Quiz';
+            } catch (error) {
+                questionTextEl.textContent = 'Error al cargar los datos. Asegúrate de que filosofos_data.json está en la misma carpeta.';
+                console.error("Error fetching data:", error);
+            }
+        }
+
+        function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [array[i], array[j]] = [array[j], array[i]];
             }
             return array;
         }
-        function pickRandom(arr, n, exclude = []) {
-            // Devuelve n elementos aleatorios de arr, excluyendo los de exclude
-            const pool = arr.filter(x => !exclude.includes(x));
-            return shuffle(pool).slice(0, n);
-        }
-        // Variables globales
-        let filosofos = [];
-        let preguntas = [];
-        let current = 0;
-        let score = 0;
 
-        // Cargar datos JSON
-        fetch('filosofos_data.json')
-            .then(res => res.json())
-            .then(data => {
-                filosofos = data.filosofos;
-                document.getElementById('start-screen').classList.remove('hidden');
-            });
+        function generateQuestions() {
+            const questions = [];
+            const usedItems = new Set(); // Para no repetir la misma cita/obra/idea
 
-        // Tipos de pregunta
-        const tipos = [
-            "obra",      // ¿Quién escribió...?
-            "cita",      // ¿Quién dijo...?
-            "corriente"  // ¿De quién era la filosofía caracterizada por...?
-        ];
+            while (questions.length < TOTAL_QUESTIONS) {
+                const questionType = ['obras', 'citas', 'ideas'][Math.floor(Math.random() * 3)];
 
-        function generarPreguntaAleatoria() {
-            // Selecciona un filósofo y tipo de pregunta al azar
-            const fil = filosofos[Math.floor(Math.random() * filosofos.length)];
-            let tipo = tipos[Math.floor(Math.random() * tipos.length)];
-            // Si el filósofo no tiene datos para ese tipo, forzar otro tipo
-            if (tipo === "obra" && (!fil.obras || fil.obras.length === 0)) tipo = "cita";
-            if (tipo === "cita" && (!fil.citas || fil.citas.length === 0)) tipo = "corriente";
-            if (tipo === "corriente" && (!fil.ideas || fil.ideas.length === 0)) tipo = "obra";
-            let pregunta = "", respuesta = "", opciones = [];
-            if (tipo === "obra") {
-                const obra = fil.obras[Math.floor(Math.random() * fil.obras.length)];
-                pregunta = `¿Quién escribió <b>${obra}</b>?`;
-                respuesta = fil.nombre;
-                // Opciones: respuesta + 3 filósofos al azar
-                const otros = pickRandom(filosofos.map(f => f.nombre), 3, [respuesta]);
-                opciones = shuffle([respuesta, ...otros]);
-            } else if (tipo === "cita") {
-                const cita = fil.citas[Math.floor(Math.random() * fil.citas.length)];
-                pregunta = `¿Quién dijo: <i>"${cita}"</i>?`;
-                respuesta = fil.nombre;
-                const otros = pickRandom(filosofos.map(f => f.nombre), 3, [respuesta]);
-                opciones = shuffle([respuesta, ...otros]);
-            } else if (tipo === "corriente") {
-                const idea = fil.ideas[Math.floor(Math.random() * fil.ideas.length)];
-                pregunta = `¿De quién era la filosofía caracterizada por: <i>${idea}</i>?`;
-                respuesta = fil.nombre;
-                const otros = pickRandom(filosofos.map(f => f.nombre), 3, [respuesta]);
-                opciones = shuffle([respuesta, ...otros]);
-            }
-            return { pregunta, opciones, respuesta, tipo };
-        }
+                // Filtrar filósofos que tienen datos para este tipo de pregunta
+                const elegiblePhilosophers = filosofosData.filter(f => f[questionType] && f[questionType].length > 0);
+                if (elegiblePhilosophers.length === 0) continue;
 
-        function generarPreguntas() {
-            // Genera 10 preguntas únicas (intentando evitar repetidos)
-            const usadas = new Set();
-            const result = [];
-            while (result.length < 10) {
-                const q = generarPreguntaAleatoria();
-                const key = q.pregunta + q.respuesta;
-                if (!usadas.has(key)) {
-                    usadas.add(key);
-                    result.push(q);
+                // Elegir un filósofo y un item al azar
+                const correctPhilosopher = elegiblePhilosophers[Math.floor(Math.random() * elegiblePhilosophers.length)];
+                const item = correctPhilosopher[questionType][Math.floor(Math.random() * correctPhilosopher[questionType].length)];
+
+                if (usedItems.has(item)) continue; // Si ya usamos este item, buscar otro
+                usedItems.add(item);
+
+                // Generar pregunta y opciones
+                let questionText = '';
+                switch (questionType) {
+                    case 'obras':
+                        questionText = `¿Quién escribió la obra "<em>${item}</em>"?`;
+                        break;
+                    case 'citas':
+                        questionText = `¿Quién dijo: "<em>${item}</em>"?`;
+                        break;
+                    case 'ideas':
+                        questionText = `¿De quién era la filosofía caracterizada por "<em>${item}</em>"?`;
+                        break;
                 }
+
+                // Obtener 3 filósofos incorrectos
+                const otherPhilosophers = filosofosData
+                    .filter(f => f.nombre !== correctPhilosopher.nombre)
+                    .map(f => f.nombre);
+
+                const wrongOptions = shuffleArray(otherPhilosophers).slice(0, 3);
+                const allOptions = shuffleArray([correctPhilosopher.nombre, ...wrongOptions]);
+
+                questions.push({
+                    question: questionText,
+                    options: allOptions,
+                    answer: correctPhilosopher.nombre
+                });
             }
-            return result;
+            return questions;
         }
+
 
         function startQuiz() {
-            preguntas = generarPreguntas();
-            current = 0;
+            startScreen.classList.add('hide');
+            resultsContainer.classList.add('hide');
+            quizContainer.classList.remove('hide');
+
             score = 0;
-            document.getElementById('start-screen').classList.add('hidden');
-            document.getElementById('result-screen').classList.add('hidden');
-            document.getElementById('quiz-screen').classList.remove('hidden');
+            currentQuestionIndex = 0;
+            currentQuestions = generateQuestions();
             showQuestion();
         }
 
         function showQuestion() {
-            const q = preguntas[current];
-            document.getElementById('question').innerHTML = q.pregunta;
-            const optionsDiv = document.getElementById('options');
-            optionsDiv.innerHTML = "";
-            const letras = ['A', 'B', 'C', 'D'];
-            q.opciones.forEach((op, i) => {
-                const btn = document.createElement('button');
-                btn.className = 'option-btn';
-                btn.innerHTML = `<span class="option-circle">${letras[i]}</span> ${op}`;
-                btn.onclick = () => selectOption(btn, op === q.respuesta);
-                btn.disabled = false;
-                optionsDiv.appendChild(btn);
+            resetState();
+            const question = currentQuestions[currentQuestionIndex];
+
+            questionCounterEl.textContent = `Pregunta ${currentQuestionIndex + 1} de ${TOTAL_QUESTIONS}`;
+            questionTextEl.innerHTML = question.question;
+
+            question.options.forEach(option => {
+                const button = document.createElement('button');
+                button.innerText = option;
+                button.classList.add('btn');
+                button.addEventListener('click', selectAnswer);
+                answerOptionsEl.appendChild(button);
             });
-            // Progreso
-            document.getElementById('progress').style.width = `${(current / 10) * 100}%`;
         }
 
-        function selectOption(btn, correct) {
-            const options = document.querySelectorAll('.option-btn');
-            options.forEach(b => b.disabled = true);
-            if (correct) {
-                btn.setAttribute('data-correct', 'true');
-                score++;
-            } else {
-                btn.setAttribute('data-correct', 'false');
-                // Resalta la correcta
-                options.forEach(b => {
-                    if (b.textContent.includes(preguntas[current].respuesta)) b.setAttribute('data-correct', 'true');
-                });
+        function resetState() {
+            nextBtn.classList.add('hide');
+            while (answerOptionsEl.firstChild) {
+                answerOptionsEl.removeChild(answerOptionsEl.firstChild);
             }
-            setTimeout(() => {
-                current++;
-                if (current < 10) {
-                    showQuestion();
-                } else {
-                    showResult();
-                }
-            }, 1100);
         }
 
-        function showResult() {
-            document.getElementById('quiz-screen').classList.add('hidden');
-            document.getElementById('result-screen').classList.remove('hidden');
-            document.getElementById('result-score').textContent = `${score} / 10`;
-            let msg = "";
-            if (score === 10) msg = "¡Perfecto! ¡Eres un verdadero filósofo!";
-            else if (score >= 8) msg = "¡Excelente! Gran dominio filosófico.";
-            else if (score >= 5) msg = "¡Bien! Pero puedes mejorar.";
-            else msg = "¡Ánimo! La filosofía es cuestión de práctica.";
-            document.getElementById('result-msg').textContent = msg;
-            document.getElementById('progress').style.width = "100%";
+        function selectAnswer(e) {
+            const selectedBtn = e.target;
+            const isCorrect = selectedBtn.innerText === currentQuestions[currentQuestionIndex].answer;
+
+            if (isCorrect) {
+                score++;
+                selectedBtn.classList.add('correct');
+            } else {
+                selectedBtn.classList.add('incorrect');
+            }
+
+            Array.from(answerOptionsEl.children).forEach(button => {
+                if (button.innerText === currentQuestions[currentQuestionIndex].answer) {
+                    button.classList.add('correct');
+                }
+                button.disabled = true;
+            });
+
+            nextBtn.classList.remove('hide');
         }
+
+        function showResults() {
+            quizContainer.classList.add('hide');
+            resultsContainer.classList.remove('hide');
+
+            let message = '';
+            const percentage = (score / TOTAL_QUESTIONS) * 100;
+            if (percentage === 100) message = "¡Perfecto! Eres un verdadero sabio.";
+            else if (percentage >= 70) message = "¡Excelente trabajo! Conoces bien a los filósofos.";
+            else if (percentage >= 40) message = "No está mal, pero hay que repasar un poco más.";
+            else message = "El camino a la sabiduría es largo. ¡Sigue intentándolo!";
+
+            results - text.textContent = message;
+            scoreEl.textContent = `${score} / ${TOTAL_QUESTIONS}`;
+        }
+
+        function handleNextButton() {
+            currentQuestionIndex++;
+            if (currentQuestionIndex < TOTAL_QUESTIONS) {
+                showQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        startBtn.addEventListener('click', startQuiz);
+        nextBtn.addEventListener('click', handleNextButton);
+        playAgainBtn.addEventListener('click', startQuiz);
+
+        // Cargar datos al iniciar
+        document.addEventListener('DOMContentLoaded', () => {
+            startBtn.disabled = true;
+            startBtn.textContent = 'Cargando datos...';
+            loadPhilosophers();
+        });
+
     </script>
 </body>
 </html>
