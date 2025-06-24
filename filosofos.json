@@ -622,5 +622,13 @@
     "movimiento": "Filosofía de la ciencia",
     "url_pagina": "https://jmlucas68.github.io/popper",
     "url_foto": "images/Popper.jpg"
+  },
+  {
+    "nombre": "Albert Camus",
+    "nacimiento": 1913,
+    "muerte": 1960,
+    "movimiento": "Existencialismo",
+    "url_pagina": "https://jmlucas68.github.io/Ccmus",
+    "url_foto": "images/Camus.jpg"
   }
 ]
