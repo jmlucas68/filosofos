@@ -217,6 +217,7 @@
             text-align: center;
             padding: 2rem;
             font-size: 0.9rem;
+            position: relative;
         }
 
         .highlight {
@@ -225,6 +226,26 @@
             border-radius: 4px;
             font-weight: bold;
         }
+
+        /* Estilo del botón de navegación */
+        .nav-button {
+            display: inline-block;
+            margin-top: 1.5rem;
+            background: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+            .nav-button:hover {
+                background: #c0392b;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            }
 
         @media (max-width: 768px) {
             .timeline::before {
@@ -379,6 +400,7 @@
                     <h3 class="source-title">Fuentes Primarias</h3>
                     <div class="source-links">
                         <a href="https://www.filosofia.org/cla/ari/azc10162.htm" target="_blank">Aristóteles - Metafísica (Texto completo)</a>
+                        <a href="https://www.webdianoia.com/aristoteles/aristoteles_meta_4.htm" target="_blank">Análisis del ser aristotélico - Webdianoia</a>
                         <a href="https://www.webdianoia.com/medieval/aquinate/aquino_meta_2.htm" target="_blank">Tomás de Aquino - Esencia y Existencia</a>
                         <a href="https://www.academiapirineos.com/wp-content/uploads/2023/03/DESCARTES-EL-PROBLEMA-DEL-SER-HUMANO.pdf" target="_blank">Descartes - El problema del ser humano</a>
                         <a href="http://modestoberciano.50webs.com/Datos%20Modesto/2.%20Escritos%20Heidegger/pdf/Introduccion%20Heidegger/IntrHeid4.pdf" target="_blank">Heidegger - El Dasein en Ser y Tiempo</a>
@@ -389,7 +411,7 @@
                     <h3 class="source-title">Estudios Académicos</h3>
                     <div class="source-links">
                         <a href="https://humanidades.com/ontologia/" target="_blank">Ontología: qué es y sus principales autores</a>
-                        <a href="https://www.filosoficas.unam.mx/docs/37/files/COMPLETO.pdf" target="_blank">Introducción a la Ontología (UNAM)</a>
+                        <a href="https://www.filosoficas.unam.mx/docs/37/files/COMPLETO.pdf" target="_blank">Introducción a la Ontología - UNAM</a>
                         <a href="https://reflexionesmarginales.com/blog/2013/09/28/la-pregunta-por-el-sentido-del-ser/" target="_blank">La pregunta por el sentido del ser</a>
                         <a href="https://www.oposinet.com/temario-de-filosofia/temario-1-filosofia/tema-67-el-problema-del-ser-en-heidegger-y-en-las-filosofas-de-la-existencia/" target="_blank">El problema del ser en Heidegger</a>
                     </div>
@@ -420,12 +442,14 @@
         <div class="container">
             <p>Página web creada para el estudio del problema filosófico del ser a través de la historia de la filosofía</p>
             <p>© 2025 - Todos los derechos reservados</p>
+            <!-- Botón para acceder a ser_integro.html -->
+            <a href="ser_integro.html" class="nav-button">Ver el análisis completo del Ser</a>
         </div>
     </footer>
 
     <script>
         // Efecto de aparición suave para las tarjetas
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {

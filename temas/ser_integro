@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Problema Filosófico del Ser</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --transition: all 0.3s ease;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+        }
+        h4 {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin: 1.5rem 0 0.5rem;
+        }
+        p, ul {
+            margin: 1rem 0;
+        }
+        .quote {
+            font-style: italic;
+            padding: 1rem;
+            border-left: 4px solid var(--secondary);
+            background: #f1f8fe;
+            margin: 1.5rem 0;
+        }
+        .concept-card {
+            display: inline-block;
+            background: #e3f2fd;
+            padding: 0.6rem 1rem;
+            border-radius: 18px;
+            margin: 0.3rem 0.3rem;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .concept-card:hover {
+            background: #bbdefb;
+            transform: translateY(-2px);
+        }
+        .concepts {
+            margin: 1.5rem 0;
+        }
+        .highlight {
+            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .sources-section {
+            background: var(--dark);
+            color: white;
+            padding: 2.5rem 0;
+        }
+        .sources-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .sources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .source-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 1.2rem;
+            transition: var(--transition);
+        }
+        .source-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+        .source-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: var(--light);
+        }
+        .source-links a {
+            display: block;
+            color: var(--secondary);
+            margin: 0.5rem 0;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        .source-links a:hover {
+            color: #1abc9c;
+            text-decoration: underline;
+        }
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0.8rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+        .timeline {
+            position: relative;
+            margin: 3rem 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 30px;
+            width: 4px;
+            background: var(--secondary);
+        }
+        .era {
+            margin-bottom: 2.5rem;
+            position: relative;
+            padding-left: 60px;
+        }
+        .era::before {
+            content: '';
+            position: absolute;
+            left: 26px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            z-index: 1;
+        }
+        .philosopher-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.2rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent);
+        }
+        .philosopher-name {
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>El Problema Filosófico del Ser</h1>
+            <p>Un recorrido por la historia de la filosofía y sus principales exponentes</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Introducción</h2>
+            <p>El problema del ser constituye la cuestión fundamental de la ontología y ha sido el hilo conductor de la reflexión filosófica occidental desde sus orígenes en la antigua Grecia. La pregunta por el ser - <span class="highlight">¿qué significa que algo "sea"?</span> - trasciende las apariencias inmediatas y busca comprender la naturaleza más profunda de la realidad.</p>
+            <p>La ontología, definida como "la disciplina que estudia el ser, comprendido como una característica común a todas las cosas", se pregunta fundamentalmente por el sentido del ser, por las formas de clasificarlo y por los diversos problemas que surgen al pensar la existencia. Esta disciplina, que también se conoce como metafísica general, fue Christian Wolff quien popularizó el término durante el siglo XVIII, definiéndola como "la ciencia del ente en general".</p>
+            <div class="concepts">
+                <div class="concept-card">Ontología</div>
+                <div class="concept-card">Metafísica</div>
+                <div class="concept-card">Ser</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Los Orígenes: Los Filósofos Presocráticos</h2>
+            <h3>Los Primeros Pensadores de Mileto</h3>
+            <p>El problema del ser surge en la filosofía occidental con los primeros filósofos de la escuela de Mileto en el siglo VI a.C. Tales, Anaximandro y Anaxímenes plantearon por primera vez la cuestión del <span class="highlight">arjé</span> (ἀρχή), el principio originario de todas las cosas. Estos pensadores inauguraron "el primer intento de conseguir una explicación racional del mundo", buscando aquello que permanece estable más allá de las apariencias cambiantes.</p>
+            <div class="philosopher-card">
+                <h4 class="philosopher-name">Anaximandro</h4>
+                <p><strong>(c. 610-546 a.C.)</strong> introdujo el concepto revolucionario de lo <span class="highlight">ápeiron</span> (lo indefinido, indeterminado e ilimitado) como principio fundamental.</p>
+                <div class="quote">"El principio de todas las cosas es lo indeterminado. Ahora bien, allí mismo donde hay generación para las cosas, allí se produce también la destrucción, según la necesidad."</div>
+                <div class="concepts">
+                    <div class="concept-card">Ápeiron</div>
+                    <div class="concept-card">Principio originario</div>
+                </div>
+            </div>
+
+            <h3>La Gran Controversia: Heráclito y Parménides</h3>
+            <p>El problema del ser alcanza su primera gran formulación filosófica en la controversia entre <span class="highlight">Heráclito</span> y <span class="highlight">Parménides</span>, dos pensadores que ofrecieron concepciones radicalmente opuestas sobre la naturaleza de la realidad.</p>
+            <div class="philosopher-card">
+                <h4 class="philosopher-name">Heráclito de Éfeso</h4>
+                <p><strong>(540-480 a.C.)</strong> postuló que "el conflicto y la tensión entre los opuestos eran la fuerza motriz detrás de la realidad en constante flujo". Su famosa afirmación "*Todo fluye, nada permanece*" encapsula su visión del ser como proceso continuo de transformación.</p>
+                <div class="quote">"La realidad era un proceso continuo de transformación donde los opuestos coexisten y generan equilibrio."</div>
+                <div class="concepts">
+                    <div class="concept-card">Flujo</div>
+                    <div class="concept-card">Devenir</div>
+                </div>
+            </div>
+            <div class="philosopher-card">
+                <h4 class="philosopher-name">Parménides de Elea</h4>
+                <p>Desarrolló una ontología radical que negaba la realidad del cambio. En su poema "Sobre la naturaleza", Parménides estableció los principios fundamentales: <span class="highlight">"el ser es y el no ser no es"</span>.</p>
+                <div class="quote">"Solo existe 'lo que es' y que no cambia. Admitir el cambio implicaría que algo pasaría del ser al no-ser, lo cual es contradictorio y lógicamente insostenible."</div>
+                <div class="concepts">
+                    <div class="concept-card">Inmutabilidad</div>
+                    <div class="concept-card">Ser</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>La Síntesis Clásica: Platón y Aristóteles</h2>
+            <h3>Aristóteles y la Ciencia del Ser en Cuanto Ser</h3>
+            <p><strong>Aristóteles (384-322 a.C.)</strong> realizó la primera sistematización comprehensiva del problema del ser en su <span class="highlight">Metafísica</span>. Definió la metafísica como la ciencia que "trata del ser en cuanto ser y de los principios por los que se rige", constituyendo así la "filosofía primera porque establece los primeros principios de todos los seres".</p>
+            <div class="quote">
+                "El ser se dice de muchas maneras: sustancia, accidente, potencia, acto, verdad."
+            </div>
+            <p>Particularmente relevante es su distinción entre <span class="highlight">ser en acto</span> y <span class="highlight">ser en potencia</span>. "Por ser en acto se refiere Aristóteles a la sustancia tal como en un momento determinado se nos presenta y la conocemos; por ser en potencia entiende el conjunto de capacidades o posibilidades de la sustancia para llegar a ser algo distinto de lo que actualmente es".</p>
+            <div class="concepts">
+                <div class="concept-card">Ser en acto</div>
+                <div class="concept-card">Ser en potencia</div>
+                <div class="concept-card">Sustancia</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>La Transformación Medieval: Esencia y Existencia</h2>
+            <h3>Tomás de Aquino y la Distinción Fundamental</h3>
+            <p>La filosofía medieval, especialmente con <strong>Tomás de Aquino (1225-1274)</strong>, introduce una distinción conceptual que marcará profundamente la historia de la ontología: la diferencia entre <span class="highlight">esencia</span> y <span class="highlight">existencia</span>.</p>
+            <div class="quote">
+                "En cada sustancia la esencia está respecto a la existencia como la potencia respecto del acto."
+            </div>
+            <p>"Lo que una cosa es, su esencia, puede ser comprendido independientemente de que esa cosa exista o no; e independientemente de su existencia o no, la esencia se mantiene inalterable siendo lo que es".</p>
+            <p>La esencia "es una potencia, puede existir o no. La existencia sería la puesta en acto de la capacidad de existir de la Esencia". Esta estructura implica que "todas las cosas que existen son un compuesto de esencia y existencia. En ese sentido son contingentes, es decir no tienen en sí mismas la necesidad de existir".</p>
+            <p>En contraste radical, "en Dios su Esencia incluye su Existencia. La Esencia de Dios es su ser. Dios es pura Esencia, sin limitación y que incluye todas las perfecciones". Esta distinción establece una "jerarquía entre los seres: los contingentes, los que reciben su existencia; y el ser necesario, aquel en que la esencia y la existencia se identifican".</p>
+            <div class="concepts">
+                <div class="concept-card">Esencia</div>
+                <div class="concept-card">Existencia</div>
+                <div class="concept-card">Contingencia</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>La Revolución Moderna: El Giro Subjetivo</h2>
+            <h3>Descartes y el Cogito</h3>
+            <p><strong>René Descartes (1596-1650)</strong> introduce una transformación radical en el planteamiento del problema del ser. A través de la duda metódica, Descartes descubre que "hay sin embargo algo de lo que no puede dudar y es de su propia existencia como ser pensante". El famoso <span class="highlight">cogito ergo sum</span> ("pienso, luego existo") establece que "la existencia afirmada es la del propio yo o sujeto pensante, no la del cuerpo".</p>
+            <div class="quote">
+                "Pienso, luego existo. Esta proposición es absolutamente cierta porque es clara y distinta."
+            </div>
+            <h3>Kant y los Límites de la Ontología</h3>
+            <p><strong>Immanuel Kant (1724-1804)</strong> introduce una crítica devastadora a la ontología tradicional. "Kant rechaza la posibilidad de una ontología concebida como una teoría del ente en cuanto ente, debido a las pretensiones que ese proyecto implica respecto del conocimiento de las cosas tal como son en sí mismas".</p>
+            <div class="quote">
+                "La existencia no es un predicado real, es decir, una determinación capaz de ser añadida al concepto de un ente."
+            </div>
+        </section>
+
+        <section>
+            <h2>El Idealismo Alemán: Hegel y la Dialéctica del Ser</h2>
+            <p><strong>Georg Wilhelm Friedrich Hegel (1770-1831)</strong> desarrolla una concepción del ser como proceso dialéctico. Para Hegel, "el espíritu no es simplemente una idea abstracta; es un proceso de auto-reconocimiento y objetivación que se despliega en la cultura, la sociedad y las instituciones humanas". El ser hegeliano no es estático sino que "es el pensamiento en su *otro ser*, en su realización sensible-corpórea".</p>
+            <div class="quote">
+                "El Absoluto es resultado, puesto que el proceso sólo es tal desde su culminación."
+            </div>
+            <div class="concepts">
+                <div class="concept-card">Dialéctica</div>
+                <div class="concept-card">Espíritu</div>
+                <div class="concept-card">Absoluto</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>La Crisis de la Modernidad: Nietzsche y la Deconstrucción</h2>
+            <p><strong>Friedrich Nietzsche (1844-1900)</strong> introduce una crítica radical a toda la tradición ontológica occidental. "Todo el pensamiento de Nietzsche tiene como punto de partida la idea de que la cultura occidental es decadente". Nietzsche "acusa a la metafísica tradicional de oponerse a la vida y haber falsificado la realidad".</p>
+            <p>Para Nietzsche, "el único fundamento absoluto de la realidad es 'la vida', entendida en su dimensión biológica, instintiva e irracional". Su crítica se dirige especialmente contra "la idea establecida por Platón, y reafirmada por el cristianismo, de que el mundo real es el mundo del ser, la unidad y la permanencia". Nietzsche afirma que "los filósofos se han inventado otra realidad por resentimiento, por el temor a la muerte o al cambio".</p>
+            <div class="concepts">
+                <div class="concept-card">Vida</div>
+                <div class="concept-card">Deconstrucción</div>
+                <div class="concept-card">Voluntad de poder</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>La Renovación Contemporánea: Heidegger y la Pregunta por el Ser</h2>
+            <h3>Martin Heidegger y el Dasein</h3>
+            <p><strong>Martin Heidegger (1889-1976)</strong> emprende una renovación radical de la pregunta por el ser. Su obra <span class="highlight">Ser y Tiempo</span> tiene como propósito explícito "la pregunta por el sentido del ser". Heidegger observa que esta pregunta "ha caído en el olvido" y considera necesario reformularla completamente.</p>
+            <p>La innovación fundamental de Heidegger consiste en transformar la pregunta "¿qué es el ser?" en <span class="highlight">"la pregunta por el sentido del ser"</span>. Esta transformación es crucial porque "preguntar por el ser es preguntar, como señala Heidegger, qué es lo que queremos decir con dicha expresión".</p>
+            <p>El punto de partida heideggeriano es el <span class="highlight">Dasein</span> (ser-ahí), que "es el ente que somos nosotros mismos". "El ser humano es, dice Heidegger, ser-ahí (Dasein), único ente que entiende el Ser, que ve su vida afectada por el Ser". El Dasein tiene una "triple primacía": ontológica (es el único ente que comprende el ser), óntica (su modo de ser es la existencia) y epistemológica (es la condición de posibilidad para toda ontología).</p>
+            <p>Lo fundamental del Dasein es que "es el lugar de la apertura del ser y también del sentido y de la comprensión del ser". Su estructura básica es el <span class="highlight">"ser-en-el-mundo"</span> (In-der-Welt-sein), que revela que el Dasein "no es un sujeto aislado en sí mismo, sino que sólo tiene subjetividad en cuanto la despliega en su mundo circundante".</p>
+            <div class="concepts">
+                <div class="concept-card">Dasein</div>
+                <div class="concept-card">Ser-en-el-mundo</div>
+                <div class="concept-card">Temporalidad</div>
+            </div>
+
+            <h3>La Temporalidad y la Finitud</h3>
+            <p>Para Heidegger, la temporalidad es fundamental para comprender el ser. "La temporalidad se manifiesta como el sentido último de la cura", y "solo si el 'ser-ahí' entiende el sentido de su ser puede ser propia y auténticamente lo que es". El Dasein es esencialmente temporal: "es un acontecer que se va desplegando entre el nacimiento y la muerte".</p>
+        </section>
+
+        <section>
+            <h2>El Existencialismo: Sartre y la Nada</h2>
+            <p><strong>Jean-Paul Sartre (1905-1980)</strong>, influenciado por Heidegger, desarrolla una ontología existencialista centrada en la relación entre el ser y la nada. Su obra <span class="highlight">El ser y la nada</span> (1943) "se considera la obra filosófica no ficticia más importante del existencialismo de Sartre".</p>
+            <p>Sartre sostiene que "el hombre está habitado desde el principio por la nada, de manera que la condición humana está compuesta, a la vez, de ser y, sobre todo, de no-ser". Su famosa tesis de que <span class="highlight">"la existencia precede a la esencia"</span> implica que "el hombre no es otra cosa que lo que él hace de sí mismo".</p>
+            <div class="quote">
+                "El hombre está condenado a ser libre. Condenado porque no se ha creado a sí mismo, y sin embargo libre porque una vez arrojado al mundo es responsable de todo lo que hace."
+            </div>
+            <div class="concepts">
+                <div class="concept-card">Existencialismo</div>
+                <div class="concept-card">Nada</div>
+                <div class="concept-card">Libertad</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Influencias y Confluencias en el Desarrollo del Problema</h2>
+            <p>A lo largo de esta evolución histórica, podemos observar ciertas líneas de continuidad y ruptura:</p>
+            <ul>
+                <li><strong>La tensión entre unidad y multiplicidad:</strong> Desde Parménides y Heráclito hasta Heidegger, la filosofía ha luchado con la cuestión de si la realidad es fundamentalmente una o múltiple.</li>
+                <li><strong>La relación entre pensamiento y ser:</strong> Desde el "lo mismo es pensar y ser" de Parménides hasta el Dasein heideggeriano, la filosofía ha explorado cómo se relacionan el conocimiento y la realidad.</li>
+                <li><strong>El problema de la temporalidad:</strong> Desde la eternidad del ser parmenídeo hasta la temporalidad existencial de Heidegger, el tiempo ha sido una dimensión crucial del problema del ser.</li>
+                <li><strong>La cuestión de la finitud:</strong> Desde la contingencia de los entes en Tomás de Aquino hasta el "ser-para-la-muerte" heideggeriano, la finitud ha sido una preocupación constante.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Conclusión: El Problema del Ser como Cuestión Perenne</h2>
+            <p>El problema filosófico del ser constituye el hilo conductor de la filosofía occidental, manifestándose en cada época histórica con características propias pero manteniendo su carácter de interrogante fundamental. Desde los primeros intentos presocráticos de encontrar el *arjé* hasta las sofisticadas análisis existenciales del siglo XX, la pregunta por el ser ha evolucionado pero nunca ha perdido su centralidad.</p>
+            <p>La evolución del problema muestra tanto continuidades como rupturas significativas. Las continuidades incluyen la persistencia de ciertas preguntas fundamentales: ¿qué significa ser? ¿cuál es la relación entre lo uno y lo múltiple? ¿cómo se relacionan el pensamiento y la realidad? Las rupturas incluyen las transformaciones metodológicas (del método racional griego a la fenomenología moderna) y las reorientaciones temáticas (del ser objetivo al Dasein existencial).</p>
+            <p>El legado de esta tradición nos muestra que el problema del ser no es simplemente una cuestión técnica de la filosofía académica, sino que toca las preguntas más profundas sobre el sentido de la existencia humana, la naturaleza de la realidad y nuestro lugar en el cosmos. Como observa Heidegger, "la pregunta por el ser" permanece como "la pregunta más universal y la más vacía" pero también "la más concreta", pues determina nuestra comprensión de todo lo que encontramos en la experiencia.</p>
+        </section>
+    </div>
+
+    <section class="sources-section">
+        <div class="sources-container">
+            <h2>Referencias y Fuentes</h2>
+            <p>Explora las obras originales y estudios académicos sobre el problema del ser:</p>
+            
+            <div class="sources-grid">
+                <div class="source-card">
+                    <h3 class="source-title">Fuentes Primarias</h3>
+                    <div class="source-links">
+                        <a href="https://www.filosofia.org/cla/ari/azc10162.htm" target="_blank">Aristóteles - Metafísica (Texto completo)</a>
+                        <a href="https://www.webdianoia.com/aristoteles/aristoteles_meta_4.htm" target="_blank">Análisis del ser aristotélico - Webdianoia</a>
+                        <a href="https://www.webdianoia.com/medieval/aquinate/aquino_meta_2.htm" target="_blank">Tomás de Aquino - Esencia y Existencia</a>
+                        <a href="https://www.academiapirineos.com/wp-content/uploads/2023/03/DESCARTES-EL-PROBLEMA-DEL-SER-HUMANO.pdf" target="_blank">Descartes - El problema del ser humano</a>
+                        <a href="http://modestoberciano.50webs.com/Datos%20Modesto/2.%20Escritos%20Heidegger/pdf/Introduccion%20Heidegger/IntrHeid4.pdf" target="_blank">Heidegger - El Dasein en Ser y Tiempo</a>
+                        <a href="https://es.wikipedia.org/wiki/El_ser_y_la_nada" target="_blank">Sartre - El ser y la nada (Wikipedia)</a>
+                        <a href="https://www.ucm.es/data/cont/docs/241-2015-06-16-Sartre%20%20El_existencialismo_es_un_humanismo.pdf" target="_blank">Sartre - El existencialismo es un humanismo</a>
+                    </div>
+                </div>
+                
+                <div class="source-card">
+                    <h3 class="source-title">Estudios Académicos</h3>
+                    <div class="source-links">
+                        <a href="https://humanidades.com/ontologia/" target="_blank">Ontología: qué es y sus principales autores</a>
+                        <a href="https://philpapers.org/archive/BARIAL-5.pdf" target="_blank">Introducción a la Ontología - PhilPapers</a>
+                        <a href="https://www.filosoficas.unam.mx/docs/37/files/COMPLETO.pdf" target="_blank">Introducción a la Ontología - UNAM</a>
+                        <a href="https://reflexionesmarginales.com/blog/2013/09/28/la-pregunta-por-el-sentido-del-ser/" target="_blank">La pregunta por el sentido del ser</a>
+                        <a href="https://www.oposinet.com/temario-de-filosofia/temario-1-filosofia/tema-67-el-problema-del-ser-en-heidegger-y-en-las-filosofas-de-la-existencia/" target="_blank">El problema del ser en Heidegger</a>
+                        <a href="http://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S2007-24062021000100009" target="_blank">Filosofía del ser y personalismo - SciELO</a>
+                    </div>
+                </div>
+                
+                <div class="source-card">
+                    <h3 class="source-title">Filosofía Antigua</h3>
+                    <div class="source-links">
+                        <a href="https://www.rafaelrobles.com/2024/09/03-el-problema-de-la-realidad-en-los-presocraticos/" target="_blank">Presocráticos y el problema de la realidad</a>
+                        <a href="https://fundacionpastor.es/cursos/heraclito-y-parmenides-ser-y-devenir/" target="_blank">Heráclito y Parménides: Ser y devenir</a>
+                        <a href="https://es.wikipedia.org/wiki/Anaximandro" target="_blank">Anaximandro (Wikipedia)</a>
+                    </div>
+                </div>
+                
+                <div class="source-card">
+                    <h3 class="source-title">Recursos Educativos</h3>
+                    <div class="source-links">
+                        <a href="https://filosofiaenlared.com/2024/08/que-es-el-ser-y-el-no-ser/" target="_blank">El Ser y el No-Ser</a>
+                        <a href="https://mejorconsalud.as.com/ontologia-caracteristicas-representantes/" target="_blank">Ontología: características y representantes</a>
+                        <a href="https://sites.google.com/view/filosofiasinrollos/p%C3%A1gina-principal/filosof%C3%ADa-4%C2%BA/ud-5-el-ser-humano-en-la-historia" target="_blank">Filosofía sin rollos - El ser humano en la historia</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Página web creada para el estudio del problema filosófico del ser a través de la historia de la filosofía</p>
+            <p>© 2025 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efecto de aparición suave para las tarjetas
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+            
+            const cards = document.querySelectorAll('.philosopher-card, .source-card');
+            cards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
