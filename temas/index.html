@@ -1,101 +1,108 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Galería Filosófica</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background: #f6f6f6;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    h1 {
-      text-align: center;
-      margin: 40px 0 20px 0;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-      color: #222;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .card {
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-      width: 260px;
-      height: 340px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      text-decoration: none;
-      color: inherit;
-      overflow: hidden;
-      transition: transform 0.18s, box-shadow 0.18s;
-      position: relative;
-    }
-    .card:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.14);
-    }
-    .card-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-    }
-    .card-content {
-      padding: 24px 18px 32px 18px;
-      text-align: center;
-    }
-    .card-title {
-      font-size: 1.3rem;
-      font-weight: bold;
-      margin-bottom: 12px;
-      color: #1a1a1a;
-    }
-    .card-desc {
-      font-size: 1rem;
-      color: #555;
-    }
-    @media (max-width: 800px) {
-      .gallery {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Galería Filosófica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #f6f6f6;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 40px 0 20px 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: #222;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            width: 260px;
+            height: 340px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            text-decoration: none;
+            color: inherit;
+            overflow: hidden;
+            transition: transform 0.18s, box-shadow 0.18s;
+            position: relative;
+        }
+
+            .card:hover {
+                transform: translateY(-8px) scale(1.03);
+                box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+            }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .card-content {
+            padding: 24px 18px 32px 18px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        .card-desc {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        @media (max-width: 800px) {
+            .gallery {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Galería de Temas Filosóficos</h1>
-  <div class="gallery">
-    <a class="card" href="ser.html">
-      <img class="card-img" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="El Ser">
-      <div class="card-content">
-        <div class="card-title">El Ser</div>
-        <div class="card-desc">Explora la pregunta fundamental sobre la existencia y la naturaleza del ser.</div>
-      </div>
-    </a>
-    <!-- Ejemplo de otra tarjeta futura:
-    <a class="card" href="conocimiento.html">
-      <img class="card-img" src="URL_DE_LA_IMAGEN" alt="El Conocimiento">
-      <div class="card-content">
-        <div class="card-title">El Conocimiento</div>
-        <div class="card-desc">Reflexiona sobre la epistemología y los límites del saber humano.</div>
-      </div>
-    </a>
-    -->
-  </div>
+    <h1>Galería de Temas Filosóficos</h1>
+    <div class="gallery">
+        <a class="card" href="ser.html">
+            <img class="card-img" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="El Ser">
+            <div class="card-content">
+                <div class="card-title">El Ser</div>
+                <div class="card-desc">Explora la pregunta fundamental sobre la existencia y la naturaleza del ser.</div>
+            </div>
+        </a>
+        <a class="card" href="conocimiento.html">
+            <img class="card-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="El Conocimiento">
+            <div class="card-content">
+                <div class="card-title">El Conocimiento</div>
+                <div class="card-desc">Reflexiona sobre los límites, posibilidades y fuentes del conocimiento humano.</div>
+            </div>
+        </a>
+    </div>
 </body>
 </html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El Problema Filosófico del Conocimiento</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --azul: #134e6f;
+            --dorado: #ffc93c;
+            --gris: #f2f2f2;
+            --negro: #212121;
+            --ancho-max: 950px;
+            --radio: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: 'Open Sans',sans-serif;
+            line-height: 1.6;
+            background: var(--gris);
+            color: var(--negro);
+        }
+
+        header {
+            background: linear-gradient(135deg,var(--azul),#0e2d44);
+            color: #fff;
+            padding: 4rem 1rem 3rem;
+            text-align: center;
+            clip-path: polygon(0 0,100% 0,100% 90%,0 100%);
+        }
+
+            header h1 {
+                font-family: 'Merriweather',serif;
+                font-size: 2.5rem;
+                margin-bottom: .8rem
+            }
+
+            header p {
+                font-size: 1.1rem;
+                max-width: 700px;
+                margin: auto
+            }
+
+        main {
+            max-width: var(--ancho-max);
+            margin: -4rem auto 4rem;
+            background: #fff;
+            border-radius: var(--radio);
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,.12);
+        }
+
+        section {
+            padding: 2.5rem 2rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+            section:last-child {
+                border-bottom: none
+            }
+
+        h2 {
+            font-family: 'Merriweather',serif;
+            color: var(--azul);
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        h3 {
+            font-family: 'Merriweather',serif;
+            color: var(--dorado);
+            font-size: 1.3rem;
+            margin: 1.6rem 0 .6rem;
+        }
+
+        p {
+            margin: .9rem 0;
+            text-align: justify
+        }
+
+        details {
+            margin: 1.2rem 0;
+            border: 1px solid var(--azul);
+            border-radius: var(--radio);
+            background: #fafafa;
+            padding: 1rem 1.2rem;
+        }
+
+            details summary {
+                font-weight: 600;
+                cursor: pointer;
+                color: var(--azul)
+            }
+
+        blockquote {
+            margin: 1.2rem 0;
+            padding: 1rem 1.2rem;
+            background: #fdf5e6;
+            border-left: 5px solid var(--dorado);
+            font-style: italic;
+        }
+
+        figure {
+            margin: 1.6rem 0;
+            text-align: center;
+        }
+
+            figure img {
+                width: 100%;
+                border-radius: var(--radio);
+                max-height: 380px;
+                object-fit: cover;
+                box-shadow: 0 4px 12px rgba(0,0,0,.15);
+            }
+
+            figure figcaption {
+                margin-top: .5rem;
+                font-size: .9rem;
+                color: #555;
+            }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: var(--azul);
+            color: #fff;
+            font-size: .85rem;
+        }
+        /* botón desplazamiento arriba */
+        #up {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: var(--dorado);
+            color: #000;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.3rem;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,.25);
+            transition: .3s;
+        }
+
+            #up:hover {
+                transform: translateY(-6px)
+            }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>El Problema Filosófico del Conocimiento</h1>
+        <p>Un recorrido histórico completo: de los presocráticos a la epistemología contemporánea</p>
+    </header>
+
+    <main>
+
+        <!-- INTRODUCCIÓN -->
+        <section id="intro">
+            <h2>Introducción</h2>
+            <p>
+                El problema del conocimiento —la epistemología— constituye una de las cuestiones fundamentales
+                de la filosofía occidental. Desde las primeras reflexiones de Platón sobre la distinción entre
+                conocimiento y opinión, pasando por la síntesis tomista medieval, la revolución cartesiana
+                moderna y los debates contemporáneos sobre relativismo y epistemología naturalizada, la pregunta
+                por la naturaleza y los límites del saber humano ha evolucionado sin cesar a lo largo de más de
+                dos milenios.
+            </p>
+            <p>
+                Este estudio rastrea esa evolución, mostrando tanto la continuidad de ciertas preguntas
+                fundamentales como la transformación de sus respuestas en cada época.
+            </p>
+            <figure>
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80" alt="Biblioteca clásica">
+                <figcaption>La búsqueda del conocimiento ha acompañado a la humanidad desde la Antigüedad.</figcaption>
+            </figure>
+        </section>
+
+        <!-- ANTIGÜEDAD -->
+        <section id="antiguedad">
+            <h2>Filosofía Antigua: Los Orígenes</h2>
+
+            <h3>Presocráticos: Heráclito y Parménides</h3>
+            <p>
+                Los primeros pensadores griegos sentaron las bases del problema epistemológico al confrontar el
+                cambio (Heráclito) con la permanencia (Parménides), generando la tensión entre devenir y ser que
+                marcará toda reflexión posterior.
+            </p>
+
+            <blockquote>«No se puede descender dos veces en el mismo río» —Heráclito</blockquote>
+
+            <h3>Sócrates y el Método Mayéutico</h3>
+            <p>
+                Sócrates desplaza la atención hacia el examen crítico de nuestras propias creencias. Su célebre
+                «solo sé que no sé nada» subraya los límites del saber y la necesidad de justificación racional.
+            </p>
+
+            <h3>Platón: Episteme vs. Doxa</h3>
+            <p>
+                En la teoría de las Ideas, Platón distingue entre el conocimiento verdadero (<em>episteme</em>)
+                referido al mundo inteligible e inmutable, y la opinión (<em>doxa</em>) ligada al mundo sensible y
+                cambiante.
+            </p>
+
+            <h3>Aristóteles y la Demostración Científica</h3>
+            <p>
+                Para Aristóteles, el conocimiento genuino es demostrativo: parte de primeros principios evidentes
+                y se organiza lógicamente mediante silogismos. Concede a la experiencia un papel decisivo como
+                punto de partida del saber.
+            </p>
+        </section>
+
+        <!-- EDAD MEDIA -->
+        <section id="medieval">
+            <h2>La Epistemología Medieval</h2>
+
+            <h3>San Agustín: Fe, Razón e Iluminación</h3>
+            <p>
+                Agustín integra platonismo y cristianismo. El conocimiento verdadero requiere iluminación
+                divina; la mente, por sí sola, no basta para acceder a las verdades eternas.
+            </p>
+
+            <h3>Santo Tomás de Aquino: Abstracción y Gracia</h3>
+            <p>
+                Tomás adopta el esquema aristotélico, pero distingue entre verdades accesibles a la razón y
+                verdades reveladas. La gracia perfecciona la naturaleza sin anularla.
+            </p>
+
+            <h3>Ockham y el Nominalismo</h3>
+            <p>
+                Al afirmar que solo existen individuos particulares, Guillermo de Ockham reduce la
+                epistemología a la intuición de lo singular y rechaza la realidad de los universales, sentando
+                bases del empirismo posterior.
+            </p>
+        </section>
+
+        <!-- MODERNA -->
+        <section id="moderna">
+            <h2>La Revolución Moderna</h2>
+
+            <h3>Descartes: Duda Metódica y <em>Cogito</em></h3>
+            <p>
+                René Descartes propone la duda sistemática como vía para hallar un fundamento indudable al
+                conocimiento. El <em>cogito ergo sum</em> se erige en certeza primera, sobre la que edifica todo su
+                sistema racionalista.
+            </p>
+
+            <h3>Empirismo Británico</h3>
+            <p>
+                Locke reduce el origen de las ideas a la experiencia, Berkeley niega la materia extra-mental y
+                Hume lleva el escepticismo al límite al cuestionar causalidad e inducción.
+            </p>
+
+            <h3>Kant: Síntesis Crítica</h3>
+            <p>
+                Kant resuelve la disputa racionalismo-empirismo al mostrar que la mente estructura la
+                experiencia mediante categorías a priori, aunque impone límites estrictos: solo podemos conocer
+                fenómenos, jamás la cosa en sí.
+            </p>
+        </section>
+
+        <!-- CONTEMPORÁNEA -->
+        <section id="contemporanea">
+            <h2>Desarrollos Contemporáneos</h2>
+
+            <h3>Positivismo Lógico</h3>
+            <p>
+                El Círculo de Viena postula el principio de verificación: una proposición es significativa si es
+                analítica o empíricamente verificable, relegando la metafísica a la pseudo-ciencia.
+            </p>
+
+            <h3>Popper y la Falsabilidad</h3>
+            <p>
+                Pensar científicamente es proponer hipótesis audaces y refutables; el progreso se da mediante la
+                eliminación de teorías falsadas.
+            </p>
+
+            <h3>Epistemología Naturalizada</h3>
+            <p>
+                Quine propone estudiar el conocimiento con métodos empíricos. Surgen teorías
+                externalistas —procesos confiables, evolución cognitiva— que vinculan epistemología y ciencias
+                cognitivas.
+            </p>
+
+            <h3>Epistemología Social y Feminista</h3>
+            <p>
+                Se analiza la dimensión comunitaria del saber, el testimonio y los sesgos de poder. Fricker
+                introduce el concepto de injusticia epistémica.
+            </p>
+        </section>
+
+        <!-- CONCLUSIONES -->
+        <section id="conclusiones">
+            <h2>Conclusiones</h2>
+            <p>
+                El problema del conocimiento permanece como eje vertebrador de la filosofía, mutable pero
+                constante. Las tensiones entre razón y experiencia, certeza y escepticismo, individuo y
+                comunidad, siguen vivas ante nuevos desafíos —inteligencia artificial, big data, entornos
+                virtuales— que reconfiguran nuestro modo de saber.
+            </p>
+
+            <details>
+                <summary>Lecturas recomendadas y enlaces útiles</summary>
+                <ul style="margin-left:1rem;padding-left:.5rem">
+                    <li><a href="https://plato.stanford.edu" target="_blank">Stanford Encyclopedia of Philosophy</a></li>
+                    <li><a href="https://iep.utm.edu" target="_blank">Internet Encyclopedia of Philosophy</a></li>
+                    <li><a href="https://www.filosofia.org" target="_blank">Filosofia.org</a></li>
+                </ul>
+            </details>
+        </section>
+
+    </main>
+
+    <a id="up" href="#intro" title="Subir">↑</a>
+
+    <footer>
+        Página elaborada para fines académicos. © 2025
+    </footer>
+
+</body>
+</html>
