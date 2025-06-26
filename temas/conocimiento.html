@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>El Problema Filosófico del Conocimiento</title>
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
     <style>
         :root {
             --azul: #134e6f;
@@ -135,8 +133,9 @@
             background: var(--azul);
             color: #fff;
             font-size: .85rem;
+            position: relative;
         }
-        /* botón desplazamiento arriba */
+
         #up {
             position: fixed;
             bottom: 28px;
@@ -157,6 +156,31 @@
 
             #up:hover {
                 transform: translateY(-6px)
+            }
+        /* --- Botón de acceso a la web íntegra --- */
+        #btn-integro {
+            display: block;
+            margin: 2.2rem auto 0 auto;
+            padding: 1rem 2.2rem;
+            background: linear-gradient(90deg, var(--dorado) 60%, #ffe57f 100%);
+            color: #222;
+            font-family: 'Merriweather', serif;
+            font-size: 1.18rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 40px;
+            box-shadow: 0 2px 12px rgba(0,0,0,.10);
+            cursor: pointer;
+            transition: background .2s, transform .2s;
+            text-decoration: none;
+            letter-spacing: .5px;
+        }
+
+            #btn-integro:hover {
+                background: linear-gradient(90deg, #ffe57f 10%, var(--dorado) 100%);
+                color: #134e6f;
+                transform: scale(1.04);
+                box-shadow: 0 4px 18px rgba(0,0,0,.13);
             }
     </style>
 </head>
@@ -323,6 +347,11 @@
                 </ul>
             </details>
         </section>
+
+        <!-- BOTÓN DE ACCESO A LA WEB ÍNTEGRA -->
+        <a id="btn-integro" href="conocimiento_integro.html" target="_blank" title="Ver la versión íntegra y ampliada">
+            Accede a la versión íntegra y visual &rarr;
+        </a>
 
     </main>
 
