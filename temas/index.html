@@ -1,448 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Problema del Ser en la Historia de la Filosofía</title>
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-            padding: 0;
-            margin: 0;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
-            font-weight: 300;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            margin: 4rem auto;
-            max-width: 1000px;
-        }
-
-            .timeline::before {
-                content: '';
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 50%;
-                width: 4px;
-                background: var(--secondary);
-                transform: translateX(-50%);
-            }
-
-        .era {
-            display: flex;
-            margin-bottom: 4rem;
-            position: relative;
-        }
-
-        .era-content {
-            background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            width: calc(50% - 4rem);
-            position: relative;
-            transition: var(--transition);
-        }
-
-            .era-content:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-            }
-
-        .era:nth-child(odd) .era-content {
-            margin-left: auto;
-        }
-
-        .era:nth-child(even) .era-content {
-            margin-right: auto;
-        }
-
-        .era-title {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid var(--secondary);
-        }
-
-        .philosopher-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: var(--transition);
-            border-left: 4px solid var(--accent);
-        }
-
-            .philosopher-card:hover {
-                transform: translateX(5px);
-                box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            }
-
-        .philosopher-name {
-            font-size: 1.5rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-
-        .quote {
-            font-style: italic;
-            padding: 1rem;
-            border-left: 3px solid var(--secondary);
-            margin: 1rem 0;
-            background-color: #f8f9fa;
-        }
-
-        .concepts {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        .concept-card {
-            background: #e3f2fd;
-            padding: 0.8rem 1.2rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-            .concept-card:hover {
-                background: #bbdefb;
-                transform: scale(1.05);
-            }
-
-        .sources-section {
-            background: var(--dark);
-            color: white;
-            padding: 4rem 0;
-        }
-
-        .sources-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .sources-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .source-card {
-            background: rgba(255,255,255,0.1);
-            border-radius: 8px;
-            padding: 1.5rem;
-            transition: var(--transition);
-        }
-
-            .source-card:hover {
-                background: rgba(255,255,255,0.15);
-                transform: translateY(-5px);
-            }
-
-        .source-title {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--light);
-        }
-
-        .source-links a {
-            display: block;
-            color: #3498db;
-            margin: 0.5rem 0;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-            .source-links a:hover {
-                color: #1abc9c;
-                text-decoration: underline;
-            }
-
-        footer {
-            background: var(--primary);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-        }
-
-        .highlight {
-            background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-
-        @media (max-width: 768px) {
-            .timeline::before {
-                left: 2rem;
-            }
-
-            .era {
-                flex-direction: column;
-            }
-
-            .era-content {
-                width: 100%;
-                margin: 0 0 2rem 4rem !important;
-            }
-
-            h1 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Galería Filosófica</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #f6f6f6;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      margin: 40px 0 20px 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      color: #222;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      width: 260px;
+      height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      transition: transform 0.18s, box-shadow 0.18s;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+    }
+    .card-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    .card-content {
+      padding: 24px 18px 32px 18px;
+      text-align: center;
+    }
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+    .card-desc {
+      font-size: 1rem;
+      color: #555;
+    }
+    @media (max-width: 800px) {
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>El Problema del Ser</h1>
-            <p class="subtitle">Un recorrido por la historia de la filosofía y sus principales exponentes</p>
-        </div>
-    </header>
-
-    <div class="container">
-        <section class="intro">
-            <h2>Introducción al Problema Ontológico</h2>
-            <p>El problema del ser constituye la cuestión fundamental de la ontología y ha sido el hilo conductor de la reflexión filosófica occidental desde sus orígenes. La pregunta por el ser - <span class="highlight">¿qué significa que algo "sea"?</span> - trasciende las apariencias inmediatas y busca comprender la naturaleza más profunda de la realidad.</p>
-
-            <div class="concepts">
-                <div class="concept-card">Ontología</div>
-                <div class="concept-card">Metafísica</div>
-                <div class="concept-card">Esencia</div>
-                <div class="concept-card">Existencia</div>
-                <div class="concept-card">Dasein</div>
-            </div>
-        </section>
-
-        <div class="timeline">
-            <!-- Presocráticos -->
-            <div class="era">
-                <div class="era-content">
-                    <h3 class="era-title">Orígenes: Filósofos Presocráticos</h3>
-
-                    <div class="philosopher-card">
-                        <h4 class="philosopher-name">Parménides de Elea</h4>
-                        <p>Desarrolló una ontología radical que negaba la realidad del cambio. En su poema "Sobre la naturaleza", estableció: <span class="highlight">"el ser es y el no ser no es"</span>.</p>
-                        <div class="quote">"Solo existe 'lo que es' y que no cambia. Admitir el cambio implicaría que algo pasaría del ser al no-ser, lo cual es contradictorio."</div>
-                    </div>
-
-                    <div class="philosopher-card">
-                        <h4 class="philosopher-name">Heráclito de Éfeso</h4>
-                        <p>Postuló que <span class="highlight">"el conflicto entre opuestos es la fuerza motriz de la realidad"</span>. Su visión del ser como proceso continuo contrastaba radicalmente con Parménides.</p>
-                        <div class="quote">"Todo fluye, nada permanece. No es posible bañarse dos veces en el mismo río."</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Clásicos -->
-            <div class="era">
-                <div class="era-content">
-                    <h3 class="era-title">Síntesis Clásica: Platón y Aristóteles</h3>
-
-                    <div class="philosopher-card">
-                        <h4 class="philosopher-name">Aristóteles</h4>
-                        <p>Sistematizó el problema del ser en su <span class="highlight">Metafísica</span>, definiéndola como la ciencia que "trata del ser en cuanto ser".</p>
-                        <div class="quote">"El ser se dice de muchas maneras: sustancia, accidente, potencia, acto, verdad."</div>
-                        <div class="concepts">
-                            <div class="concept-card">Ser en potencia</div>
-                            <div class="concept-card">Ser en acto</div>
-                            <div class="concept-card">Sustancia</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Medievales -->
-            <div class="era">
-                <div class="era-content">
-                    <h3 class="era-title">Transformación Medieval: Esencia y Existencia</h3>
-
-                    <div class="philosopher-card">
-                        <h4 class="philosopher-name">Tomás de Aquino</h4>
-                        <p>Introdujo la crucial distinción entre <span class="highlight">esencia y existencia</span>, conciliando la filosofía aristotélica con la doctrina cristiana.</p>
-                        <div class="quote">"En cada sustancia la esencia está respecto a la existencia como la potencia respecto del acto."</div>
-                        <div class="concepts">
-                            <div class="concept-card">Esencia</div>
-                            <div class="concept-card">Existencia</div>
-                            <div class="concept-card">Contingencia</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modernidad -->
-            <div class="era">
-                <div class="era-content">
-                    <h3 class="era-title">Revolución Moderna: El Giro Subjetivo</h3>
-
-                    <div class="philosopher-card">
-                        <h4 class="philosopher-name">René Descartes</h4>
-                        <p>Transformó el planteamiento con su <span class="highlight">"Cogito ergo sum"</span>, estableciendo la existencia del sujeto pensante como fundamento.</p>
-                        <div class="quote">"Pienso, luego existo. Esta proposición es absolutamente cierta porque es clara y distinta."</div>
-                    </div>
-
-                    <div class="philosopher-card">
-                        <h4 class="philosopher-name">Immanuel Kant</h4>
-                        <p>Criticó la ontología tradicional, argumentando que <span class="highlight">"la existencia no es un predicado real"</span>.</p>
-                        <div class="quote">"La existencia no es una determinación que pueda añadirse al concepto de un ente."</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contemporáneos -->
-            <div class="era">
-                <div class="era-content">
-                    <h3 class="era-title">Renovación Contemporánea</h3>
-
-                    <div class="philosopher-card">
-                        <h4 class="philosopher-name">Martin Heidegger</h4>
-                        <p>Reformuló completamente la pregunta por el ser en <span class="highlight">"Ser y Tiempo"</span>, introduciendo el concepto de <span class="highlight">Dasein</span>.</p>
-                        <div class="quote">"El Dasein es el ente que somos nosotros mismos, el único que comprende el ser."</div>
-                        <div class="concepts">
-                            <div class="concept-card">Dasein</div>
-                            <div class="concept-card">Ser-en-el-mundo</div>
-                            <div class="concept-card">Temporalidad</div>
-                        </div>
-                    </div>
-
-                    <div class="philosopher-card">
-                        <h4 class="philosopher-name">Jean-Paul Sartre</h4>
-                        <p>Desarrolló una ontología existencialista donde <span class="highlight">"la existencia precede a la esencia"</span>.</p>
-                        <div class="quote">"El hombre está condenado a ser libre. Condenado porque no se ha creado a sí mismo, y sin embargo libre porque una vez arrojado al mundo es responsable de todo lo que hace."</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <section class="sources-section">
-        <div class="sources-container">
-            <h2>Referencias y Fuentes</h2>
-            <p>Explora las obras originales y estudios académicos sobre el problema del ser:</p>
-
-            <div class="sources-grid">
-                <div class="source-card">
-                    <h3 class="source-title">Fuentes Primarias</h3>
-                    <div class="source-links">
-                        <a href="https://www.filosofia.org/cla/ari/azc10162.htm" target="_blank">Aristóteles - Metafísica (Texto completo)</a>
-                        <a href="https://www.webdianoia.com/medieval/aquinate/aquino_meta_2.htm" target="_blank">Tomás de Aquino - Esencia y Existencia</a>
-                        <a href="https://www.academiapirineos.com/wp-content/uploads/2023/03/DESCARTES-EL-PROBLEMA-DEL-SER-HUMANO.pdf" target="_blank">Descartes - El problema del ser humano</a>
-                        <a href="http://modestoberciano.50webs.com/Datos%20Modesto/2.%20Escritos%20Heidegger/pdf/Introduccion%20Heidegger/IntrHeid4.pdf" target="_blank">Heidegger - El Dasein en Ser y Tiempo</a>
-                    </div>
-                </div>
-
-                <div class="source-card">
-                    <h3 class="source-title">Estudios Académicos</h3>
-                    <div class="source-links">
-                        <a href="https://humanidades.com/ontologia/" target="_blank">Ontología: qué es y sus principales autores</a>
-                        <a href="https://www.filosoficas.unam.mx/docs/37/files/COMPLETO.pdf" target="_blank">Introducción a la Ontología (UNAM)</a>
-                        <a href="https://reflexionesmarginales.com/blog/2013/09/28/la-pregunta-por-el-sentido-del-ser/" target="_blank">La pregunta por el sentido del ser</a>
-                        <a href="https://www.oposinet.com/temario-de-filosofia/temario-1-filosofia/tema-67-el-problema-del-ser-en-heidegger-y-en-las-filosofas-de-la-existencia/" target="_blank">El problema del ser en Heidegger</a>
-                    </div>
-                </div>
-
-                <div class="source-card">
-                    <h3 class="source-title">Filosofía Antigua</h3>
-                    <div class="source-links">
-                        <a href="https://www.rafaelrobles.com/2024/09/03-el-problema-de-la-realidad-en-los-presocraticos/" target="_blank">Presocráticos y el problema de la realidad</a>
-                        <a href="https://fundacionpastor.es/cursos/heraclito-y-parmenides-ser-y-devenir/" target="_blank">Heráclito y Parménides: Ser y devenir</a>
-                        <a href="https://es.wikipedia.org/wiki/Anaximandro" target="_blank">Anaximandro (Wikipedia)</a>
-                    </div>
-                </div>
-
-                <div class="source-card">
-                    <h3 class="source-title">Recursos Educativos</h3>
-                    <div class="source-links">
-                        <a href="https://filosofiaenlared.com/2024/08/que-es-el-ser-y-el-no-ser/" target="_blank">El Ser y el No-Ser</a>
-                        <a href="https://mejorconsalud.as.com/ontologia-caracteristicas-representantes/" target="_blank">Ontología: características y representantes</a>
-                        <a href="https://sites.google.com/view/filosofiasinrollos/p%C3%A1gina-principal/filosof%C3%ADa-4%C2%BA/ud-5-el-ser-humano-en-la-historia" target="_blank">Filosofía sin rollos - El ser humano en la historia</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>Página web creada para el estudio del problema filosófico del ser a través de la historia de la filosofía</p>
-            <p>© 2025 - Todos los derechos reservados</p>
-        </div>
-    </footer>
-
-    <script>
-        // Efecto de aparición suave para las tarjetas
-        document.addEventListener('DOMContentLoaded', function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            });
-
-            const cards = document.querySelectorAll('.era-content, .philosopher-card, .source-card');
-            cards.forEach(card => {
-                card.style.opacity = 0;
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(card);
-            });
-        });
-    </script>
+  <h1>Galería de Temas Filosóficos</h1>
+  <div class="gallery">
+    <a class="card" href="ser.html">
+      <img class="card-img" src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="El Ser">
+      <div class="card-content">
+        <div class="card-title">El Ser</div>
+        <div class="card-desc">Explora la pregunta fundamental sobre la existencia y la naturaleza del ser.</div>
+      </div>
+    </a>
+    <!-- Ejemplo de otra tarjeta futura:
+    <a class="card" href="conocimiento.html">
+      <img class="card-img" src="URL_DE_LA_IMAGEN" alt="El Conocimiento">
+      <div class="card-content">
+        <div class="card-title">El Conocimiento</div>
+        <div class="card-desc">Reflexiona sobre la epistemología y los límites del saber humano.</div>
+      </div>
+    </a>
+    -->
+  </div>
 </body>
 </html>
