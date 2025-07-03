@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Explora el origen, los pensadores y las teorías clave de la filosofía hermenéutica con recursos interactivos y enlaces a obras fundamentales.">
+  <title>Filosofía Hermenéutica: Origen, Pensadores y Teorías</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', Arial, sans-serif; margin:0; background: #f7f8fa; color: #222; }
+    header { background: linear-gradient(90deg,#1e3c72 0%,#2a5298 100%); color: #fff; padding: 3rem 2rem 2rem 2rem; text-align:center; }
+    header h1 { font-size: 3rem; margin-bottom: 0.3em; }
+    header p { font-size: 1.3rem; opacity: 0.9; }
+    nav { background: #fff; box-shadow:0 2px 8px rgba(30,60,114,0.07); display:flex; justify-content:center; gap:2rem; padding: 1rem 0; position:sticky; top:0; z-index:100; }
+    nav a { color:#1e3c72; text-decoration:none; font-weight:700; transition:color 0.2s; border-bottom: 2.5px solid transparent; }
+    nav a:hover, nav a.active { color:#2a5298; border-bottom: 2.5px solid #2a5298; }
+    section { max-width: 1100px; margin: 2rem auto; background: #fff; border-radius: 16px; box-shadow:0 4px 24px rgba(30,60,114,0.07); padding: 2.5rem 2rem; }
+    h2 { color:#2a5298; font-size:2rem; margin-bottom:1rem; }
+    h3 { color:#1e3c72; margin-top:2rem; }
+    .timeline { display: flex; flex-direction: column; gap: 1.5rem; margin: 2rem 0; }
+    .timeline-event { display: flex; align-items: flex-start; gap: 1.2rem; }
+    .timeline-dot { width: 20px; height: 20px; background: #2a5298; border-radius: 50%; margin-top: 0.3rem; }
+    .timeline-content { flex:1; }
+    .philosophers { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 2rem; margin:2rem 0; }
+    .philosopher-card { background: #f7f8fa; border-radius: 12px; padding: 1.5rem; box-shadow:0 2px 8px rgba(30,60,114,0.05); transition: transform 0.2s; }
+    .philosopher-card:hover { transform: translateY(-6px) scale(1.03); }
+    .philosopher-card h4 { color: #2a5298; margin-bottom:0.5em; }
+    .concepts { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+    .concept { background: #eaf0fb; border-radius: 8px; padding: 1rem 1.2rem; flex: 1 1 220px; min-width: 220px; }
+    .concept-toggle {
+      background: #2a5298;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.6em 1em;
+      font-size: 1.1em;
+      cursor: pointer;
+      margin-bottom: 0.6em;
+      transition: background 0.2s;
+      width: 100%;
+      text-align: left;
+    }
+    .concept-toggle.open {
+      background: #1e3c72;
+    }
+    .concept-content {
+      margin-top: 0.5em;
+      font-size: 1em;
+      display: none;
+      color: #222;
+    }
+    .resources { display: grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap: 2rem; }
+    .resource-card { background: #f7f8fa; border-radius: 12px; padding: 1.5rem; box-shadow:0 2px 8px rgba(30,60,114,0.05); }
+    .resource-card h5 { margin-bottom: 0.5em; color: #1e3c72; }
+    .dynamic-cta { background: linear-gradient(90deg,#2a5298 0%,#1e3c72 100%); color:#fff; text-align:center; padding:2rem 1rem; border-radius:12px; margin:2rem 0; font-size:1.2rem; }
+    #filosofia-cita {
+      background:#eaf0fb; border-radius:10px; padding:1.3em; margin:2em 0; text-align:center; font-style:italic;
+    }
+    #btn-top {
+      display:none; position:fixed; bottom:30px; right:30px;
+      background:#2a5298; color:#fff; border:none; border-radius:50%;
+      width:48px; height:48px; font-size:1.8em; cursor:pointer;
+      box-shadow:0 2px 8px rgba(30,60,114,0.15); z-index:200;
+    }
+    @media (max-width: 700px) {
+      header h1 { font-size:2rem; }
+      section { padding:1.2rem 0.7rem;}
+      .concepts { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Filosofía Hermenéutica</h1>
+    <p>Origen, principales filósofos y teorías. Un recorrido visual e interactivo por la interpretación filosófica.</p>
+  </header>
+
+  <nav>
+    <a href="#origen">Origen</a>
+    <a href="#filosofos">Filósofos</a>
+    <a href="#teorias">Teorías</a>
+    <a href="#recursos">Recursos</a>
+  </nav>
+
+  <section id="origen">
+    <h2>Origen e Historia</h2>
+    <div class="timeline">
+      <div class="timeline-event">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <strong>Antigua Grecia:</strong> Nace el término <em>hermenéutica</em> vinculado a Hermes, dios de la comunicación. Platón y Aristóteles introducen el concepto de interpretación y análisis del lenguaje.
+        </div>
+      </div>
+      <div class="timeline-event">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <strong>Edad Media:</strong> La hermenéutica se convierte en clave para la interpretación bíblica. San Agustín establece principios de exégesis cristiana.
+        </div>
+      </div>
+      <div class="timeline-event">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <strong>Reforma y Modernidad:</strong> Lutero y Flacio Ilírico abren la interpretación bíblica al individuo, sentando bases para la hermenéutica moderna.
+        </div>
+      </div>
+      <div class="timeline-event">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <strong>Siglo XIX-XX:</strong> Schleiermacher, Dilthey, Heidegger y Gadamer transforman la hermenéutica en teoría general y luego en filosofía del ser y la comprensión.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="filosofos">
+    <h2>Principales Filósofos</h2>
+    <div class="philosophers">
+      <div class="philosopher-card">
+        <h4>Friedrich Schleiermacher</h4>
+        <p>Padre de la hermenéutica moderna. Propone la reconstrucción del acto creador del autor y el <strong>círculo hermenéutico</strong>.</p>
+      </div>
+      <div class="philosopher-card">
+        <h4>Wilhelm Dilthey</h4>
+        <p>Distingue entre explicación (ciencias naturales) y comprensión (ciencias del espíritu). Introduce la tríada <em>experiencia, expresión, comprensión</em>.</p>
+      </div>
+      <div class="philosopher-card">
+        <h4>
+        <a href="https://jmlucas68.github.io/heidegger/" target="_blank">Martin Heidegger</a>
+        </h4>
+        <p>Transforma la hermenéutica en ontología. La comprensión es una estructura fundamental del ser humano (<em>Dasein</em>).</p>
+      </div>
+      <div class="philosopher-card">
+        <h4>Hans-Georg Gadamer</h4>
+        <p>Desarrolla la <strong>fusión de horizontes</strong> y la <strong>conciencia histórico-efectual</strong>. La comprensión es diálogo con la tradición.</p>
+      </div>
+      <div class="philosopher-card">
+        <h4>
+          <a href="https://jmlucas68.github.io/ricoeur/" target="_blank">Paul Ricoeur</a>
+        </h4>
+        <p>Integra fenomenología y estructuralismo. Hermenéutica del símbolo y del texto, y el <em>camino largo</em> de la interpretación.</p>
+      </div>
+      <div class="philosopher-card">
+        <h4>
+          <a href="https://jmlucas68.github.io/habermas/" target="_blank">Jürgen Habermas</a>
+        </h4>
+        <p>Propone una hermenéutica crítica que incorpora la teoría de la acción comunicativa y la crítica ideológica.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="teorias">
+    <h2>Teorías y Conceptos Clave</h2>
+    <div class="concepts">
+      <div class="concept">
+        <button class="concept-toggle">Círculo Hermenéutico</button>
+        <div class="concept-content">
+          Comprender las partes requiere comprender el todo, y viceversa. Fundamental en Schleiermacher y Heidegger.
+        </div>
+      </div>
+      <div class="concept">
+        <button class="concept-toggle">Fusión de Horizontes</button>
+        <div class="concept-content">
+          Gadamer: el sentido surge del encuentro entre el horizonte del texto y del intérprete.
+        </div>
+      </div>
+      <div class="concept">
+        <button class="concept-toggle">Tradición y Autoridad</button>
+        <div class="concept-content">
+          La tradición no es pasado muerto, sino diálogo vivo que nos constituye.
+        </div>
+      </div>
+      <div class="concept">
+        <button class="concept-toggle">Aplicación</button>
+        <div class="concept-content">
+          La interpretación siempre se actualiza en cada contexto concreto.
+        </div>
+      </div>
+      <div class="concept">
+        <button class="concept-toggle">Distancia Temporal</button>
+        <div class="concept-content">
+          La distancia histórica no es obstáculo, sino condición para nuevas comprensiones.
+        </div>
+      </div>
+    </div>
+    <div class="dynamic-cta">
+      <strong>¿Sabías?</strong> <br>
+      La hermenéutica es hoy clave en educación, derecho, ciencias sociales y tecnología. <br>
+      <em>¡Explora los recursos interactivos y multimedia para profundizar!</em>
+    </div>
+  </section>
+
+  <section id="recursos">
+    <h2>Recursos y Obras en Archive.org</h2>
+    <div class="resources">
+      <div class="resource-card">
+        <h5>¿Qué es la Hermenéutica? (Jean Grondin, 2014)</h5>
+        <p>Obra introductoria y panorámica sobre la historia y los debates actuales de la hermenéutica.</p>
+        <a href="https://archive.org/details/grondin-jean.-que-es-la-hermeneutica-2014" target="_blank">Leer</a>
+      </div>
+      <div class="resource-card">
+        <h5>Verdad y Método (Hans-Georg Gadamer)</h5>
+        <p>El texto fundamental de la hermenéutica filosófica contemporánea. Disponible en varias ediciones.</p>
+        <a href="https://archive.org/details/verdad-y-metodo-i-hans-georg-gadamer/Verdad%20y%20M%C3%A9todo%20I%20--%20Hans-Georg%20Gadamer/" target="_blank">Leer</a>
+      </div>
+      <div class="resource-card">
+        <h5>¿Qué es la Hermenéutica? (Richard E. Palmer, 2002)</h5>
+        <p>Introducción clásica, ideal para quienes se inician en el tema.</p>
+        <a href="https://archive.org/details/palmer-richard-e.-que-es-la-hermeneutica-ocr-2002" target="_blank">Leer</a>
+      </div>
+      <div class="resource-card">
+        <h5>La Primera Hermenéutica (Roberto Cruz)</h5>
+        <p>Análisis del origen de la hermenéutica en la filosofía griega y su proyección actual.</p>
+        <a href="https://archive.org/details/cruz-r.-la-primera-hermeneutica.-el-origen-de-la-filosofia-y-los-origenes-en-grecia-ocr-2005" target="_blank">Leer</a>
+      </div>
+    </div>
+  </section>
+
+    <section id="videos">
+  <h2>Vídeos recomendados sobre Hermenéutica</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;">
+    <div>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/HtpxY3BBRac" title="¿Qué es la Hermenéutica? - Filosofía del siglo XX" frameborder="0" allowfullscreen></iframe>
+      <p><strong>¿Qué es la Hermenéutica? - Filosofía del siglo XX</strong><br>La Travesía. Explica la evolución de la hermenéutica desde la Antigüedad hasta el siglo XX.</p>
+    </div>
+    <div>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/3KUbbLm-c50" title="INTRODUCCIÓN A LA HERMENÉUTICA" frameborder="0" allowfullscreen></iframe>
+      <p><strong>INTRODUCCIÓN A LA HERMENÉUTICA</strong><br>Diplomas UCC. Origen, historia y papel de la hermenéutica en la investigación cualitativa.</p>
+    </div>
+    <div>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/vbImW_NYVVE" title="Introducción a la hermenéutica filosófica" frameborder="0" allowfullscreen></iframe>
+      <p><strong>Introducción a la hermenéutica filosófica</strong><br>Centro de Estudios Filosóficos. Recorrido por la hermenéutica filosófica y sus pensadores clave.</p>
+    </div>
+    <div>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/brQL1exy3fU" title="Historia de la Hermenéutica" frameborder="0" allowfullscreen></iframe>
+      <p><strong>Historia de la Hermenéutica</strong><br>Educatina. Repaso histórico de la hermenéutica y sus etapas principales.</p>
+    </div>
+    <div>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/Sv2SVFhBSHM" title="¿Qué es la HERMENÉUTICA? - Resumen" frameborder="0" allowfullscreen></iframe>
+      <p><strong>¿Qué es la HERMENÉUTICA? - Resumen</strong><br>Cuaderno de Historia. Definición, características y representantes más importantes.</p>
+    </div>
+    <div>
+      <iframe width="100%" height="200" src="https://www.youtube.com/embed/ZFF7AkPfFHw" title="La Fenomenología Hermenéutica de Paul Ricoeur" frameborder="0" allowfullscreen></iframe>
+      <p><strong>La Fenomenología Hermenéutica de Paul Ricoeur</strong><br>La Travesía. Claves del pensamiento de Ricoeur y su hermenéutica fenomenológica.</p>
+    </div>
+  </div>
+</section>
+
+    
+  <div id="filosofia-cita"></div>
+
+  <footer style="text-align:center; color:#888; padding:1.5rem 0; font-size:1rem;">
+    © 2025 Filosofía Hermenéutica · Diseño educativo y dinámico
+  </footer>
+
+  <button id="btn-top" title="Volver arriba">↑</button>
+
+  <script>
+    // Menú activo
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Expandir/colapsar conceptos
+    document.querySelectorAll('.concept-toggle').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+        this.classList.toggle('open');
+      });
+    });
+
+    // Cita aleatoria
+    const citas = [
+      { texto: "El ser que puede ser comprendido es lenguaje.", autor: "Hans-Georg Gadamer" },
+      { texto: "Comprender es siempre interpretar.", autor: "Paul Ricoeur" },
+      { texto: "Toda interpretación debe ser capaz de justificar su comprensión.", autor: "Friedrich Schleiermacher" },
+      { texto: "La tradición no es pasado muerto, sino diálogo vivo.", autor: "Hans-Georg Gadamer" },
+      { texto: "El lenguaje es la casa del ser.", autor: "Martin Heidegger" }
+    ];
+    const cita = citas[Math.floor(Math.random() * citas.length)];
+    document.getElementById('filosofia-cita').innerHTML = `"${cita.texto}"<br><b>— ${cita.autor}</b>`;
+
+    // Botón volver arriba
+    const btnTop = document.getElementById('btn-top');
+    window.addEventListener('scroll', () => {
+      btnTop.style.display = window.scrollY > 400 ? 'block' : 'none';
+    });
+    btnTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+  </script>
+</body>
+</html>
