@@ -96,6 +96,14 @@
     "url_foto": "images/Santo Tomas de Aquino.jpg"
   },
   {
+    "nombre": "Roger Bacon",
+    "nacimiento": 1220,
+    "muerte": 1292,
+    "movimiento": "Escolástica / Filosofía experimental",
+    "url_pagina": "https://jmlucas68.github.io/roger_bacon/",
+    "url_foto": "images/roger_bacon.jpg"
+  },
+  {
     "nombre": "Nicolás de Cusa",
     "nacimiento": 1401,
     "muerte": 1464,
@@ -548,7 +556,7 @@
     "nacimiento": 1820,
     "muerte": 1895,
     "movimiento": "Marxixmo",
-    "url_pagina": "https://jmlucas68.github.io/engels",
+    "url_pagina": "https://jmlucas68.github.o/engels",
     "url_foto": "images/Engels.jpg"
   },
   {
