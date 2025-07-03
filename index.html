@@ -1,142 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Galería de Filósofos</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Contenedor principal para todos los controles superiores */
-    .controles-superiores {
-      display: flex;
-      justify-content: center; /* Centra el grupo de controles en la página */
-      align-items: center;     /* Alinea verticalmente los botones y el selector */
-      gap: 1.5rem;             /* Espacio entre los controles */
-      flex-wrap: wrap;         /* Permite que los controles se ajusten en pantallas pequeñas */
-      margin-bottom: 2rem;
-      padding: 0 1rem;         /* Añade un poco de espacio lateral */
-    }
-
-    /* Estilos para los botones de navegación */
-    .btn-nav {
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-      text-align: center;
-      flex-shrink: 0; /* Evita que los botones se encojan */
-    }
-    .btn-timeline {
-      background-color: #007bff;
-    }
-    .btn-timeline:hover {
-      background-color: #0056b3;
-    }
-    .btn-search {
-      background-color: #28a745;
-    }
-    .btn-search:hover {
-      background-color: #218838;
-    }
-
-    /* Estilos para el control de ordenación */
-    .control-orden label {
-      margin-right: 0.5rem;
-      font-weight: bold;
-      color: #333;
-    }
-    .control-orden select {
-      padding: 8px 12px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      background-color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Legado de los Filósofos - Un Viaje Interactivo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #121212;
+            --color-surface: #1e1e1e;
+            --color-primary: #bb86fc;
+            --color-secondary: #03dac6;
+            --color-text: #e0e0e0;
+            --font-titles: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            overflow-x: hidden;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.9)), url('images/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .hero h1 {
+            font-family: var(--font-titles);
+            font-size: 4.5rem;
+            color: #fff;
+            text-shadow: 0 2px 15px rgba(0,0,0,0.7);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            max-width: 600px;
+            color: var(--color-text);
+        }
+        .hero .cta-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background-color: var(--color-primary);
+            color: var(--color-bg);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .hero .cta-button:hover {
+            transform: translateY(-5px);
+            background-color: var(--color-secondary);
+        }
+        /* --- Sections --- */
+        .section {
+            padding: 6rem 0;
+            text-align: center;
+        }
+        /* --- CTA Sections --- */
+        .cta-section {
+            background-color: var(--color-surface);
+            border-radius: 15px;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .cta-section h2 {
+            font-family: var(--font-titles);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .cta-section .cta-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.8rem 2rem;
+            background-color: var(--color-secondary);
+            color: var(--color-bg);
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .cta-section .cta-link:hover {
+            transform: scale(1.1);
+            background-color: var(--color-primary);
+        }
+        /* --- Footer --- */
+        footer {
+            background-color: var(--color-surface);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        /* --- Animations --- */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
 
-<h1>🏛️ Galería de Filósofos</h1>
-<p class="intro">Haz clic en cada filósofo para conocer más sobre él.</p>
+    <header class="hero">
+        <h1>El Legado de los Filósofos</h1>
+        <p>Explora las ideas que dieron forma al mundo. Un viaje interactivo a través del pensamiento humano.</p>
+        <a href="filosofos.html" class="cta-button">Descubre los Gigantes del Pensamiento</a>
+    </header>
 
-<!-- CONTROLES UNIFICADOS EN UN SOLO CONTENEDOR -->
-<div class="controles-superiores">
-    <!-- 1. Control de Ordenación (a la izquierda) -->
-    <div class="control-orden">
-        <label for="orden-selector">Ordenar por:</label>
-        <select id="orden-selector">
-            <option value="cronologico" selected>Orden Cronológico</option>
-            <option value="alfabetico">Orden Alfabético</option>
-        </select>
-    </div>
-
-    <!-- 2. Botón de Línea de Tiempo -->
-    <a href="linea_tiempo.html" class="btn-nav btn-timeline">Línea del Tiempo ⏳</a>
-
-    <!-- 3. Botón del Buscador -->
-    <a href="buscador.html" class="btn-nav btn-search">Buscador 🔎</a>
-
-    <!-- 4. Botón del Estudio -->
-    <a href="estudio/index.html" class="btn-nav btn-search">Estudio 🧠</a>
-
-    <!-- 5. Botón de Temas filosóficos -->
-    <a href="temas/index.html" class="btn-nav btn-search">Temas 📄</a>
-</div>
-
-<div id="galeria" class="galeria"></div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const galeria = document.getElementById('galeria');
-    const ordenSelector = document.getElementById('orden-selector');
-    let todosLosFilosofos = [];
-
-    function renderizarGaleria(lista) {
-      galeria.innerHTML = '';
-      lista.forEach(f => {
-        const card = document.createElement('div');
-        card.className = 'tarjeta';
-        card.innerHTML = `
-          <a href="${f.url_pagina}" target="_blank">
-            <img src="${f.url_foto}" alt="${f.nombre}" onerror="this.src='https://via.placeholder.com/300x400?text=${encodeURIComponent(f.nombre)}';">
-            <div class="info">
-              <strong>${f.nombre}</strong><br>
-              ${f.nacimiento} – ${f.muerte}
+    <main>
+        <section id="timeline-cta" class="section container">
+            <div class="cta-section fade-in-section">
+                <h2>La Línea del Tiempo del Pensamiento</h2>
+                <p>Viaja a través de las épocas y descubre cómo las ideas evolucionaron y se conectaron.</p>
+                <a href="linea_tiempo.html" class="cta-link">Explorar la Línea de Tiempo</a>
             </div>
-          </a>
-        `;
-        galeria.appendChild(card);
-      });
-    }
-    
-    function ordenarYRenderizar() {
-        const tipoOrden = ordenSelector.value;
-        let filosofosOrdenados = [...todosLosFilosofos];
+        </section>
 
-        if (tipoOrden === 'alfabetico') {
-            filosofosOrdenados.sort((a, b) => a.nombre.localeCompare(b.nombre));
-        } else {
-            filosofosOrdenados.sort((a, b) => a.nacimiento - b.nacimiento);
-        }
-        
-        renderizarGaleria(filosofosOrdenados);
-    }
+        <section id="search-cta" class="section container">
+            <div class="cta-section fade-in-section">
+                <h2>Encuentra a tu Filósofo</h2>
+                <p>¿Buscas a alguien en específico? Utiliza nuestra herramienta de búsqueda para acceder a una base de datos completa.</p>
+                <a href="buscador.html" class="cta-link">Ir al Buscador</a>
+            </div>
+        </section>
 
-    fetch('filosofos.json')
-      .then(response => response.json())
-      .then(data => {
-        todosLosFilosofos = data;
-        ordenarYRenderizar();
-      })
-      .catch(err => {
-        console.error("Error cargando los datos:", err);
-        galeria.innerHTML = "<p>No se pudieron cargar los datos.</p>";
-      });
+        <section id="themes-cta" class="section container">
+            <div class="cta-section fade-in-section">
+                <h2>Explora por Temas</h2>
+                <p>Navega por los grandes conceptos y debates de la historia de la filosofía.</p>
+                <a href="temas/index.html" class="cta-link">Descubrir Temas</a>
+            </div>
+        </section>
 
-    ordenSelector.addEventListener('change', ordenarYRenderizar);
-  });
-</script>
+        <section id="study-cta" class="section container">
+            <div class="cta-section fade-in-section">
+                <h2>Planes de Estudio</h2>
+                <p>Organiza tu aprendizaje con nuestros planes de estudio guiados.</p>
+                <a href="estudio/index.html" class="cta-link">Comenzar a Estudiar</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 - Un proyecto de exploración filosófica.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animaciones de scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 
 </body>
 </html>
