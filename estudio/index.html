@@ -175,6 +175,27 @@
                 font-size: 1.2rem;
             }
         }
+
+        /* Estilo para el nuevo botón */
+        .chat-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto; /* Centrar el botón y darle margen */
+            padding: 15px 30px;
+            background-color: #6f42c1; /* Un color morado distintivo */
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .chat-button:hover {
+            background-color: #563d7c;
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 <body>
@@ -183,6 +204,8 @@
         <div class="header">
             <h1>Quiz de Filósofos</h1>
         </div>
+
+        <a href="https://chatgpt.com/g/g-Es81JYiFs-profesor-de-filosofia" target="_blank" class="chat-button">🗣️ Habla con tu profesor de filosofía</a>
 
         <div id="start-screen" class="quiz-container">
             <p id="start-text" style="margin-bottom: 20px; font-size: 1.2rem;">Pon a prueba tu conocimiento filosófico.</p>
