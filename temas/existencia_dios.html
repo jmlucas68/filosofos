@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Existencia de Dios: Filosofía y Ciencia</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      color: #222;
+    }
+    header {
+      background: linear-gradient(90deg, #3a6186 0%, #89253e 100%);
+      color: #fff;
+      padding: 2rem 0 1.2rem 0;
+      text-align: center;
+      box-shadow: 0 2px 8px #0002;
+    }
+    h1 {
+      margin: 0 0 0.5em 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    h2 {
+      color: #3a6186;
+      margin-top: 2.5rem;
+      font-size: 1.7rem;
+      border-left: 5px solid #89253e;
+      padding-left: 0.5em;
+    }
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px #0001;
+      padding: 2rem 2.5rem;
+    }
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      margin: 1.5em 0;
+      font-size: 1.05em;
+    }
+    .timeline div {
+      background: #3a6186;
+      color: #fff;
+      padding: 1em 1.2em;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px #0001;
+      text-align: center;
+      flex: 1;
+      margin: 0 0.5em;
+      position: relative;
+    }
+    .timeline div:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -0.5em;
+      top: 50%;
+      width: 1em;
+      height: 4px;
+      background: #89253e;
+      transform: translateY(-50%);
+      border-radius: 2px;
+    }
+    ul, ol {
+      margin-left: 1.5em;
+    }
+    .diagram {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 2em 0;
+      gap: 1em;
+    }
+    .diagram-box {
+      flex: 1 1 250px;
+      background: #e3e8ee;
+      border-left: 5px solid #89253e;
+      border-radius: 8px;
+      padding: 1em 1.2em;
+      min-width: 210px;
+      box-shadow: 0 1px 4px #0001;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5em 0;
+      background: #fafbfc;
+    }
+    th, td {
+      padding: 0.9em 0.7em;
+      border-bottom: 1px solid #e3e8ee;
+      text-align: left;
+    }
+    th {
+      background: #3a6186;
+      color: #fff;
+      font-weight: 700;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .resources-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2em;
+      margin: 1.5em 0;
+    }
+    .resource-card {
+      flex: 1 1 300px;
+      background: #e3e8ee;
+      border-radius: 8px;
+      padding: 1em 1.2em;
+      box-shadow: 0 1px 4px #0001;
+      min-width: 220px;
+    }
+    .resource-card a {
+      color: #89253e;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .videos-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2em;
+      margin: 1.5em 0;
+    }
+    .video-embed {
+      flex: 1 1 350px;
+      min-width: 280px;
+      background: #e3e8ee;
+      border-radius: 8px;
+      padding: 1em 1em 1.5em 1em;
+      box-shadow: 0 1px 4px #0001;
+      text-align: center;
+    }
+    .video-embed iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 6px;
+      margin-bottom: 0.5em;
+    }
+    @media (max-width: 900px) {
+      section { padding: 1.2rem 0.7rem; }
+      .diagram, .resources-list, .videos-grid { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>La Existencia de Dios<br><span style="font-size:1.1rem;font-weight:400;">Filosofía, Ciencia y Debate Actual</span></h1>
+    <p>Un recorrido visual y didáctico por las grandes preguntas sobre la existencia de Dios.</p>
+  </header>
+
+  <section>
+    <h2>1. Resumen Visual del Tema</h2>
+    <div class="timeline">
+      <div>
+        <strong>Antigüedad</strong><br>
+        Aristóteles<br>
+        <span style="font-size:0.95em;">Primer Motor</span>
+      </div>
+      <div>
+        <strong>Edad Media</strong><br>
+        San Anselmo, Tomás de Aquino<br>
+        <span style="font-size:0.95em;">Argumentos ontológicos y cosmológicos</span>
+      </div>
+      <div>
+        <strong>Ilustración</strong><br>
+        Kant<br>
+        <span style="font-size:0.95em;">Crítica a la razón pura</span>
+      </div>
+      <div>
+        <strong>Contemporaneidad</strong><br>
+        Ciencia y fe<br>
+        <span style="font-size:0.95em;">Nuevas evidencias y debates</span>
+      </div>
+    </div>
+    <div class="diagram">
+      <div class="diagram-box">
+        <strong>Preguntas clave:</strong>
+        <ul>
+          <li>¿Puede demostrarse racionalmente la existencia de Dios?</li>
+          <li>¿Existen evidencias científicas?</li>
+          <li>¿Qué implicaciones éticas tiene?</li>
+        </ul>
+      </div>
+      <div class="diagram-box">
+        <strong>Posturas centrales:</strong>
+        <ul>
+          <li><b>Teísmo:</b> Dios existe</li>
+          <li><b>Ateísmo:</b> Dios no existe</li>
+          <li><b>Agnosticismo:</b> No puede conocerse</li>
+        </ul>
+      </div>
+      <div class="diagram-box">
+        <strong>Ejes del debate:</strong>
+        <ul>
+          <li>Argumentos metafísicos vs. empíricos</li>
+          <li>Papel de la ciencia</li>
+          <li>Implicaciones éticas y sociales</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. Evolución de las Teorías Principales</h2>
+    <div class="diagram">
+      <div class="diagram-box">
+        <b>Argumentos Cosmológicos</b><br>
+        Aristóteles: Primer motor inmóvil
+      </div>
+      <div class="diagram-box">
+        <b>Argumentos Ontológicos</b><br>
+        San Anselmo: Ser perfecto
+      </div>
+      <div class="diagram-box">
+        <b>Vías Tomistas</b><br>
+        Tomás de Aquino: Cinco demostraciones
+      </div>
+      <div class="diagram-box">
+        <b>Crítica Kantiana</b><br>
+        Dios como postulado moral
+      </div>
+      <div class="diagram-box">
+        <b>Evidencias Científicas</b><br>
+        S. XXI: Principio antrópico, biología, física
+      </div>
+    </div>
+    <ul>
+      <li><b>Ciencia y fe:</b> Diálogo y nuevas teorías (principio antrópico, complejidad biológica).</li>
+      <li><b>Tendencias actuales:</b> 47% de científicos creyentes según estudios recientes.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>3. Tabla Comparativa: Filósofos y sus Posturas</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Filósofo</th>
+          <th>Época</th>
+          <th>Postura</th>
+          <th>Argumento Principal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><b>Aristóteles</b></td>
+          <td>Antigüedad</td>
+          <td>Teísmo</td>
+          <td>Primer motor inmóvil</td>
+        </tr>
+        <tr>
+          <td><b>San Anselmo</b></td>
+          <td>Edad Media</td>
+          <td>Teísmo</td>
+          <td>Argumento ontológico</td>
+        </tr>
+        <tr>
+          <td><b>Tomás de Aquino</b></td>
+          <td>Edad Media</td>
+          <td>Teísmo</td>
+          <td>Cinco vías</td>
+        </tr>
+        <tr>
+          <td><b>Kant</b></td>
+          <td>Ilustración</td>
+          <td>Agnosticismo</td>
+          <td>Dios como postulado moral</td>
+        </tr>
+        <tr>
+          <td><b>González-Hurtado</b></td>
+          <td>Actualidad</td>
+          <td>Teísmo</td>
+          <td>Evidencias científicas</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>4. Obras Originales en Español</h2>
+    <div class="resources-list">
+      <div class="resource-card">
+        📚 <b>Aristóteles:</b> <i>Metafísica</i><br>
+        <a href="https://archive.org/details/metafisica_201902" target="_blank">Leer en Archive.org</a>
+      </div>
+      <div class="resource-card">
+        📚 <b>Tomás de Aquino:</b> <i>Suma Teológica</i><br>
+        <a href="https://archive.org/details/SumaTeologica" target="_blank">Leer en Archive.org</a>
+      </div>
+      <div class="resource-card">
+        📚 <b>San Anselmo:</b> <i>Proslogion</i><br>
+        <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=8771007" target="_blank">Leer en Dialnet</a>
+      </div>
+      <div class="resource-card">
+        📚 <b>González-Hurtado:</b> <i>Nuevas Evidencias...</i><br>
+        <a href="https://archive.org/details/nuevas-evidencias-de-la-existencia-de-dios" target="_blank">Leer en Archive.org</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Artículos Académicos y Sitios Especializados</h2>
+    <div class="resources-list">
+      <div class="resource-card">
+        🎓 <a href="https://dialnet.unirioja.es/servlet/articulo?codigo=8771007" target="_blank">
+          La Existencia de Dios: Un debate entre lo creíble y lo conveniente
+        </a>
+      </div>
+      <div class="resource-card">
+        🎓 <a href="https://www.unav.edu/web/ciencia-razon-y-fe/los-conocimientos-cientificos-no-cuestionan-la-existencia-de-dios" target="_blank">
+          Los conocimientos científicos no cuestionan la existencia de Dios
+        </a>
+      </div>
+      <div class="resource-card">
+        🎓 <a href="https://filco.es/5-vias-de-santo-tomas-existencia-dios/" target="_blank">
+          Análisis de las 5 vías de Tomás de Aquino
+        </a>
+      </div>
+      <div class="resource-card">
+        🔍 <a href="https://filco.es/" target="_blank">
+          Filosofía en la Red (Portal especializado)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>6. Selección de Videos Temáticos en Español</h2>
+    <div class="videos-grid">
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/9E4A3w7Yb2k" allowfullscreen></iframe>
+        <div>🎬 <b>Evidencias Científicas de la Existencia de Dios</b> (ROCA Project)</div>
+      </div>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/0nQF2vJ3R9c" allowfullscreen></iframe>
+        <div>🎬 <b>La Demostración Científica de Dios</b> (Aladetres #75)</div>
+      </div>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/8r5U6gJ2iZQ" allowfullscreen></iframe>
+        <div>🎬 <b>¿Dios Existe en la Vida Moderna?</b> (Nat Geo Español)</div>
+      </div>
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/0R1F1QnE6rI" allowfullscreen></iframe>
+        <div>🎬 <b>Conferencia: Dios y Ciencia</b> (Mater Mundi TV)</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>7. Recursos Visuales Sugeridos</h2>
+    <ul>
+      <li><b>Infografía:</b> Comparativa de argumentos teístas y ateístas (paleta azul/rojo).</li>
+      <li><b>Mapa conceptual:</b> Relación entre ciencia (física, biología) y argumentos teológicos.</li>
+      <li><b>Diagrama interactivo:</b> Evolución histórica de las posturas (línea de tiempo con filtros).</li>
+    </ul>
+    <p style="font-size:1.05em;color:#555;">
+      <b>Nota didáctica:</b> Esta estructura prioriza claridad y rigor. Los recursos visuales refuerzan la comprensión de conceptos complejos como las <i>Cinco Vías</i> o el <i>principio antrópico</i>, mientras los enlaces permiten profundización autónoma.
+    </p>
+  </section>
+</body>
+</html>
