@@ -21,7 +21,10 @@
       gap: 1.5rem;             /* Espacio entre los controles */
       flex-wrap: wrap;         /* Permite que los controles se ajusten en pantallas pequeñas */
       margin-bottom: 2rem;
-      padding: 0 1rem;         /* Añade un poco de espacio lateral */
+      padding: 1rem;         /* Añade un poco de espacio lateral */
+      background-color: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 
     /* Estilos para los botones de navegación */
@@ -52,7 +55,7 @@
     .control-orden label {
       margin-right: 0.5rem;
       font-weight: bold;
-      color: #333;
+      color: white; /* Texto blanco para contraste */
     }
     .control-orden select {
       padding: 8px 12px;
@@ -60,6 +63,28 @@
       border: 1px solid #ccc;
       font-size: 1rem;
       background-color: white;
+    }
+
+    /* Estilos para el título principal y la introducción */
+    h1 {
+      color: white; /* Texto blanco para contraste */
+      text-align: center;
+      margin: 40px 0 20px 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    .intro {
+      color: #f0f0f0; /* Texto blanco suave para contraste */
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+
+    /* Estilos para la información dentro de las tarjetas */
+    .tarjeta .info {
+      color: #333; /* Asegura que el texto dentro de la tarjeta sea oscuro y legible */
     }
   </style>
 </head>
