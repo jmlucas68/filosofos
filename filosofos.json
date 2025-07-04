@@ -654,5 +654,13 @@
     "movimiento": "Anarquismo epistemológico",
     "url_pagina": "https://jmlucas68.github.io/feyerabend",
     "url_foto": "images/Feyerabend.jpg"
+  },
+  {
+    "nombre": "Hans-Georg Gadamer",
+    "nacimiento": 1900,
+    "muerte": 2002,
+    "movimiento": "Hermenéutica filosófica",
+    "url_pagina": "https://jmlucas68.github.io/gadamer",
+    "url_foto": "images/Gadamer.jpg"
   }
 ]
