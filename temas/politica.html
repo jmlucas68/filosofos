@@ -3,11 +3,884 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filosofía Política</title>
+    <title>Filosofía Política: De la Grecia Clásica a la Actualidad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .nav-timeline {
+            background: #34495e;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .nav-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn.active {
+            background: #e74c3c;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .period-section {
+            display: none;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        .period-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .period-header {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .period-header h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .philosophers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .philosopher-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+
+        .philosopher-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .philosopher-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .philosopher-dates {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .philosopher-description {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+
+        .works-section {
+            background: #ecf0f1;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .works-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .works-list {
+            font-size: 0.9em;
+            color: #5d6d7e;
+        }
+
+        .resources-section {
+            background: linear-gradient(135deg, #16a085, #27ae60);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .resources-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .resource-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .resource-item h4 {
+            margin-bottom: 10px;
+            color: #ecf0f1;
+        }
+
+        .resource-link {
+            color: #f1c40f;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .resource-link:hover {
+            color: #f39c12;
+            text-decoration: underline;
+        }
+
+        .progress-bar {
+            background: #ecf0f1;
+            height: 6px;
+            border-radius: 3px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            height: 100%;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .timeline-visual {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            margin-left: 20px;
+        }
+
+        .timeline-date {
+            background: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-right: 15px;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .key-concepts {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .key-concepts h3 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        .concepts-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .concept-item {
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-timeline {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .philosophers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+    <script>
+        const periods = ['clasica', 'medieval', 'moderna', 'ilustracion', 'siglo19', 'siglo20', 'contemporanea'];
+        let currentPeriod = 0;
+
+        function showPeriod(periodId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.period-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remover clase active de todos los botones
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Mostrar la sección seleccionada
+            document.getElementById(periodId).classList.add('active');
+            
+            // Activar el botón correspondiente
+            event.target.classList.add('active');
+            
+            // Actualizar barra de progreso
+            currentPeriod = periods.indexOf(periodId);
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const progressPercent = ((currentPeriod + 1) / periods.length) * 100;
+            document.getElementById('progressFill').style.width = progressPercent + '%';
+        }
+
+        // Inicializar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgress();
+        });
+    </script>
 </head>
 <body>
-    <h1>Filosofía Política</h1>
-    <p>Contenido sobre Filosofía Política.</p>
-    <a href="index.html">Volver a Temas Filosóficos</a>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Filosofía Política</h1>
+            <p>Un viaje desde la Grecia clásica hasta nuestros días</p>
+        </div>
+
+        <div class="nav-timeline">
+            <button class="nav-btn active" onclick="showPeriod('clasica')">Época Clásica</button>
+            <button class="nav-btn" onclick="showPeriod('medieval')">Edad Media</button>
+            <button class="nav-btn" onclick="showPeriod('moderna')">Época Moderna</button>
+            <button class="nav-btn" onclick="showPeriod('ilustracion')">Ilustración</button>
+            <button class="nav-btn" onclick="showPeriod('siglo19')">Siglo XIX</button>
+            <button class="nav-btn" onclick="showPeriod('siglo20')">Siglo XX</button>
+            <button class="nav-btn" onclick="showPeriod('contemporanea')">Contemporánea</button>
+        </div>
+
+        <div class="content">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 14.3%;"></div>
+            </div>
+
+            <!-- ÉPOCA CLÁSICA -->
+            <div id="clasica" class="period-section active">
+                <div class="period-header">
+                    <h2>🏛️ Época Clásica (s. V-IV a.C.)</h2>
+                    <p>Los fundamentos de la filosofía política occidental</p>
+                </div>
+
+                <div class="timeline-visual">
+                    <div class="timeline-item">
+                        <div class="timeline-date">430 a.C.</div>
+                        <div class="timeline-content">
+                            <strong>Sócrates</strong> - Desarrollo del método socrático y la búsqueda de la justicia
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">380 a.C.</div>
+                        <div class="timeline-content">
+                            <strong>Platón</strong> - "La República" - El Estado ideal y la justicia
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">335 a.C.</div>
+                        <div class="timeline-content">
+                            <strong>Aristóteles</strong> - "Política" - El análisis sistemático de las formas de gobierno
+                        </div>
+                    </div>
+                </div>
+
+                <div class="philosophers-grid">
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Platón</div>
+                        <div class="philosopher-dates">428-348 a.C.</div>
+                        <div class="philosopher-description">
+                            Fundador de la filosofía política occidental. Propuso el Estado ideal basado en la justicia y la especialización funcional. Su teoría de las formas aplicada al gobierno estableció las bases del pensamiento político.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• La República<br>• Las Leyes<br>• El Político</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Aristóteles</div>
+                        <div class="philosopher-dates">384-322 a.C.</div>
+                        <div class="philosopher-description">
+                            Sistematizó el análisis político mediante la observación empírica. Clasificó las formas de gobierno y desarrolló la teoría de la constitución mixta. Su enfoque realista complementó el idealismo platónico.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Política<br>• Constitución de Atenas<br>• Ética a Nicómaco</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Cicerón</div>
+                        <div class="philosopher-dates">106-43 a.C.</div>
+                        <div class="philosopher-description">
+                            Transmitió la filosofía política griega a Roma. Desarrolló conceptos de república, ley natural y ciudadanía que influyeron profundamente en el pensamiento occidental posterior.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• De Re Publica<br>• De Legibus<br>• De Officiis</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-concepts">
+                    <h3>Conceptos Clave</h3>
+                    <div class="concepts-list">
+                        <div class="concept-item"><strong>Justicia:</strong> Virtud cardinal del Estado</div>
+                        <div class="concept-item"><strong>Democracia:</strong> Gobierno del pueblo</div>
+                        <div class="concept-item"><strong>Aristocracia:</strong> Gobierno de los mejores</div>
+                        <div class="concept-item"><strong>Tiranía:</strong> Degeneración del poder</div>
+                        <div class="concept-item"><strong>Constitución:</strong> Orden político fundamental</div>
+                        <div class="concept-item"><strong>Ciudadanía:</strong> Participación en la polis</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EDAD MEDIA -->
+            <div id="medieval" class="period-section">
+                <div class="period-header">
+                    <h2>⛪ Edad Media (s. V-XV)</h2>
+                    <p>La síntesis entre fe y razón en el pensamiento político</p>
+                </div>
+
+                <div class="philosophers-grid">
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">San Agustín</div>
+                        <div class="philosopher-dates">354-430</div>
+                        <div class="philosopher-description">
+                            Fusionó la filosofía clásica con el cristianismo. Su concepto de las dos ciudades (terrena y celestial) influyó en la relación Iglesia-Estado durante siglos.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• La Ciudad de Dios<br>• Confesiones<br>• De Libero Arbitrio</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Santo Tomás de Aquino</div>
+                        <div class="philosopher-dates">1225-1274</div>
+                        <div class="philosopher-description">
+                            Integró la filosofía aristotélica con la teología cristiana. Desarrolló la teoría del derecho natural y la legitimidad del poder político.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Suma Teológica<br>• De Regno<br>• Suma contra Gentiles</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Guillermo de Ockham</div>
+                        <div class="philosopher-dates">1287-1347</div>
+                        <div class="philosopher-description">
+                            Defendió la separación entre fe y razón. Sus ideas sobre el nominalismo y el poder papal influyeron en el desarrollo del pensamiento político moderno.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Breviloquium<br>• Opus Nonaginta Dierum<br>• Dialogus</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-concepts">
+                    <h3>Conceptos Clave</h3>
+                    <div class="concepts-list">
+                        <div class="concept-item"><strong>Derecho Natural:</strong> Ley divina universal</div>
+                        <div class="concept-item"><strong>Autoridad Papal:</strong> Poder espiritual supremo</div>
+                        <div class="concept-item"><strong>Imperio:</strong> Poder temporal universal</div>
+                        <div class="concept-item"><strong>Bien Común:</strong> Fin del gobierno</div>
+                        <div class="concept-item"><strong>Ley Eterna:</strong> Orden divino</div>
+                        <div class="concept-item"><strong>Nominalismo:</strong> Crítica al realismo</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ÉPOCA MODERNA -->
+            <div id="moderna" class="period-section">
+                <div class="period-header">
+                    <h2>🎭 Época Moderna (s. XV-XVII)</h2>
+                    <p>El nacimiento del Estado moderno y la secularización del poder</p>
+                </div>
+
+                <div class="philosophers-grid">
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Nicolás Maquiavelo</div>
+                        <div class="philosopher-dates">1469-1527</div>
+                        <div class="philosopher-description">
+                            Padre de la ciencia política moderna. Separó la política de la moral tradicional y analizó el poder de manera realista. Su obra influyó en la comprensión moderna del Estado.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• El Príncipe<br>• Discursos sobre la primera década de Tito Livio<br>• El Arte de la Guerra</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Jean Bodin</div>
+                        <div class="philosopher-dates">1530-1596</div>
+                        <div class="philosopher-description">
+                            Teórico de la soberanía moderna. Desarrolló el concepto de soberanía como poder absoluto y perpetuo, fundamental para el Estado moderno.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Los Seis Libros de la República<br>• Método para el conocimiento fácil de la historia</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Thomas Hobbes</div>
+                        <div class="philosopher-dates">1588-1679</div>
+                        <div class="philosopher-description">
+                            Fundador del contractualismo moderno. Su teoría del estado de naturaleza y el contrato social estableció las bases del absolutismo ilustrado.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Leviatán<br>• De Cive<br>• Elementos de Derecho Natural y Político</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-concepts">
+                    <h3>Conceptos Clave</h3>
+                    <div class="concepts-list">
+                        <div class="concept-item"><strong>Soberanía:</strong> Poder supremo del Estado</div>
+                        <div class="concept-item"><strong>Razón de Estado:</strong> Lógica del poder político</div>
+                        <div class="concept-item"><strong>Estado de Naturaleza:</strong> Condición pre-política</div>
+                        <div class="concept-item"><strong>Contrato Social:</strong> Fundamento del poder legítimo</div>
+                        <div class="concept-item"><strong>Absolutismo:</strong> Concentración del poder</div>
+                        <div class="concept-item"><strong>Secularización:</strong> Separación política-religión</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ILUSTRACIÓN -->
+            <div id="ilustracion" class="period-section">
+                <div class="period-header">
+                    <h2>💡 Ilustración (s. XVIII)</h2>
+                    <p>La razón como fundamento del orden político</p>
+                </div>
+
+                <div class="philosophers-grid">
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">John Locke</div>
+                        <div class="philosopher-dates">1632-1704</div>
+                        <div class="philosopher-description">
+                            Teórico del liberalismo político. Desarrolló la teoría de los derechos naturales y el gobierno limitado que influyó en las revoluciones democráticas.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Dos Tratados sobre el Gobierno Civil<br>• Ensayo sobre el Entendimiento Humano<br>• Carta sobre la Tolerancia</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Jean-Jacques Rousseau</div>
+                        <div class="philosopher-dates">1712-1778</div>
+                        <div class="philosopher-description">
+                            Crítico de la sociedad moderna y teórico de la democracia. Su concepto de voluntad general influyó en el pensamiento democrático y revolucionario.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• El Contrato Social<br>• Discurso sobre el Origen de la Desigualdad<br>• Emilio</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Montesquieu</div>
+                        <div class="philosopher-dates">1689-1755</div>
+                        <div class="philosopher-description">
+                            Teórico de la separación de poderes. Su análisis comparativo de los sistemas políticos estableció principios fundamentales del constitucionalismo moderno.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• El Espíritu de las Leyes<br>• Cartas Persas<br>• Consideraciones sobre las Causas de la Grandeza y Decadencia de los Romanos</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Immanuel Kant</div>
+                        <div class="philosopher-dates">1724-1804</div>
+                        <div class="philosopher-description">
+                            Filósofo crítico que fundamentó la moral y la política en la razón práctica. Su concepto de paz perpetua influyó en el derecho internacional moderno.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Hacia la Paz Perpetua<br>• ¿Qué es la Ilustración?<br>• Fundamentación de la Metafísica de las Costumbres</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-concepts">
+                    <h3>Conceptos Clave</h3>
+                    <div class="concepts-list">
+                        <div class="concept-item"><strong>Derechos Naturales:</strong> Vida, libertad, propiedad</div>
+                        <div class="concept-item"><strong>Separación de Poderes:</strong> Límites al poder</div>
+                        <div class="concept-item"><strong>Voluntad General:</strong> Soberanía popular</div>
+                        <div class="concept-item"><strong>Tolerancia:</strong> Pluralismo religioso</div>
+                        <div class="concept-item"><strong>Progreso:</strong> Perfectibilidad humana</div>
+                        <div class="concept-item"><strong>Cosmopolitismo:</strong> Ciudadanía mundial</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIGLO XIX -->
+            <div id="siglo19" class="period-section">
+                <div class="period-header">
+                    <h2>🏭 Siglo XIX</h2>
+                    <p>Liberalismo, nacionalismo y el surgimiento del socialismo</p>
+                </div>
+
+                <div class="philosophers-grid">
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Georg W.F. Hegel</div>
+                        <div class="philosopher-dates">1770-1831</div>
+                        <div class="philosopher-description">
+                            Filósofo del idealismo alemán. Su dialéctica de la historia y teoría del Estado como realización de la libertad influyó profundamente en el pensamiento político posterior.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Filosofía del Derecho<br>• Fenomenología del Espíritu<br>• Lecciones sobre la Filosofía de la Historia</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Karl Marx</div>
+                        <div class="philosopher-dates">1818-1883</div>
+                        <div class="philosopher-description">
+                            Fundador del socialismo científico. Su análisis del capitalismo y la lucha de clases transformó el pensamiento político y social moderno.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• El Capital<br>• Manifiesto del Partido Comunista<br>• La Ideología Alemana</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">John Stuart Mill</div>
+                        <div class="philosopher-dates">1806-1873</div>
+                        <div class="philosopher-description">
+                            Teórico del liberalismo clásico. Desarrolló principios fundamentales sobre la libertad individual y la democracia representativa.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Sobre la Libertad<br>• Gobierno Representativo<br>• El Sometimiento de las Mujeres</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Alexis de Tocqueville</div>
+                        <div class="philosopher-dates">1805-1859</div>
+                        <div class="philosopher-description">
+                            Analista de la democracia moderna. Su observación de la democracia americana proporcionó insights clave sobre la sociedad democrática y sus tensiones.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• La Democracia en América<br>• El Antiguo Régimen y la Revolución</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-concepts">
+                    <h3>Conceptos Clave</h3>
+                    <div class="concepts-list">
+                        <div class="concept-item"><strong>Dialéctica:</strong> Proceso del cambio histórico</div>
+                        <div class="concept-item"><strong>Lucha de Clases:</strong> Motor de la historia</div>
+                        <div class="concept-item"><strong>Utilitarismo:</strong> Máxima felicidad para el mayor número</div>
+                        <div class="concept-item"><strong>Nacionalismo:</strong> Identidad política colectiva</div>
+                        <div class="concept-item"><strong>Liberalismo:</strong> Libertad individual y mercado</div>
+                        <div class="concept-item"><strong>Socialismo:</strong> Propiedad colectiva y justicia social</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIGLO XX -->
+            <div id="siglo20" class="period-section">
+                <div class="period-header">
+                    <h2>⚡ Siglo XX</h2>
+                    <p>Totalitarismo, democracia y nuevas formas de poder</p>
+                </div>
+
+                <div class="philosophers-grid">
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Hannah Arendt</div>
+                        <div class="philosopher-dates">1906-1975</div>
+                        <div class="philosopher-description">
+                            Teórica del totalitarismo y la condición humana. Su análisis de la violencia política y la acción humana redefinió la comprensión de la política moderna.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Los Orígenes del Totalitarismo<br>• La Condición Humana<br>• Sobre la Violencia</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Carl Schmitt</div>
+                        <div class="philosopher-dates">1888-1985</div>
+                        <div class="philosopher-description">
+                            Teórico del derecho y la política. Su concepto de soberanía como decisión sobre el estado de excepción influyó en el pensamiento político contemporáneo.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Teología Política<br>• El Concepto de lo Político<br>• La Dictadura</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">John Rawls</div>
+                        <div class="philosopher-dates">1921-2002</div>
+                        <div class="philosopher-description">
+                            Renovador de la filosofía política. Su teoría de la justicia como equidad revitalizó el pensamiento liberal y contractualista.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Una Teoría de la Justicia<br>• Liberalismo Político<br>• El Derecho de Gentes</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Isaiah Berlin</div>
+                        <div class="philosopher-dates">1909-1997</div>
+                        <div class="philosopher-description">
+                            Filósofo de la libertad y el pluralismo. Su distinción entre libertad positiva y negativa influyó profundamente en el pensamiento liberal.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Dos Conceptos de Libertad<br>• El Erizo y la Zorra<br>• Contra la Corriente</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-concepts">
+                    <h3>Conceptos Clave</h3>
+                    <div class="concepts-list">
+                        <div class="concept-item"><strong>Totalitarismo:</strong> Control total de la sociedad</div>
+                        <div class="concept-item"><strong>Estado de Excepción:</strong> Suspensión del derecho</div>
+                        <div class="concept-item"><strong>Justicia como Equidad:</strong> Principios de justicia</div>
+                        <div class="concept-item"><strong>Libertad Negativa:</strong> Ausencia de obstáculos</div>
+                        <div class="concept-item"><strong>Pluralismo:</strong> Diversidad de valores</div>
+                        <div class="concept-item"><strong>Velo de Ignorancia:</strong> Posición original</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTEMPORÁNEA -->
+            <div id="contemporanea" class="period-section">
+                <div class="period-header">
+                    <h2>🌐 Época Contemporánea (s. XXI)</h2>
+                    <p>Globalización, multiculturalismo y nuevos desafíos políticos</p>
+                </div>
+
+                <div class="philosophers-grid">
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Jürgen Habermas</div>
+                        <div class="philosopher-dates">1929-</div>
+                        <div class="philosopher-description">
+                            Teórico de la democracia deliberativa. Su concepto de esfera pública y acción comunicativa influyó en la comprensión moderna de la democracia.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Teoría de la Acción Comunicativa<br>• Facticidad y Validez<br>• La Inclusión del Otro</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Michel Foucault</div>
+                        <div class="philosopher-dates">1926-1984</div>
+                        <div class="philosopher-description">
+                            Analista del poder y la subjetividad. Su estudio de las tecnologías de poder transformó la comprensión de la política moderna.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Vigilar y Castigar<br>• Historia de la Sexualidad<br>• Nacimiento de la Biopolítica</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Amartya Sen</div>
+                        <div class="philosopher-dates">1933-</div>
+                        <div class="philosopher-description">
+                            Teórico de la justicia y el desarrollo. Su enfoque de capacidades redefinió la comprensión del bienestar y la justicia social.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Desarrollo y Libertad<br>• La Idea de la Justicia<br>• Identidad y Violencia</div>
+                        </div>
+                    </div>
+
+                    <div class="philosopher-card">
+                        <div class="philosopher-name">Martha Nussbaum</div>
+                        <div class="philosopher-dates">1947-</div>
+                        <div class="philosopher-description">
+                            Filósofa del enfoque de capacidades y la justicia global. Su trabajo sobre emociones políticas y cosmopolitismo influyó en la filosofía práctica.
+                        </div>
+                        <div class="works-section">
+                            <div class="works-title">Obras principales:</div>
+                            <div class="works-list">• Las Mujeres y el Desarrollo Humano<br>• Crear Capacidades<br>• Emociones Políticas</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="key-concepts">
+                    <h3>Conceptos Clave</h3>
+                    <div class="concepts-list">
+                        <div class="concept-item"><strong>Democracia Deliberativa:</strong> Participación racional</div>
+                        <div class="concept-item"><strong>Biopolítica:</strong> Control de los cuerpos</div>
+                        <div class="concept-item"><strong>Enfoque de Capacidades:</strong> Desarrollo humano</div>
+                        <div class="concept-item"><strong>Multiculturalismo:</strong> Diversidad cultural</div>
+                        <div class="concept-item"><strong>Globalización:</strong> Interdependencia mundial</div>
+                        <div class="concept-item"><strong>Justicia Global:</strong> Equidad transnacional</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RECURSOS -->
+            <div class="resources-section">
+                <h3 class="resources-title">📚 Recursos Académicos</h3>
+                <div class="resources-grid">
+                    <div class="resource-item">
+                        <h4>📖 Textos Clásicos (Archive.org)</h4>
+                        <a href="https://archive.org/details/platon.-la-republica-epl-fs-2015/mode/2up" class="resource-link" target="_blank">La República - Platón</a>
+                        <a href="https://archive.org/details/aristoteles-o-politica/mode/1up" class="resource-link" target="_blank">Política - Aristóteles</a>
+                        <a href="https://archive.org/details/hobbes-thomas.-leviatan-epl-fs-1651-2017" class="resource-link" target="_blank">Leviatán - Hobbes</a>
+                        <a href="https://archive.org/details/elcontratosocial0000rous_o0e8/mode/1up" class="resource-link" target="_blank">El Contrato Social - Rousseau</a>
+                    </div>
+
+                    <div class="resource-item">
+                        <h4>🌐 Recursos Web Especializados</h4>
+                        <a href="https://www.britannica.com/topic/political-philosophy" class="resource-link" target="_blank">Encyclopædia Britannica</a>
+                        <a href="https://www.philosophybasics.com/branch_political.html" class="resource-link" target="_blank">Philosophy Basics</a>
+                    </div>
+
+                    <div class="resource-item">
+                        <h4>🎥 Videos Educativos (YouTube)</h4>
+                        <a href="https://www.youtube.com/watch?v=69Q8wfSn_vM" class="resource-link" target="_blank">Crashcourse - Political Philosophy</a>
+                        <a href="https://www.youtube.com/watch?v=VDiyQub6vpw" class="resource-link" target="_blank">The School of Life - Political Philosophy</a>
+                        <a href="https://www.youtube.com/watch?v=kBdfcR-8hEY" class="resource-link" target="_blank">Yale Courses - Political Philosophy</a>
+                        <a href="https://www.youtube.com/watch?v=69Q8wfSn_vM" class="resource-link" target="_blank">Harvard Justice Course</a>
+                    </div>
+
+                    <div class="resource-item">
+                        <h4>📚 Libros Recomendados</h4>
+                        <a href="https://archive.org/details/historyofpoliticalphilosophy" class="resource-link" target="_blank">History of Political Philosophy - Strauss</a>
+                        <a href="https://archive.org/details/politicalphilosophyintroduction" class="resource-link" target="_blank">Political Philosophy: An Introduction</a>
+                        <a href="https://archive.org/details/westernpoliticalthought" class="resource-link" target="_blank">Western Political Thought</a>
+                        <a href="https://archive.org/details/modernpoliticalthought" class="resource-link" target="_blank">Modern Political Thought</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Filosofía Política - Recurso Educativo | Desarrollado para la formación universitaria</p>
+        </div>
+    </div>
 </body>
 </html>
