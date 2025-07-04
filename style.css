@@ -1,6 +1,7 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #f4f4f4;
+  background-attachment: fixed;
   padding: 2rem;
   color: #333;
 }
