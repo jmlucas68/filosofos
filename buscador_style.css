@@ -1,0 +1,301 @@
+/* Modern Style for Buscador.html */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #FFC107; /* Amber */
+    --background-color: #212121; /* Dark Grey */
+    --surface-color: #303030; /* Slightly lighter Dark Grey */
+    --text-color: #E0E0E0; /* Light Grey */
+    --text-color-dark: #B0B0B0; /* Medium Grey */
+    --accent-color: #03DAC6; /* Teal */
+    --border-color: #424242; /* Darker Grey for borders */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+
+    --font-heading: 'Roboto', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px var(--shadow-color);
+    width: 90%;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.navegacion {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.btn-nav {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none; /* Remove default button border */
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+.btn-nav:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+#btn-aleatorio {
+    background-color: #e74c3c; /* Specific color for random button */
+}
+
+#btn-aleatorio:hover {
+    background-color: #c0392b;
+}
+
+#controles-busqueda {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 2.5rem;
+}
+
+.control-grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.control-grupo label {
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+    color: var(--text-color-dark);
+    font-size: 0.95rem;
+}
+
+.control-grupo input {
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.control-grupo input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(3, 218, 198, 0.3);
+    outline: none;
+}
+
+.contador-resultados {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: var(--accent-color);
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.contador-resultados h2 {
+    margin: 0;
+    color: var(--background-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.contador-resultados span {
+    color: var(--surface-color);
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.tarjeta {
+    background: var(--background-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid var(--border-color);
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px var(--shadow-color);
+}
+
+.tarjeta a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tarjeta .imagen-container {
+    width: 100%;
+    height: 280px; /* Slightly larger image area */
+    overflow: hidden;
+    position: relative;
+    background: var(--surface-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta:hover img {
+    transform: scale(1.08);
+}
+
+.info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info strong {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.7rem;
+    line-height: 1.4;
+}
+
+.info small {
+    color: var(--text-color-dark);
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.info em {
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: 0.8rem;
+}
+
+.sin-resultados {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 3rem;
+    font-size: 1.4rem;
+    color: var(--text-color-dark);
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .btn-nav {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+        margin: 0 0.3rem;
+    }
+
+    #controles-busqueda {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .tarjeta .imagen-container {
+        height: 200px;
+    }
+
+    .info {
+        padding: 1.2rem;
+    }
+
+    .info strong {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta .imagen-container {
+        height: 180px;
+    }
+
+    .info strong {
+        font-size: 1.2rem;
+    }
+}
