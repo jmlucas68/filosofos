@@ -1,0 +1,213 @@
+/* Modern Style for Temas/index.html */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #FFC107; /* Amber */
+    --background-color: #212121; /* Dark Grey */
+    --surface-color: #303030; /* Slightly lighter Dark Grey */
+    --text-color: #E0E0E0; /* Light Grey */
+    --text-color-dark: #B0B0B0; /* Medium Grey */
+    --accent-color: #03DAC6; /* Teal */
+    --border-color: #424242; /* Darker Grey for borders */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+
+    --font-heading: 'Roboto', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 2rem 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    text-align: center;
+    margin: 2rem 0 1.5rem 0;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    text-shadow: 0 2px 4px var(--shadow-color);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+nav button {
+    background: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px; /* Pill shape */
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+nav button:hover {
+    background: var(--primary-color);
+    color: var(--background-color);
+    transform: translateY(-3px);
+}
+
+nav button.active {
+    background: var(--accent-color);
+    color: var(--background-color);
+    border-color: var(--accent-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.philosophy-section {
+    background: var(--surface-color);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px var(--shadow-color);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.philosophy-section h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.8rem;
+    width: 80%;
+    max-width: 600px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.card {
+    background: var(--background-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 28px var(--shadow-color);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    color: var(--text-color-dark);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav button {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .philosophy-section {
+        padding: 1.5rem;
+    }
+
+    .philosophy-section h2 {
+        font-size: 2rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-img {
+        height: 180px;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav button {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .philosophy-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-img {
+        height: 150px;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+}
