@@ -22,17 +22,41 @@ searchInput.addEventListener('input', (e) => {
         const philosopherDiv = document.createElement('div');
         philosopherDiv.classList.add('philosopher');
 
-        const name = document.createElement('span');
-        name.textContent = philosopher.nombre;
+        const nameSpan = document.createElement('span');
+        nameSpan.textContent = philosopher.nombre;
 
-        const link = document.createElement('a');
-        const philosopherNameForUrl = encodeURIComponent(philosopher.nombre.replace(/ /g, '_'));
-        link.href = `https://archive.org/search?query=${philosopherNameForUrl}&and%5B%5D=mediatype%3A%22texts%22&and%5B%5D=language%3A%22Spanish%22`;
-        link.textContent = 'Buscar textos';
-        link.target = '_blank'; // Open in new tab
+        const linksContainer = document.createElement('div');
+        linksContainer.classList.add('links-container');
 
-        philosopherDiv.appendChild(name);
-        philosopherDiv.appendChild(link);
+        // Enlace a Archive.org
+        const archiveLinkDiv = document.createElement('div');
+        const archiveTitle = document.createElement('h3');
+        archiveTitle.textContent = 'Obras del autor';
+        const archiveLink = document.createElement('a');
+        const philosopherNameForArchiveUrl = encodeURIComponent(philosopher.nombre.replace(/ /g, '_'));
+        archiveLink.href = `https://archive.org/search?query=${philosopherNameForArchiveUrl}&and%5B%5D=mediatype%3A%22texts%22&and%5B%5D=language%3A%22Spanish%22`;
+        archiveLink.textContent = 'Buscar en Archive.org';
+        archiveLink.target = '_blank';
+        archiveLinkDiv.appendChild(archiveTitle);
+        archiveLinkDiv.appendChild(archiveLink);
+
+        // Enlace a Wikipedia
+        const wikipediaLinkDiv = document.createElement('div');
+        const wikipediaTitle = document.createElement('h3');
+        wikipediaTitle.textContent = 'Wikipedia';
+        const wikipediaLink = document.createElement('a');
+        const philosopherNameForWikipediaUrl = encodeURIComponent(philosopher.nombre.replace(/ /g, '_'));
+        wikipediaLink.href = `https://es.wikipedia.org/wiki/${philosopherNameForWikipediaUrl}`;
+        wikipediaLink.textContent = 'Ver en Wikipedia';
+        wikipediaLink.target = '_blank';
+        wikipediaLinkDiv.appendChild(wikipediaTitle);
+        wikipediaLinkDiv.appendChild(wikipediaLink);
+
+        linksContainer.appendChild(archiveLinkDiv);
+        linksContainer.appendChild(wikipediaLinkDiv);
+
+        philosopherDiv.appendChild(nameSpan);
+        philosopherDiv.appendChild(linksContainer);
         resultsDiv.appendChild(philosopherDiv);
     });
 });
