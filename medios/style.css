@@ -1,94 +1,171 @@
+/* Modern Style for Filosofos Medios */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #FFC107; /* Amber */
+    --background-color: #212121; /* Dark Grey */
+    --surface-color: #303030; /* Slightly lighter Dark Grey */
+    --text-color: #E0E0E0; /* Light Grey */
+    --text-color-dark: #B0B0B0; /* Medium Grey */
+    --accent-color: #03DAC6; /* Teal */
+    --border-color: #424242; /* Darker Grey for borders */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+
+    --font-heading: 'Roboto', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
 body {
-    font-family: sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Cambiado de height a min-height */
+    align-items: flex-start; /* Align to top for better scroll experience */
+    min-height: 100vh;
     margin: 0;
+    padding: 2rem 0; /* Add some vertical padding */
+    line-height: 1.6;
 }
 
 .container {
     text-align: center;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 90%; /* Añadido para mejor control del ancho */
-    max-width: 800px; /* Añadido para limitar el ancho máximo */
+    background-color: var(--surface-color);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px var(--shadow-color);
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto; /* Center the container */
 }
 
 h1 {
-    color: #2c3e50;
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px var(--shadow-color);
 }
 
 #searchInput {
-    width: 80%;
-    padding: 0.5rem;
-    margin-top: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: calc(100% - 2rem); /* Adjust for padding */
+    padding: 0.8rem 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(3, 218, 198, 0.3);
+    outline: none;
 }
 
 #results {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     text-align: left;
 }
 
 .philosopher {
     display: flex;
-    flex-direction: column; /* Cambiado a columna para apilar elementos */
-    align-items: flex-start; /* Alineado a la izquierda */
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.philosopher:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px var(--shadow-color);
 }
 
 .philosopher:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
 }
 
 .philosopher span {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 1.6em;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
 }
 
 .links-container {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los enlaces se envuelvan en pantallas pequeñas */
-    gap: 1rem; /* Espacio entre las secciones de enlaces */
-    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Responsive grid */
+    gap: 1.2rem;
+    width: 100%;
+    margin-top: 1rem;
 }
 
 .links-container > div {
-    flex: 1; /* Permite que las secciones de enlaces ocupen el espacio disponible */
-    min-width: 200px; /* Ancho mínimo para cada sección de enlace */
-    border: 1px solid #eee;
-    padding: 0.8rem;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.links-container > div:hover {
+    background-color: #424242; /* Slightly lighter on hover */
 }
 
 .links-container h3 {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 1.1em;
+    color: var(--text-color-dark);
+    margin-bottom: 0.8rem;
+    text-align: center;
 }
 
 .links-container a {
-    display: inline-block; /* Para que el padding y margin funcionen correctamente */
+    display: block; /* Make links block-level for full button effect */
     text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border: 1px solid #3498db;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-    width: auto; /* Asegura que el botón no ocupe todo el ancho */
+    color: var(--accent-color);
+    font-weight: 600;
+    padding: 0.7rem 1.2rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    width: 100%; /* Full width within its container */
+    text-align: center;
 }
 
 .links-container a:hover {
-    background-color: #3498db;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border-color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    .philosopher span {
+        font-size: 1.4em;
+    }
+
+    .links-container {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
 }
