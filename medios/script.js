@@ -172,6 +172,18 @@ searchInput.addEventListener('input', (e) => {
         filosofiaEnLaRedLinkDiv.appendChild(filosofiaEnLaRedTitle);
         filosofiaEnLaRedLinkDiv.appendChild(filosofiaEnLaRedLink);
 
+        // Enlace a Revista de Filosofía
+        const revistaFilosofiaLinkDiv = document.createElement('div');
+        const revistaFilosofiaTitle = document.createElement('h3');
+        revistaFilosofiaTitle.textContent = 'Revista de Filosofía';
+        const revistaFilosofiaLink = document.createElement('a');
+        const philosopherNameForRevistaFilosofiaUrl = encodeURIComponent(philosopher.nombre);
+        revistaFilosofiaLink.href = `https://www.revistadefilosofia.org/index.php/ERF/search/search?query=&authors=${philosopherNameForRevistaFilosofiaUrl}&dateFromYear=&dateFromMonth=&dateFromDay=&dateToYear=&dateToMonth=&dateToDay=`;
+        revistaFilosofiaLink.textContent = 'Buscar en Revista de Filosofía';
+        revistaFilosofiaLink.target = '_blank';
+        revistaFilosofiaLinkDiv.appendChild(revistaFilosofiaTitle);
+        revistaFilosofiaLinkDiv.appendChild(revistaFilosofiaLink);
+
         linksContainer.appendChild(archiveLinkDiv);
         linksContainer.appendChild(wikipediaLinkDiv);
         linksContainer.appendChild(webdianoiaLinkDiv);
@@ -184,6 +196,7 @@ searchInput.addEventListener('input', (e) => {
         linksContainer.appendChild(biografiasYVidasLinkDiv);
         linksContainer.appendChild(filcoLinkDiv);
         linksContainer.appendChild(filosofiaEnLaRedLinkDiv);
+        linksContainer.appendChild(revistaFilosofiaLinkDiv);
 
         philosopherDiv.appendChild(nameSpan);
         philosopherDiv.appendChild(linksContainer);
