@@ -52,8 +52,21 @@ searchInput.addEventListener('input', (e) => {
         wikipediaLinkDiv.appendChild(wikipediaTitle);
         wikipediaLinkDiv.appendChild(wikipediaLink);
 
+        // Enlace a Webdianoia
+        const webdianoiaLinkDiv = document.createElement('div');
+        const webdianoiaTitle = document.createElement('h3');
+        webdianoiaTitle.textContent = 'Webdianoia';
+        const webdianoiaLink = document.createElement('a');
+        const philosopherNameForWebdianoiaUrl = encodeURIComponent(philosopher.nombre.replace(/ /g, '_'));
+        webdianoiaLink.href = `https://www.webdianoia.com/buscar/search.php?query=${philosopherNameForWebdianoiaUrl}&search=1`;
+        webdianoiaLink.textContent = 'Buscar en Webdianoia';
+        webdianoiaLink.target = '_blank';
+        webdianoiaLinkDiv.appendChild(webdianoiaTitle);
+        webdianoiaLinkDiv.appendChild(webdianoiaLink);
+
         linksContainer.appendChild(archiveLinkDiv);
         linksContainer.appendChild(wikipediaLinkDiv);
+        linksContainer.appendChild(webdianoiaLinkDiv);
 
         philosopherDiv.appendChild(nameSpan);
         philosopherDiv.appendChild(linksContainer);
