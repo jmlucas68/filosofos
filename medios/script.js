@@ -76,10 +76,23 @@ searchInput.addEventListener('input', (e) => {
         herderLinkDiv.appendChild(herderTitle);
         herderLinkDiv.appendChild(herderLink);
 
+        // Enlace a YouTube
+        const youtubeLinkDiv = document.createElement('div');
+        const youtubeTitle = document.createElement('h3');
+        youtubeTitle.textContent = 'YouTube';
+        const youtubeLink = document.createElement('a');
+        const philosopherNameForYoutubeUrl = encodeURIComponent(philosopher.nombre.replace(/ /g, '+')); // Usar '+' para espacios en YouTube
+        youtubeLink.href = `https://www.youtube.com/results?search_query=${philosopherNameForYoutubeUrl}`;
+        youtubeLink.textContent = 'Buscar en YouTube';
+        youtubeLink.target = '_blank';
+        youtubeLinkDiv.appendChild(youtubeTitle);
+        youtubeLinkDiv.appendChild(youtubeLink);
+
         linksContainer.appendChild(archiveLinkDiv);
         linksContainer.appendChild(wikipediaLinkDiv);
         linksContainer.appendChild(webdianoiaLinkDiv);
         linksContainer.appendChild(herderLinkDiv);
+        linksContainer.appendChild(youtubeLinkDiv);
 
         philosopherDiv.appendChild(nameSpan);
         philosopherDiv.appendChild(linksContainer);
