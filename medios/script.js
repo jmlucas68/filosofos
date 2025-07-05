@@ -148,6 +148,30 @@ searchInput.addEventListener('input', (e) => {
         biografiasYVidasLinkDiv.appendChild(biografiasYVidasTitle);
         biografiasYVidasLinkDiv.appendChild(biografiasYVidasLink);
 
+        // Enlace a Filco.es
+        const filcoLinkDiv = document.createElement('div');
+        const filcoTitle = document.createElement('h3');
+        filcoTitle.textContent = 'Filco.es';
+        const filcoLink = document.createElement('a');
+        const philosopherNameForFilcoUrl = encodeURIComponent(philosopher.nombre);
+        filcoLink.href = `https://filco.es/?s=${philosopherNameForFilcoUrl}`;
+        filcoLink.textContent = 'Buscar en Filco.es';
+        filcoLink.target = '_blank';
+        filcoLinkDiv.appendChild(filcoTitle);
+        filcoLinkDiv.appendChild(filcoLink);
+
+        // Enlace a FilosofiaenlaRed.com
+        const filosofiaEnLaRedLinkDiv = document.createElement('div');
+        const filosofiaEnLaRedTitle = document.createElement('h3');
+        filosofiaEnLaRedTitle.textContent = 'Filosofía en la Red';
+        const filosofiaEnLaRedLink = document.createElement('a');
+        const philosopherNameForFilosofiaEnLaRedUrl = encodeURIComponent(philosopher.nombre);
+        filosofiaEnLaRedLink.href = `https://filosofiaenlared.com/?s=${philosopherNameForFilosofiaEnLaRedUrl}`;
+        filosofiaEnLaRedLink.textContent = 'Buscar en Filosofía en la Red';
+        filosofiaEnLaRedLink.target = '_blank';
+        filosofiaEnLaRedLinkDiv.appendChild(filosofiaEnLaRedTitle);
+        filosofiaEnLaRedLinkDiv.appendChild(filosofiaEnLaRedLink);
+
         linksContainer.appendChild(archiveLinkDiv);
         linksContainer.appendChild(wikipediaLinkDiv);
         linksContainer.appendChild(webdianoiaLinkDiv);
@@ -158,6 +182,8 @@ searchInput.addEventListener('input', (e) => {
         linksContainer.appendChild(stanfordLinkDiv);
         linksContainer.appendChild(britannicaLinkDiv);
         linksContainer.appendChild(biografiasYVidasLinkDiv);
+        linksContainer.appendChild(filcoLinkDiv);
+        linksContainer.appendChild(filosofiaEnLaRedLinkDiv);
 
         philosopherDiv.appendChild(nameSpan);
         philosopherDiv.appendChild(linksContainer);
