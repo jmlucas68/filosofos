@@ -64,9 +64,22 @@ searchInput.addEventListener('input', (e) => {
         webdianoiaLinkDiv.appendChild(webdianoiaTitle);
         webdianoiaLinkDiv.appendChild(webdianoiaLink);
 
+        // Enlace a Herder Editorial
+        const herderLinkDiv = document.createElement('div');
+        const herderTitle = document.createElement('h3');
+        herderTitle.textContent = 'Herder Editorial';
+        const herderLink = document.createElement('a');
+        const philosopherNameForHerderUrl = encodeURIComponent(philosopher.nombre.replace(/ /g, '_'));
+        herderLink.href = `https://encyclopaedia.herdereditorial.com/wiki/Especial:Buscar?search=${philosopherNameForHerderUrl}&fulltext=Search`;
+        herderLink.textContent = 'Buscar en Herder Editorial';
+        herderLink.target = '_blank';
+        herderLinkDiv.appendChild(herderTitle);
+        herderLinkDiv.appendChild(herderLink);
+
         linksContainer.appendChild(archiveLinkDiv);
         linksContainer.appendChild(wikipediaLinkDiv);
         linksContainer.appendChild(webdianoiaLinkDiv);
+        linksContainer.appendChild(herderLinkDiv);
 
         philosopherDiv.appendChild(nameSpan);
         philosopherDiv.appendChild(linksContainer);
