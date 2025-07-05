@@ -3,55 +3,392 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realismo Filosófico</title>
-    <link rel="stylesheet" href="../temas_style.css"> <!-- Enlazar al CSS de temas -->
-    <style>
-        body {
-            background-image: url('../images/realismo_bg.jpg'); /* Imagen de fondo específica para realismo */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-        .content-wrapper {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: rgba(48, 48, 48, 0.9); /* Fondo semitransparente oscuro */
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-            text-align: center;
-            color: var(--text-color);
-        }
-        .content-wrapper h1 {
-            font-family: var(--font-heading);
-            color: var(--primary-color);
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-        }
-        .content-wrapper p {
-            font-family: var(--font-body);
-            font-size: 1.1em;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-        .return-button-container {
-            margin-top: 30px;
-        }
-    </style>
+    <title>Realismo Filosófico - Exploración Completa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="return-button-container">
-        <a href="../index.html" class="btn-nav return-button">Volver a Temas</a>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__content">
+                <div class="nav__logo">
+                    <a href="../index.html" class="btn btn--outline">Volver a Temas</a>
+                    <h2>Realismo Filosófico</h2>
+                </div>
+                <ul class="nav__menu">
+                    <li><a href="#definition" class="nav__link">Definición</a></li>
+                    <li><a href="#history" class="nav__link">Historia</a></li>
+                    <li><a href="#currents" class="nav__link">Corrientes</a></li>
+                    <li><a href="#authors" class="nav__link">Autores</a></li>
+                    <li><a href="#works" class="nav__link">Obras</a></li>
+                    <li><a href="#sources" class="nav__link">Fuentes</a></li>
+                </ul>
+                <button class="nav__toggle" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__background"></div>
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">Realismo Filosófico</h1>
+                <p class="hero__subtitle">Una exploración completa del realismo filosófico, sus corrientes, autores y obras fundamentales</p>
+                <div class="hero__actions">
+                    <a href="#definition" class="btn btn--primary">Explorar</a>
+                    <a href="#sources" class="btn btn--outline">Ver Fuentes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Definition Section -->
+        <section id="definition" class="section">
+            <div class="container">
+                <h2 class="section__title">Definición y Características</h2>
+                <div class="definition__content">
+                    <div class="definition__text">
+                        <p>El realismo filosófico es aquella postura que manifiesta que los objetos tienen una existencia independiente del sujeto que lo observa. Sostiene que la realidad existe objetivamente, no dependiente de la mente humana ni de nuestras percepciones o representaciones mentales.</p>
+                        <div class="characteristics">
+                            <h3>Características principales:</h3>
+                            <ul>
+                                <li>Existencia independiente de la realidad</li>
+                                <li>Objetividad del conocimiento</li>
+                                <li>Correspondencia entre pensamiento y realidad</li>
+                                <li>Universalidad de los conceptos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="section section--alt">
+            <div class="container">
+                <h2 class="section__title">Desarrollo Histórico</h2>
+                <div class="timeline">
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <h3>Antigüedad Clásica</h3>
+                            <p>Raíces en la filosofía griega antigua con Demócrito, Platón y Aristóteles</p>
+                            <div class="timeline__figures">
+                                <span class="tag">Demócrito</span>
+                                <span class="tag">Platón</span>
+                                <span class="tag">Aristóteles</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <h3>Época Medieval</h3>
+                            <p>Desarrollo del realismo escolástico con Santo Tomás de Aquino</p>
+                            <div class="timeline__figures">
+                                <span class="tag">Santo Tomás de Aquino</span>
+                                <span class="tag">San Anselmo de Canterbury</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <h3>Modernidad</h3>
+                            <p>Nuevo realismo con Russell, Moore y James</p>
+                            <div class="timeline__figures">
+                                <span class="tag">Bertrand Russell</span>
+                                <span class="tag">G.E. Moore</span>
+                                <span class="tag">William James</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <h3>Contemporáneo</h3>
+                            <p>Realismo científico y especulativo</p>
+                            <div class="timeline__figures">
+                                <span class="tag">Mario Bunge</span>
+                                <span class="tag">Roy Bhaskar</span>
+                                <span class="tag">Graham Harman</span>
+                                <span class="tag">Maurizio Ferraris</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Currents Section -->
+        <section id="currents" class="section">
+            <div class="container">
+                <h2 class="section__title">Corrientes Principales</h2>
+                <div class="currents__grid">
+                    <div class="card current-card">
+                        <div class="card__body">
+                            <h3>Realismo Metafísico</h3>
+                            <p>Sostiene la existencia real de universales e Ideas perfectas</p>
+                            <div class="current-card__representative">
+                                <strong>Representante:</strong> Platón
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card current-card">
+                        <div class="card__body">
+                            <h3>Realismo Crítico</h3>
+                            <p>Combina filosofía de la ciencia con naturalismo crítico</p>
+                            <div class="current-card__representative">
+                                <strong>Representante:</strong> Roy Bhaskar
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card current-card">
+                        <div class="card__body">
+                            <h3>Realismo Especulativo</h3>
+                            <p>Movimiento contemporáneo contra el correlacionismo post-kantiano</p>
+                            <div class="current-card__representative">
+                                <strong>Representante:</strong> Graham Harman
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card current-card">
+                        <div class="card__body">
+                            <h3>Realismo Científico</h3>
+                            <p>La ciencia como mejor forma de conocer la realidad</p>
+                            <div class="current-card__representative">
+                                <strong>Representante:</strong> Mario Bunge
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card current-card">
+                        <div class="card__body">
+                            <h3>Nuevo Realismo</h3>
+                            <p>Crítica al postmodernismo del siglo XXI</p>
+                            <div class="current-card__representative">
+                                <strong>Representante:</strong> Maurizio Ferraris
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Authors Section -->
+        <section id="authors" class="section section--alt">
+            <div class="container">
+                <h2 class="section__title">Autores Fundamentales</h2>
+                <div class="search-filter">
+                    <input type="text" id="authorSearch" class="form-control" placeholder="Buscar autores...">
+                    <select id="periodFilter" class="form-control">
+                        <option value="">Todos los períodos</option>
+                        <option value="ancient">Antigüedad</option>
+                        <option value="medieval">Medieval</option>
+                        <option value="modern">Moderno</option>
+                        <option value="contemporary">Contemporáneo</option>
+                    </select>
+                </div>
+                <div class="authors__grid" id="authorsGrid">
+                    <!-- Authors will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Works Section -->
+        <section id="works" class="section">
+            <div class="container">
+                <h2 class="section__title">Obras Fundamentales</h2>
+                <div class="works__grid">
+                    <div class="card work-card">
+                        <div class="card__body">
+                            <h3>República</h3>
+                            <p class="work-card__author">Platón</p>
+                            <p>Exposición del realismo platónico</p>
+                            <a href="https://archive.org/details/la-republica-bilingue_202311" target="_blank" class="btn btn--primary btn--sm">Ver en Archive.org</a>
+                        </div>
+                    </div>
+                    <div class="card work-card">
+                        <div class="card__body">
+                            <h3>Metafísica</h3>
+                            <p class="work-card__author">Aristóteles</p>
+                            <p>Fundamentos del realismo aristotélico</p>
+                            <a href="https://archive.org/details/aristoteles-metafisica_202107" target="_blank" class="btn btn--primary btn--sm">Ver en Archive.org</a>
+                        </div>
+                    </div>
+                    <div class="card work-card">
+                        <div class="card__body">
+                            <h3>Suma Teológica</h3>
+                            <p class="work-card__author">Santo Tomás de Aquino</p>
+                            <p>Síntesis del realismo cristiano</p>
+                            <a href="https://archive.org/details/suma-de-teologia-tomo-1-sto.-tomas-de-aquino" target="_blank" class="btn btn--primary btn--sm">Ver en Archive.org</a>
+                        </div>
+                    </div>
+                    <div class="card work-card">
+                        <div class="card__body">
+                            <h3>Principia Mathematica</h3>
+                            <p class="work-card__author">Russell y Whitehead</p>
+                            <p>Fundamentos lógicos del nuevo realismo</p>
+                            <a href="https://archive.org/details/alfred-north-whitehead-bertrand-russel-principia-mathematica.-1" target="_blank" class="btn btn--primary btn--sm">Ver en Archive.org</a>
+                        </div>
+                    </div>
+                    <div class="card work-card">
+                        <div class="card__body">
+                            <h3>Principia Ethica</h3>
+                            <p class="work-card__author">G.E. Moore</p>
+                            <p>Realismo ético</p>
+                            <a href="https://archive.org/details/principiaethica01moor" target="_blank" class="btn btn--primary btn--sm">Ver en Archive.org</a>
+                        </div>
+                    </div>
+                    <div class="card work-card">
+                        <div class="card__body">
+                            <h3>Las mil caras del realismo</h3>
+                            <p class="work-card__author">Hilary Putnam</p>
+                            <p>Realismo interno</p>
+                            <a href="https://archive.org/details/putnam-hilary.-las-mil-caras-del-realismo-ocr-1994" target="_blank" class="btn btn--primary btn--sm">Ver en Archive.org</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opposing Currents Section -->
+        <section id="opposing" class="section section--alt">
+            <div class="container">
+                <h2 class="section__title">Corrientes Opuestas</h2>
+                <div class="opposing__grid">
+                    <div class="card opposing-card">
+                        <div class="card__body">
+                            <h3>Idealismo</h3>
+                            <p>Sostiene que la realidad depende de la mente o las ideas</p>
+                        </div>
+                    </div>
+                    <div class="card opposing-card">
+                        <div class="card__body">
+                            <h3>Nominalismo</h3>
+                            <p>Niega la existencia de conceptos universales</p>
+                        </div>
+                    </div>
+                    <div class="card opposing-card">
+                        <div class="card__body">
+                            <h3>Antirrealismo</h3>
+                            <p>La verdad se basa en la demostrabilidad, no en correspondencia</p>
+                        </div>
+                    </div>
+                    <div class="card opposing-card">
+                        <div class="card__body">
+                            <h3>Pragmatismo</h3>
+                            <p>Se centra en las consecuencias prácticas de las ideas</p>
+                        </div>
+                    </div>
+                    <div class="card opposing-card">
+                        <div class="card__body">
+                            <h3>Constructivismo</h3>
+                            <p>La realidad es una construcción activa del sujeto</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos" class="section">
+            <div class="container">
+                <h2 class="section__title">Videos Educativos</h2>
+                <div class="videos__grid">
+                    <div class="card video-card">
+                        <div class="card__body">
+                            <h3>REALISMO FILOSÓFICO: Historia, características, representantes</h3>
+                            <p>Video completo sobre el realismo medieval en filosofía</p>
+                            <a href="https://www.youtube.com/watch?v=Iq0BAIuSSNQ" target="_blank" class="btn btn--primary btn--sm">Ver en YouTube</a>
+                        </div>
+                    </div>
+                    <div class="card video-card">
+                        <div class="card__body">
+                            <h3>El Realismo en filosofía</h3>
+                            <p>Explicación del realismo ingenuo, crítico e hiperrealismo</p>
+                            <a href="https://www.youtube.com/watch?v=tyUPfNKCDDA" target="_blank" class="btn btn--primary btn--sm">Ver en YouTube</a>
+                        </div>
+                    </div>
+                    <div class="card video-card">
+                        <div class="card__body">
+                            <h3>¿Qué es el realismo filosófico?</h3>
+                            <p>Primera clase del curso Realismo poscontinental</p>
+                            <a href="https://www.youtube.com/watch?v=mbPyGWwZzRE" target="_blank" class="btn btn--primary btn--sm">Ver en YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sources Section -->
+        <section id="sources" class="section section--alt">
+            <div class="container">
+                <h2 class="section__title">Fuentes y Referencias</h2>
+                <div class="sources__categories">
+                    <div class="sources__category">
+                        <h3>Libros en Archive.org</h3>
+                        <ul class="sources__list">
+                            <li><a href="https://archive.org/details/gilson-etienne-el-realismo-metodico_202402" target="_blank">Gilson Etienne El Realismo Metodico</a></li>
+                            <li><a href="https://archive.org/details/realismo-poscontinental-ontologia-y-epistemologia-para-siglo-21" target="_blank">Realismo Poscontinental</a></li>
+                        </ul>
+                    </div>
+                    <div class="sources__category">
+                        <h3>Artículos Académicos</h3>
+                        <ul class="sources__list">
+                            <li><a href="https://www.academia.edu/11303940/Realismo_y_anti_realismo" target="_blank">Realismo y anti-realismo</a></li>
+                            <li><a href="https://www.academia.edu/80776702/El_realismo_filos%C3%B3fico_como_enfoque_adecuado_para_el_asesoramiento_filos%C3%B3fico" target="_blank">El realismo filosófico como enfoque adecuado</a></li>
+                        </ul>
+                    </div>
+                    <div class="sources__category">
+                        <h3>Wikipedia</h3>
+                        <ul class="sources__list">
+                            <li><a href="https://es.wikipedia.org/wiki/Realismo_filos%C3%B3fico" target="_blank">Realismo filosófico</a></li>
+                            <li><a href="https://es.wikipedia.org/wiki/Realismo_cr%C3%ADtico" target="_blank">Realismo crítico</a></li>
+                            <li><a href="https://es.wikipedia.org/wiki/Realismo_especulativo" target="_blank">Realismo especulativo</a></li>
+                        </ul>
+                    </div>
+                    <div class="sources__category">
+                        <h3>Stanford Encyclopedia</h3>
+                        <ul class="sources__list">
+                            <li><a href="https://plato.stanford.edu/entries/realism/" target="_blank">Realism - Stanford Encyclopedia of Philosophy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2025 Realismo Filosófico. Recurso educativo sobre filosofía realista.</p>
+                <p>Todas las fuentes están debidamente referenciadas y enlazadas.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Author Modal -->
+    <div class="modal" id="authorModal">
+        <div class="modal__backdrop"></div>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Cerrar modal">&times;</button>
+            <div class="modal__body">
+                <h2 id="modalAuthorName"></h2>
+                <p id="modalAuthorDates"></p>
+                <p id="modalAuthorContribution"></p>
+                <blockquote id="modalAuthorQuote"></blockquote>
+            </div>
+        </div>
     </div>
 
-    <div class="content-wrapper">
-        <h1>Realismo Filosófico</h1>
-        <p>El realismo filosófico es una corriente que postula la existencia de una realidad independiente de la mente humana. Esto significa que los objetos, las ideas y los conceptos existen por sí mismos, sin necesidad de que un sujeto los perciba o los piense.</p>
-        <p>Desde la antigüedad, con Platón y Aristóteles, hasta la filosofía contemporánea, el realismo ha adoptado diversas formas, pero siempre manteniendo la premisa fundamental de que hay un mundo objetivo que podemos conocer.</p>
-        <p>En contraste con el idealismo, que sostiene que la realidad es una construcción mental, el realismo defiende que el conocimiento es una representación fiel de esa realidad externa. Esta corriente ha tenido un impacto significativo en la metafísica, la epistemología y la filosofía de la ciencia.</p>
-    </div>
+    <script src="app.js"></script>
 </body>
 </html>
