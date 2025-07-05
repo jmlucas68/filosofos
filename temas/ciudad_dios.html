@@ -1,58 +1,302 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Ciudad de Dios - San Agustín</title>
-    <link rel="stylesheet" href="politica_style.css"> <!-- Reutilizar el estilo de politica.html -->
+  <head>
+    <meta charset="UTF-8" />
+    <title>San Agustín y la Política en "La Ciudad de Dios"</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        body {
-            background-image: url('../images/san_agustin_ciudad_dios.jpg'); /* Imagen de fondo para esta página */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: #E0E0E0; /* Color de texto principal para contraste */
-        }
-        .content-wrapper {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: rgba(48, 48, 48, 0.9); /* Fondo semitransparente oscuro */
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-            text-align: center;
-        }
-        .content-wrapper h1 {
-            font-family: 'Roboto', sans-serif;
-            color: #FFC107; /* Amber */
-            font-size: 3em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-        }
-        .content-wrapper p {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.1em;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-        .return-button-container {
-            margin-top: 30px;
-        }
+      :root {      --main-bg: #181c24;      --accent: #8ecae6;      --text: #f8f9fa;      --card: #232a34;      --highlight: #219ebc;      --shadow: 0 4px 24px rgba(0,0,0,0.5);    }    body {      background: var(--main-bg);      color: var(--text);      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;      margin: 0;      padding: 0;    }    header {      background: linear-gradient(90deg, var(--accent), var(--highlight));      color: #111;      padding: 2rem 1rem 1rem 1rem;      text-align: center;      box-shadow: var(--shadow);    }    header h1 {      margin: 0;      font-size: 2.5rem;      letter-spacing: 2px;    }    header p {      font-size: 1.2rem;      margin-top: 0.5rem;    }    nav {      background: var(--card);      display: flex;      justify-content: center;      gap: 1.5rem;      padding: 0.5rem 0;      box-shadow: var(--shadow);      position: sticky;      top: 0;      z-index: 100;    }    nav a {      color: var(--accent);      text-decoration: none;      font-weight: bold;      transition: color 0.2s;    }    nav a:hover {      color: var(--highlight);    }    main {      max-width: 900px;      margin: 2rem auto;      padding: 1rem;    }    section {      margin-bottom: 2.5rem;      background: var(--card);      border-radius: 1.2rem;      box-shadow: var(--shadow);      padding: 2rem;      animation: fadeIn 1s;    }    h2 {      color: var(--accent);      margin-top: 0;      font-size: 2rem;      border-left: 5px solid var(--highlight);      padding-left: 0.5em;    }    blockquote {      border-left: 4px solid var(--highlight);      margin: 1.5em 0;      padding: 1em 1.5em;      background: rgba(33,158,188,0.08);      font-style: italic;      color: var(--accent);    }    .obras-lista, .enlaces-lista, .videos-lista {      list-style: none;      padding: 0;    }    .obras-lista li, .enlaces-lista li, .videos-lista li {      margin-bottom: 0.8em;      background: #222831;      padding: 0.7em 1em;      border-radius: 0.6em;      transition: background 0.2s;    }    .obras-lista li:hover, .enlaces-lista li:hover, .videos-lista li:hover {      background: #2d4157;    }    a {      color: var(--accent);      text-decoration: underline;      transition: color 0.2s;    }    a:hover {      color: var(--highlight);    }    table {      width: 100%;      border-collapse: collapse;      margin-top: 1em;      background: #1b222b;      color: var(--text);      border-radius: 0.8em;      overflow: hidden;      box-shadow: var(--shadow);    }    th, td {      padding: 0.8em;      border-bottom: 1px solid #2d4157;      text-align: left;    }    th {      background: var(--highlight);      color: #fff;      font-size: 1.1em;    }    @media (max-width: 700px) {      main, section {        padding: 1em;      }      h2 {        font-size: 1.4rem;      }    }    @keyframes fadeIn {      from { opacity: 0; transform: translateY(30px);}      to { opacity: 1; transform: translateY(0);}    }
     </style>
-</head>
-<body>
-    <div class="return-button-container">
-        <a href="politica.html" class="btn-nav return-button">Volver a Filosofía Política</a>
-    </div>
-
-    <div class="content-wrapper">
-        <h1>La Ciudad de Dios</h1>
-        <p>"De civitate Dei contra paganos" (La Ciudad de Dios contra los paganos) es una obra monumental escrita por San Agustín de Hipona a principios del siglo V d.C. Es una de las obras más influyentes en la historia del pensamiento occidental, abordando temas de teología, filosofía, historia y política.</p>
-        <p>La obra fue escrita en respuesta a las acusaciones paganas de que el cristianismo había causado la caída de Roma en el año 410 d.C. San Agustín defiende el cristianismo y presenta una visión de dos ciudades: la Ciudad Terrena (representada por el Estado y las instituciones humanas, imperfecta y transitoria) y la Ciudad de Dios (la comunidad de los elegidos, eterna y perfecta).</p>
-        <p>A través de esta distinción, San Agustín explora la relación entre la fe y la razón, la justicia, el pecado, la providencia divina y el destino de la humanidad. Su pensamiento sentó las bases para gran parte de la filosofía política y teológica medieval, influyendo en pensadores como Santo Tomás de Aquino y en la concepción de la relación entre la Iglesia y el Estado durante siglos.</p>
-        <p>La obra es un testimonio de la profunda erudición de San Agustín y su capacidad para sintetizar el pensamiento clásico con la doctrina cristiana, ofreciendo una defensa robusta de la fe en un momento de crisis para el Imperio Romano.</p>
-    </div>
-</body>
+  </head>
+  <body>
+    <header>
+      <h1>San Agustín y la Política en <i>La Ciudad de Dios</i></h1>
+      <p>
+        Vida, obra y pensamiento político del Obispo de Hipona en el contexto de
+        la crisis del Imperio Romano
+      </p>
+    </header>
+    <nav>
+      <a href="#vida">Vida y Contexto</a>
+      <a href="#pensamiento">Pensamiento Político</a>
+      <a href="#citas">Citas</a> <a href="#influencias">Influencias</a>
+      <a href="#obras">Principales Obras</a>
+      <a href="#enlaces">Enlaces Externos</a> <a href="#videos">Videos</a>
+    </nav>
+    <main>
+      <section id="vida">
+        <h2>Vida y Contexto Histórico</h2>
+        <p>
+          <b>San Agustín de Hipona</b> (354-430 d.C.) fue uno de los más grandes
+          pensadores cristianos de la Antigüedad tardía. Nació en Tagaste
+          (actual Argelia) y vivió en un mundo marcado por la crisis del
+          <b>Imperio Romano</b>, la expansión del cristianismo y el conflicto
+          entre tradiciones paganas y la nueva fe oficial del Estado. Tras la
+          caída de Roma en 410 d.C., Agustín escribe
+          <i>La Ciudad de Dios</i> para responder a quienes culpaban al
+          cristianismo de la decadencia romana y para ofrecer una visión
+          alternativa de la historia y la política.
+        </p>
+        <p>
+          Su obra se sitúa en un momento de transición: el cristianismo se ha
+          convertido en religión oficial (Edicto de Tesalónica, 380), pero la
+          sociedad sigue anclada en valores paganos. Agustín, obispo en Hipona
+          (Norte de África), vivió intensamente los problemas sociales,
+          políticos y religiosos de su tiempo, interviniendo en cuestiones como
+          la pena de muerte, la esclavitud y el derecho de asilo.
+        </p>
+      </section>
+      <section id="pensamiento">
+        <h2>La Política según San Agustín en <i>La Ciudad de Dios</i></h2>
+        <p>
+          <b>La Ciudad de Dios</b> (<i>De civitate Dei</i>, 413-426) es la obra
+          donde Agustín desarrolla su pensamiento político y su
+          <b>filosofía de la historia</b>. Frente al colapso de Roma, plantea
+          que la historia humana es una lucha entre dos ciudades simbólicas:
+        </p>
+        <table>
+          <tr>
+            <th>Ciudad de Dios</th>
+            <th>Ciudad Terrenal</th>
+          </tr>
+          <tr>
+            <td>
+              Basada en el <b>amor a Dios</b> (<i>amor Dei</i>), la humildad y
+              la búsqueda del bien común.<br />
+              Comunidad espiritual y eterna, cuyo fin es la paz y la justicia
+              verdaderas.<br />
+              Su modelo es la Iglesia, y su plenitud solo se alcanza en la vida
+              eterna.
+            </td>
+            <td>
+              Basada en el <b>amor propio</b> (<i>amor sui</i>), la soberbia, la
+              ambición y el deseo de poder.<br />
+              Sociedad temporal, marcada por el pecado y la injusticia.<br />
+              Representa los reinos y estados humanos, cuyo fin es el orden y la
+              paz temporales.
+            </td>
+          </tr>
+        </table>
+        <p>
+          Para Agustín, ambas ciudades coexisten en la historia y en cada
+          persona. El Estado es necesario para mantener el orden, pero es
+          siempre imperfecto y subordinado a la <b>ley divina</b>. La verdadera
+          justicia solo existe en la Ciudad de Dios: “La verdadera justicia no
+          existe, excepto en esa república cuyo fundador y gobernante es
+          Cristo”.
+        </p>
+        <ul>
+          <li>
+            <b>Relación Iglesia-Estado:</b> El poder político es legítimo si
+            busca el bien común y respeta la ley divina. La Iglesia es la
+            comunidad perfecta y debe inspirar al Estado.
+          </li>
+          <li>
+            <b>Obediencia civil:</b> El cristiano debe obedecer las leyes
+            civiles salvo que contradigan la ley de Dios (“dar al César lo que
+            es del César y a Dios lo que es de Dios”).
+          </li>
+          <li>
+            <b>Justicia y ley:</b> La ley humana solo es justa si está en
+            consonancia con la ley divina. Una ley injusta no es ley en
+            absoluto.
+          </li>
+          <li>
+            <b>Guerra justa:</b> Agustín es el primero en formular la doctrina
+            de la guerra justa: la violencia solo se justifica para defender la
+            justicia y la paz.
+          </li>
+          <li>
+            <b>Supremacía espiritual:</b> La obra de Agustín es el punto de
+            partida de la idea medieval de la superioridad del poder espiritual
+            (Iglesia) sobre el temporal (Estado).
+          </li>
+        </ul>
+        <blockquote>
+          “La paz de la ciudad celestial es la ordenadísima conformísima
+          sociedad establecida para gozar de Dios, y unos de otros en Dios. La
+          paz de todas las cosas, la tranquilidad del orden; y el orden no es
+          otra cosa que una disposición de cosas iguales y desiguales, que da
+          cada una su propio lugar.”<br />
+          <span style="font-size:0.9em;"
+            >— San Agustín, <i>La Ciudad de Dios</i></span
+          >
+        </blockquote>
+      </section>
+      <section id="citas">
+        <h2>Citas de <i>La Ciudad de Dios</i> y Pensamiento Político</h2>
+        <ul>
+          <li>
+            <blockquote>
+              “Los hombres que se aman mutuamente y que aman a Dios, que habita
+              en ellos, constituyen la Ciudad de Dios.”<br />
+              <span style="font-size:0.9em;">— In Ps. 98,4</span>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              “El orden de esta paz consiste primero en no hacer mal a nadie,
+              luego en ayudar a todo el que pueda...”<br />
+              <span style="font-size:0.9em;">— De Civ. Dei XIX, 14</span>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              “Hay dos clases de personas, porque hay dos clases de amor. El uno
+              es santo, el otro egoísta; el uno se preocupa por el bien común en
+              aras del entendimiento mútuo y de la fraternidad espiritual, el
+              otro trata de someter lo común a lo propio...”<br />
+              <span style="font-size:0.9em;">— De Civitate Dei XII, 8</span>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              “Dios se opone a los soberbios, pero que al mismo tiempo concede
+              su gracia a los humildes.”<br />
+              <span style="font-size:0.9em;">— <i>La Ciudad de Dios</i></span>
+            </blockquote>
+          </li>
+        </ul>
+      </section>
+      <section id="influencias">
+        <h2>Influencias Recibidas y Ejercidas</h2>
+        <ul>
+          <li>
+            <b>Recibidas:</b> Profunda influencia de <b>Platón</b> (dualismo,
+            ideal de la ciudad justa), <b>Cicerón</b> (idea de república y ley
+            natural), el <b>neoplatonismo</b> de Plotino, y las Sagradas
+            Escrituras.
+          </li>
+          <li>
+            <b>Ejercidas:</b> Su pensamiento marcó la
+            <b>Edad Media</b> (agustinismo político), influyó en teólogos como
+            Tomás de Aquino, en la mística cristiana, en la filosofía moderna
+            (Descartes), y en movimientos como la Reforma y el jansenismo.
+          </li>
+        </ul>
+        <p>
+          La división agustiniana entre dos ciudades y dos ciudadanías será
+          decisiva para la historia política y religiosa de Occidente,
+          inspirando la teoría medieval de las dos potestades (Iglesia y
+          Estado).
+        </p>
+      </section>
+      <section id="obras">
+        <h2>Principales Obras y Enlaces a Textos Gratuitos</h2>
+        <ul class="obras-lista">
+          <li>
+            <b>La Ciudad de Dios</b> (<i>De civitate Dei contra paganos</i>,
+            413-426)<br />
+            <a
+              href="https://archive.org/details/san-agustin-de-civitate-dei-contra-paganos-la-ciudad-de-dios"
+              target="_blank"
+              >Leer en Archive.org (español)</a
+            >
+          </li>
+          <li>
+            <b>Confesiones</b><br />
+            <a
+              href="https://archive.org/details/confesiones_202002"
+              target="_blank"
+              >Leer en Archive.org (español)</a
+            >
+          </li>
+          <li>
+            <b>Enchiridion</b><br />
+            <a
+              href="https://archive.org/details/enchiridion_202003"
+              target="_blank"
+              >Leer en Archive.org (español)</a
+            >
+          </li>
+        </ul>
+        <p><b>Artículos y recursos académicos:</b></p>
+        <ul class="enlaces-lista">
+          <li>
+            <a
+              href="https://es.wikipedia.org/wiki/Agust%C3%ADn_de_Hipona"
+              target="_blank"
+              >Agustín de Hipona en Wikipedia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://es.wikipedia.org/wiki/Agustinismo_pol%C3%ADtico"
+              target="_blank"
+              >Agustinismo político en Wikipedia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.academia.edu/11975873/El_pensamiento_pol%C3%ADtico_de_San_Agust%C3%ADn"
+              target="_blank"
+              >El pensamiento político de San Agustín (Academia.edu)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://dspace.uib.es/xmlui/bitstream/handle/11201/152873/Amengual_Mira_Mar.152873pdf.pdf?sequence=3&isAllowed=y"
+              target="_blank"
+              >Los límites del dominio político en La Ciudad de Dios (PDF)</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section id="enlaces">
+        <h2>Enlaces Externos a Fuentes de Información</h2>
+        <ul class="enlaces-lista">
+          <li>
+            <a
+              href="https://filosofiamaterialesyrecursos.es/Antologia_de_textos/09_San_Agustin.pdf"
+              target="_blank"
+              >Antología de textos de San Agustín</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.webdianoia.com/medieval/agustin/agustin_filo2.htm"
+              target="_blank"
+              >Filosofía de Agustín de Hipona - Webdianoia</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://elaprendizdefilosofo.wordpress.com/wp-content/uploads/2012/11/contexto-de-san-agustc3adn-y-la-ciudad-de-dios.pdf"
+              target="_blank"
+              >Contexto de San Agustín y La Ciudad de Dios (PDF)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.studocu.com/es-ar/messages/question/3268207/ideas-politicas-de-san-agustin"
+              target="_blank"
+              >Ideas políticas de San Agustín - Studocu</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section id="videos">
+        <h2>Videos sobre San Agustín y La Ciudad de Dios</h2>
+        <ul class="videos-lista">
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=5v72gyGm5d4"
+              target="_blank"
+            >
+              SAN AGUSTÍN/5: SENTIDO DE LA HISTORIA Y LA CIUDAD DE DIOS (Enrique
+              P. Mesa García)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/results?search_query=San+Agust%C3%ADn+Ciudad+de+Dios"
+              target="_blank"
+            >
+              Más videos sobre San Agustín y La Ciudad de Dios en YouTube
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
