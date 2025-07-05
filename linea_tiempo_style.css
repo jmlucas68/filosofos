@@ -1,0 +1,412 @@
+/* Modern Style for Linea_Tiempo.html */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+    --primary-color: #4CAF50; /* Green */
+    --secondary-color: #FFC107; /* Amber */
+    --background-color: #212121; /* Dark Grey */
+    --surface-color: #303030; /* Slightly lighter Dark Grey */
+    --text-color: #E0E0E0; /* Light Grey */
+    --text-color-dark: #B0B0B0; /* Medium Grey */
+    --accent-color: #03DAC6; /* Teal */
+    --border-color: #424242; /* Darker Grey for borders */
+    --shadow-color: rgba(0, 0, 0, 0.3);
+
+    --filosofo-color: #2196F3; /* Blue */
+    --evento-color: #dc3545; /* Red */
+
+    --font-heading: 'Roboto', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-image: url('images/linea_tiempo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem 0;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: var(--font-heading);
+    text-align: center;
+    margin: 2rem 0 1.5rem 0;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    text-shadow: 0 3px 6px var(--shadow-color);
+}
+
+.return-button-container {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.btn-nav {
+    background-color: #E91E63; /* A strong, contrasting color (e.g., Pink) */
+    color: white;
+    border: 2px solid #E91E63;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-nav:hover {
+    background-color: #C2185B; /* Darker shade on hover */
+    border-color: #C2185B;
+    transform: translateY(-5px);
+}
+
+.leyenda {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: var(--text-color-dark);
+}
+
+.leyenda-item {
+    display: inline-block;
+    margin: 0 15px;
+    background-color: var(--surface-color);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.leyenda-color {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+    border: 2px solid var(--border-color);
+}
+
+.color-filosofo {
+    background-color: var(--filosofo-color);
+}
+
+.color-evento {
+    background-color: var(--evento-color);
+}
+
+.filtros {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    background-color: var(--surface-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn-filtro {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+}
+
+.btn-filtro:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.btn-filtro.active {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.navegacion-siglos {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    border: 1px solid var(--border-color);
+}
+
+.navegacion-siglos label {
+    margin-right: 10px;
+    font-weight: 600;
+    color: var(--text-color-dark);
+    font-size: 1.1rem;
+}
+
+.navegacion-siglos select {
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23E0E0E0%22%20d%3D%22M287%2C197.3L159.3%2C69.6c-3.7-3.7-9.8-3.7-13.5%2C0L5.4%2C197.3c-3.7%2C3.7-3.7%2C9.8%2C0%2C13.5l13.5%2C13.5c3.7%2C3.7%2C9.8%2C3.7%2C13.5%2C0l111.8-111.8l111.8%2C111.8c3.7%2C3.7%2C9.8%2C3.7%2C13.5%2C0l13.5-13.5C290.7%2C207.1%2C290.7%2C201%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.7em top 50%;
+    background-size: 0.65em auto;
+}
+
+.navegacion-siglos .btn-nav {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    margin-left: 15px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+}
+
+.navegacion-siglos .btn-nav:hover {
+    background-color: var(--primary-color);
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--filosofo-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    border-radius: 3px;
+}
+
+.entry {
+    padding: 1rem 2rem;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.entry:hover {
+    transform: scale(1.02);
+}
+
+.entry.left {
+    left: 0;
+}
+
+.entry.right {
+    left: 50%;
+}
+
+.entry.filosofo::before {
+    content: " ";
+    position: absolute;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    border: 4px solid var(--filosofo-color);
+    z-index: 1;
+}
+
+.entry.evento::before {
+    content: " ";
+    position: absolute;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--background-color);
+    border: 4px solid var(--evento-color);
+    z-index: 1;
+}
+
+.entry.left::before {
+    right: -13px;
+}
+
+.entry.right::before {
+    left: -13px;
+}
+
+.content {
+    padding: 1.5rem;
+    background-color: var(--surface-color);
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.content.filosofo {
+    border-left: 5px solid var(--filosofo-color);
+}
+
+.content.evento {
+    border-left: 5px solid var(--evento-color);
+}
+
+.content img {
+    width: 120px;
+    height: auto;
+    float: left;
+    margin-right: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.movimiento {
+    font-style: italic;
+    color: var(--text-color-dark);
+    margin-top: 0.5rem;
+    clear: both;
+}
+
+.tipo-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    text-transform: uppercase;
+}
+
+.badge-filosofo {
+    background-color: rgba(33, 150, 243, 0.2); /* Light blue with transparency */
+    color: var(--filosofo-color);
+}
+
+.badge-evento {
+    background-color: rgba(220, 53, 69, 0.2); /* Light red with transparency */
+    color: var(--evento-color);
+}
+
+.year {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.entry.hidden {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .return-button-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-nav {
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+    }
+
+    .leyenda-item {
+        margin: 0 8px;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .filtros, .navegacion-siglos {
+        padding: 1rem;
+    }
+
+    .btn-filtro {
+        margin: 0 5px;
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .navegacion-siglos select, .navegacion-siglos .btn-nav {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .timeline::after {
+        left: 20px;
+    }
+
+    .entry {
+        width: 100%;
+        left: 0;
+        padding-left: 3rem;
+        padding-right: 1rem;
+    }
+
+    .entry.right {
+        left: 0;
+    }
+
+    .entry::before {
+        left: 8px;
+        top: 25px;
+    }
+
+    .entry.right::before, .entry.left::before {
+        left: 8px;
+    }
+
+    .content img {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .btn-nav {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .leyenda-item {
+        font-size: 0.8rem;
+    }
+
+    .btn-filtro {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .navegacion-siglos select, .navegacion-siglos .btn-nav {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .content img {
+        width: 60px;
+    }
+
+    .year {
+        font-size: 1.1rem;
+    }
+}
