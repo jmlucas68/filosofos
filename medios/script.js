@@ -184,6 +184,18 @@ searchInput.addEventListener('input', (e) => {
         revistaFilosofiaLinkDiv.appendChild(revistaFilosofiaTitle);
         revistaFilosofiaLinkDiv.appendChild(revistaFilosofiaLink);
 
+        // Enlace a Academia.edu
+        const academiaEduLinkDiv = document.createElement('div');
+        const academiaEduTitle = document.createElement('h3');
+        academiaEduTitle.textContent = 'Academia.edu';
+        const academiaEduLink = document.createElement('a');
+        const philosopherNameForAcademiaEduUrl = encodeURIComponent(philosopher.nombre);
+        academiaEduLink.href = `https://www.academia.edu/search?q=${philosopherNameForAcademiaEduUrl}`;
+        academiaEduLink.textContent = 'Buscar en Academia.edu';
+        academiaEduLink.target = '_blank';
+        academiaEduLinkDiv.appendChild(academiaEduTitle);
+        academiaEduLinkDiv.appendChild(academiaEduLink);
+
         linksContainer.appendChild(archiveLinkDiv);
         linksContainer.appendChild(wikipediaLinkDiv);
         linksContainer.appendChild(webdianoiaLinkDiv);
@@ -197,6 +209,7 @@ searchInput.addEventListener('input', (e) => {
         linksContainer.appendChild(filcoLinkDiv);
         linksContainer.appendChild(filosofiaEnLaRedLinkDiv);
         linksContainer.appendChild(revistaFilosofiaLinkDiv);
+        linksContainer.appendChild(academiaEduLinkDiv);
 
         philosopherDiv.appendChild(nameSpan);
         philosopherDiv.appendChild(linksContainer);
