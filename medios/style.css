@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh; /* Cambiado de height a min-height */
     margin: 0;
 }
 
@@ -15,6 +15,8 @@ body {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%; /* Añadido para mejor control del ancho */
+    max-width: 800px; /* Añadido para limitar el ancho máximo */
 }
 
 h1 {
@@ -36,13 +38,46 @@ h1 {
 
 .philosopher {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem;
+    flex-direction: column; /* Cambiado a columna para apilar elementos */
+    align-items: flex-start; /* Alineado a la izquierda */
+    padding: 1rem;
     border-bottom: 1px solid #eee;
 }
 
-.philosopher a {
+.philosopher:last-child {
+    border-bottom: none;
+}
+
+.philosopher span {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.links-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los enlaces se envuelvan en pantallas pequeñas */
+    gap: 1rem; /* Espacio entre las secciones de enlaces */
+    margin-top: 0.5rem;
+}
+
+.links-container > div {
+    flex: 1; /* Permite que las secciones de enlaces ocupen el espacio disponible */
+    min-width: 200px; /* Ancho mínimo para cada sección de enlace */
+    border: 1px solid #eee;
+    padding: 0.8rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.links-container h3 {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.links-container a {
+    display: inline-block; /* Para que el padding y margin funcionen correctamente */
     text-decoration: none;
     color: #3498db;
     font-weight: bold;
@@ -50,9 +85,10 @@ h1 {
     border: 1px solid #3498db;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
+    width: auto; /* Asegura que el botón no ocupe todo el ancho */
 }
 
-.philosopher a:hover {
+.links-container a:hover {
     background-color: #3498db;
     color: white;
 }
