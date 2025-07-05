@@ -136,6 +136,18 @@ searchInput.addEventListener('input', (e) => {
         britannicaLinkDiv.appendChild(britannicaTitle);
         britannicaLinkDiv.appendChild(britannicaLink);
 
+        // Enlace a Biografias y Vidas
+        const biografiasYVidasLinkDiv = document.createElement('div');
+        const biografiasYVidasTitle = document.createElement('h3');
+        biografiasYVidasTitle.textContent = 'Biografías y Vidas';
+        const biografiasYVidasLink = document.createElement('a');
+        const philosopherNameForBiografiasYVidasUrl = encodeURIComponent(philosopher.nombre);
+        biografiasYVidasLink.href = `https://www.biografiasyvidas.com/cgi-bin/search/search.pl?Terms=${philosopherNameForBiografiasYVidasUrl}&Match=1&Realm=title`;
+        biografiasYVidasLink.textContent = 'Buscar en Biografías y Vidas';
+        biografiasYVidasLink.target = '_blank';
+        biografiasYVidasLinkDiv.appendChild(biografiasYVidasTitle);
+        biografiasYVidasLinkDiv.appendChild(biografiasYVidasLink);
+
         linksContainer.appendChild(archiveLinkDiv);
         linksContainer.appendChild(wikipediaLinkDiv);
         linksContainer.appendChild(webdianoiaLinkDiv);
@@ -145,6 +157,7 @@ searchInput.addEventListener('input', (e) => {
         linksContainer.appendChild(philosophicaInfoLinkDiv);
         linksContainer.appendChild(stanfordLinkDiv);
         linksContainer.appendChild(britannicaLinkDiv);
+        linksContainer.appendChild(biografiasYVidasLinkDiv);
 
         philosopherDiv.appendChild(nameSpan);
         philosopherDiv.appendChild(linksContainer);
