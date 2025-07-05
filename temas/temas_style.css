@@ -44,7 +44,7 @@ nav {
     flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
-nav button {
+nav button, .nav-button {
     background: var(--surface-color);
     color: var(--text-color);
     border: 1px solid var(--border-color);
@@ -54,9 +54,11 @@ nav button {
     font-size: 1.1rem;
     font-weight: 600;
     transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* For anchor tags */
+    display: inline-block; /* For anchor tags */
 }
 
-nav button:hover {
+nav button:hover, .nav-button:hover {
     background: var(--primary-color);
     color: var(--background-color);
     transform: translateY(-3px);
@@ -163,7 +165,7 @@ main {
         gap: 1rem;
     }
 
-    nav button {
+    nav button, .nav-button {
         width: 80%;
         margin: 0 auto;
     }
@@ -194,7 +196,7 @@ main {
         font-size: 2rem;
     }
 
-    nav button {
+    nav button, .nav-button {
         font-size: 1rem;
         padding: 0.6rem 1rem;
     }
