@@ -112,6 +112,30 @@ searchInput.addEventListener('input', (e) => {
         philosophicaInfoLinkDiv.appendChild(philosophicaInfoTitle);
         philosophicaInfoLinkDiv.appendChild(philosophicaInfoLink);
 
+        // Enlace a Stanford Encyclopedia of Philosophy
+        const stanfordLinkDiv = document.createElement('div');
+        const stanfordTitle = document.createElement('h3');
+        stanfordTitle.textContent = 'Stanford Encyclopedia of Philosophy';
+        const stanfordLink = document.createElement('a');
+        const philosopherNameForStanfordUrl = encodeURIComponent(philosopher.nombre.replace(/ /g, '+'));
+        stanfordLink.href = `https://plato.stanford.edu/search/searcher.py?query=${philosopherNameForStanfordUrl}`;
+        stanfordLink.textContent = 'Buscar en Stanford Encyclopedia';
+        stanfordLink.target = '_blank';
+        stanfordLinkDiv.appendChild(stanfordTitle);
+        stanfordLinkDiv.appendChild(stanfordLink);
+
+        // Enlace a Britannica
+        const britannicaLinkDiv = document.createElement('div');
+        const britannicaTitle = document.createElement('h3');
+        britannicaTitle.textContent = 'Britannica';
+        const britannicaLink = document.createElement('a');
+        const philosopherNameForBritannicaUrl = encodeURIComponent(philosopher.nombre.replace(/ /g, '+'));
+        britannicaLink.href = `https://www.britannica.com/search?query=${philosopherNameForBritannicaUrl}`;
+        britannicaLink.textContent = 'Buscar en Britannica';
+        britannicaLink.target = '_blank';
+        britannicaLinkDiv.appendChild(britannicaTitle);
+        britannicaLinkDiv.appendChild(britannicaLink);
+
         linksContainer.appendChild(archiveLinkDiv);
         linksContainer.appendChild(wikipediaLinkDiv);
         linksContainer.appendChild(webdianoiaLinkDiv);
@@ -119,6 +143,8 @@ searchInput.addEventListener('input', (e) => {
         linksContainer.appendChild(youtubeLinkDiv);
         linksContainer.appendChild(filosofiaOrgLinkDiv);
         linksContainer.appendChild(philosophicaInfoLinkDiv);
+        linksContainer.appendChild(stanfordLinkDiv);
+        linksContainer.appendChild(britannicaLinkDiv);
 
         philosopherDiv.appendChild(nameSpan);
         philosopherDiv.appendChild(linksContainer);
