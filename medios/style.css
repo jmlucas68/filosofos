@@ -22,12 +22,38 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     display: flex;
+    flex-direction: column; /* Changed to column to stack elements */
     justify-content: center;
-    align-items: flex-start; /* Align to top for better scroll experience */
+    align-items: center;
     min-height: 100vh;
     margin: 0;
     padding: 2rem 0; /* Add some vertical padding */
     line-height: 1.6;
+}
+
+.return-button-container {
+    text-align: center;
+    margin-bottom: 20px; /* Space below the button */
+    width: 100%;
+}
+
+.btn-nav {
+    background-color: #E91E63; /* A strong, contrasting color (e.g., Pink) */
+    color: white;
+    border: 2px solid #E91E63;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-nav:hover {
+    background-color: #C2185B; /* Darker shade on hover */
+    border-color: #C2185B;
+    transform: translateY(-5px);
 }
 
 .container {
@@ -167,5 +193,29 @@ h1 {
 
     .links-container {
         grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .links-container {
+        gap: 0.8rem;
+    }
+
+    .links-container > div {
+        padding: 0.8rem;
+    }
+
+    .links-container h3 {
+        font-size: 1em;
+        margin-bottom: 0.5rem;
+    }
+
+    .links-container a {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
 }
