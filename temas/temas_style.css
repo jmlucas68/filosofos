@@ -40,7 +40,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem; /* Reduced margin to make space for the new button */
     flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
 }
 
@@ -68,6 +68,29 @@ nav button.active {
     background: var(--accent-color);
     color: var(--background-color);
     border-color: var(--accent-color);
+}
+
+.return-button-container {
+    text-align: center;
+    margin-top: 1.5rem; /* Space below the nav buttons */
+    margin-bottom: 2.5rem; /* Space above main content */
+}
+
+.return-button {
+    background-color: #E91E63; /* A strong, contrasting color (e.g., Pink) */
+    color: white;
+    border-color: #E91E63;
+    padding: 1rem 2.5rem; /* Larger padding for prominence */
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 8px; /* Slightly less rounded than nav buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.return-button:hover {
+    background-color: #C2185B; /* Darker shade on hover */
+    border-color: #C2185B;
+    transform: translateY(-5px); /* More pronounced hover effect */
 }
 
 main {
