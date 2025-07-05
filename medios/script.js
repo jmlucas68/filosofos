@@ -208,6 +208,18 @@ searchInput.addEventListener('input', (e) => {
         googleScholarLinkDiv.appendChild(googleScholarTitle);
         googleScholarLinkDiv.appendChild(googleScholarLink);
 
+        // Enlace a Dialnet
+        const dialnetLinkDiv = document.createElement('div');
+        const dialnetTitle = document.createElement('h3');
+        dialnetTitle.textContent = 'Dialnet';
+        const dialnetLink = document.createElement('a');
+        const philosopherNameForDialnetUrl = encodeURIComponent(philosopher.nombre);
+        dialnetLink.href = `https://dialnet.unirioja.es/buscar/documentos?querysDismax.DOCUMENTAL_TODO=${philosopherNameForDialnetUrl}`;
+        dialnetLink.textContent = 'Buscar en Dialnet';
+        dialnetLink.target = '_blank';
+        dialnetLinkDiv.appendChild(dialnetTitle);
+        dialnetLinkDiv.appendChild(dialnetLink);
+
         linksContainer.appendChild(archiveLinkDiv);
         linksContainer.appendChild(wikipediaLinkDiv);
         linksContainer.appendChild(webdianoiaLinkDiv);
@@ -223,6 +235,7 @@ searchInput.addEventListener('input', (e) => {
         linksContainer.appendChild(revistaFilosofiaLinkDiv);
         linksContainer.appendChild(academiaEduLinkDiv);
         linksContainer.appendChild(googleScholarLinkDiv);
+        linksContainer.appendChild(dialnetLinkDiv);
 
         philosopherDiv.appendChild(nameSpan);
         philosopherDiv.appendChild(linksContainer);
