@@ -196,6 +196,18 @@ searchInput.addEventListener('input', (e) => {
         academiaEduLinkDiv.appendChild(academiaEduTitle);
         academiaEduLinkDiv.appendChild(academiaEduLink);
 
+        // Enlace a Google Scholar
+        const googleScholarLinkDiv = document.createElement('div');
+        const googleScholarTitle = document.createElement('h3');
+        googleScholarTitle.textContent = 'Google Scholar';
+        const googleScholarLink = document.createElement('a');
+        const philosopherNameForGoogleScholarUrl = encodeURIComponent(philosopher.nombre);
+        googleScholarLink.href = `https://scholar.google.es/scholar?lr=lang_es&q=${philosopherNameForGoogleScholarUrl}&hl=es&as_sdt=0,5`;
+        googleScholarLink.textContent = 'Buscar en Google Scholar';
+        googleScholarLink.target = '_blank';
+        googleScholarLinkDiv.appendChild(googleScholarTitle);
+        googleScholarLinkDiv.appendChild(googleScholarLink);
+
         linksContainer.appendChild(archiveLinkDiv);
         linksContainer.appendChild(wikipediaLinkDiv);
         linksContainer.appendChild(webdianoiaLinkDiv);
@@ -210,6 +222,7 @@ searchInput.addEventListener('input', (e) => {
         linksContainer.appendChild(filosofiaEnLaRedLinkDiv);
         linksContainer.appendChild(revistaFilosofiaLinkDiv);
         linksContainer.appendChild(academiaEduLinkDiv);
+        linksContainer.appendChild(googleScholarLinkDiv);
 
         philosopherDiv.appendChild(nameSpan);
         philosopherDiv.appendChild(linksContainer);
