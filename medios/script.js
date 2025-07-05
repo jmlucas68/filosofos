@@ -88,11 +88,37 @@ searchInput.addEventListener('input', (e) => {
         youtubeLinkDiv.appendChild(youtubeTitle);
         youtubeLinkDiv.appendChild(youtubeLink);
 
+        // Enlace a Filosofia.org
+        const filosofiaOrgLinkDiv = document.createElement('div');
+        const filosofiaOrgTitle = document.createElement('h3');
+        filosofiaOrgTitle.textContent = 'Filosofia.org';
+        const filosofiaOrgLink = document.createElement('a');
+        const philosopherNameForFilosofiaOrgUrl = encodeURIComponent(philosopher.nombre);
+        filosofiaOrgLink.href = `https://www.google.com/search?q=${philosopherNameForFilosofiaOrgUrl}+site:filosofia.org`;
+        filosofiaOrgLink.textContent = 'Buscar en Filosofia.org';
+        filosofiaOrgLink.target = '_blank';
+        filosofiaOrgLinkDiv.appendChild(filosofiaOrgTitle);
+        filosofiaOrgLinkDiv.appendChild(filosofiaOrgLink);
+
+        // Enlace a Philosophica.info
+        const philosophicaInfoLinkDiv = document.createElement('div');
+        const philosophicaInfoTitle = document.createElement('h3');
+        philosophicaInfoTitle.textContent = 'Philosophica.info';
+        const philosophicaInfoLink = document.createElement('a');
+        const philosopherNameForPhilosophicaInfoUrl = encodeURIComponent(philosopher.nombre);
+        philosophicaInfoLink.href = `https://www.google.com/search?q=${philosopherNameForPhilosophicaInfoUrl}+site:philosophica.info`;
+        philosophicaInfoLink.textContent = 'Buscar en Philosophica.info';
+        philosophicaInfoLink.target = '_blank';
+        philosophicaInfoLinkDiv.appendChild(philosophicaInfoTitle);
+        philosophicaInfoLinkDiv.appendChild(philosophicaInfoLink);
+
         linksContainer.appendChild(archiveLinkDiv);
         linksContainer.appendChild(wikipediaLinkDiv);
         linksContainer.appendChild(webdianoiaLinkDiv);
         linksContainer.appendChild(herderLinkDiv);
         linksContainer.appendChild(youtubeLinkDiv);
+        linksContainer.appendChild(filosofiaOrgLinkDiv);
+        linksContainer.appendChild(philosophicaInfoLinkDiv);
 
         philosopherDiv.appendChild(nameSpan);
         philosopherDiv.appendChild(linksContainer);
