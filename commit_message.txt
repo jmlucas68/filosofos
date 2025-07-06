@@ -1,1 +1,1 @@
-Añadida nueva entrada en estudio/index.html y estilos
+Actualizado el estilo de estudio/index.html y añadido quiz
