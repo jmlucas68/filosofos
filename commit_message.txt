@@ -1,1 +1,1 @@
-Añadido recurso y modificado título en hermeneutica.html
+Añadida nueva entrada en estudio/index.html y estilos
