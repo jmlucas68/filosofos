@@ -19,11 +19,7 @@
 
 body {
     font-family: var(--font-body);
-    background-image: url('images/filosofos.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-color: var(--background-color);
     color: var(--text-color);
     padding: 2rem 0;
     line-height: 1.6;
