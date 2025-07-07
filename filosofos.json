@@ -662,5 +662,13 @@
     "movimiento": "Hermenéutica filosófica",
     "url_pagina": "https://jmlucas68.github.io/gadamer",
     "url_foto": "images/Gadamer.jpg"
+  },
+  {
+    "nombre": "Graham Harman",
+    "nacimiento": 1968,
+    "muerte": " ",
+    "movimiento": "Realismo especulativo",
+    "url_pagina": "https://jmlucas68.github.io/harman",
+    "url_foto": "images/Harman.jpg"
   }
 ]

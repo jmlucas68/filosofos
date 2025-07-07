@@ -261,3 +261,41 @@ body {
         font-size: 2rem;
     }
 }
+
+/* New styles for resource entry */
+.resource-entry {
+    margin-top: 20px;
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.resource-entry:hover {
+    transform: translateY(-5px);
+}
+
+.resource-entry a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.resource-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.resource-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+}

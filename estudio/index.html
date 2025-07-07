@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz de Filósofos</title>
+    <title>Estudio de Filosofía</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estudio_style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <h1>Estudio de Filosofía</h1>
+    <p>Recursos interactivos para aprender y profundizar en la filosofía.</p>
+  </header>
 
-    <div class="return-button-container">
-        <a href="../index.html" class="btn-nav return-button">Volver a la página principal</a>
-    </div>
+  <nav>
+    <a href="../index.html">Volver a la página principal</a>
+  </nav>
 
-    <section id="options">
+  <section id="options">
     <h2>Elige tu actividad</h2>
     <div class="options-grid">
       <div class="option-card">
@@ -54,215 +58,37 @@
         </a>
       </div>
     </div>
-    </section>
+  </section>
 
-    <div class="app-container">
-        <div class="header">
-            <h1>Quiz de Filósofos</h1>
+  <section id="quiz-section" class="quiz-section hide">
+    <div class="quiz-container">
+      <div class="header">
+        <h1>Quiz de Filósofos</h1>
+      </div>
+      <div id="start-screen" class="quiz-container-inner">
+        <p id="start-text">Pon a prueba tu conocimiento filosófico.</p>
+        <button id="start-btn">Comenzar Quiz</button>
+      </div>
+      <div id="quiz-container-inner" class="quiz-container-inner hide">
+        <div id="question-counter"></div>
+        <div id="question-text">Cargando pregunta...</div>
+        <div id="answer-options" class="answer-options"></div>
+        <div class="controls">
+          <button id="next-btn" class="hide">Siguiente</button>
         </div>
-
-        <a href="https://chatgpt.com/g/g-Es81JYiFs-profesor-de-filosofia" target="_blank" class="chat-button">🗣️ Habla con tu profesor de filosofía</a>
-
-        <div id="start-screen" class="quiz-container">
-            <p id="start-text" style="margin-bottom: 20px; font-size: 1.2rem;">Pon a prueba tu conocimiento filosófico.</p>
-            <button id="start-btn">Comenzar Quiz</button>
-        </div>
-
-        <div id="quiz-container" class="quiz-container hide">
-            <div id="question-counter"></div>
-            <div id="question-text">Cargando pregunta...</div>
-            <div id="answer-options" class="answer-options"></div>
-            <div class="controls">
-                <button id="next-btn" class="hide">Siguiente</button>
-            </div>
-        </div>
-
-        <div id="results-container" class="results-container hide">
-            <div id="results-text">¡Completado!</div>
-            <div id="score"></div>
-            <button id="play-again-btn" class="btn" style="background-color: var(--accent-color); color: white;">Volver a Jugar</button>
-        </div>
+      </div>
+      <div id="results-container" class="results-container hide">
+        <div id="results-text">¡Completado!</div>
+        <div id="score"></div>
+        <button id="play-again-btn" class="btn">Volver a Jugar</button>
+      </div>
     </div>
+  </section>
 
-    <script>
-        const startScreen = document.getElementById('start-screen');
-        const startBtn = document.getElementById('start-btn');
-        const quizContainer = document.getElementById('quiz-container');
-        const resultsContainer = document.getElementById('results-container');
-        const questionCounterEl = document.getElementById('question-counter');
-        const questionTextEl = document.getElementById('question-text');
-        const answerOptionsEl = document.getElementById('answer-options');
-        const nextBtn = document.getElementById('next-btn');
-        const playAgainBtn = document.getElementById('play-again-btn');
-        const scoreEl = document.getElementById('score');
-        const resultsTextEl = document.getElementById('results-text');
+  <footer>
+    <p>&copy; 2025 Sitio educativo sin fines de lucro.</p>
+  </footer>
 
-        let filosofosData = [];
-        let currentQuestions = [];
-        let currentQuestionIndex = 0;
-        let score = 0;
-
-        const TOTAL_QUESTIONS = 10;
-
-        async function loadPhilosophers() {
-            try {
-                const response = await fetch('filosofos_data.json');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-                filosofosData = data.filosofos;
-                startBtn.disabled = false;
-                startBtn.textContent = 'Comenzar Quiz';
-            } catch (error) {
-                questionTextEl.textContent = 'Error al cargar los datos. Asegúrate de que filosofos_data.json está en la misma carpeta.';
-                console.error("Error fetching data:", error);
-            }
-        }
-
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-        function generateQuestions() {
-            const questions = [];
-            const usedItems = new Set();
-
-            while (questions.length < TOTAL_QUESTIONS) {
-                const questionType = ['obras', 'citas', 'ideas'][Math.floor(Math.random() * 3)];
-
-                const elegiblePhilosophers = filosofosData.filter(f => f[questionType] && f[questionType].length > 0);
-                if (elegiblePhilosophers.length === 0) continue;
-
-                const correctPhilosopher = elegiblePhilosophers[Math.floor(Math.random() * elegiblePhilosophers.length)];
-                const item = correctPhilosopher[questionType][Math.floor(Math.random() * correctPhilosopher[questionType].length)];
-
-                if (usedItems.has(item)) continue;
-                usedItems.add(item);
-
-                let questionText = '';
-                switch (questionType) {
-                    case 'obras':
-                        questionText = `¿Quién escribió la obra "<em>${item}</em>"?`;
-                        break;
-                    case 'citas':
-                        questionText = `¿Quién dijo: "<em>${item}</em>"?`;
-                        break;
-                    case 'ideas':
-                        questionText = `¿De quién era la filosofía caracterizada por "<em>${item}</em>"?`;
-                        break;
-                }
-
-                const otherPhilosophers = filosofosData
-                    .filter(f => f.nombre !== correctPhilosopher.nombre)
-                    .map(f => f.nombre);
-
-                const wrongOptions = shuffleArray(otherPhilosophers).slice(0, 3);
-                const allOptions = shuffleArray([correctPhilosopher.nombre, ...wrongOptions]);
-
-                questions.push({
-                    question: questionText,
-                    options: allOptions,
-                    answer: correctPhilosopher.nombre
-                });
-            }
-            return questions;
-        }
-
-
-        function startQuiz() {
-            startScreen.classList.add('hide');
-            resultsContainer.classList.add('hide');
-            quizContainer.classList.remove('hide');
-
-            score = 0;
-            currentQuestionIndex = 0;
-            currentQuestions = generateQuestions();
-            showQuestion();
-        }
-
-        function showQuestion() {
-            resetState();
-            const question = currentQuestions[currentQuestionIndex];
-
-            questionCounterEl.textContent = `Pregunta ${currentQuestionIndex + 1} de ${TOTAL_QUESTIONS}`;
-            questionTextEl.innerHTML = question.question;
-
-            question.options.forEach(option => {
-                const button = document.createElement('button');
-                button.innerText = option;
-                button.classList.add('btn');
-                button.addEventListener('click', selectAnswer);
-                answerOptionsEl.appendChild(button);
-            });
-        }
-
-        function resetState() {
-            nextBtn.classList.add('hide');
-            while (answerOptionsEl.firstChild) {
-                answerOptionsEl.removeChild(answerOptionsEl.firstChild);
-            }
-        }
-
-        function selectAnswer(e) {
-            const selectedBtn = e.target;
-            const isCorrect = selectedBtn.innerText === currentQuestions[currentQuestionIndex].answer;
-
-            if (isCorrect) {
-                score++;
-                selectedBtn.classList.add('correct');
-            } else {
-                selectedBtn.classList.add('incorrect');
-            }
-
-            Array.from(answerOptionsEl.children).forEach(button => {
-                if (button.innerText === currentQuestions[currentQuestionIndex].answer) {
-                    button.classList.add('correct');
-                }
-                button.disabled = true;
-            });
-
-            nextBtn.classList.remove('hide');
-        }
-
-        function showResults() {
-            quizContainer.classList.add('hide');
-            resultsContainer.classList.remove('hide');
-
-            let message = '';
-            const percentage = (score / TOTAL_QUESTIONS) * 100;
-            if (percentage === 100) message = "¡Perfecto! Eres un verdadero sabio.";
-            else if (percentage >= 70) message = "¡Excelente trabajo! Conoces bien a los filósofos.";
-            else if (percentage >= 40) message = "No está mal, pero hay que repasar un poco más.";
-            else message = "El camino a la sabiduría es largo. ¡Sigue intentándolo!";
-
-            resultsTextEl.textContent = message;
-            scoreEl.textContent = `${score} / ${TOTAL_QUESTIONS}`;
-        }
-
-        function handleNextButton() {
-            currentQuestionIndex++;
-            if (currentQuestionIndex < TOTAL_QUESTIONS) {
-                showQuestion();
-            } else {
-                showResults();
-            }
-        }
-
-        startBtn.addEventListener('click', startQuiz);
-        nextBtn.addEventListener('click', handleNextButton);
-        playAgainBtn.addEventListener('click', startQuiz);
-
-        document.addEventListener('DOMContentLoaded', () => {
-            startBtn.disabled = true;
-            startBtn.textContent = 'Cargando datos...';
-            loadPhilosophers();
-        });
-
-    </script>
+  <script src="script.js"></script>
 </body>
 </html>
