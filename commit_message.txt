@@ -1,1 +1,1 @@
-Actualizado el estilo de estudio/index.html y añadido quiz
+Corregida duplicidad y ubicación de entradas en temas/index.html

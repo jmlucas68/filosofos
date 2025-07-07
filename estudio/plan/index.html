@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Estudios de Filosofía - Estudiantes Avanzados</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h1>Filosofía Avanzada</h1>
+                </div>
+                <ul class="navbar-nav">
+                    <li><a href="#inicio" data-section="inicio">Inicio</a></li>
+                    <li><a href="#cronograma" data-section="cronograma">Cronograma</a></li>
+                    <li><a href="#periodos" data-section="periodos">Períodos</a></li>
+                    <li><a href="#videos" data-section="videos">Videos</a></li>
+                    <li><a href="#recursos" data-section="recursos">Recursos</a></li>
+                    <li><a href="#metodologia" data-section="metodologia">Metodología</a></li>
+                    <li><a href="#progreso" data-section="progreso">Progreso</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Sección de Inicio -->
+        <section id="inicio" class="section hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Plan de Estudios de Filosofía</h1>
+                    <p class="hero-subtitle">Un programa completo para estudiantes avanzados que desean profundizar en la historia del pensamiento filosófico</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Módulos</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-book"></i>
+                            <span class="stat-number">24</span>
+                            <span class="stat-label">Textos</span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-video"></i>
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Videos</span>
+                        </div>
+                    </div>
+                    <div class="search-container">
+                        <input type="text" id="global-search" placeholder="Buscar contenido..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Cronograma -->
+        <section id="cronograma" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-calendar-alt"></i>
+                    Cronograma Anual
+                </h2>
+                <div class="timeline-container">
+                    <div class="timeline" id="timeline">
+                        <!-- Timeline items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Períodos Filosóficos -->
+        <section id="periodos" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-history"></i>
+                    Períodos Filosóficos
+                </h2>
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="antigua">Antigua</button>
+                    <button class="filter-btn" data-filter="medieval">Medieval</button>
+                    <button class="filter-btn" data-filter="moderna">Moderna</button>
+                    <button class="filter-btn" data-filter="contemporanea">Contemporánea</button>
+                </div>
+                <div class="periods-grid" id="periods-grid">
+                    <!-- Period cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Videos -->
+        <section id="videos" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-play-circle"></i>
+                    Videos Educativos
+                </h2>
+                <div class="videos-grid" id="videos-grid">
+                    <!-- Video cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Recursos -->
+        <section id="recursos" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-bookmark"></i>
+                    Recursos y Textos
+                </h2>
+                <div class="resources-container">
+                    <div class="resource-category">
+                        <h3><i class="fas fa-book-open"></i> Textos Gratuitos</h3>
+                        <div class="resource-grid" id="archive-texts">
+                            <!-- Archive texts will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="resource-category">
+                        <h3><i class="fas fa-brain"></i> Mapas Mentales</h3>
+                        <div class="resource-grid" id="visual-resources">
+                            <!-- Visual resources will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="resource-category">
+                        <h3><i class="fas fa-university"></i> Cursos Online</h3>
+                        <div class="resource-grid" id="online-courses">
+                            <!-- Online courses will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Metodología -->
+        <section id="metodologia" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-lightbulb"></i>
+                    Metodología de Estudio
+                </h2>
+                <div class="methodology-grid" id="methodology-grid">
+                    <!-- Methodology phases will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Progreso -->
+        <section id="progreso" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-line"></i>
+                    Seguimiento del Progreso
+                </h2>
+                <div class="progress-dashboard">
+                    <div class="progress-overview">
+                        <div class="progress-circle">
+                            <div class="circle-progress" id="overall-progress">
+                                <span class="progress-percentage">0%</span>
+                            </div>
+                            <p>Progreso General</p>
+                        </div>
+                        <div class="progress-stats">
+                            <div class="stat-card">
+                                <i class="fas fa-check-circle"></i>
+                                <span class="stat-value" id="completed-modules">0</span>
+                                <span class="stat-label">Módulos Completados</span>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-book-reader"></i>
+                                <span class="stat-value" id="read-texts">0</span>
+                                <span class="stat-label">Textos Leídos</span>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-video"></i>
+                                <span class="stat-value" id="watched-videos">0</span>
+                                <span class="stat-label">Videos Vistos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-details">
+                        <h3>Progreso por Período</h3>
+                        <div class="period-progress" id="period-progress">
+                            <!-- Period progress bars will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Plan de Estudios</h4>
+                    <p>Un programa completo para el estudio avanzado de la historia de la filosofía</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Útiles</h4>
+                    <ul>
+                        <li><a href="https://archive.org" target="_blank">Archive.org</a></li>
+                        <li><a href="https://plato.stanford.edu" target="_blank">Stanford Encyclopedia</a></li>
+                        <li><a href="https://www.iep.utm.edu" target="_blank">Internet Encyclopedia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Para dudas y sugerencias sobre el plan de estudios</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Plan de Estudios de Filosofía. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
