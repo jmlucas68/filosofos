@@ -727,9 +727,13 @@ select.form-control {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: var(--space-32);
+  justify-content: space-between;
   padding: var(--space-16) 0;
+}
+
+.nav__brand {
+  flex-grow: 1;
+  text-align: center;
 }
 
 .nav__title {
