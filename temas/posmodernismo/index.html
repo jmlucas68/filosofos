@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posmodernismo Filosófico - Exploración Interactiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Posmodernismo</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#introduccion" class="nav-link">Introducción</a></li>
+                <li><a href="#historia" class="nav-link">Historia</a></li>
+                <li><a href="#corrientes" class="nav-link">Corrientes</a></li>
+                <li><a href="#autores" class="nav-link">Autores</a></li>
+                <li><a href="#obras" class="nav-link">Obras</a></li>
+                <li><a href="#criticas" class="nav-link">Críticas</a></li>
+                <li><a href="#conceptos" class="nav-link">Conceptos</a></li>
+                <li><a href="#videos" class="nav-link">Videos</a></li>
+                <li><a href="#enlaces" class="nav-link">Enlaces</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Posmodernismo Filosófico</h1>
+            <p class="hero-subtitle">Exploración interactiva del pensamiento posmoderno</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Buscar autores, conceptos, obras...">
+                <button class="btn btn--primary" onclick="performSearch()">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="introduccion" class="section">
+            <div class="container">
+                <h2>Introducción al Posmodernismo</h2>
+                <div class="intro-grid">
+                    <div class="intro-card">
+                        <h3>¿Qué es el Posmodernismo?</h3>
+                        <p>Corriente filosófica que asume que se han sobrepasado las ideas que han caracterizado a la modernidad y a la Ilustración. Surgió en los años 1960, especialmente en Francia (French Theory).</p>
+                    </div>
+                    <div class="intro-card">
+                        <h3>Características Principales</h3>
+                        <ul>
+                            <li>Crítica a la razón universal</li>
+                            <li>Incredulidad hacia los metarrelatos</li>
+                            <li>Desconstrucción del logocentrismo</li>
+                            <li>Énfasis en la diferencia y multiplicidad</li>
+                            <li>Cuestionamiento de verdades absolutas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="historia" class="section">
+            <div class="container">
+                <h2>Desarrollo Histórico</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Post-Segunda Guerra Mundial</h3>
+                            <p>Crisis de confianza en el progreso tras las guerras mundiales. El horror del Holocausto y las bombas atómicas cuestionaron la fe en la razón y el progreso.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Mayo del 68</h3>
+                            <p>Movimientos estudiantiles que cuestionaron las instituciones tradicionales, la autoridad y los valores establecidos en Francia y otros países.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Guerra Fría</h3>
+                            <p>Tensión entre ideologías que llevó al cuestionamiento de las verdades absolutas y la emergencia de perspectivas relativistas.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Sociedad Postindustrial</h3>
+                            <p>Cambio hacia una economía basada en la información y el conocimiento, transformando las estructuras sociales tradicionales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="corrientes" class="section">
+            <div class="container">
+                <h2>Principales Corrientes</h2>
+                <div class="corrientes-grid">
+                    <div class="corriente-card">
+                        <h3>Posestructuralismo</h3>
+                        <p>Crítica al estructuralismo y énfasis en la inestabilidad del significado. Rechaza las estructuras fijas y explora la fluidez del lenguaje.</p>
+                        <div class="autores-corriente">Derrida, Foucault, Deleuze</div>
+                    </div>
+                    <div class="corriente-card">
+                        <h3>Deconstrucción</h3>
+                        <p>Método de análisis crítico que revela contradicciones en los textos y cuestiona las oposiciones binarias tradicionales.</p>
+                        <div class="autores-corriente">Jacques Derrida</div>
+                    </div>
+                    <div class="corriente-card">
+                        <h3>Pensamiento Débil</h3>
+                        <p>Alternativa a los dogmas fuertes de la modernidad, propone una filosofía menos dogmática y más interpretativa.</p>
+                        <div class="autores-corriente">Gianni Vattimo</div>
+                    </div>
+                    <div class="corriente-card">
+                        <h3>Pragmatismo Posmoderno</h3>
+                        <p>Enfoque anti-fundacionalista de la filosofía que rechaza la búsqueda de fundamentos últimos del conocimiento.</p>
+                        <div class="autores-corriente">Richard Rorty</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="autores" class="section">
+            <div class="container">
+                <h2>Autores Fundamentales</h2>
+                <div class="autores-grid">
+                    <div class="autor-card" data-autor="lyotard">
+                        <div class="autor-header">
+                            <h3>Jean-François Lyotard</h3>
+                            <span class="fechas">1924-1998</span>
+                        </div>
+                        <div class="autor-preview">
+                            <p><strong>Concepto clave:</strong> Incredulidad hacia los metarrelatos</p>
+                            <p><strong>Obra principal:</strong> La condición posmoderna</p>
+                        </div>
+                        <div class="autor-details">
+                            <p>Filósofo francés que popularizó el término posmodernismo. Defendía el escepticismo ante los metarrelatos y la pragmática lingüística. Analizó cómo la sociedad postindustrial transforma el conocimiento y la legitimación.</p>
+                        </div>
+                        <button class="btn btn--outline expand-btn">Ver más</button>
+                    </div>
+
+                    <div class="autor-card" data-autor="foucault">
+                        <div class="autor-header">
+                            <h3>Michel Foucault</h3>
+                            <span class="fechas">1926-1984</span>
+                        </div>
+                        <div class="autor-preview">
+                            <p><strong>Concepto clave:</strong> Relaciones de poder y saber</p>
+                            <p><strong>Obra principal:</strong> Vigilar y castigar</p>
+                        </div>
+                        <div class="autor-details">
+                            <p>Filósofo francés que analizó las relaciones de poder en la sociedad y cómo el saber implica poder. Estudió las instituciones disciplinarias y los mecanismos de control social moderno.</p>
+                        </div>
+                        <button class="btn btn--outline expand-btn">Ver más</button>
+                    </div>
+
+                    <div class="autor-card" data-autor="derrida">
+                        <div class="autor-header">
+                            <h3>Jacques Derrida</h3>
+                            <span class="fechas">1930-2004</span>
+                        </div>
+                        <div class="autor-preview">
+                            <p><strong>Concepto clave:</strong> Deconstrucción</p>
+                            <p><strong>Obra principal:</strong> De la gramatología</p>
+                        </div>
+                        <div class="autor-details">
+                            <p>Filósofo argelino-francés que desarrolló la deconstrucción como método de análisis crítico del logocentrismo occidental. Cuestionó las oposiciones binarias tradicionales y la primacía de la palabra hablada.</p>
+                        </div>
+                        <button class="btn btn--outline expand-btn">Ver más</button>
+                    </div>
+
+                    <div class="autor-card" data-autor="baudrillard">
+                        <div class="autor-header">
+                            <h3>Jean Baudrillard</h3>
+                            <span class="fechas">1929-2007</span>
+                        </div>
+                        <div class="autor-preview">
+                            <p><strong>Concepto clave:</strong> Simulacro e hiperrealidad</p>
+                            <p><strong>Obra principal:</strong> Simulacros y simulación</p>
+                        </div>
+                        <div class="autor-details">
+                            <p>Sociólogo francés que analizó la pérdida de realidad en la sociedad contemporánea. Desarrolló la teoría del simulacro y estudió cómo los medios de comunicación crean una hiperrealidad.</p>
+                        </div>
+                        <button class="btn btn--outline expand-btn">Ver más</button>
+                    </div>
+
+                    <div class="autor-card" data-autor="deleuze">
+                        <div class="autor-header">
+                            <h3>Gilles Deleuze</h3>
+                            <span class="fechas">1925-1995</span>
+                        </div>
+                        <div class="autor-preview">
+                            <p><strong>Concepto clave:</strong> Esquizoanálisis</p>
+                            <p><strong>Obra principal:</strong> Anti-Edipo (con Guattari)</p>
+                        </div>
+                        <div class="autor-details">
+                            <p>Filósofo francés que desarrolló junto a Guattari una crítica al psicoanálisis y al capitalismo. Propuso el concepto de rizoma y máquinas deseantes como alternativa a las estructuras jerárquicas.</p>
+                        </div>
+                        <button class="btn btn--outline expand-btn">Ver más</button>
+                    </div>
+
+                    <div class="autor-card" data-autor="vattimo">
+                        <div class="autor-header">
+                            <h3>Gianni Vattimo</h3>
+                            <span class="fechas">1936-2023</span>
+                        </div>
+                        <div class="autor-preview">
+                            <p><strong>Concepto clave:</strong> Pensamiento débil</p>
+                            <p><strong>Obra principal:</strong> El pensamiento débil</p>
+                        </div>
+                        <div class="autor-details">
+                            <p>Filósofo italiano que propuso el pensamiento débil como alternativa a los dogmas fuertes de la modernidad. Desarrolló una hermenéutica nihilista inspirada en Nietzsche y Heidegger.</p>
+                        </div>
+                        <button class="btn btn--outline expand-btn">Ver más</button>
+                    </div>
+
+                    <div class="autor-card" data-autor="rorty">
+                        <div class="autor-header">
+                            <h3>Richard Rorty</h3>
+                            <span class="fechas">1931-2007</span>
+                        </div>
+                        <div class="autor-preview">
+                            <p><strong>Concepto clave:</strong> Pragmatismo posmoderno</p>
+                            <p><strong>Obra principal:</strong> Filosofía y el espejo de la naturaleza</p>
+                        </div>
+                        <div class="autor-details">
+                            <p>Filósofo estadounidense que desarrolló un pragmatismo anti-fundacionalista. Criticó la epistemología tradicional y propuso una filosofía más conversacional y menos representacional.</p>
+                        </div>
+                        <button class="btn btn--outline expand-btn">Ver más</button>
+                    </div>
+
+                    <div class="autor-card" data-autor="butler">
+                        <div class="autor-header">
+                            <h3>Judith Butler</h3>
+                            <span class="fechas">1956-</span>
+                        </div>
+                        <div class="autor-preview">
+                            <p><strong>Concepto clave:</strong> Performatividad de género</p>
+                            <p><strong>Obra principal:</strong> El género en disputa</p>
+                        </div>
+                        <div class="autor-details">
+                            <p>Filósofa estadounidense que desarrolló la teoría de la performatividad de género. Aplicó la deconstrucción derridiana al análisis de las identidades de género y sexuales.</p>
+                        </div>
+                        <button class="btn btn--outline expand-btn">Ver más</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="obras" class="section">
+            <div class="container">
+                <h2>Obras Clave</h2>
+                <div class="obras-grid">
+                    <div class="obra-card">
+                        <h3>La condición posmoderna</h3>
+                        <p class="autor">Jean-François Lyotard (1979)</p>
+                        <p class="descripcion">Análisis del fin de los metarrelatos en la sociedad postindustrial. Examina cómo el conocimiento se transforma en mercancía.</p>
+                        <a href="https://archive.org/search.php?query=condition+postmoderne+lyotard" target="_blank" class="btn btn--primary">Leer online</a>
+                    </div>
+                    <div class="obra-card">
+                        <h3>Vigilar y castigar</h3>
+                        <p class="autor">Michel Foucault (1975)</p>
+                        <p class="descripcion">Examen de los mecanismos de poder y control social. Análisis del paso de la sociedad punitiva a la sociedad disciplinaria.</p>
+                        <a href="https://archive.org/search.php?query=surveiller+punir+foucault" target="_blank" class="btn btn--primary">Leer online</a>
+                    </div>
+                    <div class="obra-card">
+                        <h3>De la gramatología</h3>
+                        <p class="autor">Jacques Derrida (1967)</p>
+                        <p class="descripcion">Desarrollo de la deconstrucción como método crítico. Crítica al logocentrismo y la metafísica de la presencia.</p>
+                        <a href="https://archive.org/search.php?query=grammatologie+derrida" target="_blank" class="btn btn--primary">Leer online</a>
+                    </div>
+                    <div class="obra-card">
+                        <h3>Simulacros y simulación</h3>
+                        <p class="autor">Jean Baudrillard (1981)</p>
+                        <p class="descripcion">Análisis de la pérdida de realidad en la sociedad contemporánea. Teoría de los simulacros y la hiperrealidad.</p>
+                        <a href="https://archive.org/search.php?query=simulacres+simulation+baudrillard" target="_blank" class="btn btn--primary">Leer online</a>
+                    </div>
+                    <div class="obra-card">
+                        <h3>Anti-Edipo</h3>
+                        <p class="autor">Gilles Deleuze y Félix Guattari (1972)</p>
+                        <p class="descripcion">Crítica al psicoanálisis y desarrollo del esquizoanálisis. Análisis del deseo y las máquinas deseantes.</p>
+                        <a href="https://archive.org/search.php?query=anti+oedipe+deleuze+guattari" target="_blank" class="btn btn--primary">Leer online</a>
+                    </div>
+                    <div class="obra-card">
+                        <h3>El género en disputa</h3>
+                        <p class="autor">Judith Butler (1990)</p>
+                        <p class="descripcion">Teoría de la performatividad de género. Deconstrucción de las identidades de género como construcciones culturales.</p>
+                        <a href="https://archive.org/search.php?query=gender+trouble+butler" target="_blank" class="btn btn--primary">Leer online</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="criticas" class="section">
+            <div class="container">
+                <h2>Corrientes Contrarias</h2>
+                <div class="criticas-grid">
+                    <div class="critica-card">
+                        <h3>Modernidad Inacabada</h3>
+                        <p class="autor">Jürgen Habermas</p>
+                        <p>Defiende que la modernidad es un proyecto inacabado que debe continuarse. Critica el relativismo posmoderno y defiende la razón comunicativa.</p>
+                    </div>
+                    <div class="critica-card">
+                        <h3>Críticas Analíticas</h3>
+                        <p class="autor">Alan Sokal y Jean Bricmont</p>
+                        <p>Críticas al uso inadecuado de términos científicos en el posmodernismo. El "asunto Sokal" reveló problemas en el rigor académico.</p>
+                    </div>
+                    <div class="critica-card">
+                        <h3>Realismo Crítico</h3>
+                        <p class="autor">Roy Bhaskar</p>
+                        <p>Defensa de la existencia de una realidad objetiva independiente del discurso. Crítica al construccionismo social extremo.</p>
+                    </div>
+                    <div class="critica-card">
+                        <h3>Críticas Marxistas</h3>
+                        <p class="autor">Terry Eagleton, Fredric Jameson</p>
+                        <p>Críticas desde el marxismo tradicional al relativismo posmoderno. Ven el posmodernismo como ideología del capitalismo tardío.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conceptos" class="section">
+            <div class="container">
+                <h2>Conceptos Clave</h2>
+                <div class="conceptos-grid">
+                    <div class="concepto-card">
+                        <h3>Metarrelatos</h3>
+                        <p>Grandes narrativas legitimadoras de la modernidad como el progreso, la emancipación y la ciencia. Lyotard declara su fin en la posmodernidad.</p>
+                    </div>
+                    <div class="concepto-card">
+                        <h3>Deconstrucción</h3>
+                        <p>Método de análisis crítico que revela contradicciones en los textos y cuestiona las oposiciones binarias tradicionales.</p>
+                    </div>
+                    <div class="concepto-card">
+                        <h3>Logocentrismo</h3>
+                        <p>Primacía de la razón y el logos en la tradición occidental. Derrida critica esta centralidad del discurso racional.</p>
+                    </div>
+                    <div class="concepto-card">
+                        <h3>Différance</h3>
+                        <p>Concepto de Derrida que combina diferencia y diferimiento temporal. Juego de palabras que revela la inestabilidad del significado.</p>
+                    </div>
+                    <div class="concepto-card">
+                        <h3>Simulacro</h3>
+                        <p>Copia sin original que precede a la realidad. Baudrillard describe cuatro fases del simulacro en la sociedad contemporánea.</p>
+                    </div>
+                    <div class="concepto-card">
+                        <h3>Hiperrealidad</h3>
+                        <p>Estado donde lo simulado es más real que lo real. Los medios crean una realidad más convincente que la realidad misma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="videos" class="section">
+            <div class="container">
+                <h2>Videos Educativos</h2>
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <h3>Introducción al Posmodernismo</h3>
+                        <p>Explicación general de los conceptos fundamentales del pensamiento posmoderno.</p>
+                        <a href="https://www.youtube.com/results?search_query=posmodernismo+filosofia+introduccion" target="_blank" class="btn btn--primary">Ver en YouTube</a>
+                    </div>
+                    <div class="video-card">
+                        <h3>Michel Foucault y el Poder</h3>
+                        <p>Análisis de las teorías de Foucault sobre las relaciones de poder en la sociedad moderna.</p>
+                        <a href="https://www.youtube.com/results?search_query=michel+foucault+poder+vigilar+castigar" target="_blank" class="btn btn--primary">Ver en YouTube</a>
+                    </div>
+                    <div class="video-card">
+                        <h3>Derrida y la Deconstrucción</h3>
+                        <p>Exploración del método deconstructivo y su aplicación al análisis textual.</p>
+                        <a href="https://www.youtube.com/results?search_query=jacques+derrida+deconstruccion+filosofia" target="_blank" class="btn btn--primary">Ver en YouTube</a>
+                    </div>
+                    <div class="video-card">
+                        <h3>Baudrillard: Simulacros y Simulación</h3>
+                        <p>Explicación de la teoría de los simulacros y la hiperrealidad en la sociedad contemporánea.</p>
+                        <a href="https://www.youtube.com/results?search_query=jean+baudrillard+simulacros+simulacion" target="_blank" class="btn btn--primary">Ver en YouTube</a>
+                    </div>
+                    <div class="video-card">
+                        <h3>Lyotard y la Condición Posmoderna</h3>
+                        <p>Análisis de la crítica a los metarrelatos en la sociedad postindustrial.</p>
+                        <a href="https://www.youtube.com/results?search_query=lyotard+condicion+posmoderna+metarrelatos" target="_blank" class="btn btn--primary">Ver en YouTube</a>
+                    </div>
+                    <div class="video-card">
+                        <h3>Críticas al Posmodernismo</h3>
+                        <p>Presentación de las principales críticas y debates en torno al pensamiento posmoderno.</p>
+                        <a href="https://www.youtube.com/results?search_query=criticas+posmodernismo+habermas+sokal" target="_blank" class="btn btn--primary">Ver en YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="enlaces" class="section">
+            <div class="container">
+                <h2>Enlaces y Recursos</h2>
+                <div class="enlaces-grid">
+                    <div class="enlaces-category">
+                        <h3>Fuentes Académicas</h3>
+                        <ul>
+                            <li><a href="https://plato.stanford.edu/entries/postmodernism/" target="_blank">Stanford Encyclopedia of Philosophy - Postmodernism</a></li>
+                            <li><a href="https://www.academia.edu/search?q=postmodernism+philosophy" target="_blank">Academia.edu - Artículos sobre Posmodernismo</a></li>
+                            <li><a href="https://www.jstor.org/action/doBasicSearch?Query=postmodernism" target="_blank">JSTOR - Artículos académicos</a></li>
+                            <li><a href="https://philpapers.org/browse/postmodernism" target="_blank">PhilPapers - Filosofía Posmoderna</a></li>
+                        </ul>
+                    </div>
+                    <div class="enlaces-category">
+                        <h3>Bibliotecas Digitales</h3>
+                        <ul>
+                            <li><a href="https://archive.org/search.php?query=postmodernism+philosophy" target="_blank">Internet Archive - Libros de Posmodernismo</a></li>
+                            <li><a href="https://books.google.com/books?q=postmodernism+philosophy" target="_blank">Google Books - Filosofía Posmoderna</a></li>
+                            <li><a href="https://www.cervantesvirtual.com/portales/filosofia_hispanica/" target="_blank">Cervantes Virtual - Filosofía</a></li>
+                            <li><a href="https://www.gutenberg.org/ebooks/search/?query=philosophy" target="_blank">Project Gutenberg - Textos Filosóficos</a></li>
+                        </ul>
+                    </div>
+                    <div class="enlaces-category">
+                        <h3>Recursos Especializados</h3>
+                        <ul>
+                            <li><a href="https://www.filosofia.net/materiales/temas/postmodernismo.htm" target="_blank">Filosofía.net - Posmodernismo</a></li>
+                            <li><a href="https://www.webdianoia.com/contemporanea/postmodernidad.htm" target="_blank">Webdianoia - Postmodernidad</a></li>
+                            <li><a href="https://www.filosofia.org/enc/ros/postmod.htm" target="_blank">Filosofía.org - Enciclopedia</a></li>
+                            <li><a href="https://revistas.um.es/daimon" target="_blank">Daimon - Revista de Filosofía</a></li>
+                        </ul>
+                    </div>
+                    <div class="enlaces-category">
+                        <h3>Cursos Online</h3>
+                        <ul>
+                            <li><a href="https://www.coursera.org/courses?query=postmodernism" target="_blank">Coursera - Cursos de Posmodernismo</a></li>
+                            <li><a href="https://www.edx.org/learn/philosophy" target="_blank">edX - Cursos de Filosofía</a></li>
+                            <li><a href="https://www.futurelearn.com/courses/categories/nature-and-environment-courses/philosophy-courses" target="_blank">FutureLearn - Filosofía</a></li>
+                            <li><a href="https://oyc.yale.edu/philosophy" target="_blank">Yale Open Courses - Filosofía</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Exploración del Posmodernismo Filosófico. Recurso educativo para el estudio del pensamiento posmoderno.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
