@@ -678,5 +678,13 @@
     "movimiento": "Filosofía presocrática / Atomismo",
     "url_pagina": "https://jmlucas68.github.io/leucipo/",
     "url_foto": "images/Leucipo.jpg"
+  },
+  {
+    "nombre": "S. Alberto Magno",
+    "nacimiento": 1206,
+    "muerte": 1280,
+    "movimiento": "Escolástica",
+    "url_pagina": "https://jmlucas68.github.io/alberto_magno/",
+    "url_foto": "images/Alberto_Magno.jpg"
   }
 ]
