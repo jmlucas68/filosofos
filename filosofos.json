@@ -64,6 +64,14 @@
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Plotino.JPG"
   },
   {
+    "nombre": "Porfirio",
+    "nacimiento": 232,
+    "muerte": 304,
+    "movimiento": "Neoplatonismo",
+    "url_pagina": "https://jmlucas68.github.io/porfirio/",
+    "url_foto": "images/Porfirio.jpg"
+  },
+  {
     "nombre": "San Agustín",
     "nacimiento": 354,
     "muerte": 430,
