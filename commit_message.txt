@@ -1,1 +1,1 @@
-Añadido Claude Lévi-Strauss al fichero de filósofos y clonado su repositorio.
+Corregido el nombre de la imagen de Lévi-Strauss.
