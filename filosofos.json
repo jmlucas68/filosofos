@@ -694,5 +694,13 @@
     "movimiento": "Escolástica",
     "url_pagina": "https://jmlucas68.github.io/alberto_magno/",
     "url_foto": "images/Alberto_Magno.jpg"
+  },
+  {
+    "nombre": "Claude Lévi-Strauss",
+    "nacimiento": 1908,
+    "muerte": 2009,
+    "movimiento": "Estructuralismo",
+    "url_pagina": "https://jmlucas68.github.io/levi_strauss/",
+    "url_foto": "images/Levi_Strauss.jpg"
   }
 ]

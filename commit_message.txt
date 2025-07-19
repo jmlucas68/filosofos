@@ -1,1 +1,1 @@
-Feat: Añade a Porfirio a la lista de filósofos
+Añadido Claude Lévi-Strauss al fichero de filósofos y clonado su repositorio.
