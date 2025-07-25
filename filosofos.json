@@ -56,6 +56,14 @@
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Aristoteles.jpg"
   },
   {
+    "nombre": "Cicerón",
+    "nacimiento": -106,
+    "muerte": -43,
+    "movimiento": "Filosofía romana / Estoicismo / Eclecticismo",
+    "url_pagina": "https://jmlucas68.github.io/ciceron/",
+    "url_foto": "images/Ciceron.jpg"
+  },
+  {
     "nombre": "Plotino",
     "nacimiento": 205,
     "muerte": 270,
