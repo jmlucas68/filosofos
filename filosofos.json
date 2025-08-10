@@ -56,12 +56,28 @@
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Aristoteles.jpg"
   },
   {
+    "nombre": "Cicerón",
+    "nacimiento": -106,
+    "muerte": -43,
+    "movimiento": "Filosofía romana / Estoicismo / Eclecticismo",
+    "url_pagina": "https://jmlucas68.github.io/ciceron/",
+    "url_foto": "images/Ciceron.jpg"
+  },
+  {
     "nombre": "Plotino",
     "nacimiento": 205,
     "muerte": 270,
     "movimiento": "Neoplatonismo",
     "url_pagina": "https://jmlucas68.github.io/plotino/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Plotino.JPG"
+  },
+  {
+    "nombre": "Porfirio",
+    "nacimiento": 232,
+    "muerte": 304,
+    "movimiento": "Neoplatonismo",
+    "url_pagina": "https://jmlucas68.github.io/porfirio/",
+    "url_foto": "images/Porfirio.jpg"
   },
   {
     "nombre": "San Agustín",
@@ -670,5 +686,29 @@
     "movimiento": "Realismo especulativo",
     "url_pagina": "https://jmlucas68.github.io/harman",
     "url_foto": "images/Harman.jpg"
+  },
+  {
+    "nombre": "Leucipo",
+    "nacimiento": -500,
+    "muerte": -440,
+    "movimiento": "Filosofía presocrática / Atomismo",
+    "url_pagina": "https://jmlucas68.github.io/leucipo/",
+    "url_foto": "images/Leucipo.jpg"
+  },
+  {
+    "nombre": "S. Alberto Magno",
+    "nacimiento": 1206,
+    "muerte": 1280,
+    "movimiento": "Escolástica",
+    "url_pagina": "https://jmlucas68.github.io/alberto_magno/",
+    "url_foto": "images/Alberto_Magno.jpg"
+  },
+  {
+    "nombre": "Claude Lévi-Strauss",
+    "nacimiento": 1908,
+    "muerte": 2009,
+    "movimiento": "Estructuralismo",
+    "url_pagina": "https://jmlucas68.github.io/levi_strauss/",
+    "url_foto": "images/Levi-Strauss.jpg"
   }
 ]
