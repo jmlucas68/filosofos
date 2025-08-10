@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- CONFIGURACIÓN ---
     // ¡¡¡IMPORTANTE!!! Reemplaza esta URL por la URL de tu backend desplegado en Vercel.
-    const PROXY_URL = 'https://perplexity-proxy-backend.vercel.app/';
+    const PROXY_URL = 'https://perplexity-proxy-backend.vercel.app/api/proxy';
 
     let filosofoSeleccionado = null;
 
