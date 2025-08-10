@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscador de Filósofos</title>
     <link rel="stylesheet" href="buscador_style.css">
+    <style>
+        .tarjeta {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .info {
+            flex-grow: 1;
+            padding: 10px;
+        }
+        .acciones {
+            padding: 0 10px 10px 10px;
+            text-align: center;
+        }
+        .btn-chat {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .btn-chat:hover {
+            background-color: #3498db;
+        }
+        .tarjeta a.imagen-link {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
 </head>
 <body>
 
@@ -126,19 +160,26 @@
         lista.forEach(f => {
           const card = document.createElement('div');
           card.className = 'tarjeta';
+          
+          // Codificamos el nombre para pasarlo de forma segura en la URL
+          const nombreCodificado = encodeURIComponent(f.nombre);
+
           card.innerHTML = `
-            <a href="${f.url_pagina}" target="_blank">
+            <a href="${f.url_pagina}" target="_blank" class="imagen-link">
               <div class="imagen-container">
-                <img src="${f.url_foto}" alt="${f.nombre}" onerror="this.src='https://via.placeholder.com/300x250/e8e8e8/666666?text=${encodeURIComponent(f.nombre)}';">
-              </div>
-              <div class="info">
-                <div>
-                  <strong>${f.nombre}</strong>
-                  <small>${f.nacimiento} – ${f.muerte}</small>
-                </div>
-                <em>${f.movimiento || 'N/A'}</em>
+                <img src="${f.url_foto}" alt="${f.nombre}" onerror="this.src='httpshttps://via.placeholder.com/300x250/e8e8e8/666666?text=${encodeURIComponent(f.nombre)}';">
               </div>
             </a>
+            <div class="info">
+              <div>
+                <strong>${f.nombre}</strong>
+                <small>${f.nacimiento} – ${f.muerte}</small>
+              </div>
+              <em>${f.movimiento || 'N/A'}</em>
+            </div>
+            <div class="acciones">
+              <a href="chat.html?filosofo=${nombreCodificado}" class="btn-chat">Habla con él</a>
+            </div>
           `;
           resultadosDiv.appendChild(card);
         });

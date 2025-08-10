@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Filosófico</title>
+    <link rel="stylesheet" href="filosofos_style.css"> 
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+        .chat-container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+        }
+        .chat-header {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .chat-header img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .chat-header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .chat-messages {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .message {
+            padding: 10px 15px;
+            border-radius: 18px;
+            max-width: 75%;
+            line-height: 1.4;
+        }
+        .user-message {
+            background-color: #007bff;
+            color: white;
+            align-self: flex-end;
+        }
+        .ai-message {
+            background-color: #e9e9eb;
+            color: #333;
+            align-self: flex-start;
+        }
+        .typing-indicator {
+            align-self: flex-start;
+            color: #aaa;
+        }
+        .chat-form {
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            gap: 10px;
+        }
+        .chat-form textarea {
+            flex-grow: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: none;
+            font-size: 1em;
+        }
+        .chat-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #2980b9;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-link {
+            text-align: center;
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <img id="filosofo-foto" src="" alt="Foto del filósofo">
+            <h1 id="filosofo-nombre">Cargando...</h1>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Los mensajes aparecerán aquí -->
+        </div>
+        <form class="chat-form" id="chat-form">
+            <textarea id="pregunta-usuario" placeholder="Escribe tu pregunta..." required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <a href="buscador.html" class="back-link">Volver al buscador</a>
+
+    <script src="chat.js"></script>
+</body>
+</html>
