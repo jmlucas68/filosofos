@@ -10,6 +10,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // ¡¡¡IMPORTANTE!!! Reemplaza esta URL por la URL de tu backend desplegado en Vercel.
     const PROXY_URL = 'https://perplexity-proxy-backend.vercel.app/api/proxy';
 
+    // Función para probar la conexión con el proxy
+    async function probarConexionProxy() {
+        try {
+            console.log('Probando conexión con el proxy...');
+            const response = await fetch(PROXY_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    prompt: 'Hola'
+                }),
+            });
+            
+            console.log('Status de prueba:', response.status);
+            const responseText = await response.text();
+            console.log('Respuesta de prueba:', responseText);
+        } catch (error) {
+            console.error('Error en prueba de conexión:', error);
+        }
+    }
+
     let filosofoSeleccionado = null;
 
     // --- INICIALIZACIÓN ---
@@ -67,6 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // Construir el prompt para Gemini
             const prompt = `Eres ${filosofoSeleccionado.nombre}. Responde a la siguiente pregunta en primera persona, manteniendo tu estilo, tus ideas y tu perspectiva filosófica. Sé conciso y directo en tu respuesta. La pregunta es: "${pregunta}"`;
 
+            console.log('Enviando prompt:', prompt);
+            console.log('URL del proxy:', PROXY_URL);
+
             // Llamar al proxy de Vercel con el formato correcto para Gemini
             const response = await fetch(PROXY_URL, {
                 method: 'POST',
@@ -78,13 +103,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 }),
             });
 
+            console.log('Status de respuesta:', response.status);
+            console.log('Headers de respuesta:', response.headers);
+
             // Verificar si la respuesta es exitosa
             if (!response.ok) {
                 const errorText = await response.text();
+                console.log('Texto de error completo:', errorText);
+                
                 let errorData;
                 try {
                     errorData = JSON.parse(errorText);
-                } catch {
+                    console.log('Error parseado:', errorData);
+                } catch (parseError) {
+                    console.log('Error al parsear respuesta:', parseError);
                     errorData = { error: `Error HTTP ${response.status}: ${errorText}` };
                 }
                 throw new Error(errorData.error || `Error del servidor: ${response.status}`);
@@ -155,4 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Iniciar todo
     inicializarChat();
+    
+    // Probar conexión (solo para debug)
+    probarConexionProxy();
 });
