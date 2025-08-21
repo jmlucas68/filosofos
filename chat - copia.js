@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- CONFIGURACIÓN ---
     // ¡¡¡IMPORTANTE!!! Reemplaza esta URL por la URL de tu backend desplegado en Vercel.
-    const PROXY_URL = 'https://tu-proxy-gemini.vercel.app/api/proxy';
+    const PROXY_URL = 'https://perplexity-proxy-backend.vercel.app/api/proxy';
 
     let filosofoSeleccionado = null;
 
@@ -64,73 +64,36 @@ document.addEventListener('DOMContentLoaded', () => {
         const typingIndicator = anadirMensaje('...', 'typing');
 
         try {
-            // Construir el prompt para Gemini
+            // Construir el prompt para la IA
             const prompt = `Eres ${filosofoSeleccionado.nombre}. Responde a la siguiente pregunta en primera persona, manteniendo tu estilo, tus ideas y tu perspectiva filosófica. Sé conciso y directo en tu respuesta. La pregunta es: "${pregunta}"`;
 
-            // Llamar al proxy de Vercel con el formato correcto para Gemini
+            // Llamar al proxy de Vercel
             const response = await fetch(PROXY_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    prompt: prompt
-                }),
+                body: JSON.stringify({ prompt: prompt }),
             });
 
-            // Verificar si la respuesta es exitosa
             if (!response.ok) {
-                const errorText = await response.text();
-                let errorData;
-                try {
-                    errorData = JSON.parse(errorText);
-                } catch {
-                    errorData = { error: `Error HTTP ${response.status}: ${errorText}` };
-                }
-                throw new Error(errorData.error || `Error del servidor: ${response.status}`);
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Error en la respuesta del servidor');
             }
 
             const data = await response.json();
-            
-            // Verificar que la respuesta tenga la estructura esperada
-            if (!data.choices || !data.choices[0] || !data.choices[0].message || !data.choices[0].message.content) {
-                console.error('Estructura de respuesta inesperada:', data);
-                throw new Error('La respuesta del servidor no tiene el formato esperado');
-            }
-
             const respuestaIA = data.choices[0].message.content;
 
-            // Limpiar y procesar la respuesta
-            const respuestaLimpia = respuestaIA.trim();
-            
-            if (!respuestaLimpia) {
-                throw new Error('La respuesta de la IA está vacía');
-            }
-
             // Reemplazar el indicador con la respuesta real
-            typingIndicator.textContent = respuestaLimpia;
+            typingIndicator.textContent = respuestaIA;
             typingIndicator.classList.remove('typing-indicator');
             typingIndicator.classList.add('ai-message');
 
         } catch (error) {
-            console.error('Error detallado al contactar la IA:', error);
-            
-            let mensajeError = 'Lo siento, ha ocurrido un error inesperado.';
-            
-            // Proporcionar mensajes de error más específicos
-            if (error.message.includes('API key not valid')) {
-                mensajeError = 'Error de configuración del servidor. La clave API no es válida.';
-            } else if (error.message.includes('Failed to fetch')) {
-                mensajeError = 'Error de conexión. Verifica tu conexión a internet.';
-            } else if (error.message.includes('404')) {
-                mensajeError = 'El servidor no está disponible. Verifica la URL del proxy.';
-            } else if (error.message) {
-                mensajeError = `Error: ${error.message}`;
-            }
-            
-            typingIndicator.textContent = mensajeError;
+            console.error('Error al contactar la IA:', error);
+            typingIndicator.textContent = `Lo siento, ha ocurrido un error. ${error.message}`;
             typingIndicator.classList.remove('typing-indicator');
-            typingIndicator.classList.add('ai-message', 'error-message');
+            typingIndicator.classList.add('ai-message');
         }
     });
 
