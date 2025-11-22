@@ -1,84 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galería de Filósofos</title>
   <link rel="stylesheet" href="filosofos_style.css" />
 </head>
+
 <body>
 
-<h1>🏛️ Galería de Filósofos</h1>
-<p class="intro">Haz clic en cada filósofo para conocer más sobre él.</p>
+  <h1>🏛️ Galería de Filósofos</h1>
+  <p class="intro">Haz clic en cada filósofo para conocer más sobre él.</p>
 
-<div class="return-button-container">
+  <div class="return-button-container">
     <a href="index.html" class="btn-nav return-button">Volver a la página principal</a>
-</div>
+  </div>
 
-<!-- CONTROLES UNIFICADOS EN UN SOLO CONTENEDOR -->
-<div class="controles-superiores">
+  <!-- CONTROLES UNIFICADOS EN UN SOLO CONTENEDOR -->
+  <div class="controles-superiores">
     <!-- 1. Control de Ordenación (a la izquierda) -->
     <div class="control-orden">
-        <label for="orden-selector">Ordenar por:</label>
-        <select id="orden-selector">
-            <option value="cronologico" selected>Orden Cronológico</option>
-            <option value="alfabetico">Orden Alfabético</option>
-        </select>
+      <label for="orden-selector">Ordenar por:</label>
+      <select id="orden-selector">
+        <option value="cronologico" selected>Orden Cronológico</option>
+        <option value="alfabetico">Orden Alfabético</option>
+      </select>
     </div>
-</div>
+  </div>
 
-<div id="galeria" class="galeria"></div>
+  <div id="galeria" class="galeria"></div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const galeria = document.getElementById('galeria');
-    const ordenSelector = document.getElementById('orden-selector');
-    let todosLosFilosofos = [];
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const galeria = document.getElementById('galeria');
+      const ordenSelector = document.getElementById('orden-selector');
+      let todosLosFilosofos = [];
 
-    function renderizarGaleria(lista) {
-      galeria.innerHTML = '';
-      lista.forEach(f => {
-        const card = document.createElement('div');
-        card.className = 'tarjeta';
-        card.innerHTML = `
+      function renderizarGaleria(lista) {
+        galeria.innerHTML = '';
+        lista.forEach(f => {
+          const card = document.createElement('div');
+          card.className = 'tarjeta';
+          card.innerHTML = `
           <a href="${f.url_pagina}" target="_blank">
-            <img src="${f.url_foto}" alt="${f.nombre}" onerror="this.src='https://via.placeholder.com/300x400?text=${encodeURIComponent(f.nombre)}';">
+            <img src="${f.url_foto}" alt="${f.nombre}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x400?text=${encodeURIComponent(f.nombre)}';">
             <div class="info">
               <strong>${f.nombre}</strong><br>
               ${f.nacimiento} – ${f.muerte}
             </div>
           </a>
         `;
-        galeria.appendChild(card);
-      });
-    }
-    
-    function ordenarYRenderizar() {
+          galeria.appendChild(card);
+        });
+      }
+
+      function ordenarYRenderizar() {
         const tipoOrden = ordenSelector.value;
         let filosofosOrdenados = [...todosLosFilosofos];
 
         if (tipoOrden === 'alfabetico') {
-            filosofosOrdenados.sort((a, b) => a.nombre.localeCompare(b.nombre));
+          filosofosOrdenados.sort((a, b) => a.nombre.localeCompare(b.nombre));
         } else {
-            filosofosOrdenados.sort((a, b) => a.nacimiento - b.nacimiento);
+          filosofosOrdenados.sort((a, b) => a.nacimiento - b.nacimiento);
         }
-        
+
         renderizarGaleria(filosofosOrdenados);
-    }
+      }
 
-    fetch('filosofos.json')
-      .then(response => response.json())
-      .then(data => {
-        todosLosFilosofos = data;
-        ordenarYRenderizar();
-      })
-      .catch(err => {
-        console.error("Error cargando los datos:", err);
-        galeria.innerHTML = "<p>No se pudieron cargar los datos.</p>";
-      });
+      fetch('filosofos.json')
+        .then(response => response.json())
+        .then(data => {
+          todosLosFilosofos = data;
+          ordenarYRenderizar();
+        })
+        .catch(err => {
+          console.error("Error cargando los datos:", err);
+          galeria.innerHTML = "<p>No se pudieron cargar los datos.</p>";
+        });
 
-    ordenSelector.addEventListener('change', ordenarYRenderizar);
-  });
-</script>
+      ordenSelector.addEventListener('change', ordenarYRenderizar);
+    });
+  </script>
 
 </body>
+
 </html>
