@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Línea del Tiempo de Filósofos y Eventos Históricos</title>
-    <link rel="stylesheet" href="linea_tiempo_style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Línea del Tiempo de Filósofos y Eventos Históricos</title>
+  <link rel="stylesheet" href="linea_tiempo_style.css">
 </head>
+
 <body>
-    <h1>Línea del Tiempo de Filósofos y Eventos Históricos</h1>
+  <h1>Línea del Tiempo de Filósofos y Eventos Históricos</h1>
 
-    <div class="return-button-container">
-        <a href="index.html" class="btn-nav return-button">Volver a la página principal</a>
+  <div class="return-button-container">
+    <a href="index.html" class="btn-nav return-button">Volver a la página principal</a>
+  </div>
+
+  <div class="leyenda">
+    <div class="leyenda-item">
+      <span class="leyenda-color color-filosofo"></span>
+      Filósofos
     </div>
-
-    <div class="leyenda">
-        <div class="leyenda-item">
-            <span class="leyenda-color color-filosofo"></span>
-            Filósofos
-        </div>
-        <div class="leyenda-item">
-            <span class="leyenda-color color-evento"></span>
-            Eventos Históricos
-        </div>
+    <div class="leyenda-item">
+      <span class="leyenda-color color-evento"></span>
+      Eventos Históricos
     </div>
+  </div>
 
-    <div class="filtros">
-        <button class="btn-filtro active" onclick="filtrar('todos')">Mostrar Todo</button>
-        <button class="btn-filtro" onclick="filtrar('filosofos')">Solo Filósofos</button>
-        <button class="btn-filtro" onclick="filtrar('eventos')">Solo Eventos</button>
-    </div>
+  <div class="filtros">
+    <button class="btn-filtro active" onclick="filtrar('todos')">Mostrar Todo</button>
+    <button class="btn-filtro" onclick="filtrar('filosofos')">Solo Filósofos</button>
+    <button class="btn-filtro" onclick="filtrar('eventos')">Solo Eventos</button>
+  </div>
 
-    <div class="navegacion-siglos">
-        <label for="selector-siglo">Ir al siglo:</label>
-        <select id="selector-siglo" onchange="irAlSiglo()">
-            <option value="">Selecciona un siglo</option>
-        </select>
-        <button class="btn-nav" onclick="volverAlInicio()">⬆️ Volver al inicio</button>
-    </div>
+  <div class="navegacion-siglos">
+    <label for="selector-siglo">Ir al siglo:</label>
+    <select id="selector-siglo" onchange="irAlSiglo()">
+      <option value="">Selecciona un siglo</option>
+    </select>
+    <button class="btn-nav" onclick="volverAlInicio()">⬆️ Volver al inicio</button>
+  </div>
 
-    <div class="timeline" id="timeline"></div>
+  <div class="timeline" id="timeline"></div>
 
-    <script>
+  <script>
     let todosLosElementos = [];
     let siglosDisponibles = new Set();
 
@@ -111,6 +113,7 @@
           anio: e.year,
           nombre: e.name,
           descripcion: e.description,
+          wiki_url: e.wiki_url,
           movimiento: null
         }));
 
@@ -167,6 +170,7 @@
               <h3>${elemento.nombre}</h3>
               <div class="year">${formatearAnio(elemento.anio)}</div>
               <p>${elemento.descripcion}</p>
+              ${elemento.wiki_url ? `<a class="wiki-btn" href="${elemento.wiki_url}" target="_blank">📖 Más info en Wikipedia</a>` : ''}
             </div>
           `;
         }
@@ -250,6 +254,7 @@
 
     // Cargar datos al iniciar la página
     cargarDatos();
-    </script>
+  </script>
 </body>
+
 </html>
