@@ -3,16 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
-    --primary-color: #4CAF50; /* Green */
-    --secondary-color: #FFC107; /* Amber */
-    --background-color: #212121; /* Dark Grey */
-    --surface-color: #303030; /* Slightly lighter Dark Grey */
-    --text-color: #E0E0E0; /* Light Grey */
-    --text-color-dark: #B0B0B0; /* Medium Grey */
-    --accent-color: #03DAC6; /* Teal */
-    --border-color: #424242; /* Darker Grey for borders */
+    --primary-color: #4CAF50;
+    /* Green */
+    --secondary-color: #FFC107;
+    /* Amber */
+    --background-color: #212121;
+    /* Dark Grey */
+    --surface-color: #303030;
+    /* Slightly lighter Dark Grey */
+    --text-color: #E0E0E0;
+    /* Light Grey */
+    --text-color-dark: #B0B0B0;
+    /* Medium Grey */
+    --accent-color: #03DAC6;
+    /* Teal */
+    --border-color: #424242;
+    /* Darker Grey for borders */
     --shadow-color: rgba(0, 0, 0, 0.3);
-
     --font-heading: 'Roboto', sans-serif;
     --font-body: 'Open Sans', sans-serif;
 }
@@ -55,7 +62,8 @@ h1 {
 }
 
 .btn-nav {
-    background-color: #E91E63; /* A strong, contrasting color (e.g., Pink) */
+    background-color: #E91E63;
+    /* Pink */
     color: white;
     border: 2px solid #E91E63;
     padding: 1rem 2.5rem;
@@ -68,7 +76,7 @@ h1 {
 }
 
 .btn-nav:hover {
-    background-color: #C2185B; /* Darker shade on hover */
+    background-color: #C2185B;
     border-color: #C2185B;
     transform: translateY(-5px);
 }
@@ -101,8 +109,8 @@ h1 {
     font-size: 1rem;
     background-color: var(--background-color);
     color: var(--text-color);
-    appearance: none; /* Remove default select arrow */
-    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23E0E0E0%22%20d%3D%22M287%2C197.3L159.3%2C69.6c-3.7-3.7-9.8-3.7-13.5%2C0L5.4%2C197.3c-3.7%2C3.7-3.7%2C9.8%2C0%2C13.5l13.5%2C13.5c3.7%2C3.7%2C9.8%2C3.7%2C13.5%2C0l111.8-111.8l111.8%2C111.8c3.7%2C3.7%2C9.8%2C3.7%2C13.5%2C0l13.5-13.5C290.7%2C207.1%2C290.7%2C201%2C287%2C197.3z%22%2F%3E%3C%2Fsvg%3E');
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns="http://www.w3.org/2000/svg" width="292.4" height="292.4"%3E%3Cpath fill="%23E0E0E0" d="M287,197.3L159.3,69.6c-3.7-3.7-9.8-3.7-13.5,0L5.4,197.3c-3.7,3.7-3.7,9.8,0,13.5l13.5,13.5c3.7,3.7,9.8,3.7,13.5,0l111.8-111.8l111.8,111.8c3.7,3.7,9.8,3.7,13.5,0l13.5-13.5C290.7,207.1,290.7,201,287,197.3z"/>%3C/svg%3E');
     background-repeat: no-repeat;
     background-position: right 0.7em top 50%;
     background-size: 0.65em auto;
@@ -138,6 +146,7 @@ h1 {
     display: flex;
     flex-direction: column;
     height: 100%;
+    touch-action: manipulation;
 }
 
 .tarjeta img {
@@ -250,5 +259,34 @@ h1 {
 
     .info strong {
         font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .galeria {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .tarjeta img {
+        height: 150px;
+    }
+
+    .controles-superiores {
+        padding: 0.8rem;
+        gap: 0.6rem;
+    }
+
+    .btn-nav {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .info strong {
+        font-size: 1.2rem;
+    }
+
+    .info {
+        padding: 0.8rem;
     }
 }
