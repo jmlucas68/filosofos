@@ -75,7 +75,7 @@
         "year": -146,
         "name": "Destrucción de Cartago",
         "description": "Roma destruye completamente Cartago, terminando las Guerras Púnicas.",
-        "wiki_url": "https://es.wikipedia.org/wiki/Cartago_(ciudad)"
+        "wiki_url": "https://es.wikipedia.org/wiki/Cartago"
     },
     {
         "year": -49,
@@ -87,7 +87,7 @@
         "year": -44,
         "name": "Asesinato de César",
         "description": "Julio César es asesinado en los Idus de Marzo, marcando el fin de la República Romana.",
-        "wiki_url": "https://es.wikipedia.org/wiki/Asesinato_de_Julio_C%C3%A9sar"
+        "wiki_url": "https://es.wikipedia.org/wiki/Julio_C%C3%A9sar"
     },
     {
         "year": -27,
@@ -111,7 +111,7 @@
         "year": 79,
         "name": "Erupción del Vesubio",
         "description": "El volcán Vesubio entra en erupción, destruyendo Pompeya y Herculano.",
-        "wiki_url": "https://es.wikipedia.org/wiki/Erupti%C3%B3n_del_Vesubio"
+        "wiki_url": "https://es.wikipedia.org/wiki/Monte_Vesubio"
     },
     {
         "year": 313,
@@ -123,7 +123,7 @@
         "year": 476,
         "name": "Caída del Imperio Romano",
         "description": "Caída del Imperio Romano de Occidente con la deposición de Rómulo Augústulo.",
-        "wiki_url": "https://es.wikipedia.org/wiki/Fin_del_Empire_romano_de_Occidente"
+        "wiki_url": "https://es.wikipedia.org/wiki/Imperio_romano"
     },
     {
         "year": 622,
@@ -189,7 +189,7 @@
         "year": 1789,
         "name": "Revolución Francesa",
         "description": "Comienza la Revolución Francesa con la toma de la Bastilla.",
-        "wiki_url": "https://es.wikipedia.org/wiki/Revoluci%C3%B3n_franquista"
+        "wiki_url": "https://es.wikipedia.org/wiki/Revoluci%C3%B3n_francesa"
     },
     {
         "year": 1914,
