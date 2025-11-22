@@ -22,3 +22,6 @@
 *.vsidx
 /.vs/filosofos/config/applicationhost.config
 /.vs/filosofos/copilot-chat/87f3a3c7/sessions/61bbd676-26af-44c0-a9bc-a7a8f5f9c561
+filosofos.code-workspace
+.gitignore
+.gitignore
