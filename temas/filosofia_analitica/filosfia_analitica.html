@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filosofía Analítica - Historia, Autores y Obras</title>
+    <style>
+        :root {
+            --color-cream-50: rgba(252, 252, 249, 1);
+            --color-cream-100: rgba(255, 255, 253, 1);
+            --color-slate-900: rgba(19, 52, 59, 1);
+            --color-slate-500: rgba(98, 108, 113, 1);
+            --color-teal-500: rgba(33, 128, 141, 1);
+            --color-teal-600: rgba(29, 116, 128, 1);
+            --color-brown-600-rgb: 94, 82, 64;
+            --color-teal-500-rgb: 33, 128, 141;
+            
+            --color-background: var(--color-cream-50);
+            --color-surface: var(--color-cream-100);
+            --color-text: var(--color-slate-900);
+            --color-text-secondary: var(--color-slate-500);
+            --color-primary: var(--color-teal-500);
+            --color-primary-hover: var(--color-teal-600);
+            --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+            --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+            
+            --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --radius-lg: 12px;
+            --radius-base: 8px;
+            --space-16: 16px;
+            --space-24: 24px;
+            --space-32: 32px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-charcoal-700: rgba(31, 33, 33, 1);
+                --color-charcoal-800: rgba(38, 40, 40, 1);
+                --color-gray-200: rgba(245, 245, 245, 1);
+                --color-gray-300: rgba(167, 169, 169, 1);
+                --color-gray-400-rgb: 119, 124, 124;
+                --color-teal-300: rgba(50, 184, 198, 1);
+                
+                --color-background: var(--color-charcoal-700);
+                --color-surface: var(--color-charcoal-800);
+                --color-text: var(--color-gray-200);
+                --color-text-secondary: rgba(var(--color-gray-300), 0.7);
+                --color-primary: var(--color-teal-300);
+                --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+                --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, rgba(var(--color-teal-500-rgb), 0.8) 100%);
+            color: var(--color-cream-100);
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-32) var(--space-16);
+        }
+
+        .nav-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: var(--space-32);
+            flex-wrap: wrap;
+            justify-content: center;
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 10px;
+        }
+
+        .tab-btn {
+            padding: 12px 24px;
+            background: transparent;
+            border: none;
+            color: var(--color-text-secondary);
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: var(--radius-base);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .tab-btn:hover {
+            background: rgba(var(--color-teal-500-rgb), 0.1);
+            color: var(--color-primary);
+        }
+
+        .tab-btn.active {
+            background: var(--color-primary);
+            color: var(--color-cream-100);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-24);
+            margin-bottom: var(--space-24);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h2 {
+            color: var(--color-primary);
+            font-size: 2em;
+            margin-bottom: 16px;
+            border-bottom: 2px solid var(--color-primary);
+            padding-bottom: 10px;
+        }
+
+        .card h3 {
+            color: var(--color-text);
+            font-size: 1.5em;
+            margin: 24px 0 12px 0;
+        }
+
+        .card h4 {
+            color: var(--color-text-secondary);
+            font-size: 1.2em;
+            margin: 16px 0 8px 0;
+        }
+
+        .card p {
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .quote {
+            background: rgba(var(--color-teal-500-rgb), 0.08);
+            border-left: 4px solid var(--color-primary);
+            padding: 16px 20px;
+            margin: 20px 0;
+            font-style: italic;
+            border-radius: var(--radius-base);
+        }
+
+        .authors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .author-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .author-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-color: var(--color-primary);
+        }
+
+        .author-card h3 {
+            color: var(--color-primary);
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+
+        .author-card p {
+            color: var(--color-text-secondary);
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .author-card .years {
+            font-size: 0.85em;
+            color: var(--color-text-secondary);
+            font-weight: 500;
+        }
+
+        .link-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--color-primary);
+            color: var(--color-cream-100);
+            text-decoration: none;
+            border-radius: var(--radius-base);
+            font-size: 0.9em;
+            margin-top: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .link-btn:hover {
+            background: var(--color-primary-hover);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--color-primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 20px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            border: 3px solid var(--color-background);
+        }
+
+        .timeline-item h4 {
+            color: var(--color-primary);
+            margin-bottom: 8px;
+        }
+
+        .works-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .works-list li {
+            background: rgba(var(--color-teal-500-rgb), 0.05);
+            padding: 12px 16px;
+            margin-bottom: 10px;
+            border-radius: var(--radius-base);
+            border-left: 3px solid var(--color-primary);
+        }
+
+        .works-list li strong {
+            color: var(--color-text);
+        }
+
+        .external-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .external-link {
+            padding: 10px 20px;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-base);
+            text-decoration: none;
+            color: var(--color-text);
+            transition: all 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        .external-link:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .authors-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+            }
+
+            .tab-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Filosofía Analítica</h1>
+        <p>Claridad, precisión y rigor en el análisis del lenguaje y el pensamiento</p>
+    </header>
+
+    <div class="container">
+        <nav class="nav-tabs">
+            <button class="tab-btn active" onclick="showTab('historia')">Historia</button>
+            <button class="tab-btn" onclick="showTab('caracteristicas')">Características</button>
+            <button class="tab-btn" onclick="showTab('autores')">Principales Autores</button>
+            <button class="tab-btn" onclick="showTab('obras')">Obras Fundamentales</button>
+            <button class="tab-btn" onclick="showTab('actualidad')">Actualidad</button>
+            <button class="tab-btn" onclick="showTab('enlaces')">Enlaces y Referencias</button>
+        </nav>
+
+        <!-- Historia -->
+        <div id="historia" class="tab-content active">
+            <div class="card">
+                <h2>Historia de la Filosofía Analítica</h2>
+                
+                <h3>Orígenes (1879-1920)</h3>
+                <p>La filosofía analítica surge a finales del siglo XIX como una reacción al idealismo alemán dominante en la época. Sus fundadores buscaban un método más riguroso y científico para abordar los problemas filosóficos. El punto de partida se sitúa en 1879 con la publicación de <em>Begriffsschrift</em> (Conceptografía) de Gottlob Frege, obra que revolucionó la lógica y estableció las bases de la lógica matemática moderna.</p>
+
+                <div class="quote">
+                    "La filosofía es una batalla contra el embrujamiento de nuestra inteligencia por medio del lenguaje." - Ludwig Wittgenstein
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>1879 - Nacimiento de la Lógica Moderna</h4>
+                        <p>Gottlob Frege publica <em>Begriffsschrift</em>, revolucionando la lógica formal y superando el sistema aristotélico. Introduce la cuantificación y establece las bases para el análisis lógico del lenguaje.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>1903 - Los Principia Mathematica</h4>
+                        <p>Bertrand Russell y Alfred North Whitehead inician el proyecto de reducir las matemáticas a la lógica. Russell desarrolla su teoría de las descripciones y resuelve paradojas lógicas fundamentales.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>1921 - El Tractatus</h4>
+                        <p>Ludwig Wittgenstein publica el <em>Tractatus Logico-Philosophicus</em>, estableciendo una teoría pictórica del lenguaje y definiendo los límites del lenguaje significativo.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>1922-1936 - El Círculo de Viena</h4>
+                        <p>Moritz Schlick funda el Círculo de Viena, grupo que desarrolla el positivismo lógico. Rudolf Carnap, Otto Neurath y otros proponen el verificacionismo como criterio de significado y abogan por la unificación de la ciencia.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>1950-1970 - Giro Lingüístico</h4>
+                        <p>El "segundo Wittgenstein" (<em>Investigaciones Filosóficas</em>, 1953) y J.L. Austin desarrollan la filosofía del lenguaje ordinario. W.V.O. Quine critica el dogma analítico-sintético y propone el naturalismo epistemológico.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h4>1970-Actualidad - Diversificación</h4>
+                        <p>La filosofía analítica se expande a múltiples áreas: filosofía de la mente (Davidson, Searle), metafísica (Kripke, Lewis), ética (Rawls, Singer), epistemología (Goldman, Williamson) y filosofía experimental.</p>
+                    </div>
+                </div>
+
+                <h3>Contexto Histórico y Filosófico</h3>
+                <p>La filosofía analítica emerge en un contexto de profundos cambios científicos y culturales. A finales del siglo XIX, el idealismo hegeliano dominaba el pensamiento europeo, especialmente en las universidades británicas y alemanas. Sin embargo, los avances en matemáticas, lógica y ciencias naturales demandaban un enfoque más preciso y empíricamente fundamentado.</p>
+
+                <p>El desarrollo de las geometrías no euclidianas, la teoría de conjuntos de Cantor y los problemas en los fundamentos de las matemáticas crearon una crisis que exigía nuevas herramientas conceptuales. Frege, Russell y otros pioneros vieron en la lógica matemática el instrumento adecuado para clarificar el pensamiento filosófico.</p>
+
+                <h3>Influencias Recibidas</h3>
+                <p>La filosofía analítica recibió influencias fundamentales de:</p>
+                <ul style="margin-left: 20px; margin-bottom: 16px;">
+                    <li><strong>Empirismo británico</strong> (Locke, Hume): énfasis en la experiencia y rechazo de la metafísica especulativa</li>
+                    <li><strong>Matemáticas y lógica</strong> (Boole, Peano, Cantor): desarrollo de sistemas formales rigurosos</li>
+                    <li><strong>Positivismo</strong> (Comte, Mach): defensa del método científico y rechazo de proposiciones inverificables</li>
+                    <li><strong>Crítica kantiana</strong>: distinción entre juicios analíticos y sintéticos, aunque posteriormente cuestionada</li>
+                </ul>
+
+                <h3>Influencia Ejercida</h3>
+                <p>La filosofía analítica ha influido profundamente en:</p>
+                <ul style="margin-left: 20px; margin-bottom: 16px;">
+                    <li><strong>Ciencias cognitivas</strong>: teorías computacionales de la mente, inteligencia artificial</li>
+                    <li><strong>Lingüística</strong>: semántica formal, pragmática, filosofía del lenguaje</li>
+                    <li><strong>Ética aplicada</strong>: bioética, ética ambiental, ética de la tecnología</li>
+                    <li><strong>Epistemología social</strong>: conocimiento distribuido, testimonio, epistemología de las redes</li>
+                    <li><strong>Metodología científica</strong>: filosofía de la física, biología, economía</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Características -->
+        <div id="caracteristicas" class="tab-content">
+            <div class="card">
+                <h2>Características Principales</h2>
+
+                <h3>1. Análisis Lógico del Lenguaje</h3>
+                <p>La filosofía analítica considera que muchos problemas filosóficos surgen de confusiones lingüísticas. Por ello, aplica herramientas de la lógica formal para clarificar el significado de proposiciones y conceptos. Esta metodología busca revelar la estructura lógica subyacente en el lenguaje natural.</p>
+
+                <div class="quote">
+                    "Todo lo que puede ser dicho, puede ser dicho claramente." - Ludwig Wittgenstein, <em>Tractatus</em>
+                </div>
+
+                <h3>2. Rigor Argumentativo</h3>
+                <p>Los filósofos analíticos valoran la precisión conceptual y la claridad expositiva. Los argumentos deben ser explícitos, las premisas claramente identificadas, y las inferencias lógicamente válidas. Se evita la ambigüedad y se busca la formulación más clara posible de los problemas.</p>
+
+                <h3>3. Enfoque Científico</h3>
+                <p>Existe una estrecha relación con las ciencias naturales, las matemáticas y la lógica. La filosofía analítica comparte con la ciencia el compromiso con la evidencia empírica, la contrastabilidad de hipótesis y la revisión crítica de teorías. Muchos filósofos analíticos trabajan en problemas fronterizos con la ciencia.</p>
+
+                <h3>4. Atomismo Lógico</h3>
+                <p>Especialmente en las primeras etapas, se defendía que el mundo está compuesto de hechos atómicos independientes entre sí, y que el lenguaje ideal debe reflejar esta estructura. Aunque esta visión fue posteriormente revisada, su influencia metodológica persiste.</p>
+
+                <h3>5. Verificacionismo y Empirismo Lógico</h3>
+                <p>El Círculo de Viena propuso que el significado de una proposición está dado por su método de verificación. Las proposiciones que no pueden ser verificadas empíricamente (ni son tautologías lógicas) carecen de significado cognitivo. Esta postura fue posteriormente suavizada pero marcó profundamente la tradición.</p>
+
+                <h3>6. Filosofía del Lenguaje Ordinario</h3>
+                <p>El "segundo Wittgenstein" y J.L. Austin desarrollaron un enfoque que examina el uso ordinario del lenguaje en contextos prácticos. En lugar de buscar un lenguaje ideal, estudian los "juegos de lenguaje" y los "actos de habla" en la vida cotidiana.</p>
+
+                <h3>7. Naturalismo Epistemológico</h3>
+                <p>Quine y otros proponen que la epistemología debe ser una rama de la ciencia empírica (especialmente la psicología). No existe un "punto de vista privilegiado" desde el cual justificar el conocimiento; debemos partir de nuestra práctica científica real.</p>
+
+                <h3>8. Método Analítico</h3>
+                <p>Los problemas complejos se descomponen en problemas más simples y manejables. El análisis conceptual busca identificar las condiciones necesarias y suficientes para la aplicación correcta de un concepto. Este método se aplica sistemáticamente a conceptos como conocimiento, verdad, justicia, mente, causalidad, etc.</p>
+            </div>
+        </div>
+
+        <!-- Autores -->
+        <div id="autores" class="tab-content">
+            <div class="card">
+                <h2>Principales Autores de la Filosofía Analítica</h2>
+                <p>A continuación se presentan los principales filósofos analíticos, incluyendo enlaces a las páginas de aquellos que están documentados en nuestra base de datos:</p>
+
+                <div class="authors-grid" id="authorsGrid">
+                    <!-- Los autores se cargarán dinámicamente aquí -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Obras -->
+        <div id="obras" class="tab-content">
+            <div class="card">
+                <h2>Obras Fundamentales</h2>
+
+                <h3>Fundadores (1879-1925)</h3>
+                <ul class="works-list">
+                    <li>
+                        <strong>Gottlob Frege - <em>Begriffsschrift</em> (1879)</strong><br>
+                        Obra fundacional que establece la lógica moderna. Introduce la cuantificación y el análisis lógico del lenguaje.
+                        <div class="external-links">
+                            <a href="https://archive.org/details/begriffsschrift00freg" target="_blank" class="external-link">Archive.org (alemán)</a>
+                            <a href="https://es.wikipedia.org/wiki/Begriffsschrift" target="_blank" class="external-link">Wikipedia</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Gottlob Frege - "Über Sinn und Bedeutung" (1892)</strong><br>
+                        Artículo seminal que distingue entre sentido (Sinn) y referencia (Bedeutung), fundamental para la filosofía del lenguaje.
+                        <div class="external-links">
+                            <a href="https://www.academia.edu/search?q=frege%20sentido%20referencia" target="_blank" class="external-link">Academia.edu</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Bertrand Russell & A.N. Whitehead - <em>Principia Mathematica</em> (1910-1913)</strong><br>
+                        Monumental intento de fundamentar las matemáticas en la lógica. Desarrolla la teoría de tipos para evitar paradojas.
+                        <div class="external-links">
+                            <a href="https://archive.org/details/principiamathema01russuoft" target="_blank" class="external-link">Archive.org (inglés)</a>
+                            <a href="https://es.wikipedia.org/wiki/Principia_Mathematica" target="_blank" class="external-link">Wikipedia</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Bertrand Russell - <em>Los Problemas de la Filosofía</em> (1912)</strong><br>
+                        Introducción accesible a problemas fundamentales de epistemología y metafísica desde perspectiva analítica.
+                        <div class="external-links">
+                            <a href="https://www.amazon.es/problemas-filosof%C3%ADa-Bertrand-Russell/dp/8433902938" target="_blank" class="external-link">Amazon</a>
+                            <a href="https://www.gutenberg.org/ebooks/5827" target="_blank" class="external-link">Project Gutenberg (inglés)</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Ludwig Wittgenstein - <em>Tractatus Logico-Philosophicus</em> (1921)</strong><br>
+                        Obra revolucionaria sobre los límites del lenguaje y el pensamiento. Propone la teoría pictórica del significado.
+                        <div class="external-links">
+                            <a href="https://www.amazon.es/Tractatus-logico-philosophicus-Ludwig-Wittgenstein/dp/8491812776" target="_blank" class="external-link">Amazon</a>
+                            <a href="https://www.gutenberg.org/ebooks/5740" target="_blank" class="external-link">Project Gutenberg (inglés)</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3>Positivismo Lógico (1920-1950)</h3>
+                <ul class="works-list">
+                    <li>
+                        <strong>Rudolf Carnap - <em>Der logische Aufbau der Welt</em> (1928)</strong><br>
+                        Intento de reconstruir el conocimiento científico partiendo de la experiencia inmediata mediante la lógica.
+                        <div class="external-links">
+                            <a href="https://www.amazon.es/s?k=carnap+construccion+logica+mundo" target="_blank" class="external-link">Amazon</a>
+                            <a href="https://es.wikipedia.org/wiki/Rudolf_Carnap" target="_blank" class="external-link">Wikipedia</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>A.J. Ayer - <em>Language, Truth and Logic</em> (1936)</strong><br>
+                        Introducción influyente al positivismo lógico en el mundo anglosajón. Defiende el verificacionismo radical.
+                        <div class="external-links">
+                            <a href="https://www.amazon.es/Language-Truth-Logic-Penguin-Philosophy/dp/0141186046" target="_blank" class="external-link">Amazon</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Alfred Tarski - "The Semantic Conception of Truth" (1944)</strong><br>
+                        Desarrolla la teoría semántica de la verdad, fundamental para la lógica y la filosofía del lenguaje.
+                        <div class="external-links">
+                            <a href="https://www.academia.edu/search?q=tarski%20semantic%20truth" target="_blank" class="external-link">Academia.edu</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3>Filosofía del Lenguaje Ordinario (1950-1970)</h3>
+                <ul class="works-list">
+                    <li>
+                        <strong>Ludwig Wittgenstein - <em>Investigaciones Filosóficas</em> (1953)</strong><br>
+                        El "segundo Wittgenstein" critica el Tractatus y propone el análisis de los "juegos de lenguaje" en uso ordinario.
+                        <div class="external-links">
+                            <a href="https://www.amazon.es/Investigaciones-filos%C3%B3ficas-Ludwig-Wittgenstein/dp/8498796679" target="_blank" class="external-link">Amazon</a>
+                            <a href="https://es.wikipedia.org/wiki/Investigaciones_filos%C3%B3ficas" target="_blank" class="external-link">Wikipedia</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>J.L. Austin - <em>How to Do Things with Words</em> (1962)</strong><br>
+                        Desarrolla la teoría de los actos de habla, mostrando que hablar es realizar acciones.
+                        <div class="external-links">
+                            <a href="https://www.amazon.es/How-Things-Words-Harvard-Paperbacks/dp/0674411528" target="_blank" class="external-link">Amazon</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Gilbert Ryle - <em>The Concept of Mind</em> (1949)</strong><br>
+                        Crítica al dualismo cartesiano, introduciendo el concepto de "error categorial".
+                        <div class="external-links">
+                            <a href="https://www.amazon.es/Concept-Mind-Routledge-Classics/dp/0415485479" target="_blank" class="external-link">Amazon</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3>Filosofía Analítica Contemporánea (1970-Actualidad)</h3>
+                <ul class="works-list">
+                    <li>
+                        <strong>W.V.O. Quine - "Two Dogmas of Empiricism" (1951)</strong><br>
+                        Artículo revolucionario que critica la distinción analítico-sintético y el reduccionismo verificacionista.
+                        <div class="external-links">
+                            <a href="https://www.academia.edu/search?q=quine%20two%20dogmas" target="_blank" class="external-link">Academia.edu</a>
+                            <a href="https://es.wikipedia.org/wiki/Dos_dogmas_del_empirismo" target="_blank" class="external-link">Wikipedia</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Saul Kripke - <em>Naming and Necessity</em> (1980)</strong><br>
+                        Revoluciona la semántica de los nombres propios con la teoría de los designadores rígidos.
+                        <div class="external-links">
+                            <a href="https://www.amazon.es/Naming-Necessity-Saul-Kripke/dp/0631128018" target="_blank" class="external-link">Amazon</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Donald Davidson - <em>Essays on Actions and Events</em> (1980)</strong><br>
+                        Teoría causal de la acción y análisis del papel de las razones en la explicación del comportamiento.
+                        <div class="external-links">
+                            <a href="https://www.amazon.es/Essays-Actions-Events-Philosophical/dp/0199246270" target="_blank" class="external-link">Amazon</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>John Rawls - <em>A Theory of Justice</em> (1971)</strong><br>
+                        Obra fundamental en filosofía política que revitaliza el contractualismo y la teoría de la justicia.
+                        <div class="external-links">
+                            <a href="https://www.amazon.es/Teor%C3%ADa-justicia-John-Rawls/dp/9681640446" target="_blank" class="external-link">Amazon</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Thomas Nagel - "What Is It Like to Be a Bat?" (1974)</strong><br>
+                        Artículo influyente sobre el problema de la conciencia y la subjetividad.
+                        <div class="external-links">
+                            <a href="https://www.academia.edu/search?q=nagel%20bat" target="_blank" class="external-link">Academia.edu</a>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>David Lewis - <em>On the Plurality of Worlds</em> (1986)</strong><br>
+                        Defensa del realismo modal y la teoría de los mundos posibles.
+                        <div class="external-links">
+                            <a href="https://www.amazon.es/Plurality-Worlds-David-Lewis/dp/063122426X" target="_blank" class="external-link">Amazon</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Actualidad -->
+        <div id="actualidad" class="tab-content">
+            <div class="card">
+                <h2>Filosofía Analítica en la Actualidad</h2>
+
+                <h3>Estado Actual y Evolución</h3>
+                <p>En el siglo XXI, la filosofía analítica ha experimentado una profunda transformación y diversificación. Lejos de estar "muerta" como algunos críticos afirmaron, se ha consolidado como la tradición dominante en las universidades de investigación angloparlantes y ha extendido su influencia globalmente. Actualmente representa la corriente mayoritaria en los departamentos de filosofía de las principales universidades estadounidenses, británicas, australianas y de muchos otros países.</p>
+
+                <div class="quote">
+                    "La filosofía analítica del siglo XXI se caracteriza por su apertura metodológica, su diálogo con las ciencias empíricas y su diversidad temática." - Perspectiva Contemporánea
+                </div>
+
+                <h3>Tendencias Principales</h3>
+
+                <h4>1. Filosofía Experimental</h4>
+                <p>Una de las innovaciones más significativas es el surgimiento de la filosofía experimental, que aplica métodos empíricos (encuestas, experimentos psicológicos) para investigar las intuiciones filosóficas. Filósofos como Joshua Knobe, Edouard Machery y Stephen Stich utilizan técnicas de las ciencias cognitivas para estudiar cómo las personas ordinarias piensan sobre conceptos como intencionalidad, conocimiento o responsabilidad moral.</p>
+
+                <h4>2. Filosofía de las Ciencias Especiales</h4>
+                <p>Se ha intensificado el trabajo en filosofías de disciplinas específicas: filosofía de la física (especialmente mecánica cuántica y cosmología), filosofía de la biología (evolución, genética), filosofía de la neurociencia, filosofía de la economía, filosofía de la psicología. Estos campos requieren dominio técnico tanto filosófico como científico.</p>
+
+                <h4>3. Metafísica Analítica Revitalizada</h4>
+                <p>Tras décadas de escepticismo positivista, la metafísica ha experimentado un renacimiento en la tradición analítica. Filósofos como Kit Fine, Ted Sider, Karen Bennett y Jonathan Schaffer desarrollan teorías sistemáticas sobre fundamentalidad ontológica, composición mereológica, causalidad y modalidad, utilizando herramientas de la lógica contemporánea.</p>
+
+                <h4>4. Epistemología Social y Testimonial</h4>
+                <p>Se ha desarrollado intensamente la investigación sobre el conocimiento social, el testimonio y la confianza epistémica. En la era de las redes sociales y la desinformación, epistemólogos como Miranda Fricker, Jennifer Lackey, Alvin Goldman y Jason Stanley estudian fenómenos como la injusticia epistémica, las cámaras de eco y la polarización cognitiva.</p>
+
+                <h4>5. Ética Aplicada y Filosofía Práctica</h4>
+                <p>La ética analítica se ha expandido masivamente hacia problemas aplicados: bioética (Peter Singer, Jeff McMahan), ética ambiental, ética de la inteligencia artificial, ética animal, ética de la tecnología. El efectivo altruismo, movimiento filosófico fundado por Singer y Toby Ord, ejemplifica esta orientación práctica.</p>
+
+                <h4>6. Filosofía de la Mente y Ciencias Cognitivas</h4>
+                <p>Los debates sobre conciencia, intencionalidad y representación mental continúan siendo centrales. David Chalmers, Ned Block, Daniel Dennett y otros discuten el "problema difícil" de la conciencia, el funcionalismo, el externalismo semántico y la naturaleza de los estados mentales, en constante diálogo con la neurociencia.</p>
+
+                <h4>7. Filosofía del Lenguaje Formal</h4>
+                <p>La semántica formal ha avanzado enormemente, especialmente en el análisis de contextos intensionales, semántica de eventos, teoría de la referencia directa, pragmática formal y análisis de discurso. El trabajo de autores como Angelika Kratzer, Irene Heim y Robert Stalnaker ejemplifica esta sofisticación técnica.</p>
+
+                <h4>8. Metafilosofía y Metodología</h4>
+                <p>Hay una creciente reflexión sobre la naturaleza misma de la filosofía analítica: ¿Qué es el análisis conceptual? ¿Tienen valor epistémico las intuiciones? ¿Debe la filosofía ser experimental? ¿Cuál es la relación apropiada entre filosofía y ciencia? Timothy Williamson, Herman Cappelen y otros debaten estas cuestiones metodológicas fundamentales.</p>
+
+                <h3>Debates Actuales Centrales</h3>
+
+                <h4>La Naturaleza de la Conciencia</h4>
+                <p>El debate entre materialistas (Dennett, Churchland), funcionalistas (Block, Shoemaker), dualistas de propiedades (Chalmers) y panpsiquistas (Goff, Strawson) sobre si los fenómenos conscientes pueden reducirse a o explicarse por procesos físicos.</p>
+
+                <h4>Realismo vs Anti-realismo</h4>
+                <p>Discusiones sobre el realismo científico (¿las teorías científicas describen el mundo tal como es?), el realismo moral (¿existen hechos morales objetivos?), el realismo matemático (¿existen objetos matemáticos independientemente de nuestras mentes?) y el realismo metafísico (¿existe una única estructura correcta del mundo?).</p>
+
+                <h4>Libre Albedrío y Determinismo</h4>
+                <p>Dado el avance de las neurociencias, se debate si somos genuinamente libres o si nuestras acciones están determinadas por causas previas. Compatibilistas (Frankfurt, Fischer) y incompatibilistas (Kane, Strawson) proponen soluciones contrastantes.</p>
+
+                <h4>Relativismo y Objetividad</h4>
+                <p>¿Son la verdad, el conocimiento y los valores relativos a marcos conceptuales, culturas o perspectivas? Debates sobre relativismo epistémico (Boghossian vs Rorty) y relativismo moral (Harman vs realsitas morales).</p>
+
+                <h3>Instituciones y Revistas Principales</h3>
+                <p>Las principales revistas de filosofía analítica incluyen: <em>The Journal of Philosophy, Mind, Noûs, Philosophical Review, Philosophy and Phenomenological Research, The Philosophical Quarterly, Analysis, Philosophical Studies</em>. Las universidades líderes incluyen Oxford, Cambridge, NYU, Rutgers, MIT, Princeton, Pittsburgh, Michigan y ANU (Australia).</p>
+
+                <h3>Críticas y Desafíos</h3>
+                <p>La filosofía analítica enfrenta críticas por su aparente estrechez temática, su excesiva especialización técnica, su falta de relevancia cultural, su homogeneidad demográfica y su predominio institucional. Sin embargo, muchos filósofos analíticos están abordando activamente estas preocupaciones, ampliando el rango de temas, métodos y perspectivas, y fomentando mayor diversidad e inclusión en la profesión.</p>
+            </div>
+        </div>
+
+        <!-- Enlaces -->
+        <div id="enlaces" class="tab-content">
+            <div class="card">
+                <h2>Enlaces y Referencias Externas</h2>
+
+                <h3>Enciclopedias y Recursos Académicos</h3>
+                <div class="external-links">
+                    <a href="https://plato.stanford.edu/entries/analysis/" target="_blank" class="external-link">Stanford Encyclopedia - Análisis Filosófico</a>
+                    <a href="https://plato.stanford.edu/entries/logical-empiricism/" target="_blank" class="external-link">Stanford Encyclopedia - Empirismo Lógico</a>
+                    <a href="https://plato.stanford.edu/entries/wittgenstein/" target="_blank" class="external-link">Stanford Encyclopedia - Wittgenstein</a>
+                    <a href="https://es.wikipedia.org/wiki/Filosof%C3%ADa_anal%C3%ADtica" target="_blank" class="external-link">Wikipedia - Filosofía Analítica</a>
+                    <a href="https://www.iep.utm.edu/analytic/" target="_blank" class="external-link">Internet Encyclopedia of Philosophy</a>
+                </div>
+
+                <h3>Artículos Académicos y Revistas</h3>
+                <div class="external-links">
+                    <a href="https://www.academia.edu/search?q=filosof%C3%ADa%20anal%C3%ADtica" target="_blank" class="external-link">Academia.edu - Filosofía Analítica</a>
+                    <a href="https://philpapers.org/browse/analytic-philosophy" target="_blank" class="external-link">PhilPapers - Analytic Philosophy</a>
+                    <a href="https://www.jstor.org/topic/analytic-philosophy/" target="_blank" class="external-link">JSTOR - Artículos sobre Filosofía Analítica</a>
+                    <a href="https://revistas2.unac.edu.co/ojs/index.php/unaciencia/article/view/728" target="_blank" class="external-link">Revista UNAC - Conceptos Principales</a>
+                </div>
+
+                <h3>Recursos Educativos</h3>
+                <div class="external-links">
+                    <a href="https://www.unprofesor.com/ciencias-sociales/filosofia-analitica-autores-destacados-6051.html" target="_blank" class="external-link">UnProfesor - Autores Destacados</a>
+                    <a href="https://lamenteesmaravillosa.com/significado-de-la-filosofia-analitica/" target="_blank" class="external-link">La Mente es Maravillosa</a>
+                    <a href="https://www.ui1.es/blog-ui1/caracteristicas-de-la-filosofia-contemporanea" target="_blank" class="external-link">UI1 - Filosofía Contemporánea</a>
+                </div>
+
+                <h3>Obras Fundamentales (Acceso Libre)</h3>
+                <div class="external-links">
+                    <a href="https://archive.org/" target="_blank" class="external-link">Archive.org - Textos Clásicos</a>
+                    <a href="https://www.gutenberg.org/" target="_blank" class="external-link">Project Gutenberg</a>
+                    <a href="https://philarchive.org/" target="_blank" class="external-link">PhilArchive - Repositorio de Papers</a>
+                </div>
+
+                <h3>Blogs y Difusión</h3>
+                <div class="external-links">
+                    <a href="https://www.revistadelibros.com/las-raices-de-la-filosofia-analitica/" target="_blank" class="external-link">Revista de Libros - Raíces de la Filosofía Analítica</a>
+                    <a href="https://www.observacionesfilosoficas.net/filosofiaanalitica.html" target="_blank" class="external-link">Observaciones Filosóficas</a>
+                    <a href="https://dailynous.com/" target="_blank" class="external-link">Daily Nous (inglés)</a>
+                </div>
+
+                <h3>Instituciones Académicas</h3>
+                <div class="external-links">
+                    <a href="https://www.philosophy.ox.ac.uk/" target="_blank" class="external-link">Universidad de Oxford - Filosofía</a>
+                    <a href="https://philosophy.rutgers.edu/" target="_blank" class="external-link">Rutgers University - Philosophy</a>
+                    <a href="https://www.nyu.edu/gsas/dept/philo/" target="_blank" class="external-link">NYU - Philosophy Department</a>
+                    <a href="https://www.pitt.edu/~pittcntr/" target="_blank" class="external-link">Center for Philosophy of Science - Pittsburgh</a>
+                </div>
+
+                <h3>Fuentes Bibliográficas Consultadas</h3>
+                <p style="font-size: 0.9em; color: var(--color-text-secondary); margin-top: 20px;">
+                    Esta página ha sido elaborada consultando múltiples fuentes académicas, incluyendo artículos de revistas especializadas, enciclopedias filosóficas (Stanford Encyclopedia of Philosophy, Internet Encyclopedia of Philosophy), recursos educativos en español y obras de referencia sobre historia de la filosofía analítica. Se han incluido enlaces directos a las fuentes primarias siempre que ha sido posible.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Datos de los filósofos analíticos
+        const analyticPhilosophers = [
+            {
+                nombre: "Gottlob Frege",
+                años: "1848-1925",
+                descripcion: "Padre de la lógica moderna y la filosofía analítica del lenguaje",
+                url: null
+            },
+            {
+                nombre: "Bertrand Russell",
+                años: "1872-1970",
+                descripcion: "Cofundador de la filosofía analítica, lógica y filosofía del lenguaje",
+                url: "https://jmlucas68.github.io/russell/"
+            },
+            {
+                nombre: "Ludwig Wittgenstein",
+                años: "1889-1951",
+                descripcion: "Tractatus Logico-Philosophicus e Investigaciones Filosóficas",
+                url: "https://jmlucas68.github.io/wittgenstein/"
+            },
+            {
+                nombre: "G.E. Moore",
+                años: "1873-1958",
+                descripcion: "Defensa del sentido común y ética intuicionista",
+                url: null
+            },
+            {
+                nombre: "Rudolf Carnap",
+                años: "1891-1970",
+                descripcion: "Líder del Círculo de Viena y positivismo lógico",
+                url: "https://jmlucas68.github.io/carnap/"
+            },
+            {
+                nombre: "Alfred North Whitehead",
+                años: "1861-1947",
+                descripcion: "Coautor de Principia Mathematica y filosofía del proceso",
+                url: "https://jmlucas68.github.io/whitehead/"
+            },
+            {
+                nombre: "Kurt Gödel",
+                años: "1906-1978",
+                descripcion: "Teoremas de incompletitud y platonismo matemático",
+                url: "https://jmlucas68.github.io/godel/"
+            },
+            {
+                nombre: "Alfred Tarski",
+                años: "1901-1983",
+                descripcion: "Teoría semántica de la verdad",
+                url: null
+            },
+            {
+                nombre: "W.V.O. Quine",
+                años: "1908-2000",
+                descripcion: "Crítica al empirismo lógico y naturalismo epistemológico",
+                url: "https://jmlucas68.github.io/quine/"
+            },
+            {
+                nombre: "J.L. Austin",
+                años: "1911-1960",
+                descripcion: "Filosofía del lenguaje ordinario y teoría de actos de habla",
+                url: "https://jmlucas68.github.io/austin/"
+            },
+            {
+                nombre: "Gilbert Ryle",
+                años: "1900-1976",
+                descripcion: "Crítica al dualismo cartesiano, El concepto de lo mental",
+                url: null
+            },
+            {
+                nombre: "A.J. Ayer",
+                años: "1910-1989",
+                descripcion: "Defensor del verificacionismo, Lenguaje, Verdad y Lógica",
+                url: null
+            },
+            {
+                nombre: "Saul Kripke",
+                años: "1940-2022",
+                descripcion: "Designadores rígidos, lógica modal y semántica de mundos posibles",
+                url: null
+            },
+            {
+                nombre: "Donald Davidson",
+                años: "1917-2003",
+                descripcion: "Filosofía de la mente, teoría causal de la acción",
+                url: null
+            },
+            {
+                nombre: "Hilary Putnam",
+                años: "1926-2016",
+                descripcion: "Externalismo semántico, realismo interno",
+                url: null
+            },
+            {
+                nombre: "David Lewis",
+                años: "1941-2001",
+                descripcion: "Realismo modal, mundos posibles, contrafácticos",
+                url: null
+            },
+            {
+                nombre: "John Rawls",
+                años: "1921-2002",
+                descripcion: "Teoría de la justicia, filosofía política analítica",
+                url: null
+            },
+            {
+                nombre: "Thomas Nagel",
+                años: "1937-presente",
+                descripcion: "Filosofía de la mente, 'What Is It Like to Be a Bat?'",
+                url: null
+            },
+            {
+                nombre: "Peter Singer",
+                años: "1946-presente",
+                descripcion: "Ética aplicada, utilitarismo, derechos animales",
+                url: null
+            },
+            {
+                nombre: "David Chalmers",
+                años: "1966-presente",
+                descripcion: "Problema difícil de la conciencia, filosofía de la mente",
+                url: null
+            },
+            {
+                nombre: "Timothy Williamson",
+                años: "1955-presente",
+                descripcion: "Epistemología, lógica, metafísica, conocimiento como primitivo",
+                url: null
+            },
+            {
+                nombre: "Karl Popper",
+                años: "1902-1994",
+                descripcion: "Filosofía de la ciencia, falsacionismo",
+                url: "https://jmlucas68.github.io/popper/"
+            }
+        ];
+
+        // Función para cargar los autores
+        function loadAuthors() {
+            const grid = document.getElementById('authorsGrid');
+            
+            analyticPhilosophers.forEach(philosopher => {
+                const card = document.createElement('div');
+                card.className = 'author-card';
+                
+                let cardContent = `
+                    <h3>${philosopher.nombre}</h3>
+                    <p class="years">${philosopher.años}</p>
+                    <p>${philosopher.descripcion}</p>
+                `;
+                
+                if (philosopher.url) {
+                    cardContent += `<a href="${philosopher.url}" target="_blank" class="link-btn">Ver página completa</a>`;
+                }
+                
+                card.innerHTML = cardContent;
+                
+                if (philosopher.url) {
+                    card.style.cursor = 'pointer';
+                    card.addEventListener('click', function(e) {
+                        if (e.target.tagName !== 'A') {
+                            window.open(philosopher.url, '_blank');
+                        }
+                    });
+                }
+                
+                grid.appendChild(card);
+            });
+        }
+
+        // Función para cambiar de pestaña
+        function showTab(tabId) {
+            // Ocultar todos los contenidos
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            // Desactivar todos los botones
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Mostrar el contenido seleccionado
+            document.getElementById(tabId).classList.add('active');
+            
+            // Activar el botón correspondiente
+            event.target.classList.add('active');
+        }
+
+        // Cargar autores al iniciar
+        document.addEventListener('DOMContentLoaded', loadAuthors);
+    </script>
+</body>
+</html>
+
