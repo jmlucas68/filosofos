@@ -443,9 +443,17 @@
     "nombre": "Malebranche",
     "nacimiento": 1638,
     "muerte": 1715,
-    "movimiento": "Racionalisto",
-    "url_pagina": "https://jmlucas68.github.io/malebranche",
-    "url_foto": "images/Malebranche.jpg"
+    "movimiento": "Racionalismo francés / Ocasionalismo",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/malebranche/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/malebranche/images/malebranche.jpg"
+  },
+  {
+    "nombre": "Blaise Pascal",
+    "nacimiento": 1623,
+    "muerte": 1662,
+    "movimiento": "Racionalismo francés / Filosofía de la religión",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/pascal/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/pascal/images/pascal.jpg"
   },
   {
     "nombre": "Blaise Pascal",
