@@ -726,5 +726,13 @@
     "movimiento": "Filosofía de la vida / Intuicionismo",
     "url_pagina": "https://jmlucas68.github.io/resto_filosofos/henri-bergson/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/henri-bergson/images/bergson-portrait.jpg"
+  },
+  {
+    "nombre": "Séneca",
+    "nacimiento": -4,
+    "muerte": 65,
+    "movimiento": "Estoicismo romano",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/seneca/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/seneca/images/seneca-engraving.jpg"
   }
 ]
