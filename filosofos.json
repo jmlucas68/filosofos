@@ -718,5 +718,13 @@
     "movimiento": "Estructuralismo",
     "url_pagina": "https://jmlucas68.github.io/levi_strauss/",
     "url_foto": "images/Levi-Strauss.jpg"
+  },
+  {
+    "nombre": "Henri Bergson",
+    "nacimiento": 1859,
+    "muerte": 1941,
+    "movimiento": "Filosofía de la vida / Intuicionismo",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/henri-bergson/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/henri-bergson/images/bergson-portrait.jpg"
   }
 ]
