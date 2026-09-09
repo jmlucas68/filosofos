@@ -56,12 +56,12 @@
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/filosofos/refs/heads/main/images/Aristoteles.jpg"
   },
   {
-    "nombre": "Cicerón",
+    "nombre": "Marco Tulio Cicerón",
     "nacimiento": -106,
     "muerte": -43,
-    "movimiento": "Filosofía romana / Estoicismo / Eclecticismo",
-    "url_pagina": "https://jmlucas68.github.io/ciceron/",
-    "url_foto": "images/Ciceron.jpg"
+    "movimiento": "Filosofía romana / Academicismo escéptico",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/ciceron/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/ciceron/images/ciceron-capitolino.png"
   },
   {
     "nombre": "Plotino",
