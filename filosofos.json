@@ -750,5 +750,13 @@
     "movimiento": "Hermenéutica analógica / Filosofía latinoamericana",
     "url_pagina": "https://jmlucas68.github.io/resto_filosofos/mauricio-beuchot/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/mauricio-beuchot/images/mauricio-beuchot.jpg"
+  },
+  {
+    "nombre": "Humberto Maturana",
+    "nacimiento": 1928,
+    "muerte": 2021,
+    "movimiento": "Biología del conocer / Cibernética de segundo orden",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/humberto-maturana/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/humberto-maturana/images/humberto-maturana.jpg"
   }
 ]
