@@ -758,5 +758,13 @@
     "movimiento": "Biología del conocer / Cibernética de segundo orden",
     "url_pagina": "https://jmlucas68.github.io/resto_filosofos/humberto-maturana/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/humberto-maturana/images/humberto-maturana.jpg"
+  },
+  {
+    "nombre": "Wilhelm Dilthey",
+    "nacimiento": 1833,
+    "muerte": 1911,
+    "movimiento": "Hermenéutica / Filosofía de la vida",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/dilthey/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/dilthey/images/wilhelm-dilthey.jpg"
   }
 ]
