@@ -659,9 +659,9 @@
     "nombre": "Albert Camus",
     "nacimiento": 1913,
     "muerte": 1960,
-    "movimiento": "Existencialismo",
-    "url_pagina": "https://jmlucas68.github.io/camus",
-    "url_foto": "images/Camus.jpg"
+    "movimiento": "Filosofía del absurdo / Rebelión",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/albert-camus/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/albert-camus/images/camus-harcourt-1945.jpg"
   },
   {
     "nombre": "Thomas Kuhn",
