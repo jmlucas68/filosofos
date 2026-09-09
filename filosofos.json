@@ -766,5 +766,13 @@
     "movimiento": "Hermenéutica / Filosofía de la vida",
     "url_pagina": "https://jmlucas68.github.io/resto_filosofos/dilthey/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/dilthey/images/wilhelm-dilthey.jpg"
+  },
+  {
+    "nombre": "Franz Brentano",
+    "nacimiento": 1838,
+    "muerte": 1917,
+    "movimiento": "Psicología descriptiva / Filosofía de la mente",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/brentano/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/brentano/images/franz-brentano.jpg"
   }
 ]
