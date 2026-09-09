@@ -718,5 +718,13 @@
     "movimiento": "Estructuralismo",
     "url_pagina": "https://jmlucas68.github.io/levi_strauss/",
     "url_foto": "images/Levi-Strauss.jpg"
+  },
+  {
+    "nombre": "Herbert Marcuse",
+    "nacimiento": 1898,
+    "muerte": 1979,
+    "movimiento": "Teoría crítica / Escuela de Fráncfort",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/marcuse/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/marcuse/images/marcuse-1955.jpeg"
   }
 ]
