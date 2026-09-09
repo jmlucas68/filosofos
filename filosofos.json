@@ -782,5 +782,13 @@
     "movimiento": "Escolástica / Lógica medieval",
     "url_pagina": "https://jmlucas68.github.io/resto_filosofos/pedro-abelardo/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/pedro-abelardo/images/abelardo.jpg"
+  },
+  {
+    "nombre": "Antonio Escohotado",
+    "nacimiento": 1941,
+    "muerte": 2021,
+    "movimiento": "Filosofía contemporánea / liberalismo libertario",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/escohotado/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/escohotado/images/antonio-escohotado.jpg"
   }
 ]
