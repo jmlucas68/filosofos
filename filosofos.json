@@ -798,5 +798,13 @@
     "movimiento": "Teoría de los medios / Ecología de los medios",
     "url_pagina": "https://jmlucas68.github.io/resto_filosofos/mcluhan/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/mcluhan/images/marshall-mcluhan-television.jpg"
+  },
+  {
+    "nombre": "Protágoras",
+    "nacimiento": -490,
+    "muerte": -420,
+    "movimiento": "Sofística / Filosofía griega clásica",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/protagoras/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/protagoras/images/protagoras.jpg"
   }
 ]
