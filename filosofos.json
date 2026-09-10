@@ -790,5 +790,13 @@
     "movimiento": "Filosofía contemporánea / liberalismo libertario",
     "url_pagina": "https://jmlucas68.github.io/resto_filosofos/escohotado/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/escohotado/images/antonio-escohotado.jpg"
+  },
+  {
+    "nombre": "Marshall McLuhan",
+    "nacimiento": 1911,
+    "muerte": 1980,
+    "movimiento": "Teoría de los medios / Ecología de los medios",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/mcluhan/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/mcluhan/images/marshall-mcluhan-television.jpg"
   }
 ]
