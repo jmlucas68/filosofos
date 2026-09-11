@@ -822,5 +822,13 @@
     "movimiento": "Generación del 98 / Filosofía de la existencia",
     "url_pagina": "https://jmlucas68.github.io/resto_filosofos/miguel-de-unamuno/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/miguel-de-unamuno/images/miguel-de-unamuno-1925.jpg"
+  },
+  {
+    "nombre": "Juan Donoso Cortés",
+    "nacimiento": 1809,
+    "muerte": 1853,
+    "movimiento": "Contrarrevolución / Teología política",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/donoso-cortes/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/donoso-cortes/images/juan-donoso-cortes.jpg"
   }
 ]
