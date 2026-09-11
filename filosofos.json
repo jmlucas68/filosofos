@@ -846,5 +846,13 @@
     "movimiento": "Sociología clásica / Funcionalismo",
     "url_pagina": "https://jmlucas68.github.io/resto_filosofos/emile-durkheim/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/emile-durkheim/images/emile-durkheim.jpg"
+  },
+  {
+    "nombre": "Juan de Mariana",
+    "nacimiento": 1536,
+    "muerte": 1624,
+    "movimiento": "Escuela de Salamanca / Teología política",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/juan-de-mariana/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/juan-de-mariana/images/juan-de-mariana.jpg"
   }
 ]
