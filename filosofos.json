@@ -830,5 +830,13 @@
     "movimiento": "Contrarrevolución / Teología política",
     "url_pagina": "https://jmlucas68.github.io/resto_filosofos/donoso-cortes/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/donoso-cortes/images/juan-donoso-cortes.jpg"
+  },
+  {
+    "nombre": "Jaime Balmes",
+    "nacimiento": 1810,
+    "muerte": 1848,
+    "movimiento": "Filosofía del sentido común / Filosofía católica",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/jaime-balmes/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/jaime-balmes/images/jaime-balmes.jpg"
   }
 ]
