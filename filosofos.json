@@ -838,5 +838,13 @@
     "movimiento": "Filosofía del sentido común / Filosofía católica",
     "url_pagina": "https://jmlucas68.github.io/resto_filosofos/jaime-balmes/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/jaime-balmes/images/jaime-balmes.jpg"
+  },
+  {
+    "nombre": "Émile Durkheim",
+    "nacimiento": 1858,
+    "muerte": 1917,
+    "movimiento": "Sociología clásica / Funcionalismo",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/emile-durkheim/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/emile-durkheim/images/emile-durkheim.jpg"
   }
 ]
