@@ -814,5 +814,13 @@
     "movimiento": "Neotomismo / Personalismo cristiano",
     "url_pagina": "https://jmlucas68.github.io/resto_filosofos/jacques-maritain/",
     "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/jacques-maritain/images/jacques-maritain.jpg"
+  },
+  {
+    "nombre": "Miguel de Unamuno",
+    "nacimiento": 1864,
+    "muerte": 1936,
+    "movimiento": "Generación del 98 / Filosofía de la existencia",
+    "url_pagina": "https://jmlucas68.github.io/resto_filosofos/miguel-de-unamuno/",
+    "url_foto": "https://raw.githubusercontent.com/jmlucas68/resto_filosofos/main/miguel-de-unamuno/images/miguel-de-unamuno-1925.jpg"
   }
 ]
